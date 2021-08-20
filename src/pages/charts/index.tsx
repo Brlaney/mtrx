@@ -45,9 +45,6 @@ export default function Charts() {
             </Link>
           </div>
 
-          {/* Divider */}
-          <div className='uk-heading-divider' />
-
           <div className={styles.listContainer}>
             {locations.map((location) => (
               <Link key={location.name}
@@ -56,7 +53,7 @@ export default function Charts() {
               >
                 <button
                   id={styles.dynamicButton}
-                  className='uk-button uk-button-secondary uk-width-1-1@xs uk-width-1-5'
+                  className='uk-button uk-button-secondary uk-width-1-5@s'
                   >
                   {location.name}
                 </button>

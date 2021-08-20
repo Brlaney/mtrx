@@ -7,9 +7,10 @@ import styles from '@/styles/pages/Locations.module.scss'
 
 export const getStaticProps = async ({ params }) => {
   const location = locations.filter(p => p.id.toString() === params.id)
+  const index = params.id - 1
   return {
     props: {
-      location: locations[0],
+      location: locations[index],
     },
   }
 }
