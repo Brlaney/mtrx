@@ -8,7 +8,7 @@ export const locations: Location[] = [
   { id: 5, name: 'Colorado' },
   { id: 6, name: 'Connecticut' },
   { id: 7, name: 'Delaware' },
-  { id: 8, name: 'District of Columbia' },
+  { id: 8, name: 'Washington DC' },
   { id: 9, name: 'Florida' },
   { id: 10, name: 'Georgia' },
   { id: 11, name: 'Hawaii' },

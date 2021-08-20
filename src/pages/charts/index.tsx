@@ -56,7 +56,7 @@ export default function Charts() {
               >
                 <button
                   id={styles.dynamicButton}
-                  className='uk-button uk-button-secondary'
+                  className='uk-button uk-button-secondary uk-width-1-1@xs uk-width-1-5'
                   >
                   {location.name}
                 </button>
