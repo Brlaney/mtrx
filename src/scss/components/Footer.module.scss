@@ -1,0 +1,26 @@
+@import '../theme/theme';
+
+#footer {
+  bottom: 0;
+  position: absolute;
+  width: 100vw;
+  background-color: $bg-d;
+  padding: 1rem 0 1rem 0;
+  height: 80px;
+  .link {
+    padding: 0.8rem 0 0 0;
+    color: $light;
+    font-size: 1.3rem;
+    text-decoration: none;
+    #span {
+      color: $primary !important;
+      margin: 0;
+      padding: 0.35rem;
+    }
+    #span:hover {
+      text-decoration: underline;
+      text-decoration-color: $primary;
+      cursor: pointer;
+    }
+  }
+}

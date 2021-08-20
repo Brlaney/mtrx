@@ -1,0 +1,25 @@
+@import '../theme/theme';
+
+#navbar {
+  border-bottom: '1px solid $text-light';
+  background-color: $bg-d;
+  #parent {
+    #brand {
+      padding-left: 0.4rem;
+      font-size: 32px;
+      color: $text-light !important;
+    }
+    #list {
+      font-size: 2rem;
+      #listItem {
+        margin: 0 0 0 0.2rem;
+        padding: 0 0.1rem 0 0.2rem;
+        .navLink {
+          font-weight: bold;
+          color: $bg-dark;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

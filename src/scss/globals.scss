@@ -1,0 +1,61 @@
+@import './theme/theme';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $primary-font;
+  color: $bg-d;
+  // overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+a { font-family: $tertiary-font; }
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $bg-d;
+  font-family: $secondary-font;
+}
+
+#category {
+  font-family: $tertiary-font;
+  font-weight: 500;
+}
+
+#banner {
+  margin: 20px;
+  height: 800px;
+  font-family: $secondary-font;
+}
+
+.uk-navbar-container {
+  background: #fff !important;
+  font-family: $tertiary-font;
+}
+
+.uk-navbar-container {
+  background: $bg-d !important;
+  font-family: $tertiary-font;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

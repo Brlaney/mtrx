@@ -1,0 +1,35 @@
+﻿@import '../theme/theme';
+
+
+uk-container-large {
+  div {
+    .title {
+      text-align: start;
+      font-size: 36px;
+      margin: 0;
+    }
+  }
+  div {
+    .subheading {
+      color: $bg-d;
+      font-size: 24px;
+      text-align: center;
+      width: 100%;
+      flex: auto;
+    }
+  }
+  #container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    .parent {
+      .select {
+        color: $text-secondary;
+        font-size: 22px;
+        text-align: center;
+      }
+    }
+  }
+}
