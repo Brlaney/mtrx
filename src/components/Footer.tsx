@@ -10,7 +10,7 @@ const Footer = () => {
       >
         <Link href='https://github.com/Brlaney'>
           <p className={styles.link}>
-            Designed by
+            Developed by
             <a
               id={styles.span}
               target='_blank'

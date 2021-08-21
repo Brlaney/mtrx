@@ -1,5 +1,6 @@
 import TextsByAuthor from '@/components/graphs/TextsByAuthor'
 import Link from 'next/link'
+import styles from '@/styles/pages/Matrix.module.scss'
 
 
 export default function Comparison () {

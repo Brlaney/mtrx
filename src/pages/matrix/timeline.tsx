@@ -1,5 +1,6 @@
 import FrequencyGraph from '@/components/graphs/FrequencyGraph'
 import Link from 'next/link'
+import styles from '@/styles/pages/Matrix.module.scss'
 
 
 export default function Timeline () {

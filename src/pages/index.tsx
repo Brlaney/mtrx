@@ -16,11 +16,11 @@ export default function Home() {
           </h1>
           <h4 className={styles.subtitle}>A sample Next app that features stunning Charts</h4>
         </div>
-        <div className={styles.subheader}>
-          <h3 className={styles.secondary}>
-            <span className={styles.span}>Designed by </span>
-            Brendan Laney
-          </h3>
+
+        <div className={styles.section}>
+          <h2 className='uk-header-small uk-text-lead uk-text-center'>
+            Featuring the following tech
+          </h2>
         </div>
 
         {/* Grid row I - children = columns/cards */}

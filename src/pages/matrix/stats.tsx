@@ -1,5 +1,6 @@
 import TextPie from '@/components/graphs/TextPie'
 import Link from 'next/link'
+import styles from '@/styles/pages/Matrix.module.scss'
 
 
 export default function Comparison () {
