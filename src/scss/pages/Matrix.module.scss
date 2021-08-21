@@ -64,9 +64,10 @@
         width: 100%;
         margin: 0;
         #formSelect {
-          margin: 0.75rem 0 1rem 0;
           padding: 0;
+          margin: 0.75rem 0 1rem 0;
           #radioTitle {
+            font-size: 1rem;
             width: 100%;
             text-align: center;
             padding-bottom: 0.12rem;
@@ -76,16 +77,10 @@
           #radioControl {
             display: flex;
             justify-content: space-between;
-            .active {
+            #label {
               #radio {
-                margin-top: 1rem;
                 padding-top: 1rem;
-              }
-            }
-            .inactive {
-              #radio {
-                margin-top: 1rem;
-                padding-top: 1rem;
+                margin: 0.44rem 0.67rem 0.44rem 0.67rem;
               }
             }
             .rlabel {
@@ -97,12 +92,13 @@
           }
         }
         #formDiv {
-          margin: 0.75rem 0 1rem 0;
           padding: 0;
           align-items: center;
           justify-content: center;
+          margin: 0.75rem 0 1rem 0;
           #label {
             padding: 0.2rem;
+            font-size: 1rem;
           }
           #controls {
             text-align: center;
@@ -111,13 +107,13 @@
             }
           }
           #submit {
-            color: $white;
-            background-color: $secondary;
             width: 100%;
-            max-width: 480px;
+            max-width: 450px;
             border-radius: 5px;
-            padding: 0.4rem;
+            background-color: $secondary;
             margin: 1rem 0 1.2rem 0;
+            padding: 0.4rem;
+            color: $white;
           }
         }
       }

@@ -8,8 +8,13 @@ interface Values {
   members: number;
 }
 
+interface Selected {
+  selection: string;
+}
+
 interface Props {
   onSubmit: (values: Values) => void;
+  onClick: (selected: Selected) => void;
 }
 
 const names = [
@@ -18,7 +23,10 @@ const names = [
   'Frame'
 ]
 
-const Matrix: React.FC<Props> = ({ onSubmit }) => {
+const Matrix: React.FC<Props> = ({ onSubmit, onClick }) => {
+  const [selected, setSelected] = React.useState<Selected>({
+    selection: ''
+  })
   const [values, setValues] = React.useState<Values>({
     activeSystem: null,
     systems: [
@@ -30,22 +38,23 @@ const Matrix: React.FC<Props> = ({ onSubmit }) => {
     members: 1
   })
 
-  function toggleActive (index) {
-    setValues(
-      { ...values, activeSystem: values.systems[index] }
-    )
-  }
-
-  function toggleActiveStyles(index) {
-    if (values.systems[index] === values.activeSystem) {
-      return 'active'
-    } else {
-      return 'inactive'
+  // The following should allow only one selection at a time
+  function toggleActive(index) {
+    if (!selected) {
+      setSelected(
+        { ...selected, selection: selected[index] }
+      )
+    }
+    if (selected) {
+      setSelected(
+        { ...selected, selection: selected[index] }
+      )
     }
   }
 
+
   // Handle value changes --> change state values
-  const handleChange = (fieldName: keyof Values) => (
+  const handleChange2 = (fieldName: keyof Values) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setValues({ ...values, [fieldName]: e.currentTarget.value });
@@ -94,7 +103,7 @@ const Matrix: React.FC<Props> = ({ onSubmit }) => {
                 {/* Maps each index of system options to select from */}
                 <div id={styles.radioControl} className='uk-form-controls'>
                   {values.systems.map((elements, index) => (
-                    <label className={toggleActiveStyles(index)}>
+                    <label id={styles.label}>
                       <input
                         key={index}
                         id={styles.radio}
@@ -133,7 +142,7 @@ const Matrix: React.FC<Props> = ({ onSubmit }) => {
                     step='1'
                     placeholder='members, m'
                     value={values.members}
-                    onChange={handleChange('members')}
+                    onChange={handleChange2('members')}
                   />
                 </div>
               </div>
@@ -160,7 +169,7 @@ const Matrix: React.FC<Props> = ({ onSubmit }) => {
                     step='1'
                     placeholder='nodes, n'
                     value={values.nodes}
-                    onChange={handleChange('nodes')}
+                    onChange={handleChange2('nodes')}
                   />
                 </div>
               </div>
