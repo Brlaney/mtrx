@@ -8,17 +8,20 @@
   margin: 0.66rem;
   padding: 0.22rem;
   .header {
+    margin-bottom: 1rem;
     .title {
-      border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
+      font-size: 3.2rem;
       text-align: center;
-      font-size: 62px;
+      padding-bottom: 0.44rem;
       margin: 0.85rem 0 0 0;
+      border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
     }
     .subtitle {
-      font-weight: bold;
+      text-align: justify;
+      width: 50vw;
       margin: 0.4rem 0 0.8rem 0;
-      text-align: center;
       color: $text-secondary;
+      font-size: 1.4rem;
     }
   }
   #subheader {
@@ -54,6 +57,17 @@
             color: $text-secondary;
             font-size: 28px;
             text-align: center;
+          }
+        }
+      }
+      .form {
+        .formDiv {
+          margin: 0.75rem 0 1rem 0;
+          #label {
+            padding: 0.2rem;
+          }
+          #controls {
+            
           }
         }
       }

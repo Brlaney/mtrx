@@ -2,7 +2,7 @@ import { Bar } from 'react-chartjs-2'
 // import { data } from '@/lib/data/texts-one'
 
 
-const TextMessages = () => {
+const FrequencyGraph = () => {
   return (
     <div className='uk-height-large uk-flex uk-flex-center uk-flex-middle uk-margin'>
       <Bar
@@ -389,4 +389,4 @@ const TextMessages = () => {
   )
 }
 
-export default TextMessages
+export default FrequencyGraph

@@ -2,11 +2,11 @@
 
 #footer {
   bottom: 0;
-  position: absolute;
+  height: 70px;
   width: 100vw;
+  position: absolute;
   background-color: $bg-d;
   padding: 1rem 0 1rem 0;
-  height: 80px;
   .link {
     padding: 0.8rem 0 0 0;
     color: $light;

@@ -16,7 +16,7 @@ const Navbar = () => {
           {/* Matrix dropdown menu */}
           <ul id={styles.list} className='uk-navbar-nav'>
             <li id={styles.listItem} className='uk-*'>
-              <Link href='/samples'>
+              <Link href='/matrix'>
                 <a className={styles.navlink}>Matrix</a>
               </Link>
             </li>

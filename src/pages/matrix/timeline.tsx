@@ -1,17 +1,17 @@
-import TextMessages from '@/components/graphs/TextMessages'
+import FrequencyGraph from '@/components/graphs/FrequencyGraph'
 import Link from 'next/link'
 
 
-export default function Messages () {
+export default function Timeline () {
   return (
     <>
       <div id='texts' className='uk-container-large'>
-        <h1>Comparing texts</h1>
-        <Link href='/texts'>
+        <h1>Texting timeline</h1>
+        <Link href='/matrix'>
           <button className='uk-button-default'>back</button>
         </Link>
         <div className='uk-heading-divider uk-margin-large-bottom' />
-        <TextMessages />
+        <FrequencyGraph />
       </div>
     </>
   )
