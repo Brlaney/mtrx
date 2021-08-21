@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
+import { server } from '@/lib/config'
 import { locations as locationData } from '@/lib/data/locations'
 import styles from '@/styles/pages/Charts.module.scss'
 
@@ -43,6 +44,13 @@ export default function Charts() {
                 States with the highest numbers
               </button>
             </Link>
+          </div>
+
+          {/* Select a state header */}
+          <div className={styles.subheader}>
+            <h3 className={styles.states}>
+              Select a state
+            </h3>
           </div>
 
           <div className={styles.listContainer}>

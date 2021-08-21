@@ -1,13 +1,24 @@
 import React from 'react'
 import Link from 'next/link'
-import LocationBarChart from '@/components/graphs/LocationBarChart'
+import { server } from '@/lib/config'
 import { locations } from '@/lib/data/locations'
 import styles from '@/styles/pages/Locations.module.scss'
+
+import LocationBarChart from '@/components/graphs/LocationBarChart'
 
 
 export const getStaticProps = async ({ params }) => {
   const location = locations.filter(p => p.id.toString() === params.id)
+
   const index = params.id - 1
+  const endpoint = locations[index]
+
+  // The goal here is to obtain the selected locations
+  //   abortion data for all categories by the internal
+  //   api endpoint response --> returning json data.
+  const res = await fetch(`${server}/api/${endpoint}`)
+  const data = await res.json()
+
   return {
     props: {
       location: locations[index],

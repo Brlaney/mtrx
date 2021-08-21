@@ -46,14 +46,22 @@
         line-height: 2;
         max-width: 550px;
       }
-
+    }
+    .subheader {
+      margin-top: 2.5rem;
+      width: 83%;
+      .states {
+        text-align: center;
+        border-bottom: 1px solid $bg-m;
+        margin-bottom: 1.44rem;
+        padding-bottom: 0.44rem;
+      }
     }
     .listContainer {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       flex-grow: 1;
-      margin-top: 2.5rem;
       width: 100vw;
       align-items: center;
       justify-content: center;
