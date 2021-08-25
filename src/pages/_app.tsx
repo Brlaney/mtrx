@@ -7,8 +7,7 @@ import 'uikit/dist/css/uikit.css'
 import '@/styles/globals.scss'
 
 
-export default function MyApp(props: AppProps) {
-  const { Component, pageProps } = props
+export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   return (

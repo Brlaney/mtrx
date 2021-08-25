@@ -2,7 +2,7 @@ import * as React from 'react'
 import styles from '@/styles/pages/Matrix.module.scss'
 
 interface Values {
-  activeSystem: object;
+  activeSystem: object | number;
   systems: object[];
   nodes: number;
   members: number;
@@ -39,17 +39,10 @@ const Matrix: React.FC<Props> = ({ onSubmit, onClick }) => {
   })
 
   // The following should allow only one selection at a time
-  function toggleActive(index) {
-    if (!selected) {
-      setSelected(
-        { ...selected, selection: selected[index] }
-      )
-    }
-    if (selected) {
-      setSelected(
-        { ...selected, selection: selected[index] }
-      )
-    }
+  const toggleActive = (fieldName: keyof Values) => (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    setValues({ ...values, [fieldName]: e.currentTarget.value })
   }
 
 
@@ -57,7 +50,7 @@ const Matrix: React.FC<Props> = ({ onSubmit, onClick }) => {
   const handleChange2 = (fieldName: keyof Values) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setValues({ ...values, [fieldName]: e.currentTarget.value });
+    setValues({ ...values, [fieldName]: e.currentTarget.value })
   }
 
   // When the form is submitted - the user clicks the submit button
@@ -96,28 +89,25 @@ const Matrix: React.FC<Props> = ({ onSubmit, onClick }) => {
 
               {/* User is prompted to select the type of system to solve */}
               <div id={styles.formSelect} className='uk-width-1-1'>
-                <div id={styles.radioTitle} className='uk-form-label'>
+                <div id={styles.selectionTitle} className='uk-form-label'>
                   Select a system
                 </div>
 
                 {/* Maps each index of system options to select from */}
-                <div id={styles.radioControl} className='uk-form-controls'>
-                  {values.systems.map((elements, index) => (
-                    <label id={styles.label}>
-                      <input
+                <div id={styles.selectionControl} className='uk-form-controls'>
+                  <select id={styles.select} className='uk-select'>s
+                    {values.systems.map((elements, index) => (
+                      <option
                         key={index}
-                        id={styles.radio}
-                        className='uk-radio'
-                        type='radio'
-                        name={names[index]}
+                        id={styles.selection}
                         value={names[index]}
-                        onClick={() => { toggleActive(index) }}
-                      />
-                      {names[index]}
-                    </label>
-                  ))}
+                        // onClick={() => { () => toggleActive({names[index]}) }}
+                      >
+                        {names[index]}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-
               </div>
 
               {/* Input section I */}

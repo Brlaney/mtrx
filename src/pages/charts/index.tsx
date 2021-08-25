@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { server } from '@/lib/config'
 import { locations as locationData } from '@/lib/data/locations'
 import styles from '@/styles/pages/Charts.module.scss'
 
@@ -28,20 +27,18 @@ export default function Charts() {
           <div className={styles.child}>
             <Link href='/charts/horizontal-bar-charts'>
               <button
-              id={styles.button}
-                className='uk-button uk-button-primary uk-button-large uk-width-1-1'
+                id={styles.button}
+                className='uk-button uk-button-primary uk-button uk-width-1-2'
               >
                 Total US stats
               </button>
             </Link>
-          </div>
-          <div className={styles.child}>
             <Link href='/charts/stacked-bar-charts'>
               <button
-              id={styles.button}
-                className='uk-button uk-button-primary uk-button-large uk-width-1-1'
+                id={styles.button}
+                className='uk-button uk-button-primary uk-button uk-width-1-2'
               >
-                States with the highest numbers
+                Highest impact states
               </button>
             </Link>
           </div>
@@ -61,8 +58,8 @@ export default function Charts() {
               >
                 <button
                   id={styles.dynamicButton}
-                  className='uk-button uk-button-secondary uk-width-1-5@s'
-                  >
+                  className='uk-button uk-button-secondary uk-width-1-6@s'
+                >
                   {location.name}
                 </button>
               </Link>

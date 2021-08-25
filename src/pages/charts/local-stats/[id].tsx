@@ -1,66 +1,76 @@
 import React from 'react'
 import Link from 'next/link'
+import {
+  GetStaticProps,
+  GetStaticPaths,
+} from 'next'
 import { server } from '@/lib/config'
 import { locations } from '@/lib/data/locations'
 import styles from '@/styles/pages/Locations.module.scss'
 
 import LocationBarChart from '@/components/graphs/LocationBarChart'
+import { Params } from 'next/dist/server/router'
 
+export const getStaticProps: GetStaticProps<Params> = async (context) => {
+  const location = locations.filter(p => p.id.toString() === location.id)
 
-export const getStaticProps = async ({ params }) => {
-  const location = locations.filter(p => p.id.toString() === params.id)
-
-  const index = params.id - 1
+  const index = location.id - 1
   const endpoint = locations[index]
 
-  // The goal here is to obtain the selected locations
-  //   abortion data for all categories by the internal
-  //   api endpoint response --> returning json data.
-  const res = await fetch(`${server}/api/${endpoint}`)
-  const data = await res.json()
+  /* The goal here is to obtain the selected locations
+  abortion data for all categories by the internal
+  api endpoint response --> returning json data. */
+  const res = await fetch(`${server}/api/locations`)
+  const rows = await res.json()
+
+  console.log(rows);
 
   return {
     props: {
-      location: locations[index],
+      locations: location,
+      data: rows,
     },
   }
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = locations.map(location => ({
     params: { id: location.id.toString() },
   }))
   return { paths, fallback: false }
 }
 
-const LocalStats = props => (
-  <>
-    {/* Page parent container */}
-    <div className={styles.container}>
+export default function LocalStats({ data, location }) {
+  return (
+    <>
+      {/* Page parent container */}
+      <div className={styles.container}>
 
-      {/* Header */}
-      <div className={styles.header}>
-        <h1 className={styles.title}>
-          {props.location.name}
-        </h1>
-        <Link href='/charts'>
-          <button className='uk-button uk-button-primary uk-button-small'>
-            back
-          </button>
-        </Link>
-      </div>
+        {/* Header */}
+        <div className={styles.header}>
+          <h1 className={styles.title}>
+            {location.name}
+          </h1>
+          <Link href='/charts'>
+            <button className='uk-button uk-button-primary uk-button-small'>
+              back
+            </button>
+          </Link>
+        </div>
 
-      {/* Divider */}
-      <div className='uk-heading-divider' />
+        {/* Divider */}
+        <div className='uk-heading-divider' />
 
-      {/* This pages main content */}
-      <div className={styles.content}>
-        <div className={styles.chartContainer}>
-          {/* <LocationBarChart /> */}
+        {/* This pages main content */}
+        <div className={styles.content}>
+          <div className={styles.chartContainer}>
+            <LocationBarChart
+              // data={data}
+              // location={location}
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </>
-)
-
-export default LocalStats
+    </>
+  )
+}
