@@ -14,24 +14,35 @@ export default function Home() {
           <h1 className={styles.title}>Welcome, to
             <span id={styles.next}> Next Charts</span>
           </h1>
-          <h4 className={styles.subtitle}>A sample Next app that features stunning Charts</h4>
+          <h4 className={styles.subtitle}>
+            A sample Next app that features stunning Charts
+          </h4>
         </div>
 
         {/* Grid row I - children = columns/cards */}
         <div className={styles.grid}>
 
           {/* Grid column I */}
-          <div id={styles.image} className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'>
+          <div 
+            id={styles.image} 
+            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
+          >
             <Image src='/brands/Uikit.png' width={200} height={200} />
           </div>
 
           {/* Grid column II */}
-          <div id={styles.image} className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'>
+          <div 
+            id={styles.image} 
+            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
+          >
             <Image src='/brands/chartjs.png' width={200} height={200} />
           </div>
 
           {/* Grid column III */}
-          <div id={styles.image} className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'>
+          <div
+            id={styles.image}
+            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
+          >
             <Image src='/brands/React.png' width={200} height={200} />
           </div>
         </div>
@@ -41,19 +52,25 @@ export default function Home() {
 
           {/* Card/column I caption */}
           <h4 className={styles.uikit}>
-            <span className={styles.company}>Styled with </span>
+            <span className={styles.company}>
+              Styled with
+            </span>
             UiKit
           </h4>
 
           {/* Card/column II caption */}
           <h4 className={styles.chartjs}>
-            <span className={styles.company}>Visualizations designed using </span>
+            <span className={styles.company}>
+              Visualizations designed using 
+            </span>
             Chart.js
           </h4>
 
           {/* Card/column III caption */}
           <h4 className={styles.react}>
-            <span className={styles.company}>Developed with </span>
+            <span className={styles.company}>
+              Developed with
+            </span>
             React/Next
           </h4>
         </div>
