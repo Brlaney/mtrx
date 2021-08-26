@@ -34,8 +34,8 @@ const Matrix: React.FC<Props> = ({ onSubmit, onClick }) => {
       { id: '2' },
       { id: '3' }
     ],
-    nodes: 1,
-    members: 1
+    nodes: null,
+    members: null
   })
 
   // The following should allow only one selection at a time
@@ -52,6 +52,15 @@ const Matrix: React.FC<Props> = ({ onSubmit, onClick }) => {
   ) => {
     setValues({ ...values, [fieldName]: e.currentTarget.value })
   }
+
+  
+  /* 
+  Create an onChange function for the condition: the user has input 
+  a number of nodes, members, supports, and any externally applied loads
+  then verify the system is structurally stable based on the equations
+  for frames, beams, and trusses.   
+  */
+
 
   // When the form is submitted - the user clicks the submit button
   const handleSubmit = (e: React.FormEvent) => {
@@ -95,7 +104,7 @@ const Matrix: React.FC<Props> = ({ onSubmit, onClick }) => {
 
                 {/* Maps each index of system options to select from */}
                 <div id={styles.selectionControl} className='uk-form-controls'>
-                  <select id={styles.select} className='uk-select'>s
+                  <select id={styles.select} className='uk-select'>
                     {values.systems.map((elements, index) => (
                       <option
                         key={index}
@@ -112,20 +121,13 @@ const Matrix: React.FC<Props> = ({ onSubmit, onClick }) => {
 
               {/* Input section I */}
               <div id={styles.formDiv} className='uk-width-1-2'>
-                <label
-                  id={styles.label}
-                  className='uk-form-label'
-                  htmlFor='form-horizontal-text'
-                >
-                  Number of members
-                </label>
                 <div id={styles.controls} className='uk-form-controls'>
 
                   {/* User prompted to input the number of members, m */}
                   <input
                     id={styles.input}
                     name='m'
-                    className='uk-input uk-form-width-medium uk-form-large'
+                    className='uk-input'
                     type='number'
                     min='1'
                     max='99'
@@ -139,20 +141,13 @@ const Matrix: React.FC<Props> = ({ onSubmit, onClick }) => {
 
               {/* Input section II */}
               <div id={styles.formDiv} className='uk-width-1-2'>
-                <label
-                  id={styles.label}
-                  className='uk-form-label'
-                  htmlFor='form-horizontal-text'
-                >
-                  Number of nodes
-                </label>
                 <div id={styles.controls} className='uk-form-controls'>
 
                   {/* User prompted to input the number of nodes, n */}
                   <input
                     id={styles.input}
                     name='n'
-                    className='uk-input uk-form-width-medium uk-form-large'
+                    className='uk-input'
                     type='number'
                     min='1'
                     max='99'
