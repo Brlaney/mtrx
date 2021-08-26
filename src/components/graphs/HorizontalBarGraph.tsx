@@ -7,12 +7,11 @@ const data = {
     '<= 9 (Medical)',
     '> 13 (Surgical)',
     '> 9 (Medical)',
-    // 'Unknown (Total abortions reported by known method type)'
   ],
   datasets: [
     {
       label: 'Combined US totals',
-      data: [289931, 214779, 43576, 7743], // 556294
+      data: [289931, 214779, 43576, 7743], 
       backgroundColor: [
         'rgba(242, 27, 63, 0.3)',
         'rgba(41, 191, 18, 0.2)',
@@ -34,22 +33,21 @@ const options = {
   indexAxis: 'y',
   elements: {
     bar: {
-      borderWidth: 2,
+      borderWidth: 1,
     },
   },
   responsive: true,
   plugins: {
     legend: {
-      position: 'right',
+      position: 'bottom',
     },
     title: {
-      display: true,
-      text: 'Chart.js Horizontal Bar Chart',
+      display: false,
     },
   },
 }
 
-const TestBarGraph = () => {
+const HorizontalBarGraph = () => {
   return (
     <>
       <Bar
@@ -60,4 +58,4 @@ const TestBarGraph = () => {
   )
 }
 
-export default TestBarGraph
+export default HorizontalBarGraph

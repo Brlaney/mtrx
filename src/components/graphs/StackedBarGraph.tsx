@@ -120,6 +120,23 @@ const options = {
       },
     ],
   },
+  elements: {
+    bar: {
+      borderWidth: 1,
+    },
+  },
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'bottom',
+      align: 'center',
+      maxWidth: 500,
+      padding: '2rem'
+    },
+    title: {
+      display: false,
+    },
+  },
 }
 
 const StackedBarGraph = () => (

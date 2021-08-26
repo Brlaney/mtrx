@@ -52,26 +52,20 @@ export default function Home() {
 
           {/* Card/column I caption */}
           <h4 className={styles.uikit}>
-            <span className={styles.company}>
-              Styled with
-            </span>
-            UiKit
+            <span className={styles.company}>Styled with </span>
+             UiKit
           </h4>
 
           {/* Card/column II caption */}
           <h4 className={styles.chartjs}>
-            <span className={styles.company}>
-              Visualizations designed using 
-            </span>
-            Chart.js
+            <span className={styles.company}>Visualizations designed using </span>
+             Chart.js
           </h4>
 
           {/* Card/column III caption */}
           <h4 className={styles.react}>
-            <span className={styles.company}>
-              Developed with
-            </span>
-            React/Next
+            <span className={styles.company}>Developed with </span>
+             React/Next
           </h4>
         </div>
       </div>

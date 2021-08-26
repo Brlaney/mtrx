@@ -1,4 +1,4 @@
-import TestBarGraph from '@/components/graphs/TestBarGraph'
+import HorizontalBarGraph from '@/components/graphs/HorizontalBarGraph'
 import Link from 'next/link'
 import styles from '@/styles/pages/Charts.module.scss'
 
@@ -15,7 +15,10 @@ export default function HorizontalBarCharts() {
             Overall abortion stats
           </h1>
           <Link href='/charts'>
-            <button className='uk-button uk-button-primary uk-button-small'>
+            <button
+              id={styles.back}
+              className='uk-button uk-button-default uk-button-small'
+            >
               back
             </button>
           </Link>
@@ -27,7 +30,7 @@ export default function HorizontalBarCharts() {
         {/* This pages main content */}
         <div className={styles.content}>
           <div className={styles.chartContainer}>
-            <TestBarGraph />
+            <HorizontalBarGraph />
           </div>
         </div>
       </div>

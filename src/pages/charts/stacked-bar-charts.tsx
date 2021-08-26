@@ -15,14 +15,14 @@ export default function StackedBarCharts() {
             Grouped comparison
           </h1>
           <Link href='/charts'>
-            <button className='uk-button uk-button-primary uk-button-small'>
+            <button
+              id={styles.back}
+              className='uk-button uk-button-default uk-button-small'
+            >
               back
             </button>
           </Link>
         </div>
-
-        {/* Divider */}
-        <div className='uk-heading-divider uk-margin-large-bottom'></div>
 
         {/* This pages main content */}
         <div className={styles.content}>

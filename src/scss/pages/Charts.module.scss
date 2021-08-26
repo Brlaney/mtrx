@@ -9,10 +9,12 @@
   justify-content: flex-start;
   align-items: center;
   .header {
+    margin-bottom: 0.77rem;
     .title {
-      font-size: 3.875rem;
+      width: 80vw;
+      font-size: 2rem;
       color:$bg-d;
-      text-align: center;
+      text-align: justify;
       padding-bottom: 0.44rem;
       margin-bottom: 0.2rem;
       border-bottom: calc(0.3px + 0.02em) solid $bg-m;
@@ -22,6 +24,12 @@
       margin-top: 0.2rem;
       color: $text-secondary;
       font-weight: bold;
+    }
+    #back {
+      margin-top: 0.33rem;
+      background-color: $secondary !important;
+      color: $light;
+      border: 0;
     }
   }
   .content {
@@ -71,8 +79,9 @@
     }
     .chartContainer {
       margin: 0 0 1.5rem 0;
+      padding: 0;
       height: 100%;
-      width: 1200px;
+      width: 1000px;
     }
   }
 }
