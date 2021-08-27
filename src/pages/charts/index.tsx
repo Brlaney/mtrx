@@ -25,6 +25,8 @@ export default function Charts() {
         {/* This pages main content */}
         <div className={styles.content}>
           <div className={styles.child}>
+
+            {/* Horizontal bar charts link */}
             <Link href='/charts/horizontal-bar-charts'>
               <button
                 id={styles.button}
@@ -33,12 +35,44 @@ export default function Charts() {
                 Total US stats
               </button>
             </Link>
+
+            {/* Grouped/stacked bar charts link */}
             <Link href='/charts/stacked-bar-charts'>
               <button
                 id={styles.button}
                 className='uk-button uk-button-primary uk-button uk-width-1-2'
               >
                 Highest impact states
+              </button>
+            </Link>
+
+            {/* Trusses deformation/stresses link */}
+            <Link href='/charts/truss'>
+              <button
+                id={styles.button}
+                className='uk-button uk-button-primary uk-button uk-width-1-2'
+              >
+                Truss graph
+              </button>
+            </Link>
+
+            {/* Beams deformation/stresses link */}
+            <Link href='/charts/beam'>
+              <button
+                id={styles.button}
+                className='uk-button uk-button-primary uk-button uk-width-1-2'
+              >
+                Beam graph
+              </button>
+            </Link>
+
+            {/* Frames deformation/stresses link */}
+            <Link href='/charts/frame'>
+              <button
+                id={styles.button}
+                className='uk-button uk-button-primary uk-button uk-width-1-2'
+              >
+                Frame graph
               </button>
             </Link>
           </div>
@@ -52,15 +86,16 @@ export default function Charts() {
 
           <div className={styles.listContainer}>
             {locations.map((location) => (
-              <Link key={location.name}
+              <Link key={location.id}
                 href='/charts/local-stats/[id]'
                 as={`/charts/local-stats/${location.id}`}
               >
                 <button
                   id={styles.dynamicButton}
-                  className='uk-button uk-button-secondary uk-width-1-4@s'
+                  className='uk-button uk-button-secondary uk-width-1-6@s'
+                  uk-tooltip={location.name}
                 >
-                  {location.name}
+                  {location.abbr}
                 </button>
               </Link>
             ))}
