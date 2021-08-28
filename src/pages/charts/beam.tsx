@@ -1,4 +1,4 @@
-import Beams from '@/components/graphs/Beams'
+import Beams from '@/components/matrix/Beams'
 import Link from 'next/link'
 import styles from '@/styles/pages/Charts.module.scss'
 

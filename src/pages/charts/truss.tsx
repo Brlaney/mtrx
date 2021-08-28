@@ -1,4 +1,4 @@
-import Trusses from '@/components/graphs/Trusses'
+import Trusses from '@/components/matrix/Trusses'
 import Link from 'next/link'
 import styles from '@/styles/pages/Charts.module.scss'
 

@@ -4,7 +4,7 @@ import {
   GetStaticProps,
   GetStaticPaths,
 } from 'next'
-import { server } from '@/lib/config'
+import { server } from '@/lib/config/server'
 import { locations } from '@/lib/data/locations'
 import styles from '@/styles/pages/Locations.module.scss'
 
@@ -65,8 +65,8 @@ export default function LocalStats({ data, location }) {
         <div className={styles.content}>
           <div className={styles.chartContainer}>
             <LocationBarChart
-              // data={data}
-              // location={location}
+              data={data}
+              location={location}
             />
           </div>
         </div>

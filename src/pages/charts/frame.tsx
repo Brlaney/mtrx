@@ -1,4 +1,4 @@
-import Frames from '@/components/graphs/Frames'
+import Frames from '@/components/matrix/Frames'
 import Link from 'next/link'
 import styles from '@/styles/pages/Charts.module.scss'
 
