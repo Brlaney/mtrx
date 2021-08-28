@@ -28,6 +28,7 @@ export const data = {
         { x: 20, y: 0.16, },
         { x: 30, y: 0 }
       ],
+      fill: true,
       backgroundColor: 'rgba(191, 26, 47, 0.2)',
       borderColor: 'rgba(191, 26, 47, 1)',
       borderWidth: 1,
