@@ -23,3 +23,7 @@ export interface IApi {
   cat8?: number | null;
   cat9?: number | null;
 }
+
+// export interface TrussRows {
+
+// }
