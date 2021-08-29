@@ -4,11 +4,16 @@
   bottom: 0;
   height: 60px;
   width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   background-color: $bg-d;
   padding: 1rem 0 1rem 0;
   .link {
     padding: 0.8rem 0 0 0;
+    margin: 0;
     color: $light;
     font-size: 1.15rem;
     text-decoration: none;
@@ -20,6 +25,16 @@
     #span:hover {
       text-decoration: underline;
       text-decoration-color: $primary;
+      cursor: pointer;
+    }
+    #tests {
+      color: $chartjs !important;
+      margin: 0 0 0 0.44rem;
+      padding: 0.35rem;
+    }
+    #tests:hover {
+      text-decoration: underline;
+      text-decoration-color: $chartjs;
       cursor: pointer;
     }
   }

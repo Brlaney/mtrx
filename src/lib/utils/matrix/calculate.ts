@@ -1,4 +1,36 @@
-// Function 1.)
+/* Function 1.)
+
+Calculates area given a radius ~
+  Input: cross-sectional radius
+  Output: cross-sectional area in US units */
+export function calcAreaR(r) {
+  let initial = Math.PI * r^2;
+  let final = initial / 144; // Assumming the input is in, convert to sq ft.
+
+  // Rounded to two decimal places
+  let A = final.toFixed(3); 
+
+  return A;
+}
+
+
+/* Function 2.)
+
+Calculates area given a diameter ~
+  Input: members angle of orientation in radians
+  Output: members angle of orientation in degrees */
+export function calcAreaD(d) {
+  let initial = Math.PI * d^2;
+  let final = initial / 576;  // Assumming the input is in, convert to sq ft. (576 = 4 * 12 * 12)
+
+  // Rounded to two decimal places
+  let A = final.toFixed(3); 
+
+  return A;
+}
+
+
+// Function 3.)
 // point • matrix
 function multiplyMatrixAndPoint(matrix, point) {
   // Give a simple variable name to each part of the matrix, a column and row number
@@ -13,22 +45,18 @@ function multiplyMatrixAndPoint(matrix, point) {
   let z = point[2];
   let w = point[3];
 
-  // Multiply the point against each part of the 1st column, then add together
+  // Multiply the point against each part of the 1st, 2nd, 3rd, 
+  //   & 4th columns, then add together.
   let resultX = (x * c0r0) + (y * c0r1) + (z * c0r2) + (w * c0r3);
-
-  // Multiply the point against each part of the 2nd column, then add together
   let resultY = (x * c1r0) + (y * c1r1) + (z * c1r2) + (w * c1r3);
-
-  // Multiply the point against each part of the 3rd column, then add together
   let resultZ = (x * c2r0) + (y * c2r1) + (z * c2r2) + (w * c2r3);
-
-  // Multiply the point against each part of the 4th column, then add together
   let resultW = (x * c3r0) + (y * c3r1) + (z * c3r2) + (w * c3r3);
 
   return [resultX, resultY, resultZ, resultW];
 }
 
-// Function 2.)
+
+// Function 4.)
 //matrixB • matrixA
 export function multiplyMatrices(matrixA, matrixB) {
   // Slice the second matrix up into rows
@@ -51,24 +79,3 @@ export function multiplyMatrices(matrixA, matrixB) {
     result3[0], result3[1], result3[2], result3[3]
   ];
 }
-
-// Function 3.)
-
-/*
-let someMatrix = [
-  4, 0, 0, 0,
-  0, 3, 0, 0,
-  0, 0, 5, 0,
-  4, 8, 4, 1
-]
-
-let identityMatrix = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, 0,
-  0, 0, 0, 1
-];
-
-// Returns a new array equivalent to someMatrix
-let someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
-*/
