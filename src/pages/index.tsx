@@ -1,9 +1,44 @@
 import Image from 'next/image'
 import Footer from '@/components/Footer'
 import styles from '@/styles/pages/Home.module.scss'
+import { multiplyMatrices } from '@/lib/utils/matrix/beams'
+import { convertToRadians, convertToDegrees } from '@/lib/utils/matrix/convert'
 
+let d1 = 90;
+let d2 = 45;
+let r1 = 1;
+let r2 = 0.5;
+
+let converedResult1 = convertToRadians(d1);
+let converedResult2 = convertToRadians(d2);
+let converedResult3 = convertToDegrees(r1);
+let converedResult4 = convertToDegrees(r2);
+
+
+let someMatrix = [
+  4, 0, 0, 0,
+  0, 3, 0, 0,
+  0, 0, 5, 0,
+  4, 8, 4, 1
+]
+
+let identityMatrix = [
+  1, 0, 0, 0,
+  0, 1, 0, 0,
+  0, 0, 1, 0,
+  0, 0, 0, 1
+];
+
+// Returns a new array equivalent to someMatrix
+let someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 
 export default function Home() {
+  console.log(someMatrixResult);
+  console.log(converedResult1);
+  console.log(converedResult2);
+  console.log(converedResult3);
+  console.log(converedResult4);
+
   return (
     <>
       {/* Main parent container */}
