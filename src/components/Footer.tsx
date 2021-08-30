@@ -22,6 +22,18 @@ const Footer = () => {
             &copy; 2021
           </p>
         </Link>
+        <Link href='/tests'>
+          <p className={styles.link}>
+            <a
+              id={styles.tests}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='uk-text-primary uk-padding-small uk-text-large'
+            >
+              Tests
+            </a>
+          </p>
+        </Link>
       </div>
     </>
   )
