@@ -3,8 +3,20 @@ import {
   // convertToDegrees,
   coordinatesToL
 } from '@/lib/utils/matrix/convert'
-// import { calcAreaR, calcAreaD, multiplyMatrices } from '@/lib/utils/matrix/calculate'
+
+// import { 
+// calcAreaR,
+//   calcAreaD,
+//   multiplyMatrices 
+// } from '@/lib/utils/matrix/calculate'
+
+import {
+  trussK,
+  beamK
+} from '@/lib/utils/matrix/transform'
+
 import styles from '@/styles/pages/Test.module.scss'
+
 
 // Declaring variables for conversion functions
 // let mtx1 = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1]
@@ -15,8 +27,8 @@ import styles from '@/styles/pages/Test.module.scss'
 // let r2 = 0.5;
 
 // Represents: (x1, y1) & (x2, y2)
-let p1 = [0, 0];   
-let p2 = [10, 10];
+// let p1 = [0, 0];   
+// let p2 = [10, 10];
 
 // Declaring variables for calculation functions
 // let R1 = 3; // inches
@@ -28,7 +40,7 @@ export default function Tests() {
   // let convertedResult3 = convertToDegrees(r1);
   // let convertedResult4 = convertToDegrees(r2);
   // let someMatrixResult = multiplyMatrices(mtx1, mtx2);
-  let L1 = coordinatesToL(p1, p2);
+  // let L1 = coordinatesToL(p1, p2);
   // let area1 = calcAreaR(R1); // Output in sf.
   // let area2 = calcAreaD(D1); // Output in sf.
 
@@ -40,8 +52,20 @@ export default function Tests() {
   // console.log(convertedResult4);
   // console.log(area1);
   // console.log(area2);
-  console.log(L1); 
+  // console.log(L1); 
   //
+  let theta1 = 45;
+  let A1 = 0.79;
+  let L1 = 10;
+  let E1 = 29000000;
+  let example1 = trussK(theta1, E1, A1, L1);
+  console.log(example1);
+
+  let E2 = 29000000;
+  let I2 = 200;
+  let L2 = 144;
+  let example2 = beamK(E2, I2, L2)
+  console.log(example2);
 
   return (
     <>

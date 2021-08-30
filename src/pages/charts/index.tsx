@@ -86,7 +86,8 @@ export default function Charts() {
 
           <div className={styles.listContainer}>
             {locations.map((location) => (
-              <Link key={location.id}
+              <Link
+                key={location.id}
                 href='/charts/local-stats/[id]'
                 as={`/charts/local-stats/${location.id}`}
               >

@@ -12,7 +12,7 @@ import LocationBarChart from '@/components/graphs/LocationBarChart'
 import { Params } from 'next/dist/server/router'
 
 export const getStaticProps: GetStaticProps<Params> = async (context) => {
-  const location = locations.filter(p => p.id.toString() === location.id)
+  const location = locations.filter(p => p.id.toString() == location.id)
 
   const index = location.id - 1
   const endpoint = locations[index]

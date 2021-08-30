@@ -29,7 +29,7 @@ export default function HorizontalBarCharts() {
 
         {/* This pages main content */}
         <div className={styles.content}>
-          <div className={styles.chartContainer}>
+          <div className={styles.chartContainerWide}>
             <HorizontalBarGraph />
           </div>
         </div>

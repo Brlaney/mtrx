@@ -2,14 +2,14 @@ export interface Location {
   id: number;
   name: string;
   abbr: string;
-}
+};
 
 export interface IData {
   id: number;
   State: string;
   Number: number;
   Percent: number;
-}
+};
 
 export interface IApi {
   id: number;
@@ -22,8 +22,16 @@ export interface IApi {
   cat7?: number | null;
   cat8?: number | null;
   cat9?: number | null;
-}
+};
 
-// export interface TrussRows {
+export interface IApi1 {
+  id: number;
+  link: string;
+  name: string;
+};
 
-// }
+export interface Choice {
+  id: number;
+  link: string;
+  name: string;
+};

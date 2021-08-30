@@ -26,7 +26,7 @@ export default function StackedBarCharts() {
 
         {/* This pages main content */}
         <div className={styles.content}>
-          <div className={styles.chartContainer}>
+          <div className={styles.chartContainerWide}>
             <StackedBarGraph />
           </div>
         </div>
