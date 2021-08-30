@@ -46,7 +46,7 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
               >
                 <button
                   id={styles.dynamicButton}
-                  className='uk-button uk-button-secondary uk-width-1-6@s'
+                  className='uk-button uk-button-secondary uk-width-1-1 uk-margin-small'
                 >
                   {choice.name}
                 </button>
