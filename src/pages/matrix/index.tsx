@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   GetStaticProps,
@@ -33,27 +34,31 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
           </h2>
         </div>
 
-        {/* Link container */}
+        {/* Grid row I - parent */}
         <div
-          id={styles.linkContainer}
+          id={styles.grid}
           className='uk-grid-row uk-grid-row-large uk-child-width-1-1 uk-text-center'
         >
-          <div id={styles.card} className='uk-width-1-1'>
-            {choicesList.map((choice: Choice) => (
-              <Link
-                key={choice.id}
-                href={`/matrix/${encodeURIComponent(choice.link)}`}
-              >
-                <button
-                  id={styles.dynamicButton}
-                  className='uk-button uk-button-secondary uk-width-1-1 uk-margin-small'
-                >
-                  {choice.name}
-                </button>
+
+          {/* Grid-column children */}
+          {choicesList.map((choice: Choice) => (
+            <div
+              key={choice.id}
+              id={styles.image}
+              className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
+            >
+              <Link href={`/matrix/${encodeURIComponent(choice.link)}`}>
+                <Image
+                  className={styles.img}
+                  src={choice.path}
+                  width={300}
+                  height={219}
+                />
               </Link>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+  
       </div>
     </>
   )
