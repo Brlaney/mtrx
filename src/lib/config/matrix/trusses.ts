@@ -14,8 +14,8 @@ export const data = {
       backgroundColor: 'rgba(41, 105, 255, 0.2)',
       borderColor: 'rgba(41, 105, 255, 1)',
       borderWidth: 1,
-      pointRadius: 5,
-      pointHoverRadius: 8,
+      pointRadius: 2,
+      pointHoverRadius: 4,
       yAxisID: 'y'
     },
     {
@@ -31,28 +31,10 @@ export const data = {
       backgroundColor: 'rgba(191, 26, 47, 0.2)',
       borderColor: 'rgba(191, 26, 47, 1)',
       borderWidth: 1,
-      pointRadius: 3,
-      pointHoverRadius: 6,
+      pointRadius: 2,
+      pointHoverRadius: 4,
       lineTension: 0.25,
       yAxisID: 'y'
-    },
-    {
-      type: 'line',
-      label: 'Internal stresses',
-      data: [
-        { x: 0, y1: 0, },
-        { x: 5, y1: 3.5, },
-        { x: 10, y1: -1.5, },
-        { x: 20, y1: -2, },
-        { x: 30, y1: 0 }
-      ],
-      stepped: true,
-      fill: true,
-      backgroundColor: 'rgba(119, 104, 174, 0.2)',
-      borderColor: 'rgba(119, 104, 174, 1)',
-      borderWidth: 1,
-      pointRadius: 0,
-      yAxisID: 'y1'
     },
   ]
 };
@@ -75,10 +57,6 @@ export const config = {
         display: true,
         position: 'top',
       },
-      title: {
-        display: true,
-        text: 'Chart.js Combined Line/Bar Chart',
-      }
     }
   },
   interaction: {
@@ -108,22 +86,6 @@ export const config = {
         stepSize: 1,
         callback: function (value) {
           return value + ' in';
-        }
-      },
-    },
-    y1: {
-      type: 'linear',
-      display: true,
-      position: 'right',
-      max: 4,
-      min: -4,
-      grid: {
-        drawOnChartArea: false,
-      },
-      ticks: {
-        stepSize: 1,
-        callback: function (value) {
-          return value + ' ksi';
         }
       },
     },

@@ -1,41 +1,47 @@
-import { convertToRadians, convertToDegrees, coordinatesToL } from '@/lib/utils/matrix/convert'
-import { calcAreaR, calcAreaD, multiplyMatrices } from '@/lib/utils/matrix/calculate'
+import {
+  // convertToRadians,
+  // convertToDegrees,
+  coordinatesToL
+} from '@/lib/utils/matrix/convert'
+// import { calcAreaR, calcAreaD, multiplyMatrices } from '@/lib/utils/matrix/calculate'
 import styles from '@/styles/pages/Test.module.scss'
 
 // Declaring variables for conversion functions
-let mtx1 = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1]
-let mtx2 = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
-let d1 = 90;
-let d2 = 45;
-let r1 = 1;
-let r2 = 0.5;
-let px1 = 0;
-let py1 = 0;
-let px2 = 10;
-let py2 = 10;
+// let mtx1 = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1]
+// let mtx2 = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
+// let d1 = 90;
+// let d2 = 45;
+// let r1 = 1;
+// let r2 = 0.5;
+
+// Represents: (x1, y1) & (x2, y2)
+let p1 = [0, 0];   
+let p2 = [10, 10];
 
 // Declaring variables for calculation functions
-let R1 = 3; // inches
-let D1 = 6; // inches
+// let R1 = 3; // inches
+// let D1 = 6; // inches
 
 export default function Tests() {
-  let converedResult1 = convertToRadians(d1);
-  let converedResult2 = convertToRadians(d2);
-  let converedResult3 = convertToDegrees(r1);
-  let converedResult4 = convertToDegrees(r2);
-  let someMatrixResult = multiplyMatrices(mtx1, mtx2);
-  let L1 = coordinatesToL(px1, py1, px2, py2);
-  let area1 = calcAreaR(R1); // Output in sf.
-  let area2 = calcAreaD(D1); // Output in sf.
+  // let convertedResult1 = convertToRadians(d1);
+  // let convertedResult2 = convertToRadians(d2);
+  // let convertedResult3 = convertToDegrees(r1);
+  // let convertedResult4 = convertToDegrees(r2);
+  // let someMatrixResult = multiplyMatrices(mtx1, mtx2);
+  let L1 = coordinatesToL(p1, p2);
+  // let area1 = calcAreaR(R1); // Output in sf.
+  // let area2 = calcAreaD(D1); // Output in sf.
 
-  /* console.log(someMatrixResult);
-  console.log(converedResult1);
-  console.log(converedResult2);
-  console.log(converedResult3);
-  console.log(converedResult4);
-  console.log(area1);
-  console.log(area2);
-  console.log(L1); */
+  //
+  // console.log(someMatrixResult);
+  // console.log(convertedResult1);
+  // console.log(convertedResult2);
+  // console.log(convertedResult3);
+  // console.log(convertedResult4);
+  // console.log(area1);
+  // console.log(area2);
+  console.log(L1); 
+  //
 
   return (
     <>
@@ -52,13 +58,18 @@ export default function Tests() {
         <div className={styles.grid}>
 
           {/* Grid column I */}
-          <div
-            id={styles.data}
-            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle'
-          >
-            poop
+          <div className={styles.card}>
+            <div className={styles.banner}>
+              <h3 className={styles.output}>
+                Input: <span className={styles.focus}> 90&deg; </span>
+              </h3>
+            </div>
+            {/* <div className={styles.banner}>
+              <h3 className={styles.output}>
+                Output: <span className={styles.focus}> {convertedResult1} </span>
+              </h3>
+            </div> */}
           </div>
-
         </div>
       </div>
     </>

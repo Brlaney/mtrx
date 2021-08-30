@@ -8,7 +8,7 @@ export function convertToRadians(angleInDegrees) {
   let final = initial / 180;
 
   // Rounded to whole number
-  let thetaR = Math.round(final); 
+  let thetaR = Math.round(final);
 
   return thetaR;
 }
@@ -24,7 +24,7 @@ export function convertToDegrees(angleInRadians) {
   let final = initial / Math.PI;
 
   // Rounded to whole number
-  let thetaD = Math.round(final); 
+  let thetaD = Math.round(final);
 
   return thetaD;
 }
@@ -61,12 +61,16 @@ export function lengthToUS(length) {
 Converts US length in ft or in to metric m (meters) or cm
   Input: A length measurement in imperial units (US) either ft or in
   Output: Length converted into metric units, m or cm */
-  export function coordinatesToL(x1, y1, x2, y2) {
-    let dx = x2 - x1;
-    let dy = y2 - y1;
+export function coordinatesToL(xy1, xy2) {
+  let x1 = xy1[0];
+  let y1 = xy1[1];
+  let x2 = xy2[0];
+  let y2 = xy2[1];
 
-    let L = Math.sqrt(dx * dx + dy * dy);
-  
-    return L;
-  }
-  
+  let dx = x2 - x1;
+  let dy = y2 - y1;
+
+  let L = Math.sqrt(dx * dx + dy * dy);
+
+  return L;
+}
