@@ -36,6 +36,15 @@
     }
   }
 
+  .section {
+    color: $bg-d;
+    width: 100%;
+    text-align: left;
+    font-size: 1.3rem;
+    margin: 0.4rem 0 0.4rem 0;
+    border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
+  }
+
   #grid {
     width: 100%;
     display: flex;
@@ -44,6 +53,8 @@
     padding: 0.99rem;
 
     #image {
+      max-width: 350px;
+      min-width: 33%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -51,9 +62,8 @@
       border: 1px solid $border-color;
       border-radius: 7px;
       box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-      min-width: 33%;
-      max-width: 300px;
       margin: 0 1rem 0 1rem;
+      padding: 1rem;
       background-color: $bg-d;
 
       .img {
@@ -65,6 +75,7 @@
 
     #image:hover {
       cursor: pointer;
+      border: 1px solid $secondary;
     }
 
     #form {
