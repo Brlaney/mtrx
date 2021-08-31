@@ -22,17 +22,20 @@ const StepOne = (props) => {
       >
         {() => (
           <Form className={styles.form}>
+            <h2 className={styles.label}>
+              Step 1. <span className={styles.span}>System properties</span>  
+            </h2>
             <div className='formDiv'>
               <div className='controls'>
                 <Field
                   id={styles.input}
                   name='m'
-                  className='uk-input uk-width-1-1'
+                  className='uk-input uk-width-1-1 uk-margin-small'
                   type='number'
                   min='1'
                   max='50'
                   step='1'
-                  placeholder='members, m'
+                  placeholder='Number of members'
                 />
                 <ErrorMessage name='members' />
               </div>
@@ -42,22 +45,25 @@ const StepOne = (props) => {
                 <Field
                   id={styles.input}
                   name='n'
-                  className='uk-input uk-width-1-1'
+                  className='uk-input uk-width-1-1 uk-margin-small'
                   type='number'
                   min='1'
                   max='50'
                   step='1'
-                  placeholder='nodes, n'
+                  placeholder='Number of nodes'
                 />
                 <ErrorMessage name='nodes' />
               </div>
             </div>
-            <button
-              type='submit'
-              className='uk-button uk-button-primary'
-            >
-              Continue
-            </button>
+            <div className='formDiv'>
+              <button
+                id={styles.submit}
+                type='submit'
+                className='uk-button uk-button-primary uk-width-1-1 uk-margin-small'
+              >
+                Continue
+              </button>
+            </div>
           </Form>
         )}
       </Formik>

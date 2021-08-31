@@ -68,7 +68,7 @@ const Truss: React.FC<{}> = () => {
         </div>
 
         {/* Container - conditionally render the current form step */}
-        <div className={styles.container}>
+        <div className={styles.grid}>
           <div id={styles.card}>
 
             {/* Step 1 */}

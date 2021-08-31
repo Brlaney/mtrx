@@ -9,60 +9,54 @@
   padding: 0.22rem;
   align-items: center;
   justify-content: center;
-
   .header {
-    margin-bottom: 1rem;
-
+    width: 50vw;
+    margin: 0.65rem 0 1rem 0;
     .title {
       text-align: center;
-      margin: 0.4rem 0 0.2rem 0;
-      color: $text-secondary;
-      font-size: 1.2rem;
-      border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
+      margin: 0.4rem;
+      color: $bg-d;
+      font-size: 1.8rem;
       padding-bottom: 0.34rem;
       .span {
         font-weight: bold;
         color: $secondary;
       }
     }
-
     .currentStep {
-      text-align: center;
-      margin: 0.4rem 0 0.4rem 0;
-      color: $bg-d;
+      text-align: justify;
+      margin: 0.4rem;
+      color: $text-secondary;
       font-size: 1.15rem;
       .span {
         font-weight: bold;
         color: $secondary;
       }
     }
-
     .subtitle {
       text-align: center;
       margin: 0.4rem 0 0.8rem 0;
       color: $text-secondary;
       font-size: 1.2rem;
     }
-
     #back {
-      margin-top: 0.33rem;
-      background-color: $secondary !important;
+      margin: 0.4rem;
+      background-color: $secondary;
       color: $light;
       border: 0;
     }
   }
-
   .section {
+    margin: 0;
     color: $bg-d;
-    width: 100%;
+    width: 90%;
     text-align: left;
     font-size: 1.3rem;
-    margin: 0 0 0.2rem 0;
+    padding: 0 0 0.3rem 0;
     border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
   }
-
   #grid {
-    width: 100vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,19 +72,16 @@
       margin: 0.3rem 0 0.3rem 0;
       padding: 1rem;
       background-color: $bg-d;
-
       .img {
         background-color: transparent;
         background: transparent;
         border: 0;
       }
     }
-
     #image:hover {
       cursor: pointer;
       border: 1px solid $primary;
     }
-
     .form {
       display: flex;
       flex-direction: row;
@@ -101,11 +92,9 @@
       border: 1px solid $border-color;
       border-radius: 7px;
       box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
       #formSelect {
         padding: 0;
         margin: 0.75rem 0 1rem 0;
-
         #selectionTitle {
           font-size: 1rem;
           width: 100%;
@@ -114,12 +103,10 @@
           margin-bottom: 0.33rem;
           border-bottom: 1px solid $bg-m;
         }
-
         #selectionControl {
           padding-top: 0.77rem;
           display: flex;
           justify-content: space-between;
-
           #select {
             #selection {
               padding-top: 1rem;
@@ -127,26 +114,21 @@
           }
         }
       }
-
-      #formDiv {
+      .formDiv {
         padding: 0;
         align-items: center;
         margin: 0.75rem 0 1rem 0;
-
         #label {
           padding: 0.2rem;
           font-size: 1rem;
         }
-
         #controls {
           text-align: center;
-
           #input {
             width: 220px;
             margin: 0.2rem 0 0.2rem 0;
           }
         }
-
         #submit {
           width: 100%;
           max-width: 450px;

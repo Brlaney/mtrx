@@ -21,10 +21,6 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
           <h1 className={styles.title}>
             Matrix structural analysis
           </h1>
-          <h2 className={styles.subtitle}>
-            An app that solves trusses, beams,
-            and frames using the stiffness method
-          </h2>
         </div>
 
         <h2 className={styles.section}>
@@ -46,12 +42,20 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
                 id={styles.image}
                 className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
               >
-                <Image
-                  className={styles.img}
-                  src={choice.path}
-                  width={350}
-                  height={255.5}
-                />
+                <div
+                  className='uk-animation-toggle'
+                  // tabIndex={0}
+                >
+                  <Image
+                    id={styles.img}
+                    className='uk-animation-stroke'
+                    uk-svg='stroke-animation: true'
+                    alt={choice.name}
+                    src={choice.path}
+                    width={350}
+                    height={255.5}
+                  />
+                </div>
               </div>
             </Link>
           ))}
