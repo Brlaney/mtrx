@@ -10,7 +10,7 @@ const Navbar = () => {
         {/* Left-end of navbar */}
         <div id={styles.parent} className='uk-navbar-left'>
           <a id={styles.brand} href='/' className='uk-navbar-item uk-logo uk-margin-small-left'>
-            Next | UiKit
+            Next | Charts
           </a>
 
           {/* Matrix dropdown menu */}

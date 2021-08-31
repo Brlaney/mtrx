@@ -35,30 +35,30 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
         </div>
 
         <h2 className={styles.section}>Select the desired system to solve</h2>
-        
+
         {/* Grid row I - parent */}
         <div
           id={styles.grid}
           className='uk-grid-row uk-grid-row-large uk-child-width-1-1 uk-text-center'
         >
           {choicesList.map((choice: Choice) => (
-            <div
-              key={choice.id}
-              id={styles.image}
-              className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
-            >
-              <Link href={`/matrix/${encodeURIComponent(choice.link)}`}>
+            <Link href={`/matrix/${encodeURIComponent(choice.link)}`}>
+              <div
+                key={choice.id}
+                id={styles.image}
+                className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
+              >
                 <Image
                   className={styles.img}
                   src={choice.path}
                   width={350}
                   height={255.5}
                 />
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
-  
+
       </div>
     </>
   )

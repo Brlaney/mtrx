@@ -23,19 +23,31 @@ export default function Home() {
         <div className={styles.grid}>
 
           {/* Grid column I */}
-          <div 
-            id={styles.image} 
+          <div
+            id={styles.image}
             className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
           >
-            <Image src='/brands/Uikit.png' width={200} height={200} />
+            <Image
+              src='/brands/Uikit.png'
+              width={140}
+              height={140}
+              layout='intrinsic'
+              quality='100'
+            />
           </div>
 
           {/* Grid column II */}
-          <div 
-            id={styles.image} 
+          <div
+            id={styles.image}
             className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
           >
-            <Image src='/brands/chartjs.png' width={200} height={200} />
+            <Image
+              src='/brands/chartjs.png'
+              width={140}
+              height={140}
+              layout='intrinsic'
+              quality='100'
+            />
           </div>
 
           {/* Grid column III */}
@@ -43,30 +55,48 @@ export default function Home() {
             id={styles.image}
             className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
           >
-            <Image src='/brands/React.png' width={200} height={200} />
+            <Image
+              src='/brands/React.png'
+              width={140}
+              height={140}
+              layout='intrinsic'
+              quality='100'
+            />
           </div>
         </div>
 
         {/* Grid row II - children = columns/cards caption text */}
         <div className={styles.grid}>
 
-          {/* Card/column I caption */}
-          <h4 className={styles.uikit}>
-            <span className={styles.company}>Styled with </span>
-             UiKit
-          </h4>
+          {/* Grid column I */}
+          <div
+            id={styles.image}
+            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-dark'
+          >
+            <h4 className={styles.uikit}>
+              UiKit
+            </h4>
+          </div>
 
-          {/* Card/column II caption */}
-          <h4 className={styles.chartjs}>
-            <span className={styles.company}>Visualizations designed using </span>
-             Chart.js
-          </h4>
+          {/* Grid column II */}
+          <div
+            id={styles.image}
+            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-dark'
+          >
+            <h4 className={styles.chartjs}>
+              Chart.js
+            </h4>
+          </div>
 
-          {/* Card/column III caption */}
-          <h4 className={styles.react}>
-            <span className={styles.company}>Developed with </span>
-             React/Next
-          </h4>
+          {/* Grid column III */}
+          <div
+            id={styles.image}
+            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-dark'
+          >
+            <h4 className={styles.react}>
+              React/Next
+            </h4>
+          </div>
         </div>
       </div>
       <Footer />

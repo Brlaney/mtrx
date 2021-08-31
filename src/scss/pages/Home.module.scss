@@ -47,53 +47,42 @@
     }
   }
   .grid {
-    margin-top: 1rem;
     padding: 0;
     display: flex;
     flex-direction: row;
     #image {
       height: 100%;
-      padding: 1rem;
-      margin: 0.75rem;
+      margin: 0.1rem 0.5rem 0.1rem 0.5rem;
       border: 1px solid $bg-m;
       border-radius: 0.75rem;
       background-color: $bg-d;
       box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.166);
-    }
-    .uikit {
-      margin: 0;
-      width: 50%;
-      text-align: center;
-      padding: 0;
-      color: $uikit;
-      font-weight: bold;
-      .company {
-        font-weight: 400;
-        color: $bg-d;
+      .uikit {
+        height: 30px;
+        width: 140px;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 0.6rem;
+        color: $uikit;
+        font-weight: bold;
       }
-    }
-    .chartjs {
-      margin: 0;
-      width: 50%;
-      text-align: center;
-      padding: 0;
-      color: $chartjs;
-      font-weight: bold;
-      .company {
-        font-weight: 400;
-        color: $bg-d;
+      .chartjs {
+        height: 30px;
+        width: 140px;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 0.6rem;
+        color: $chartjs;
+        font-weight: bold;
       }
-    }
-    .react {
-      margin: 0;
-      width: 50%;
-      text-align: center;
-      padding: 0;
-      color: $react;
-      font-weight: bold;
-      .company {
-        font-weight: 400;
-        color: $bg-d;
+      .react {
+        height: 30px;
+        width: 140px;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 0.6rem;
+        color: $react;
+        font-weight: bold;
       }
     }
   }

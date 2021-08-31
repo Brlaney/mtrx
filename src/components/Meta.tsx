@@ -19,7 +19,7 @@ const Meta = ({ title, keywords, description }) => {
 
 Meta.defaultProps = {
   title:
-    'Next | UiKit',
+    'Next | Charts',
   keywords:
     'Brendan Laney, web-development, civil engineer, website design, marketing, advertising, next js, react, dev, coding, programming',
   description:
