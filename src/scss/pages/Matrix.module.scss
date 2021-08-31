@@ -26,12 +26,22 @@
       }
     }
 
+    .currentStep {
+      text-align: center;
+      margin: 0.4rem 0 0.4rem 0;
+      color: $bg-d;
+      font-size: 1.15rem;
+      .span {
+        font-weight: bold;
+        color: $secondary;
+      }
+    }
+
     .subtitle {
       text-align: center;
       margin: 0.4rem 0 0.8rem 0;
       color: $text-secondary;
       font-size: 1.2rem;
-
     }
 
     #back {

@@ -5,20 +5,13 @@ import {
   GetStaticProps,
   InferGetStaticPropsType,
 } from 'next'
-import { server } from '@/lib/config/server'
 import { Choice } from '@/lib/types'
+import { server } from '@/lib/config/server'
 import styles from '@/styles/pages/Matrix.module.scss'
 
-interface Selected {
-  selection: string;
-}
 
 const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [choicesList] = React.useState(choices)
-
-  const [selected, setSelected] = React.useState<Selected>({
-    selection: ''
-  });
 
   return (
     <>
@@ -34,7 +27,9 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
           </h2>
         </div>
 
-        <h2 className={styles.section}>Select the desired system to solve</h2>
+        <h2 className={styles.section}>
+          Select the desired system to solve
+        </h2>
 
         {/* Grid row I - parent */}
         <div
@@ -42,7 +37,10 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
           className='uk-grid-row uk-grid-row-large uk-child-width-1-1 uk-text-center'
         >
           {choicesList.map((choice: Choice) => (
-            <Link href={`/matrix/${encodeURIComponent(choice.link)}`}>
+            <Link
+              href={`/matrix/${encodeURIComponent(choice.link)}`}
+              as={`/matrix/${encodeURIComponent(choice.link)}`}
+            >
               <div
                 key={choice.id}
                 id={styles.image}
