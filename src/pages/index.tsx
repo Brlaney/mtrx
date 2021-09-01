@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Footer from '@/components/Footer'
 import styles from '@/styles/pages/Home.module.scss'
 
-
 export default function Home() {
   return (
     <>
@@ -12,10 +11,10 @@ export default function Home() {
         {/* Homepage header container */}
         <div className={styles.header}>
           <h1 className={styles.title}>Welcome, to
-            <span id={styles.next}> Next Charts</span>
+            <span id={styles.next}> Mtrx</span>
           </h1>
           <h4 className={styles.subtitle}>
-            A sample Next app that features stunning Charts
+            A web application that implements the matrix displacement method
           </h4>
         </div>
 

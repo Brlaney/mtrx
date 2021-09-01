@@ -1,6 +1,6 @@
 import Link from 'next/link'
+import Brand from '@/components/buttons/Brand'
 import styles from '@/styles/components/Navbar.module.scss'
-
 
 const Navbar = () => {
   return (
@@ -10,24 +10,39 @@ const Navbar = () => {
       uk-sticky='sel-target: .uk-navbar-container;
        cls-active: uk-navbar-sticky;'
     >
-      <nav id={styles.navcontainer} className='uk-navbar-container'>
+      <nav
+        id={styles.navcontainer}
+        className='uk-navbar-container'
+        uk-navbar='true'
+      >
 
-        {/* Navbar title/brand */}
-        <div id={styles.parent} className='uk-navbar-left'>
-          <a id={styles.brand} href='/' className='uk-navbar-item uk-logo uk-margin-small-left'>
-            Next | Charts
+        {/* Navbar title/brand - left-end of navbar */}
+        <div
+          id={styles.parent}
+          className='uk-navbar-left uk-margin-large-left'
+        >
+          <a
+            id={styles.brand}
+            href='/'
+            className='uk-navbar-item uk-logo uk-margin-large-left'
+          ><Brand /> Mtrx
           </a>
+        </div>
 
-          {/* Navbar links */}
-          <ul id={styles.list} className='uk-navbar-nav'>
+        {/* Navbar links - right-end of navbar */}
+        <div className='uk-navbar-right uk-margin-large-right'>
+          <ul
+            id={styles.list}
+            className='uk-navbar-nav uk-margin-large-right'
+          >
             <li id={styles.listItem} className='uk-*'>
               <Link href='/matrix'>
-                <a className={styles.navlink}>Matrix</a>
+                <a id={styles.link}>Matrix</a>
               </Link>
             </li>
             <li id={styles.listItem} className='uk-*'>
               <Link href='/charts'>
-                <a className={styles.navlink}>Charts</a>
+                <a id={styles.link}>Charts</a>
               </Link>
             </li>
           </ul>

@@ -6,23 +6,35 @@ import { Choice } from '@/lib/types'
 import { server } from '@/lib/config/server'
 import styles from '@/styles/pages/Matrix.module.scss'
 
-
 const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const [choicesList] = React.useState(choices)
+  const [hovering, setHovering] = React.useState<boolean>();
+  const [choicesList] = React.useState(choices);
+  const [name, setName] = React.useState('');
+
+  const handleMouseEnter = () => setHovering(true);
+  const handleMouseLeave = () => setHovering(false);
+
+  // const handleHover = (choice: string) => {
+  //   setName(choice);
+  // } 
 
   return (
     <>
       {/* Page parent container and header */}
       <div className={styles.parent}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>
-            Matrix structural analysis
-          </h1>
-        </div>
 
-        <h2 className={styles.section}>
-          Select the desired system to solve
-        </h2>
+        {/* Header - conditionally render */}
+        {name && (
+          <h2 className={styles.heading}>
+            Select a system <span className={styles.conditional}> {name}</span>
+          </h2>
+        )}
+
+        {!name && (
+          <h2 className={styles.heading}>
+            Select a system
+          </h2>
+        )}
 
         {/* Grid row I - parent */}
         <div
@@ -46,6 +58,8 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
                   src={choice.path}
                   width={200}
                   height={164.25}
+                  onMouseEnter={() => setName(name)}
+                  onMouseLeave={() => setName('')}
                 />
               </div>
             </Link>

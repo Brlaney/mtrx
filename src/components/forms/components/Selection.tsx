@@ -1,5 +1,5 @@
 import React from 'react'
-import { FieldProps, getIn } from 'formik'
+import { FieldProps } from 'formik'
 
 export const Selection: React.FC<
   FieldProps & {
@@ -7,8 +7,6 @@ export const Selection: React.FC<
     options: Array<{ label: string; value: string }>;
   }
 > = ({ field, form, label, options, ...props }) => {
-  const errorText = getIn(form.touched, field.name) && getIn(form.errors, field.name);
-
   return (
     <>
       <select

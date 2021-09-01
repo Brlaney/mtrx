@@ -2,7 +2,6 @@ import StackedBarGraph from '@/components/graphs/StackedBarGraph'
 import GoBack from '@/components/buttons/GoBack'
 import styles from '@/styles/pages/Charts.module.scss'
 
-
 export default function StackedBarCharts() {
   const endpoint = '/charts';
 

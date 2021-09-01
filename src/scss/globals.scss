@@ -71,3 +71,12 @@ h1, h2, h3, h4, h5, h6 {
 #goback:hover {
   transform: scale(1.1);
 }
+
+.brandIcon {
+  font-weight: 400;
+  transition: transform .3s;
+}
+
+.brandIcon:hover {
+  transform: scale(1.2);
+}

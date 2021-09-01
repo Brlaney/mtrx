@@ -1,17 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
-import {
-  GetStaticProps,
-  GetStaticPaths,
-} from 'next'
-import { server } from '@/lib/config/server'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import { locations } from '@/lib/data/locations'
+// import { Params } from 'next/dist/server/router'
+import { server } from '@/lib/config/server'
+import LocationBarChart from '@/components/graphs/LocationBarChart'
 import styles from '@/styles/pages/Locations.module.scss'
 
-import LocationBarChart from '@/components/graphs/LocationBarChart'
-import { Params } from 'next/dist/server/router'
 
-export const getStaticProps: GetStaticProps<Params> = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const location = locations.filter(p => p.id.toString() == location.id)
 
   const index = location.id - 1

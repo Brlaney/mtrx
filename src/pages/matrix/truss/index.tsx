@@ -6,7 +6,6 @@ import styles from '@/styles/pages/Matrix.module.scss'
 
 const Truss: React.FC<{props}> = () => {
   const endpoint = '/matrix';
-  const step = 1;
   const [currentStep, setCurrentStep] = React.useState(0);
   const [data, setData] = React.useState({
     nodes: '',

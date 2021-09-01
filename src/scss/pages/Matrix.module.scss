@@ -11,10 +11,10 @@
 }
 
 .parent {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  height: 80vh;
+  display: block;
+  // flex-direction: column;
+  // flex: 1;
   margin: 0.2rem;
   padding: 0.22rem;
   align-items: center;
@@ -50,12 +50,12 @@
       font-size: 1.2rem;
     }
   }
-  .section {
-    margin: 0;
+  .heading {
+    margin: 1.3rem 0 0 0;
     color: $bg-d;
     width: 50%;
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 0 0 0.3rem 0;
     border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
   }

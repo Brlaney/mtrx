@@ -1,6 +1,5 @@
 ﻿import Head from 'next/head'
 
-
 const Meta = ({ title, keywords, description }) => {
   return (
     <Head>
@@ -11,7 +10,7 @@ const Meta = ({ title, keywords, description }) => {
       <meta name='keywords' content={keywords} />
       <meta name='description' content={description} />
       <meta charSet='utf-8' />
-      <link rel='icon' href='/next-uikit-charts.svg' />
+      <link rel='icon' href='/matrix.svg' />
       <title>{title}</title>
     </Head>
   )
@@ -19,7 +18,7 @@ const Meta = ({ title, keywords, description }) => {
 
 Meta.defaultProps = {
   title:
-    'Next | Charts',
+    'Mtrx',
   keywords:
     'Brendan Laney, web-development, civil engineer, website design, marketing, advertising, next js, react, dev, coding, programming',
   description:

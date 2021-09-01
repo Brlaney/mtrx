@@ -1,29 +1,37 @@
 @import '../theme/theme';
 
-#navbar {
-  #navcontainer {
-    background-color: $bg-d !important;
-    position: sticky;
-    border-bottom: '1px solid $text-light';
-    #parent {
-      #brand {
-        padding-left: 0.4rem;
-        font-size: 1.85rem;
-        color: $border-color;
-      }
-      #list {
-        font-size: 2rem;
-        #listItem {
-          margin: 0;
-          padding: 0 0.1rem 0 0.2rem;
-          .navLink {
-            font-weight: bold;
-            color: $bg-dark;
-            font-size: 2rem;
-          }
-        }
-      }
-    }
-  }
+#navcontainer {
+  position: sticky;
+  background-color: $bg-d;
+  border-bottom: '1px solid $text-light';
+  display: flex;
+  flex-direction: row;
 }
-  
+
+#brand {
+  padding-left: 0.4rem;
+  font-size: 2rem;
+  color: $border-color;
+}
+
+#brand:hover {
+  text-decoration: underline;
+}
+
+#listItem {
+  margin: 0 1rem 0 0;
+  padding: 0;
+}
+
+.navLink {
+  font-weight: bold;
+  color: $bg-dark;
+}
+
+#list {
+  font-size: 2rem;
+}
+
+#link {
+  font-size: 1rem;
+}
