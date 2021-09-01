@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Choice } from '@/lib/types'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { server } from '@/lib/config/server'
+import { Choice } from '@/lib/types'
 import styles from '@/styles/pages/Matrix.module.scss'
 
 const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => {

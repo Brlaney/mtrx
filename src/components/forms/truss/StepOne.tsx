@@ -3,7 +3,7 @@ import * as yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import Forward from '@/components/buttons/Forward'
 import { Selection } from '../components/Selection'
-import { trussCheck } from '@/lib/utils/matrix/calculate'
+// import { trussCheck } from '@/lib/utils/matrix/calculate'
 import styles from '@/styles/components/Steps.module.scss'
 
 const StepOne = (props) => {
@@ -12,13 +12,11 @@ const StepOne = (props) => {
   };
 
   const stepOneSchema = yup.object({
-    nodes: yup.number().required().min(1).max(50).label('Nodes'),
-    members: yup.number().required().min(1).max(50).label('Members'),
-    reactions: yup.number().required().min(0).max(20).label('Reactions'),
-    units: yup.string().required().label('Units'),
+    nodes: yup.number().required().min(1).max(50),
+    members: yup.number().required().min(1).max(50),
+    reactions: yup.number().required().min(0).max(20),
+    units: yup.string().required(),
   });
-
-  console.log(props.step)
 
   return (
     <>
@@ -99,6 +97,7 @@ const StepOne = (props) => {
                   id={styles.input}
                   className='uk-select'
                   options={[
+                    { label: '', value: '' },
                     { label: 'Imperial (US)', value: 'imperial' },
                     { label: 'Metric (SI)', value: 'metric' }
                   ]}

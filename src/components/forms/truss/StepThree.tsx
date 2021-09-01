@@ -7,70 +7,49 @@ import {
   Form,
   Field,
 } from 'formik'
-// import { Selection } from '../components/Selection'
+import { Selection } from '../components/Selection'
 import { SelectOne } from '../components/SelectOne'
 import styles from '@/styles/components/Steps.module.scss'
 
-const imperialL = [
-  { label: 'ft', value: 'feet' },
-  { label: 'in', value: 'inches' },
-];
-
-const metricL = [
-  { label: 'm', value: 'meter' },
-  { label: 'cm', value: 'centimeter' },
-];
-
-const imperialF = [
-  { label: 'lbs', value: 'lbs' },
-  { label: 'kips', value: 'kips' },
-];
-
-const metricF = [
-  { label: 'N', value: 'newtons' },
-  { label: 'KN', value: 'kilonewtons' },
-];
-
-const StepTwo = (props) => {
+const StepThree = (props) => {
   const handleSubmit = (values) => {
-    props.next(values);
+    props.next(values, true);
   };
 
-  const [checkUnits, setCheckUnits] = React.useState();
-
-  const stepTwoSchema = yup.object({
-    lengthUnits: yup.string().required(),
-    forceUnits: yup.string().required(),
+  const StepThreeSchema = yup.object({
+    units: yup.string().required().label('Units'),
   });
-
-  console.log(props.data.units);
 
   return (
     <>
       <Formik
-        validationSchema={stepTwoSchema}
+        validationSchema={StepThreeSchema}
         initialValues={props.data}
         onSubmit={handleSubmit}
       >
         {({ values }) => (
           <div className={styles.form}>
             <Form className='uk-grid-small' uk-grid='true'>
-
-              {/* Header */}
               <h2 className={styles.label}>
-                Step 2. <span className={styles.span}>Specify units</span>
+                Step 2. <span className={styles.span}>Node coordinates</span>
               </h2>
-
-              {/* Input units for length */}
-              <div className='uk-width-1-3'>
-                <h6 className={styles.field}>Length/coordinates</h6>
+              <div className='uk-width-1-1'>
+                <Field
+                  name='units'
+                  id={styles.input}
+                  placeholder='Select units'
+                  className='uk-select uk-width-1-1'
+                  options={[
+                    { label: 'Imperial (US)', value: 'imperial' },
+                    { label: 'Metric (SI)', value: 'metric' }
+                  ]}
+                  component={Selection}
+                />
               </div>
-
-              <div className='uk-width-2-3'>
+              <div className='uk-width-1-1'>
                 <Field
                   name='length'
                   id={styles.input}
-                  // placeholder='Select units'
                   className='uk-margin'
                   options={[
                     { label: 'ft', value: 'feet' },
@@ -81,8 +60,6 @@ const StepTwo = (props) => {
                   component={SelectOne}
                 />
               </div>
-
-
               <div className='uk-width-1-1'>
                 <button
                   id={styles.iconButton}
@@ -100,7 +77,6 @@ const StepTwo = (props) => {
                   <Forward props={props} />
                 </button>
               </div>
-
             </Form>
           </div>
         )}
@@ -109,4 +85,4 @@ const StepTwo = (props) => {
   )
 }
 
-export default StepTwo
+export default StepThree

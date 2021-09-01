@@ -11,6 +11,8 @@
 }
 
 .parent {
+  display: flex;
+  flex-direction: column;
   margin: 1.3rem 0.2rem 0.2rem 0.2rem;
   padding: 0.22rem;
   align-items: center;
