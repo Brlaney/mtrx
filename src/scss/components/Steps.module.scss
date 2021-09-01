@@ -4,47 +4,40 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  width: 420px;
+  max-width: 600px;
+  min-width: 400px;
   min-height: 300px;
-  margin-top: 1rem;
   padding: 0 2rem 0 2rem;
   justify-content: center;
-  border: 1px solid $border-color;
+  align-items: center;
   border-radius: 7px;
+  margin-top: 1rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    .label {
-      color: $text-secondary;
-      font-size: 1.5rem;
-      text-align: center;
-      margin-bottom: 0.8rem;
-      padding-bottom: 0.34rem; 
-      border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
-      .span {
-        font-weight: bold;
-        color: $secondary;
-      }
-    }
-  .formDiv {
-    display: flex;
-    flex-direction: row;
+  .label {
     width: 100%;
-    padding: 0;
-    align-items: center;
-    .controls {
-      text-align: center;
-      #input {
-        margin: 0.2rem 0 0.2rem 0;
-      }
-      #submit {
-        width: 100%;
-        max-width: 450px;
-        border-radius: 5px;
-        background-color: $secondary;
-        margin: 1rem 0 1.2rem 0;
-        padding: 0.4rem;
-        color: $white;
-      }
+    margin: 1.2rem 0 0 0;
+    color: $text-secondary;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: justify;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.34rem;
+    border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
+    .span {
+      font-weight: 400;
+      color: $secondary;
     }
   }
+  #iconButton {
+    align-self: flex-start;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color:transparent;
+  }
+}
+
+#input {
+  margin: 0.6rem 0 0.3rem 0;
 }

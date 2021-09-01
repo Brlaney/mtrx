@@ -2,7 +2,6 @@
 import Navbar from './Navbar'
 import styles from '@/styles/components/Layout.module.scss'
 
-
 const Layout = ({ children }) => {
   return (
     <>

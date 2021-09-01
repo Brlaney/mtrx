@@ -15,7 +15,7 @@ import {
   beamK
 } from '@/lib/utils/matrix/transform'
 
-import styles from '@/styles/pages/Test.module.scss'
+import styles from '@/styles/pages/Tests.module.scss'
 
 
 // Declaring variables for conversion functions

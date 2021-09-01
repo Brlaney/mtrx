@@ -1,5 +1,15 @@
 ﻿@import '../theme/theme';
 
+#back {
+  position: absolute;
+  margin: 0.4rem;
+  background-color: $secondary;
+  color: $light;
+  border: 0;
+  left: 2%;
+  top: 10%;
+}
+
 .parent {
   height: 100%;
   display: flex;
@@ -38,12 +48,6 @@
       margin: 0.4rem 0 0.8rem 0;
       color: $text-secondary;
       font-size: 1.2rem;
-    }
-    #back {
-      margin: 0.4rem;
-      background-color: $secondary;
-      color: $light;
-      border: 0;
     }
   }
   .section {

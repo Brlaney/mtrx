@@ -10,7 +10,7 @@
   justify-content: center;
   position: absolute;
   background-color: $bg-d;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0 2rem 0;
   .link {
     padding: 0.8rem 0 0 0;
     margin: 0;
@@ -18,23 +18,23 @@
     font-size: 1.15rem;
     text-decoration: none;
     #span {
-      color: $primary !important;
+      color: $ui-primary;
       margin: 0;
       padding: 0.35rem;
     }
     #span:hover {
       text-decoration: underline;
-      text-decoration-color: $primary;
+      text-decoration-color: $ui-primary;
       cursor: pointer;
     }
     #tests {
-      color: $chartjs !important;
+      color: $ui-primary;
       margin: 0 0 0 0.44rem;
       padding: 0.35rem;
     }
     #tests:hover {
       text-decoration: underline;
-      text-decoration-color: $chartjs;
+      text-decoration-color: $ui-primary;
       cursor: pointer;
     }
   }

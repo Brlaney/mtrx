@@ -9,13 +9,14 @@
   width: 100vw;
   color: $bg-d;
   .header {
-    border-bottom: calc(0.2px + 0.05em) solid #e5e5e5;
     margin: 1.22rem 0 1.22rem 0;
     .title {
-      letter-spacing: 0.1rem;
-      font-size: 3.5rem;
       color: $bg-d;
       margin-bottom: 0;
+      padding-bottom: 0.3rem;
+      font-size: 3.5rem;
+      letter-spacing: 0.1rem;
+      border-bottom: calc(0.2px + 0.05rem) solid #e5e5e5;
       #next {
         color: $secondary;
         font-weight: bold;

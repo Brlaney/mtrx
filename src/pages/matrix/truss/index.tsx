@@ -1,15 +1,7 @@
 import * as React from 'react'
 import Link from 'next/link'
-import * as Yup from 'yup'
-import {
-  Formik,
-  Form,
-  Field,
-  ErrorMessage
-} from 'formik'
-import StepOne from '@/components/steps/StepOne'
-import StepTwo from '@/components/steps/StepTwo'
-
+import StepOne from '@/components/forms/StepOne'
+import StepTwo from '@/components/forms/StepTwo'
 import styles from '@/styles/pages/Matrix.module.scss'
 
 const Truss: React.FC<{}> = () => {
@@ -48,23 +40,17 @@ const Truss: React.FC<{}> = () => {
 
   return (
     <>
+      <Link href='/matrix/'>
+        <button
+          id={styles.back}
+          className='uk-button uk-button-default uk-button-small uk-align-left'
+        >
+          back
+        </button>
+      </Link>
       {/* Page parent container and header */}
       <div className={styles.parent}>
         <div className={styles.header}>
-          <h2 className={styles.title}>
-            Your structural system: <span className={styles.span}>Truss</span>
-          </h2>
-          <h3 className={styles.currentStep}>
-            Currently on step: <span className={styles.span}>{correctedStep}</span>
-          </h3>
-          <Link href='/matrix/'>
-            <button
-              id={styles.back}
-              className='uk-button uk-button-default uk-button-small'
-            >
-              back
-            </button>
-          </Link>
         </div>
 
         {/* Container - conditionally render the current form step */}

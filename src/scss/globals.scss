@@ -58,3 +58,14 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+// Misc. global styles
+.backIcon {
+  color: $secondary;
+  font-weight: 400;
+}
+
+.forwardIcon {
+  color: $secondary;
+  font-weight: 400;
+}

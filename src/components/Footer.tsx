@@ -15,7 +15,7 @@ const Footer = () => {
               id={styles.span}
               target='_blank'
               rel='noopener noreferrer'
-              className='uk-text-primary uk-padding-small uk-text-large'
+              className='uk-text-lead'
             >
               Brendan Laney
             </a>
@@ -28,7 +28,7 @@ const Footer = () => {
               id={styles.tests}
               target='_blank'
               rel='noopener noreferrer'
-              className='uk-text-primary uk-padding-small uk-text-large'
+              className='uk-text-lead'
             >
               Tests
             </a>
