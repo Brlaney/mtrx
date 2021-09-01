@@ -27,7 +27,7 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
         {/* Grid row I - parent */}
         <div
           id={styles.grid}
-          className='uk-grid-row uk-grid-row-large uk-child-width-1-1 uk-text-center'
+          className='uk-grid-row uk-grid-row uk-child-width-1-1'
         >
           {choicesList.map((choice: Choice) => (
             <Link
@@ -37,22 +37,16 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
             >
               <div
                 id={styles.image}
-                className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
+                className='uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
               >
-                <div
-                  className='uk-animation-toggle'
-                  tabIndex={0}
-                >
-                  <Image
-                    id={styles.img}
-                    className='uk-animation-stroke'
-                    uk-svg='stroke-animation: true'
-                    alt={choice.name}
-                    src={choice.path}
-                    width={350}
-                    height={255.5}
-                  />
-                </div>
+                <Image
+                  layout='fixed'
+                  className={styles.img}
+                  alt={choice.name}
+                  src={choice.path}
+                  width={200}
+                  height={164.25}
+                />
               </div>
             </Link>
           ))}

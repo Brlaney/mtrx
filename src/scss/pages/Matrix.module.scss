@@ -53,38 +53,39 @@
   .section {
     margin: 0;
     color: $bg-d;
-    width: 90%;
+    width: 50%;
     text-align: left;
     font-size: 1.3rem;
     padding: 0 0 0.3rem 0;
     border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
   }
   #grid {
-    width: 90vw;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.99rem;
     flex-wrap: wrap;
     #image {
+      height: 200px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
       border-radius: 7px;
       box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-      margin: 0.3rem 0 0.3rem 0;
+      margin: 0.25rem 0.3rem 0.25rem 0.3rem;
       padding: 1rem;
       background-color: $bg-d;
+      transition: transform .3s;
       .img {
-        background-color: transparent;
-        background: transparent;
         border: 0;
+        padding: 0.5rem;
       }
     }
     #image:hover {
       cursor: pointer;
-      border: 1px solid $primary;
+      border: 2px solid $secondary;
+      transform: scale(1.02);
     }
     .form {
       display: flex;
