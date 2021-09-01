@@ -13,7 +13,6 @@ const Navbar = () => {
       <nav
         id={styles.navcontainer}
         className='uk-navbar-container'
-        uk-navbar='true'
       >
 
         {/* Navbar title/brand - left-end of navbar */}
