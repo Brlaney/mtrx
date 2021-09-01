@@ -1,11 +1,15 @@
 import Trusses from '@/components/matrix/Trusses'
-import Link from 'next/link'
+import GoBack from '@/components/buttons/GoBack'
 import styles from '@/styles/pages/Charts.module.scss'
 
-
 export default function Truss() {
+  const endpoint = '/charts';
+
   return (
     <>
+      {/* Render the back button component */}
+      <GoBack link={endpoint} />
+
       {/* Page parent container */}
       <div className={styles.container}>
 
@@ -14,14 +18,6 @@ export default function Truss() {
           <h1 className={styles.title}>
             Truss example
           </h1>
-          <Link href='/charts'>
-            <button
-              id={styles.back}
-              className='uk-button uk-button-default uk-button-small'
-            >
-              back
-            </button>
-          </Link>
         </div>
 
         {/* Divider */}

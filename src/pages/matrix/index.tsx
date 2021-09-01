@@ -1,10 +1,7 @@
 import * as React from 'react'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  GetStaticProps,
-  InferGetStaticPropsType,
-} from 'next'
 import { Choice } from '@/lib/types'
 import { server } from '@/lib/config/server'
 import styles from '@/styles/pages/Matrix.module.scss'
@@ -34,17 +31,17 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
         >
           {choicesList.map((choice: Choice) => (
             <Link
+              key={choice.id}
               href={`/matrix/${encodeURIComponent(choice.link)}`}
               as={`/matrix/${encodeURIComponent(choice.link)}`}
             >
               <div
-                key={choice.id}
                 id={styles.image}
                 className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
               >
                 <div
                   className='uk-animation-toggle'
-                  // tabIndex={0}
+                  tabIndex={0}
                 >
                   <Image
                     id={styles.img}
@@ -60,7 +57,6 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
             </Link>
           ))}
         </div>
-
       </div>
     </>
   )

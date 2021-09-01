@@ -5,7 +5,7 @@ const Forward = ({props}) => {
     <>
       <IoChevronForwardCircleOutline
         className='forwardIcon'
-        size='2.5rem'
+        size='3rem'
       />
     </>
   )

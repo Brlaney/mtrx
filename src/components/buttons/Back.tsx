@@ -5,7 +5,7 @@ const Back = ({props}) => {
     <>
       <IoChevronBackCircleOutline
         className='backIcon'
-        size='2.5rem'
+        size='3rem'
       />
     </>
   )

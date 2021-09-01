@@ -1,12 +1,21 @@
 import { IoReturnUpBackOutline } from 'react-icons/io5'
+import Link from 'next/link'
 
-const GoBack = ({props}) => {
+const GoBack = ({ link }) => {
   return (
     <>
-      <IoReturnUpBackOutline
-        className='backIcon'
-        size='2.5rem'
-      />
+      <Link href={link}>
+        <button
+          id='goback'
+          className='uk-button uk-button-default uk-button-small uk-align-left'
+        >
+          <IoReturnUpBackOutline
+            className='backIcon'
+            size='1.5rem'
+            color='white'
+          />
+        </button>
+      </Link>
     </>
   )
 }

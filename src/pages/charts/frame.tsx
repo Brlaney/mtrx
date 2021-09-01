@@ -1,11 +1,15 @@
 import Frames from '@/components/matrix/Frames'
 import Link from 'next/link'
 import styles from '@/styles/pages/Charts.module.scss'
-
+import GoBack from '@/components/buttons/GoBack'
 
 export default function Beam() {
+  const endpoint = '/charts';
   return (
     <>
+      {/* Render the back button component */}
+      <GoBack link={endpoint} />
+
       {/* Page parent container */}
       <div className={styles.container}>
 

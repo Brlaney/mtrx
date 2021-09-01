@@ -1,11 +1,14 @@
 import Beams from '@/components/matrix/Beams'
-import Link from 'next/link'
+import GoBack from '@/components/buttons/GoBack'
 import styles from '@/styles/pages/Charts.module.scss'
 
-
 export default function Beam() {
+  const endpoint = '/charts';
   return (
     <>
+      {/* Render the back button component */}
+      <GoBack link={endpoint} />
+
       {/* Page parent container */}
       <div className={styles.container}>
 
@@ -14,14 +17,6 @@ export default function Beam() {
           <h1 className={styles.title}>
             Continuous beam graph
           </h1>
-          <Link href='/charts'>
-            <button
-              id={styles.back}
-              className='uk-button uk-button-default uk-button-small'
-            >
-              back
-            </button>
-          </Link>
         </div>
 
         {/* Divider */}

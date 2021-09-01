@@ -8,8 +8,8 @@ import {
   Field,
   // ErrorMessage
 } from 'formik'
-import { Selection } from './components/Selection'
-import { SelectOne } from './components/SelectOne'
+import { Selection } from '../components/Selection'
+import { SelectOne } from '../components/SelectOne'
 import styles from '@/styles/components/Steps.module.scss'
 
 const StepTwo = (props) => {

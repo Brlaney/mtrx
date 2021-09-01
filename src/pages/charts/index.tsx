@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { locations as locationData } from '@/lib/data/locations'
 import styles from '@/styles/pages/Charts.module.scss'
 
-
 export default function Charts() {
   const [locations] = useState(locationData)
 
@@ -30,7 +29,7 @@ export default function Charts() {
             <Link href='/charts/horizontal-bar-charts'>
               <button
                 id={styles.button}
-                className='uk-button uk-button-primary uk-button uk-width-1-2'
+                className='uk-button uk-button-primary uk-button uk-width-1-1'
               >
                 Total US stats
               </button>
@@ -40,7 +39,7 @@ export default function Charts() {
             <Link href='/charts/stacked-bar-charts'>
               <button
                 id={styles.button}
-                className='uk-button uk-button-primary uk-button uk-width-1-2'
+                className='uk-button uk-button-primary uk-button uk-width-1-1'
               >
                 Highest impact states
               </button>
@@ -50,7 +49,7 @@ export default function Charts() {
             <Link href='/charts/truss'>
               <button
                 id={styles.button}
-                className='uk-button uk-button-primary uk-button uk-width-1-2'
+                className='uk-button uk-button-primary uk-button uk-width-1-1'
               >
                 Truss graph
               </button>
@@ -60,7 +59,7 @@ export default function Charts() {
             <Link href='/charts/beam'>
               <button
                 id={styles.button}
-                className='uk-button uk-button-primary uk-button uk-width-1-2'
+                className='uk-button uk-button-primary uk-button uk-width-1-1'
               >
                 Beam graph
               </button>
@@ -70,7 +69,7 @@ export default function Charts() {
             <Link href='/charts/frame'>
               <button
                 id={styles.button}
-                className='uk-button uk-button-primary uk-button uk-width-1-2'
+                className='uk-button uk-button-primary uk-button uk-width-1-1'
               >
                 Frame graph
               </button>

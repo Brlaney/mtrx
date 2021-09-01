@@ -1,5 +1,5 @@
-import React from 'react';
-import { FieldProps, getIn } from 'formik';
+import React from 'react'
+import { FieldProps, getIn } from 'formik'
 
 export const SelectOne: React.FC<
   FieldProps & {
@@ -17,13 +17,13 @@ export const SelectOne: React.FC<
       {...field}
     >
       {options.map(op => (
-        <div className='uk-width-1-4'>
-        <label key={op.value}>
+        <div key={op.value} className='uk-width-1-4'>
+        <label>
           <input
+            name={op.value}
             value={op.value}
             className='uk-radio uk-margin'
             type='radio'
-            name={op.value}
           />
           {op.label}
           </label>

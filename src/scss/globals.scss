@@ -11,35 +11,11 @@ body {
 
 a { font-family: $tertiary-font; }
 
-* {
-  box-sizing: border-box;
-  font-family: inherit;
-}
+* { box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 {
   color: $bg-d;
   font-family: $secondary-font;
-}
-
-#category {
-  font-family: $tertiary-font;
-  font-weight: 500;
-}
-
-#banner {
-  margin: 20px;
-  height: 800px;
-  font-family: $secondary-font;
-}
-
-.uk-navbar-container {
-  background: #fff;
-  font-family: $tertiary-font;
-}
-
-.uk-navbar-container {
-  background: $bg-d;
-  font-family: $tertiary-font;
 }
 
 /* Scrollbar styles */
@@ -59,13 +35,39 @@ h1, h2, h3, h4, h5, h6 {
   background: #555;
 }
 
-// Misc. global styles
+// Misc. global styles - button components
 .backIcon {
   color: $secondary;
   font-weight: 400;
+  transition: transform .3s;
+}
+
+.backIcon:hover {
+  transform: scale(1.15);
 }
 
 .forwardIcon {
   color: $secondary;
   font-weight: 400;
+  transition: transform .3s;
+}
+
+.forwardIcon:hover {
+  transform: scale(1.15);
+}
+
+#goback {
+  position: absolute;
+  margin: 0.4rem;
+  background-color: $secondary;
+  color: $light;
+  border: 0;
+  border-radius: 3px;
+  left: 2%;
+  top: 10%;
+  transition: transform .3s;
+}
+
+#goback:hover {
+  transform: scale(1.1);
 }

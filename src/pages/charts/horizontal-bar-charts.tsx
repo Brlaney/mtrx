@@ -1,11 +1,13 @@
 import HorizontalBarGraph from '@/components/graphs/HorizontalBarGraph'
-import Link from 'next/link'
+import GoBack from '@/components/buttons/GoBack'
 import styles from '@/styles/pages/Charts.module.scss'
 
-
 export default function HorizontalBarCharts() {
+  const endpoint = '/charts';
+  
   return (
     <>
+      <GoBack link={endpoint} />
       {/* Page parent container */}
       <div className={styles.container}>
 
@@ -14,14 +16,6 @@ export default function HorizontalBarCharts() {
           <h1 className={styles.title}>
             Overall abortion stats
           </h1>
-          <Link href='/charts'>
-            <button
-              id={styles.back}
-              className='uk-button uk-button-default uk-button-small'
-            >
-              back
-            </button>
-          </Link>
         </div>
 
         {/* Divider */}

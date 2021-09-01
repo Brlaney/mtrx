@@ -7,7 +7,7 @@
   max-width: 600px;
   min-width: 400px;
   min-height: 300px;
-  padding: 0 2rem 0 2rem;
+  padding: 0.5rem 2rem 1.2rem 2rem;
   justify-content: center;
   align-items: center;
   border-radius: 7px;
@@ -16,7 +16,7 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   .label {
     width: 100%;
-    margin: 1.2rem 0 0 0;
+    margin: 1.6rem 1.2rem 1.2rem 1.2rem;
     color: $text-secondary;
     font-size: 1.5rem;
     font-weight: bold;
@@ -40,4 +40,13 @@
 
 #input {
   margin: 0.6rem 0 0.3rem 0;
+}
+
+
+.field {
+  color: $text-secondary;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1.1rem;
+  text-align: left;
 }

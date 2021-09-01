@@ -1,10 +1,12 @@
 import * as React from 'react'
-import Link from 'next/link'
-import StepOne from '@/components/forms/StepOne'
-import StepTwo from '@/components/forms/StepTwo'
+import StepOne from '@/components/forms/truss/StepOne'
+import StepTwo from '@/components/forms/truss/StepTwo'
+import GoBack from '@/components/buttons/GoBack'
 import styles from '@/styles/pages/Matrix.module.scss'
 
-const Truss: React.FC<{}> = () => {
+const Truss: React.FC<{props}> = () => {
+  const endpoint = '/matrix';
+  const step = 1;
   const [currentStep, setCurrentStep] = React.useState(0);
   const [data, setData] = React.useState({
     nodes: '',
@@ -32,22 +34,12 @@ const Truss: React.FC<{}> = () => {
     setCurrentStep((prev) => prev - 1);
   };
 
-  console.log('data', data);
-
-  // Since program begins at 0, add 1 to the 
-  // currentStep for a better user-experience.
-  const correctedStep = currentStep + 1;
+  // Console the data to test the output
+  // console.log('data', data);
 
   return (
     <>
-      <Link href='/matrix/'>
-        <button
-          id={styles.back}
-          className='uk-button uk-button-default uk-button-small uk-align-left'
-        >
-          back
-        </button>
-      </Link>
+      <GoBack link={endpoint} />
       {/* Page parent container and header */}
       <div className={styles.parent}>
         <div className={styles.header}>
