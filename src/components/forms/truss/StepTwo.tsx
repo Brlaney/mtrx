@@ -1,6 +1,5 @@
 import * as React from 'react'
 import * as yup from 'yup'
-import { imperialL, metricL, imperialF, metricF } from '@/lib/config/forms/truss'
 import { Dotnav } from '@/components/buttons/Dotnav'
 import { SelectOne } from '../components/SelectOne'
 import { Formik, Form, Field } from 'formik'
@@ -53,8 +52,7 @@ const StepTwo = (props) => {
                   name='length'
                   id={styles.input}
                   className='uk-radio'
-                  options={props.data.units === 'imperial' ? imperialL : metricL}
-                  component={SelectOne}
+                  // component={SelectOne}
                 />
               </div>
 
@@ -67,8 +65,7 @@ const StepTwo = (props) => {
                   name='length'
                   id={styles.input}
                   className='uk-radio uk-margin'
-                  options={props.data.units === 'imperial' ? imperialF : metricF}
-                  component={SelectOne}
+                  // component={SelectOne}
                 />
               </div>
 

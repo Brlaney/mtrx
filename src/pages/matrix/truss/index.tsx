@@ -57,7 +57,7 @@ const Truss: React.FC<{ props }> = () => {
         <div className={styles.grid}>
           <div id={styles.card}>
 
-            {/* Step 1 */}
+            {/* Step 1 - System properties */}
             {currentStep === 0 && (
               <StepOne
                 step={st1}
@@ -66,7 +66,7 @@ const Truss: React.FC<{ props }> = () => {
               />
             )}
 
-            {/* Step 2 */}
+            {/* Step 2 - Specify Units */}
             {currentStep === 1 && (
               <StepTwo
                 step={st2}
@@ -76,7 +76,7 @@ const Truss: React.FC<{ props }> = () => {
               />
             )}
 
-            {/* Step 3 */}
+            {/* Step 3 - Input node coordinates */}
             {currentStep === 2 && (
               <StepThree
                 step={st3}
@@ -85,7 +85,6 @@ const Truss: React.FC<{ props }> = () => {
                 prev={handlePrevStep}
               />
             )}
-
           </div>
         </div>
       </div>

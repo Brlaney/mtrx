@@ -1,21 +1,13 @@
-export const imperialL = [
-  { label: 'ft', value: 'feet' },
-  { label: 'in', value: 'inches' },
-];
-
-export const metricL = [
-  { label: 'm', value: 'meter' },
-  { label: 'cm', value: 'centimeter' },
-];
-
-export const imperialF = [
-  { label: 'lbs', value: 'lbs' },
-  { label: 'kips', value: 'kips' },
-];
-
-export const metricF = [
-  { label: 'N', value: 'newtons' },
-  { label: 'KN', value: 'kilonewtons' },
+export const selectUnits = [
+  { label: 'Select your units', value: '' },
+  { label: 'Force: lbs, Length: in', value: 'imperial1' },
+  { label: 'Force: lbs, Length: ft', value: 'imperial2' },
+  { label: 'Force: K, Length: in', value: 'imperial3' },
+  { label: 'Force: K, Length: ft', value: 'imperial4' },
+  { label: 'Force: N, Length: cm', value: 'metric1' },
+  { label: 'Force: N, Length: m', value: 'metric2' },
+  { label: 'Force: KN, Length: cm', value: 'metric3' },
+  { label: 'Force: KN, Length: cm', value: 'metric4' },
 ];
 
 export const step1 = [

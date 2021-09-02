@@ -4,6 +4,7 @@ import { Formik, Form, Field } from 'formik'
 import Forward from '@/components/buttons/Forward'
 import { Dotnav } from '@/components/buttons/Dotnav'
 import { Selection } from '../components/Selection'
+import { selectUnits } from '@/lib/config/forms/truss'
 // import { trussCheck } from '@/lib/utils/matrix/calculate'
 import styles from '@/styles/components/Steps.module.scss'
 
@@ -40,12 +41,16 @@ const StepOne = (props) => {
 
               {/* Header */}
               <h2 className={styles.label}>
-                Step 1. <span className={styles.span}>Describe your truss</span>
+                Step 1. <span className={styles.span}>
+                  Describe your truss
+                </span>
               </h2>
 
               {/* Input no of members */}
               <div className='uk-width-1-2'>
-                <h6 className={styles.field}>Number of members</h6>
+                <h6 className={styles.field}>
+                  Number of members
+                </h6>
               </div>
               <div className='uk-width-1-2'>
                 <Field
@@ -62,7 +67,9 @@ const StepOne = (props) => {
 
               {/* Input number of nodes/connections */}
               <div className='uk-width-1-2'>
-                <h6 className={styles.field}>Number of nodes</h6>
+                <h6 className={styles.field}>
+                  Number of nodes
+                </h6>
               </div>
               <div className='uk-width-1-2'>
                 <Field
@@ -97,19 +104,17 @@ const StepOne = (props) => {
               </div>
 
               {/* Select your type of units */}
-              <div className='uk-width-1-2'>
-                <h6 className={styles.field}>Select your units</h6>
+              <div className='uk-width-2-5 uk-margin'>
+                <h6 className={styles.field}>
+                  Select your units
+                </h6>
               </div>
-              <div className='uk-width-1-2'>
+              <div className='uk-width-3-5 uk-margin'>
                 <Field
                   name='units'
                   id={styles.input}
-                  className='uk-select'
-                  options={[
-                    { label: '', value: '' },
-                    { label: 'Imperial (US)', value: 'imperial' },
-                    { label: 'Metric (SI)', value: 'metric' }
-                  ]}
+                  className='uk-select uk-margin'
+                  options={selectUnits}
                   component={Selection}
                 />
               </div>

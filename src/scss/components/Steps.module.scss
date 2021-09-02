@@ -1,8 +1,8 @@
 @import '../theme/theme';
 
 .form {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  flex-direction: row;
   flex: 1;
   max-width: 600px;
   min-width: 400px;
