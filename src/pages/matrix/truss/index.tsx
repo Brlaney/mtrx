@@ -61,8 +61,8 @@ const Truss: React.FC<{ props }> = () => {
             {currentStep === 0 && (
               <StepOne
                 step={st1}
-                next={handleNextStep}
                 data={data}
+                next={handleNextStep}
               />
             )}
 
@@ -70,9 +70,9 @@ const Truss: React.FC<{ props }> = () => {
             {currentStep === 1 && (
               <StepTwo
                 step={st2}
+                data={data}
                 next={handleNextStep}
                 prev={handlePrevStep}
-                data={data}
               />
             )}
 
@@ -80,9 +80,9 @@ const Truss: React.FC<{ props }> = () => {
             {currentStep === 2 && (
               <StepThree
                 step={st3}
+                data={data}
                 next={handleNextStep}
                 prev={handlePrevStep}
-                data={data}
               />
             )}
 
