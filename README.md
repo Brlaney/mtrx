@@ -1,9 +1,9 @@
-# Next JS webApp using Typescript (.tsx)
+# Mtrx - Matrix structural analysis web app
 
 Designed and coded by: **Brendan Laney**
 </br>
 
-## Last updated: 4/15/2021
+## Last updated: 9/2/2021
 
 </br>
 
