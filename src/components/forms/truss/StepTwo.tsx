@@ -33,17 +33,16 @@ const metricF = [
 
 const StepTwo = (props) => {
   const handleSubmit = (values) => {
-    props.next(values);
+    props.next(values, true);
   };
-
-  const [checkUnits, setCheckUnits] = React.useState();
 
   const stepTwoSchema = yup.object({
     lengthUnits: yup.string().required(),
     forceUnits: yup.string().required(),
   });
 
-  console.log(props.data.units);
+  // Testing to see if exists
+  // console.log(props.data.units);
 
   return (
     <>
@@ -70,14 +69,23 @@ const StepTwo = (props) => {
                 <Field
                   name='length'
                   id={styles.input}
-                  // placeholder='Select units'
-                  className='uk-margin'
-                  options={[
-                    { label: 'ft', value: 'feet' },
-                    { label: 'in', value: 'inches' },
-                    { label: 'm', value: 'meter' },
-                    { label: 'cm', value: 'centimeter' },
-                  ]}
+                  className='uk-radio'
+                  options={props.data.units === 'imperial' ? imperialL : metricL}
+                  component={SelectOne}
+                />
+              </div>
+
+              {/* Input units for length */}
+              <div className='uk-width-1-3'>
+                <h6 className={styles.field}>Forces</h6>
+              </div>
+
+              <div className='uk-width-2-3'>
+                <Field
+                  name='length'
+                  id={styles.input}
+                  className='uk-radio uk-margin'
+                  options={props.data.units === 'imperial' ? imperialF : metricF}
                   component={SelectOne}
                 />
               </div>

@@ -7,12 +7,12 @@ import { Choice } from '@/lib/types'
 import styles from '@/styles/pages/Matrix.module.scss'
 
 const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const [hovering, setHovering] = React.useState<boolean>();
+  // const [hovering, setHovering] = React.useState<boolean>();
   const [choicesList] = React.useState(choices);
   const [name, setName] = React.useState('');
 
-  const handleMouseEnter = () => setHovering(true);
-  const handleMouseLeave = () => setHovering(false);
+  // const handleMouseEnter = () => setHovering(true);
+  // const handleMouseLeave = () => setHovering(false);
 
   // const handleHover = (choice: string) => {
   //   setName(choice);
@@ -58,7 +58,7 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
                   src={choice.path}
                   width={200}
                   height={164.25}
-                  onMouseEnter={() => setName(name)}
+                  onMouseEnter={() => setName(choice.name)}
                   onMouseLeave={() => setName('')}
                 />
               </div>
