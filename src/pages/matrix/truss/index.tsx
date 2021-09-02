@@ -1,11 +1,14 @@
 import * as React from 'react'
+import { step1 as st1 } from '@/lib/config/forms/truss'
+import { step2 as st2 } from '@/lib/config/forms/truss'
+import { step3 as st3 } from '@/lib/config/forms/truss'
 import StepOne from '@/components/forms/truss/StepOne'
 import StepTwo from '@/components/forms/truss/StepTwo'
 import StepThree from '@/components/forms/truss/StepThree'
 import GoBack from '@/components/buttons/GoBack'
 import styles from '@/styles/pages/Matrix.module.scss'
 
-const Truss: React.FC<{props}> = () => {
+const Truss: React.FC<{ props }> = () => {
   const endpoint = '/matrix';
   const [currentStep, setCurrentStep] = React.useState(0);
   const [data, setData] = React.useState({
@@ -18,7 +21,7 @@ const Truss: React.FC<{props}> = () => {
   });
 
   const makeRequest = (formData) => {
-    console.log("Form Submitted", formData);
+    console.log('Form Submitted', formData);
   };
 
   const handleNextStep = (newData, final = false) => {
@@ -56,18 +59,33 @@ const Truss: React.FC<{props}> = () => {
 
             {/* Step 1 */}
             {currentStep === 0 && (
-              <StepOne next={handleNextStep} data={data} />
+              <StepOne
+                step={st1}
+                next={handleNextStep}
+                data={data}
+              />
             )}
 
             {/* Step 2 */}
             {currentStep === 1 && (
-              <StepTwo next={handleNextStep} prev={handlePrevStep} data={data} />
+              <StepTwo
+                step={st2}
+                next={handleNextStep}
+                prev={handlePrevStep}
+                data={data}
+              />
             )}
 
             {/* Step 3 */}
             {currentStep === 2 && (
-              <StepThree next={handleNextStep} prev={handlePrevStep} data={data} />
+              <StepThree
+                step={st3}
+                next={handleNextStep}
+                prev={handlePrevStep}
+                data={data}
+              />
             )}
+
           </div>
         </div>
       </div>

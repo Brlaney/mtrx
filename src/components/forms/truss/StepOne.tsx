@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import Forward from '@/components/buttons/Forward'
+import { Dotnav } from '@/components/buttons/Dotnav'
 import { Selection } from '../components/Selection'
 // import { trussCheck } from '@/lib/utils/matrix/calculate'
 import styles from '@/styles/components/Steps.module.scss'
@@ -18,8 +19,16 @@ const StepOne = (props) => {
     units: yup.string().required(),
   });
 
+  console.log(props)
+
   return (
     <>
+      
+      {/* Dotnav container for component render */}
+      <div className={styles.dotnavContainer}>
+        <Dotnav step={props.step} />
+      </div>
+
       <Formik
         validationSchema={stepOneSchema}
         initialValues={props.data}

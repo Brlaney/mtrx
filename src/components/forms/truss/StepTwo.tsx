@@ -1,35 +1,12 @@
 import * as React from 'react'
 import * as yup from 'yup'
-import Forward from '@/components/buttons/Forward'
-import Back from '@/components/buttons/Back'
-import {
-  Formik,
-  Form,
-  Field,
-} from 'formik'
-// import { Selection } from '../components/Selection'
+import { imperialL, metricL, imperialF, metricF } from '@/lib/config/forms/truss'
+import { Dotnav } from '@/components/buttons/Dotnav'
 import { SelectOne } from '../components/SelectOne'
+import { Formik, Form, Field } from 'formik'
+import Back from '@/components/buttons/Back'
+import Forward from '@/components/buttons/Forward'
 import styles from '@/styles/components/Steps.module.scss'
-
-const imperialL = [
-  { label: 'ft', value: 'feet' },
-  { label: 'in', value: 'inches' },
-];
-
-const metricL = [
-  { label: 'm', value: 'meter' },
-  { label: 'cm', value: 'centimeter' },
-];
-
-const imperialF = [
-  { label: 'lbs', value: 'lbs' },
-  { label: 'kips', value: 'kips' },
-];
-
-const metricF = [
-  { label: 'N', value: 'newtons' },
-  { label: 'KN', value: 'kilonewtons' },
-];
 
 const StepTwo = (props) => {
   const handleSubmit = (values) => {
@@ -46,6 +23,13 @@ const StepTwo = (props) => {
 
   return (
     <>
+      
+      {/* Dotnav container for component render */}
+      <div className={styles.dotnavContainer}>
+        <Dotnav step={props.step} />
+      </div>
+
+      {/* Form parent container */}
       <Formik
         validationSchema={stepTwoSchema}
         initialValues={props.data}
@@ -64,7 +48,6 @@ const StepTwo = (props) => {
               <div className='uk-width-1-3'>
                 <h6 className={styles.field}>Length/coordinates</h6>
               </div>
-
               <div className='uk-width-2-3'>
                 <Field
                   name='length'
@@ -79,7 +62,6 @@ const StepTwo = (props) => {
               <div className='uk-width-1-3'>
                 <h6 className={styles.field}>Forces</h6>
               </div>
-
               <div className='uk-width-2-3'>
                 <Field
                   name='length'
@@ -89,7 +71,6 @@ const StepTwo = (props) => {
                   component={SelectOne}
                 />
               </div>
-
 
               <div className='uk-width-1-1'>
                 <button

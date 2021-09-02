@@ -40,8 +40,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li id={styles.listItem} className='uk-*'>
-              <Link href='/charts'>
-                <a id={styles.link}>Charts</a>
+              <Link href='/learn'>
+                <a id={styles.link}>Learn</a>
               </Link>
             </li>
           </ul>

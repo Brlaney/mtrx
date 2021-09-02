@@ -2,11 +2,7 @@ import * as React from 'react'
 import * as yup from 'yup'
 import Forward from '@/components/buttons/Forward'
 import Back from '@/components/buttons/Back'
-import {
-  Formik,
-  Form,
-  Field,
-} from 'formik'
+import { Formik, Form, Field } from 'formik'
 import { Selection } from '../components/Selection'
 import { SelectOne } from '../components/SelectOne'
 import styles from '@/styles/components/Steps.module.scss'

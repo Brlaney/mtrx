@@ -56,6 +56,15 @@
     font-size: 1.5rem;
     padding: 0 0 0.3rem 0;
     border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
+    align-items: stretch;
+    .conditional {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: $secondary;
+      text-align: right;
+      transition: transform 1.6s;
+      transition: width 2s, height 4s;
+    }
   }
   #grid {
     width: 60%;
@@ -74,7 +83,7 @@
       margin: 0.25rem 0.3rem 0.25rem 0.3rem;
       padding: 1rem;
       background-color: $bg-d;
-      transition: transform .3s;
+      transition: transform .6s;
       .img {
         border: 0;
         padding: 0.5rem;
