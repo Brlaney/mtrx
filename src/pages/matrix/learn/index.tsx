@@ -2,9 +2,12 @@ import * as React from 'react'
 import Link from 'next/link'
 import 'katex/dist/katex.min.css'
 import TeX from '@matejmazur/react-katex'
-import styles from '@/styles/pages/Learn.module.scss'
+import GoBack from '@/components/buttons/GoBack'
+import styles from '@/styles/pages/Learning.module.scss'
 
 export default function Learn() {
+  const endpoint = '/matrix';
+
   const Elem1 = <TeX
     className={styles.inlineMath}
     math='\sum ( All \ losses) = H = H_\epsilon + H_f'
@@ -20,6 +23,10 @@ export default function Learn() {
 
   return (
     <>
+
+      {/* Render the back button component */}
+      <GoBack link={endpoint} />
+
       {/* Page parent container and header */}
       <div className={styles.parent}>
         <div className={styles.header}>
@@ -30,19 +37,11 @@ export default function Learn() {
             An app that solves trusses, beams,
             and frames using the stiffness method
           </h2>
-          <Link href='/matrix/'>
-            <button
-              id={styles.back}
-              className='uk-button uk-button-default uk-button-small'
-            >
-              back
-            </button>
-          </Link>
         </div>
 
         <h2 className={styles.section}>Select the desired system to solve</h2>
 
-        {/* 1 Grid row (parent) & 3 grid columns (children)  */}
+        {/* 1 Grid row (parent) & 2 grid columns (children)  */}
         <div
           id={styles.grid}
           className='uk-grid-row uk-grid-row-large uk-child-width-1-1 uk-text-center'
@@ -53,6 +52,13 @@ export default function Learn() {
           <div className={styles.element}>
             {Elem2}
           </div>
+        </div>
+
+        {/* 2 Grid row (parent) & 1 grid columns (children)  */}
+        <div
+          id={styles.grid}
+          className='uk-grid-row uk-grid-row-large uk-child-width-1-1 uk-text-center'
+        >
           <div className={styles.element}>
             {Elem3}
           </div>

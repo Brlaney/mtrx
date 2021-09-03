@@ -14,7 +14,7 @@ export default function Components() {
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Bridge design components
+            Components of bridge design
           </h1>
         </div>
       </div>
