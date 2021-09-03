@@ -1,10 +1,10 @@
-import Frames from '@/components/matrix/Frames'
-import Link from 'next/link'
-import styles from '@/styles/pages/Charts.module.scss'
+import Trusses from '@/components/matrix/Trusses'
 import GoBack from '@/components/buttons/GoBack'
+import styles from '@/styles/pages/Charts.module.scss'
 
-export default function Beam() {
-  const endpoint = '/charts';
+export default function Truss() {
+  const endpoint = '/learn';
+
   return (
     <>
       {/* Render the back button component */}
@@ -16,16 +16,8 @@ export default function Beam() {
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Frame example
+            Truss example
           </h1>
-          <Link href='/charts'>
-            <button
-              id={styles.back}
-              className='uk-button uk-button-default uk-button-small'
-            >
-              back
-            </button>
-          </Link>
         </div>
 
         {/* Divider */}
@@ -34,7 +26,7 @@ export default function Beam() {
         {/* This pages main content */}
         <div className={styles.content}>
           <div className={styles.chartContainer}>
-            <Frames />
+            <Trusses />
           </div>
         </div>
       </div>

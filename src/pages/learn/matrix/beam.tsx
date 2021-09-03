@@ -3,7 +3,7 @@ import GoBack from '@/components/buttons/GoBack'
 import styles from '@/styles/pages/Charts.module.scss'
 
 export default function Beam() {
-  const endpoint = '/charts';
+  const endpoint = '/learn';
   return (
     <>
       {/* Render the back button component */}

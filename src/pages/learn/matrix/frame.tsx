@@ -1,10 +1,10 @@
-import Trusses from '@/components/matrix/Trusses'
-import GoBack from '@/components/buttons/GoBack'
+import Frames from '@/components/matrix/Frames'
+import Link from 'next/link'
 import styles from '@/styles/pages/Charts.module.scss'
+import GoBack from '@/components/buttons/GoBack'
 
-export default function Truss() {
-  const endpoint = '/charts';
-
+export default function Frame() {
+  const endpoint = '/learn';
   return (
     <>
       {/* Render the back button component */}
@@ -16,7 +16,7 @@ export default function Truss() {
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Truss example
+            Frame example
           </h1>
         </div>
 
@@ -26,7 +26,7 @@ export default function Truss() {
         {/* This pages main content */}
         <div className={styles.content}>
           <div className={styles.chartContainer}>
-            <Trusses />
+            <Frames />
           </div>
         </div>
       </div>
