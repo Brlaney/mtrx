@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Link from 'next/link'
 import 'katex/dist/katex.min.css'
 import TeX from '@matejmazur/react-katex'
 import GoBack from '@/components/buttons/GoBack'
