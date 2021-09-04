@@ -37,7 +37,7 @@ const StepOne = (props) => {
       >
         {() => (
           <div className={styles.form}>
-            <Form className='uk-grid-small' uk-grid='true'>
+            <Form className='uk-grid-small uk-align-center' uk-grid='true'>
 
               {/* Header */}
               <h2 className={styles.label}>
@@ -47,12 +47,10 @@ const StepOne = (props) => {
               </h2>
 
               {/* Input no of members */}
-              <div className='uk-width-1-2'>
+              <div className='uk-width-1-1'>
                 <h6 className={styles.field}>
                   Number of members
                 </h6>
-              </div>
-              <div className='uk-width-1-2'>
                 <Field
                   id={styles.input}
                   name='members'
@@ -66,12 +64,10 @@ const StepOne = (props) => {
               </div>
 
               {/* Input number of nodes/connections */}
-              <div className='uk-width-1-2'>
+              <div className='uk-width-1-1'>
                 <h6 className={styles.field}>
                   Number of nodes
                 </h6>
-              </div>
-              <div className='uk-width-1-2'>
                 <Field
                   id={styles.input}
                   name='nodes'
@@ -85,12 +81,10 @@ const StepOne = (props) => {
               </div>
 
               {/* Define your supports and external forces */}
-              <div className='uk-width-1-2'>
+              <div className='uk-width-1-1'>
                 <h6 className={styles.field}>
                   Number of reactions
                 </h6>
-              </div>
-              <div className='uk-width-1-2'>
                 <Field
                   id={styles.input}
                   name='reactions'
@@ -104,22 +98,20 @@ const StepOne = (props) => {
               </div>
 
               {/* Select your type of units */}
-              <div className='uk-width-2-5 uk-margin'>
+              <div className='uk-width-1-1'>
                 <h6 className={styles.field}>
                   Select your units
                 </h6>
-              </div>
-              <div className='uk-width-3-5 uk-margin'>
                 <Field
                   name='units'
                   id={styles.input}
-                  className='uk-select uk-margin'
+                  className='uk-select'
                   options={selectUnits}
                   component={Selection}
                 />
               </div>
 
-              <div className='uk-width-1-1'>
+              <div className='formButton'>
                 <button
                   id={styles.iconButton}
                   type='submit'

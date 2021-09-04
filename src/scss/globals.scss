@@ -7,6 +7,7 @@ body {
   color: $bg-d;
   font-family: $primary-font;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 a { font-family: $tertiary-font; }
@@ -39,21 +40,11 @@ h1, h2, h3, h4, h5, h6 {
 .backIcon {
   color: $secondary;
   font-weight: 400;
-  transition: transform .3s;
-}
-
-.backIcon:hover {
-  transform: scale(1.15);
 }
 
 .forwardIcon {
   color: $secondary;
   font-weight: 400;
-  transition: transform .3s;
-}
-
-.forwardIcon:hover {
-  transform: scale(1.15);
 }
 
 #goback {
@@ -69,11 +60,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .brandIcon {
   font-weight: 400;
-  transition: transform .3s;
-}
-
-.brandIcon:hover {
-  transform: scale(1.2);
 }
 
 .dotnav {
@@ -82,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   align-items: center;
   justify-content: center;
-  height: 80px;
+  height: 30px;
   width: 60vw;
   margin: 0.5rem;
 }
@@ -96,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   height: 100%;
   width: 400px;
-  height: 80px;
+  height: 30px;
   vertical-align: center;
   justify-content: center;
   align-items: center;
@@ -160,4 +146,12 @@ h1, h2, h3, h4, h5, h6 {
 #isa:hover {
   cursor: none;
   text-decoration: none;
+}
+
+.formButton {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }

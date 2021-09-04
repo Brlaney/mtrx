@@ -1,5 +1,13 @@
 @import '../theme/theme';
 
+#iconButton {
+  align-self: flex-start;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color:transparent;
+}
+
 .topRow {
   height: 30px;
   margin-bottom: 2rem;
@@ -23,7 +31,7 @@
   padding: 0.22rem;
   align-items: center;
   .header {
-    width: 80%;
+    width: 100%;
     margin-bottom: 1rem;
     .title {
       font-size: 3.2rem;
@@ -37,6 +45,57 @@
       margin: 0.4rem 0 0.8rem 0;
       color: $text-secondary;
       font-size: 1.2rem;
+    }
+  }
+  .imagecard {
+    display: flex;
+    width: 90%;
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem 1.5rem 2rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 5px 10px 9px -5px,
+    rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+    .img {
+      align-self: center;
+      justify-self: center;
+      text-align: center;
+    }
+  }
+  .card1 {
+    width: 90%;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem 1.5rem 2rem 1.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 5px 10px 9px -5px,
+    rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+    .title {
+      color: $secondary;
+      font-weight: bold;
+      font-size: 1.75rem;
+      text-align: center;
+      padding: 0.88rem;
+      margin: 0.6rem 0 0 0;
+      border-bottom: calc(0.3px + 0.02em) solid $border-color;
+    }
+    .sectionTitle {
+      font-size: 1.2rem;
+      color: $text-secondary;
+      text-align: center;
+      word-wrap: wrap;
+      padding: 0.88rem;
+      margin: 0.6rem 0 1.4rem 0;
+    }
+    .element {
+      margin: 1rem 0 0.67rem 0;
+      align-items: center;
+      justify-content: center;
+      display: flex;
     }
   }
   .card {
