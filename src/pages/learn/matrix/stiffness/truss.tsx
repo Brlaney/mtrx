@@ -70,7 +70,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
               }
             }}
             alt='bar-element'
-            src='/bar-member.svg'
+            src='/bar-labeled.svg'
             width={326}
             height={73}
           />

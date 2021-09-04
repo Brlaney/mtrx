@@ -9,7 +9,7 @@ const GoBack = ({ link }) => {
         <motion.button
           id='goback'
           whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.95 }} 
+          whileTap={{ scale: 0.95 }}
           className='uk-button uk-button-default uk-button-small uk-align-left'
         >
           <IoReturnUpBackOutline

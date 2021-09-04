@@ -10,6 +10,7 @@ const GoBack = () => {
           duration: .25
         }
       }}
+      whileTap={{ scale: 0.9 }}
     >
       <IoGridOutline
         className='brandIcon'

@@ -10,6 +10,7 @@ const Forward = ({ props }) => {
           duration: .2
         }
       }}
+      whileTap={{ scale: 0.9 }}
     >
       <IoChevronForwardCircleOutline
         className='forwardIcon'

@@ -1,17 +1,11 @@
 import * as React from 'react'
+import { AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Layout from '@/components/Layout'
 import 'uikit/dist/js/uikit.js'
 import 'uikit/dist/css/uikit.css'
 import '@/styles/globals.scss'
-
-import {
-  motion,
-  AnimateSharedLayout,
-  AnimatePresence
-} from 'framer-motion'
-
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()

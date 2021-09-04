@@ -10,6 +10,7 @@ const Back = ({ props }) => {
           duration: .2
         }
       }}
+      whileTap={{ scale: 0.9 }} 
     >
       <IoChevronBackCircleOutline
         className='backIcon'
