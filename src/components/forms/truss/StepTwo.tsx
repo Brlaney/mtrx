@@ -1,13 +1,58 @@
 import * as React from 'react'
 import * as yup from 'yup'
 import { Dotnav } from '@/components/buttons/Dotnav'
-import { SelectOne } from '../components/SelectOne'
+// import { SelectOne } from '../components/SelectOne'
 import { Formik, Form, Field } from 'formik'
 import Back from '@/components/buttons/Back'
 import Forward from '@/components/buttons/Forward'
 import styles from '@/styles/components/Steps.module.scss'
 
 const StepTwo = (props) => {
+  const [currentUnits] = React.useState(props.data.units);
+  const [forceUnits, setForceUnits] = React.useState('');
+  const [lengthUnits, setLengthUnits] = React.useState('');
+
+  if (currentUnits === 'imperial1') {
+    setForceUnits('lbs');
+    setLengthUnits('in');
+  }
+
+  if (currentUnits === 'imperial2') {
+    setForceUnits('lbs');
+    setLengthUnits('ft');
+  }
+
+  if (currentUnits === 'imperial3') {
+    setForceUnits('kips');
+    setLengthUnits('in');
+  }
+
+  if (currentUnits === 'imperial4') {
+    setForceUnits('kips');
+    setLengthUnits('ft');
+  }
+
+  if (currentUnits === 'metric1') {
+    setForceUnits('N');
+    setLengthUnits('cm');
+  }
+
+  if (currentUnits === 'metric2') {
+    setForceUnits('N');
+    setLengthUnits('m');
+  }
+
+  if (currentUnits === 'metric3') {
+    setForceUnits('KN');
+    setLengthUnits('cm');
+  }
+
+  if (currentUnits === 'metric4') {
+    setForceUnits('KN');
+    setLengthUnits('m');
+  }
+
+
   const handleSubmit = (values) => {
     props.next(values, true);
   };
@@ -18,7 +63,7 @@ const StepTwo = (props) => {
   });
 
   // Testing to see if exists
-  // console.log(props.data.units);
+  // console.log(currentUnits);
 
   return (
     <>

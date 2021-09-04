@@ -64,18 +64,25 @@ Output: local beam member stiffness matrix in global coordinates
 export function beamK(E, I, L) {
   let coeff = 2 * E * I / L ^ 3;
 
+  // Row 1
   let k11 = coeff * 6;
   let k12 = coeff * - 3 * L;
   let k13 = coeff * - 6;
   let k14 = coeff * - 3 * L;
+
+  // Row 2
   let k21 = coeff * - 3 * L;
   let k22 = coeff * 2 * L ^ 2;
   let k23 = coeff * 3 * L;
   let k24 = coeff * L * L;
+
+  // Row 3
   let k31 = coeff * - 6;
   let k32 = coeff * 3 * L;
   let k33 = coeff * 6
   let k34 = coeff * 3 * L;
+
+  // Row 4
   let k41 = coeff * - 3 * L;
   let k42 = coeff * L * L;
   let k43 = coeff * 3 * L;

@@ -7,7 +7,7 @@ export const selectUnits = [
   { label: 'Force: N, Length: cm', value: 'metric1' },
   { label: 'Force: N, Length: m', value: 'metric2' },
   { label: 'Force: KN, Length: cm', value: 'metric3' },
-  { label: 'Force: KN, Length: cm', value: 'metric4' },
+  { label: 'Force: KN, Length: m', value: 'metric4' },
 ];
 
 export const step1 = [

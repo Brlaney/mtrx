@@ -16,8 +16,6 @@ const Truss: React.FC<{ props }> = () => {
     members: '',
     reactions: '',
     units: '',
-    lengthUnits: '',
-    forceUnits: ''
   });
 
   const makeRequest = (formData) => {

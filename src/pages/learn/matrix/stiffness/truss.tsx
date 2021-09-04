@@ -33,7 +33,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
           </h2>
         </div>
 
-        {/* 1st Grid row (parent) */}
+        {/* 1st component */}
         {currentStep === 0 && (
           <div className={styles.card}>
             <h2 className={styles.sectionTitle}>
@@ -53,7 +53,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
           </div>
         )}
 
-        {/* 2nd Grid row (parent) */}
+        {/* 2nd component */}
         {currentStep === 1 && (
           <div className={styles.card}>
             <h2 className={styles.sectionTitle}>
@@ -79,7 +79,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
           </div>
         )}
 
-        {/* 3rd Grid row (parent) */}
+        {/* 3rd component */}
         {currentStep === 2 && (
           <div className={styles.card}>
             <h2 className={styles.sectionTitle}>
@@ -103,7 +103,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
           </div>
         )}
 
-        {/* 3rd Grid row (parent) */}
+        {/* 4th component */}
         {currentStep === 3 && (
           <div className={styles.card}>
             <h2 className={styles.title}>
