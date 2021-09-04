@@ -1,11 +1,30 @@
+import * as React from 'react'
 import 'katex/dist/katex.min.css'
 import GoBack from '@/components/buttons/GoBack'
-import Elem1 from './components/trusses/Elem1'
-import Elem2 from './components/trusses/Elem2'
+import Forward from '@/components/buttons/Forward'
+import Back from '@/components/buttons/Back'
+import { Elem1 } from './components/trusses/Elem1'
+import { Elem2 } from './components/trusses/Elem2'
+import { Elem3 } from './components/trusses/Elem3'
 import styles from '@/styles/pages/Learning.module.scss'
 
-export default function Truss() {
+const Truss: React.FC<{ props }> = ({ props }) => {
+  const [currentStep, setCurrentStep] = React.useState(0);
   const endpoint = '/learn';
+
+  const handleNextStep = () => {
+    setCurrentStep((prev) => prev + 1);
+  };
+
+  const handlePrevStep = () => {
+    setCurrentStep((prev) => prev - 1);
+  };
+
+  const handleSubmit = () => {
+    handleNextStep();
+  };
+
+  console.log(currentStep)
 
   return (
     <>
@@ -28,41 +47,77 @@ export default function Truss() {
         </div>
 
         {/* 1st Grid row (parent) */}
-        <div className={styles.card}>
-          <h2 className={styles.sectionTitle}>
-            Stiffness method - theory
-          </h2>
-          <div className={styles.content}>
-            <div className={styles.child}>
-              <Elem1 />
+        {currentStep === 0 && (
+          <div className={styles.card}>
+            <h2 className={styles.sectionTitle}>
+              Stiffness method - theory
+            </h2>
+            <div className={styles.content}>
+              <div className={styles.child}>
+                <Elem1 />
+              </div>
+              <button
+                className='uk-button uk-button-small'
+                type='submit'
+              >
+                <Forward props={props} />
+              </button>
             </div>
           </div>
-        </div>
+        )}
 
         {/* 2nd Grid row (parent) */}
-        <div className={styles.card}>
-          <h2 className={styles.sectionTitle}>
-            Stiffness method - theory
-          </h2>
-          <div className={styles.content}>
-            <div className={styles.child}>
-              <Elem2 />
+        {currentStep === 1 && (
+          <div className={styles.card}>
+            <h2 className={styles.sectionTitle}>
+              Stiffness method - theory
+            </h2>
+            <div className={styles.content}>
+              <div className={styles.child}>
+                <Elem2 />
+              </div>
+              <button
+                className='uk-button uk-button-small'
+                onClick={() => handlePrevStep}
+              >
+                <Back props={props} />
+              </button>
+              <button
+                className='uk-button uk-button-small'
+                type='submit'
+              >
+                <Forward props={props} />
+              </button>
             </div>
           </div>
-        </div>
+        )}
 
         {/* 3rd Grid row (parent) */}
-        <div className={styles.card}>
-          <h2 className={styles.sectionTitle}>
-            Stiffness method - theory
-          </h2>
-          <div className={styles.content}>
-            <div className={styles.child}>
-              Element goes here
+        {currentStep === 2 && (
+          <div className={styles.card}>
+            <h2 className={styles.sectionTitle}>
+              Stiffness method - theory
+            </h2>
+            <div className={styles.content}>
+              <Elem3 />
+              <button
+                className='uk-button uk-button-small'
+                onClick={() => handlePrevStep}
+              >
+                <Back props={props} />
+              </button>
+              <button
+                className='uk-button uk-button-small'
+                type='submit'
+              >
+                <Forward props={props} />
+              </button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   )
 }
+
+export default Truss
