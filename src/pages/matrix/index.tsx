@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { server } from '@/lib/config/server'
 import { Choice } from '@/lib/types'
+import { motion } from 'framer-motion'
 import styles from '@/styles/pages/Matrix.module.scss'
 
 const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -11,7 +12,7 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
   const [name, setName] = React.useState('');
 
   return (
-    <>
+    <motion.div className={styles.container}>
 
       {/* Page parent container and header */}
       <div className={styles.parent}>
@@ -40,11 +41,13 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
               href={`/matrix/${encodeURIComponent(choice.link)}`}
               as={`/matrix/${encodeURIComponent(choice.link)}`}
             >
-              <div
+              <motion.div
                 id={styles.image}
                 className='uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
                 onMouseEnter={() => setName(choice.name)}
                 onMouseLeave={() => setName('')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }} 
               >
                 <Image
                   layout='fixed'
@@ -54,12 +57,12 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
                   width={200}
                   height={164.25}
                 />
-              </div>
+              </motion.div>
             </Link>
           ))}
         </div>
       </div>
-    </>
+    </motion.div>
   )
 }
 
