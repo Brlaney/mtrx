@@ -2,7 +2,6 @@ import Link from 'next/link'
 import styles from '@/styles/pages/Learn.module.scss'
 
 export default function Learn() {
-
   return (
     <>
       {/* Page parent container */}
@@ -22,7 +21,7 @@ export default function Learn() {
           </h2>
           <div className={styles.content}>
             <div className={styles.child}>
-              <Link href='/learn/stiffness/truss'>
+              <Link href='/learn/matrix/stiffness/truss'>
                 <button
                   id={styles.button}
                   className='uk-button'
@@ -30,7 +29,7 @@ export default function Learn() {
                   Truss
                 </button>
               </Link>
-              <Link href='/learn/stiffness/beam'>
+              <Link href='/learn/matrix/stiffness/beam'>
                 <button
                   id={styles.button}
                   className='uk-button'
@@ -38,7 +37,7 @@ export default function Learn() {
                   Beam
                 </button>
               </Link>
-              <Link href='/learn/stiffness/frame'>
+              <Link href='/learn/matrix/stiffness/frame'>
                 <button
                   id={styles.button}
                   className='uk-button'

@@ -16,18 +16,25 @@ export function trussK(theta, E, A, L) {
   let c = Math.cos(radians);
   let coeff = A * E / L;
 
+  // Row 1
   let k11 = coeff * c * c;
   let k12 = coeff * c * s;
   let k13 = coeff * - c * c;
   let k14 = coeff * - c * s;
+
+  // Row 2
   let k21 = coeff * c * s;
   let k22 = coeff * s * s;
   let k23 = coeff * - c * s;
   let k24 = coeff * - s * s;
+
+  // Row 3
   let k31 = coeff * - c * c;
   let k32 = coeff * -c * s;
   let k33 = coeff * c * c;
   let k34 = coeff * c * s;
+
+  // Row 4
   let k41 = coeff * - c * s;
   let k42 = coeff * - s * s;
   let k43 = coeff * c * s;
