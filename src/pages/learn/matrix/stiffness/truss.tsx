@@ -3,27 +3,21 @@ import TeX from '@matejmazur/react-katex'
 import GoBack from '@/components/buttons/GoBack'
 import styles from '@/styles/pages/Learning.module.scss'
 
-// const Elem2 = <TeX
-// className={styles.inlineMath}
-// math='\implies \ H = [  1 + K_e + \frac{29n^2L}{R^{1.33}} ]\frac{ V^2}{ 2g}'/> 
-// const Elem3 = <TeX
-// className={styles.blockMath}
-// math='HW_o + \frac{V_1^2}{2g} = TW_o + \frac{V_1^2}{2g} + H'/>
-
-
 export default function Truss() {
   const endpoint = '/learn';
 
   const Elem1 = <TeX
-    className={styles.inlineMath}
+    className={styles.math}
     math='c \le 0.62(s)'
   />
+
   const Elem2 = <TeX
-    className={styles.inlineMath}
+    className={styles.math}
     math='2c + (n-1)s = w'
   />
+
   const Elem3 = <TeX
-    className={styles.blockMath}
+    className={styles.math}
     math='\frac{EA}{L}
       \begin{bmatrix}
       1 & -1 \\
@@ -37,8 +31,9 @@ export default function Truss() {
           F_{x2}
           \end{bmatrix}'
   />
+
   const Elem4 = <TeX
-    className={styles.blockMath}
+    className={styles.math}
     math='\begin{bmatrix}
       \cos^{2}(\theta) & \cos(\theta)sin(\theta) & -\cos^{2}(\theta) & -\cos(\theta)sin(\theta) \\
       \cos(\theta)sin(\theta) & \sin^{2}(\theta) & -\cos(\theta)sin(\theta) & -\sin^{2}(\theta) \\
@@ -55,9 +50,12 @@ export default function Truss() {
 
       {/* Page parent container and header */}
       <div className={styles.parent}>
+
+        <div className={styles.topRow} />
+
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Matrix structural analysis
+            Discretize your truss
           </h1>
           <h2 className={styles.subtitle}>
             An app that solves trusses, beams,

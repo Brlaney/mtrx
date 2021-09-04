@@ -1,5 +1,12 @@
 @import '../theme/theme';
 
+.topRow {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  margin-bottom: 2rem;
+}
+
 .parent {
   height: 100%;
   display: flex;
