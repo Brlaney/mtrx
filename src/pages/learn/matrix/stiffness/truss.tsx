@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Link from 'next/link'
 import 'katex/dist/katex.min.css'
 import GoBack from '@/components/buttons/GoBack'
 import Forward from '@/components/buttons/Forward'
@@ -13,11 +14,11 @@ const Truss: React.FC<{ props }> = ({ props }) => {
   const endpoint = '/learn';
 
   const handleNextStep = () => {
-    setCurrentStep((prev) => prev + 1);
+    setCurrentStep(currentStep + 1);
   };
 
   const handlePrevStep = () => {
-    setCurrentStep((prev) => prev - 1);
+    setCurrentStep(currentStep - 1);
   };
 
   const handleSubmit = () => {
@@ -58,7 +59,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
               </div>
               <button
                 className='uk-button uk-button-small'
-                type='submit'
+                onClick={() => setCurrentStep(1)}
               >
                 <Forward props={props} />
               </button>
@@ -78,13 +79,13 @@ const Truss: React.FC<{ props }> = ({ props }) => {
               </div>
               <button
                 className='uk-button uk-button-small'
-                onClick={() => handlePrevStep}
+                onClick={() => setCurrentStep(0)}
               >
                 <Back props={props} />
               </button>
               <button
                 className='uk-button uk-button-small'
-                type='submit'
+                onClick={() => setCurrentStep(2)}
               >
                 <Forward props={props} />
               </button>
@@ -102,16 +103,33 @@ const Truss: React.FC<{ props }> = ({ props }) => {
               <Elem3 />
               <button
                 className='uk-button uk-button-small'
-                onClick={() => handlePrevStep}
+                onClick={() => setCurrentStep(1)}
               >
                 <Back props={props} />
               </button>
               <button
                 className='uk-button uk-button-small'
-                type='submit'
+                onClick={() => setCurrentStep(3)}
               >
                 <Forward props={props} />
               </button>
+            </div>
+          </div>
+        )}
+
+        {/* 3rd Grid row (parent) */}
+        {currentStep === 3 && (
+          <div className={styles.card}>
+            <h2 className={styles.sectionTitle}>
+              The tutorial is finished
+            </h2>
+            <div className={styles.content}>
+              <Link href='/'>
+                <button
+                  className='uk-button uk-button-large uk-button-primary'>
+                  Back to homepage
+                </button>
+              </Link>
             </div>
           </div>
         )}
