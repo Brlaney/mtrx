@@ -13,20 +13,6 @@ const Truss: React.FC<{ props }> = ({ props }) => {
   const [currentStep, setCurrentStep] = React.useState(0);
   const endpoint = '/learn';
 
-  const handleNextStep = () => {
-    setCurrentStep(currentStep + 1);
-  };
-
-  const handlePrevStep = () => {
-    setCurrentStep(currentStep - 1);
-  };
-
-  const handleSubmit = () => {
-    handleNextStep();
-  };
-
-  console.log(currentStep)
-
   return (
     <>
 
@@ -120,13 +106,22 @@ const Truss: React.FC<{ props }> = ({ props }) => {
         {/* 3rd Grid row (parent) */}
         {currentStep === 3 && (
           <div className={styles.card}>
-            <h2 className={styles.sectionTitle}>
-              The tutorial is finished
+            <h2 className={styles.title}>
+              Congratulations!
             </h2>
+            <h3 className={styles.sectionTitle}>
+              You have completed the truss portion of the stiffness method tutorial
+            </h3>
+            <div className={styles.content}>
+              <Link href='/learn'>
+                <button className='uk-button uk-button-primary uk-margin uk-width-1-2 uk-align-center'>
+                  Learn more
+                </button>
+              </Link>
+            </div>
             <div className={styles.content}>
               <Link href='/'>
-                <button
-                  className='uk-button uk-button-large uk-button-primary'>
+                <button className='uk-button uk-button-primary uk-margin uk-width-1-2 uk-align-center'>
                   Back to homepage
                 </button>
               </Link>

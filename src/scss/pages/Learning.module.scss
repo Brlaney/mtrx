@@ -48,7 +48,20 @@
     padding: 0.5rem 1.5rem 2rem 1.5rem;
     box-shadow: rgba(50, 50, 93, 0.25) 5px 10px 9px -5px,
     rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+    .title {
+      color: $secondary;
+      font-weight: bold;
+      font-size: 1.75rem;
+      text-align: center;
+      padding: 0.88rem;
+      margin: 0.6rem 0 0 0;
+      border-bottom: calc(0.3px + 0.02em) solid $border-color;
+    }
     .sectionTitle {
+      font-size: 1.2rem;
+      color: $text-secondary;
+      text-align: center;
+      word-wrap: wrap;
       padding: 0.88rem;
       margin: 0.6rem 0 1.4rem 0;
     }

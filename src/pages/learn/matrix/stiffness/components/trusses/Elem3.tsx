@@ -6,17 +6,25 @@ import styles from '@/styles/pages/Learning.module.scss'
 export const Elem3: React.FC<{}> = ({ ...props }) => {
   const Elem3 = <TeX
     className={styles.math}
-    math='\begin{bmatrix}
-    \cos^{2}(\theta) & \cos(\theta)sin(\theta) & -\cos^{2}(\theta) & -\cos(\theta)sin(\theta) \\
-    \cos(\theta)sin(\theta) & \sin^{2}(\theta) & -\cos(\theta)sin(\theta) & -\sin^{2}(\theta) \\
-    -\cos^{2}(\theta) & -\cos(\theta)sin(\theta) & \cos^{2}(\theta) & \cos(\theta)sin(\theta) \\
-    -\cos(\theta)sin(\theta) & -\sin^{2}(\theta) & \cos(\theta)sin(\theta) & \sin^{2}(\theta) 
-  \end{bmatrix}'
+    math='L = \sqrt{dx^2 + dy^2}'
+  />
+
+  const Elem4 = <TeX
+    className={styles.math}
+    math='\\
+    L = length \ of \ member \\
+    dx = x_2 - x_1 \\
+    dy = y_2 - y_1'
   />
 
   return (
     <div className={styles.child} {...props}>
-      {Elem3}
+      <div>
+        {Elem3}
+      </div>
+      <div>
+        {Elem4}
+      </div>
     </div>
   )
 }
