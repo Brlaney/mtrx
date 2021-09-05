@@ -1,37 +1,37 @@
 @import '../theme/theme';
 
-#navcontainer {
-  position: sticky;
-  background-color: $bg-d;
-  border-bottom: '1px solid $text-light';
-  display: flex;
-  flex-direction: row;
-}
-
-#brand {
-  padding-left: 0.4rem;
-  font-size: 2rem;
-  color: $border-color;
-}
-
-#brand:hover {
-  text-decoration: underline;
-}
-
-#listItem {
-  margin: 0 1rem 0 0;
-  padding: 0;
-}
-
-.navLink {
-  font-weight: bold;
-  color: $bg-dark;
-}
-
-#list {
-  font-size: 2rem;
-}
-
-#link {
-  font-size: 1rem;
+#navbar {
+  #navcontainer {
+    position: sticky;
+    background-color: $bg-d;
+    border-bottom: '1px solid $text-light';
+    display: flex;
+    flex-direction: row;
+    #parent {
+      #brand {
+        font-size: 2rem;
+        padding-left: 0.4rem;
+        color: $border-color;
+      }
+      #brand:hover {
+        text-decoration: underline;
+      }
+    }
+    div {
+      #listItem {
+        margin: 0 1rem 0 0;
+        padding: 0;
+      }
+      .navLink {
+        font-weight: bold;
+        color: $bg-dark;
+      }
+      #list {
+        font-size: 2rem;
+      }
+      #link {
+        font-size: 1rem;
+      }
+    }
+  }
 }

@@ -33,7 +33,7 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
         {/* Grid row I - parent */}
         <div
           id={styles.grid}
-          className='uk-grid-row uk-child-width-1-1'
+          className='uk-grid-row uk-child-width-1-3'
         >
           {choicesList.map((choice: Choice1) => (
             <Link

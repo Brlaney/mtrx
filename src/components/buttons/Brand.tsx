@@ -6,7 +6,7 @@ const GoBack = () => {
     <motion.div
       className='brandDiv'
       whileHover={{
-        scale: 1.1,
+        scale: 1.2,
         transition: {
           duration: .25
         }
@@ -15,7 +15,7 @@ const GoBack = () => {
     >
       <IoGridOutline
         className='brandIcon'
-        size='2rem'
+        size='2.25rem'
         color='#e5e5e5'
       />
     </motion.div>

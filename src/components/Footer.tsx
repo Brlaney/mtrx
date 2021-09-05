@@ -10,25 +10,16 @@ const Footer = () => {
       >
         <Link href='https://github.com/Brlaney'>
           <p className={styles.link}>
-            Developed by
-            <a
-              id={styles.span}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='uk-text-lead'
-            >
-              Brendan Laney
-            </a>
+            Developed by <a target='_blank' rel='noopener noreferrer' className={styles.span}>Brendan Laney</a>
             &copy; 2021
           </p>
         </Link>
         <Link href='/tests'>
           <p className={styles.link}>
             <a
-              id={styles.tests}
               target='_blank'
               rel='noopener noreferrer'
-              className='uk-text-lead'
+              className={styles.tests}
             >
               Tests
             </a>
