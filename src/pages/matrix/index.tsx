@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { server } from '@/lib/config/server'
-import { Choice } from '@/lib/types'
+import { Choice1 } from '@/lib/types'
 import { motion } from 'framer-motion'
 import styles from '@/styles/pages/Matrix.module.scss'
 
@@ -35,7 +35,7 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
           id={styles.grid}
           className='uk-grid-row uk-child-width-1-1'
         >
-          {choicesList.map((choice: Choice) => (
+          {choicesList.map((choice: Choice1) => (
             <Link
               key={choice.id}
               href={`/matrix/${encodeURIComponent(choice.link)}`}
@@ -69,7 +69,7 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
 export const getStaticProps: GetStaticProps = async _context => {
   const endpoint = `${server}/api/matrix`;
   const res = await fetch(endpoint)
-  const choices: Choice[] = await res.json()
+  const choices: Choice1[] = await res.json()
 
   return {
     props: {

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const GoBack = ({ link }) => {
   return (
-    <motion.div className='btnRow'>
+    <motion.div>
       <Link href={link}>
         <motion.button
           id='goback'
@@ -19,6 +19,7 @@ const GoBack = ({ link }) => {
           />
         </motion.button>
       </Link>
+      <div className='btnRow' />
     </motion.div>
   )
 }
