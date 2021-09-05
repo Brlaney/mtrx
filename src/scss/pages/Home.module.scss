@@ -30,6 +30,7 @@
       color: $bg-d;
     }
   }
+
   .subheader {
     font-size: 1.77rem;
     margin-bottom: 1rem;
@@ -50,44 +51,23 @@
     }
   }
   .grid {
+    width: 100%;
+    margin: 2.5rem 0 1rem 0;
     padding: 0;
     display: flex;
     flex-direction: row;
-    #image {
-      height: 100%;
-      margin: 0.1rem 0.5rem 0.1rem 0.5rem;
-      border: 1px solid $bg-m;
+    div {
+      width: 450px;
+      height: 303.8px;
+      border: 0;
+      margin: 0 0.77rem 0 0.65rem;
       border-radius: 0.75rem;
-      background-color: $bg-d;
-      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.166);
-      .uikit {
-        height: 30px;
-        width: 140px;
-        text-align: center;
-        vertical-align: middle;
-        padding-top: 0.6rem;
-        color: $uikit;
-        font-weight: bold;
-      }
-      .chartjs {
-        height: 30px;
-        width: 140px;
-        text-align: center;
-        vertical-align: middle;
-        padding-top: 0.6rem;
-        color: $chartjs;
-        font-weight: bold;
-      }
-      .react {
-        height: 30px;
-        width: 140px;
-        text-align: center;
-        vertical-align: middle;
-        padding-top: 0.6rem;
-        color: $react;
-        font-weight: bold;
+      .image {
+        border: 0;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.166);
+        padding: 0 0.77rem 0 0.77rem;
+        margin: 0 0.77rem 0 0.77rem;
       }
     }
   }
 }
-  

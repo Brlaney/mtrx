@@ -58,8 +58,12 @@ h1, h2, h3, h4, h5, h6 {
   top: 10%;
 }
 
-.brandIcon {
-  font-weight: 400;
+.brandDiv {
+  padding: auto;
+  margin: 0 0.5rem 0 0;
+  .brandIcon {
+    font-weight: 400;
+  }
 }
 
 .dotnav {

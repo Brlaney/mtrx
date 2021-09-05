@@ -2,48 +2,33 @@ import { motion, AnimationProps } from 'framer-motion'
 
 const pathColor = '#252323'
 const shapeColor = '#252323'
-const nodeColor = '#CADEFC'
+const nodeColor = 'rgba(202, 221, 251, 0.4)'
 
 const mainPathVariant: AnimationProps = {
-  transition: {
-    duration: 6,
-    ease: 'easeInOut',
-  },
-  variants: {
-    visible: {
-      pathLength: 1,
-    },
-    hidden: {
-      pathLength: 0,
-    },
-  },
-}
+  transition: { duration: 6, ease: 'easeInOut' },
+  variants: { visible: { pathLength: 1 }, hidden: { pathLength: 0, } }
+};
 
 const shapeVariations: AnimationProps = {
-  transition: {
-    delay: 0,
-    duration: 1,
-    ease: 'easeIn',
-  },
+  transition: { delay: 0, duration: 1, ease: 'easeIn' },
   variants: {
     visible: {
       fillOpacity: 1,
       pathLength: 1,
-      transition: {
-        delay: 0,
-        duration: 4,
-      },
+      transition: { delay: 0, duration: 4 }
     },
-    hidden: {
-      fillOpacity: 0,
-      pathLength: 0,
-    },
-  },
-}
+    hidden: { fillOpacity: 0, pathLength: 0 }
+  }
+};
 
 const Bar = () => {
   return (
-    <motion.div>
+    <motion.div
+      className='animationParent'
+      initial='initial'
+      animate='animate'
+      exit={{ opacity: 0 }}
+    >
       <div>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -64,7 +49,6 @@ const Bar = () => {
               fill={shapeColor}
               stroke={pathColor}
               stroke-width='0.5'
-              {...shapeVariations}
               animate='visible'
               initial='hidden'
               whileHover={{ scale: 1.3 }}
@@ -72,115 +56,37 @@ const Bar = () => {
             />
             <motion.circle
               id='node1'
-              data-name='Path 2'
-              cx='284'
-              cy='55'
-              r='4'
-              transform='rotate(-180 284 55)'
-              fill={nodeColor}
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
-            />
-            <motion.circle
-              id='node2'
               data-name='Path 3'
               cx='58'
               cy='55'
               r='4'
               transform='rotate(-180 58 55)'
               fill={nodeColor}
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
-            />
-            <motion.path
-              id='Fx1'
-              data-name='Path 4'
-              d='M62 55.5C62 53 60 51.5 58 51.5'
-              fill={shapeColor}
               stroke={pathColor}
-              stroke-width='1'
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
+              stroke-width='0.5'
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }
+              }}
+              initial={{ y: 60, opacity: 0, }}
             />
-            <motion.path
-              id='Fx1'
-              data-name='Path 5'
-              d='M54 55C54 53 55.5 51.5 58 51.5'
-              fill={shapeColor}
+            <motion.circle
+              id='node2'
+              data-name='Path 2'
+              cx='284'
+              cy='55'
+              r='4'
+              transform='rotate(-180 284 55)'
+              fill={nodeColor}
               stroke={pathColor}
-              stroke-width='1'
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
-            />
-            <motion.path
-              id='Fx1'
-              data-name='Path 6'
-              d='M62 55C62 57.5 60 59 58 59'
-              fill={shapeColor}
-              stroke={pathColor}
-              stroke-width='1'
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
-            />
-            <motion.path
-              id='Fx1'
-              data-name='Path 7'
-              d='M54 55C54 57.5 55.5 59 58 59'
-              fill={shapeColor}
-              stroke={pathColor}
-              stroke-width='1'
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
-            />
-            <motion.path
-              id='Fx1'
-              data-name='Path 8'
-              d='M286 55C286 53 286 51.5 286 51.5'
-              fill={shapeColor}
-              stroke={pathColor}
-              stroke-width='1'
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
-            />
-            <motion.path
-              id='Fx1'
-              data-name='Path 9'
-              d='M286 55C286 53 281.5 51.5 286 51.5'
-              fill={shapeColor}
-              stroke={pathColor}
-              stroke-width='1'
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
-            />
-            <motion.path
-              id='Fx1'
-              data-name='Path 10'
-              d='M288 55C288 57.5 286 59 286 59'
-              fill={shapeColor}
-              stroke={pathColor}
-              stroke-width='1'
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
-            />
-            <motion.path
-              id='Fx1'
-              data-name='Path 11'
-              d='M280 55C280 57.5 281.5 59 286 59'
-              fill={shapeColor}
-              stroke={pathColor}
-              stroke-width='1'
-              {...shapeVariations}
-              animate='visible'
-              initial='hidden'
+              stroke-width='0.5'
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { duration: 1.2, ease: [0.6, -0.05, 0.01, 0.99] }
+              }}
+              initial={{ y: 60, opacity: 0, }}
             />
             <motion.path
               id='Fx1'

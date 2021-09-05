@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 const GoBack = () => {
   return (
     <motion.div
+      className='brandDiv'
       whileHover={{
         scale: 1.1,
         transition: {

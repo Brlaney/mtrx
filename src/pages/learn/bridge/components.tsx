@@ -1,10 +1,13 @@
 import GoBack from '@/components/buttons/GoBack'
+import { data } from '@/lib/data/bridge/components'
 import styles from '@/styles/pages/Bridge.module.scss'
 
-export default function Components() {
+export default function Components({ data }) {
   const endpoint = '/learn';
+
   return (
     <>
+      
       {/* Render the back button component */}
       <GoBack link={endpoint} />
 

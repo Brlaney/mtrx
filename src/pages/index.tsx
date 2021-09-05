@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import Footer from '@/components/Footer'
 import styles from '@/styles/pages/Home.module.scss'
 
@@ -20,81 +20,8 @@ export default function Home() {
 
         {/* Grid row I - children = columns/cards */}
         <div className={styles.grid}>
-
-          {/* Grid column I */}
-          <div
-            id={styles.image}
-            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
-          >
-            <Image
-              src='/brands/Uikit.png'
-              width={140}
-              height={140}
-              layout='intrinsic'
-              quality='100'
-            />
-          </div>
-
-          {/* Grid column II */}
-          <div
-            id={styles.image}
-            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
-          >
-            <Image
-              src='/brands/chartjs.png'
-              width={140}
-              height={140}
-              layout='intrinsic'
-              quality='100'
-            />
-          </div>
-
-          {/* Grid column III */}
-          <div
-            id={styles.image}
-            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
-          >
-            <Image
-              src='/brands/React.png'
-              width={140}
-              height={140}
-              layout='intrinsic'
-              quality='100'
-            />
-          </div>
-        </div>
-
-        {/* Grid row II - children = columns/cards caption text */}
-        <div className={styles.grid}>
-
-          {/* Grid column I */}
-          <div
-            id={styles.image}
-            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-dark'
-          >
-            <h4 className={styles.uikit}>
-              UiKit
-            </h4>
-          </div>
-
-          {/* Grid column II */}
-          <div
-            id={styles.image}
-            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-dark'
-          >
-            <h4 className={styles.chartjs}>
-              Chart.js
-            </h4>
-          </div>
-
-          {/* Grid column III */}
-          <div
-            id={styles.image}
-            className='uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-dark'
-          >
-            <h4 className={styles.react}>
-              React/Next
-            </h4>
+          <div className='uk-text-center uk-width-expand uk-text-lead'>
+            Landing page content
           </div>
         </div>
       </div>
