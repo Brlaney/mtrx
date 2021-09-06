@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import Bar from '@/components/animations/Bar'
+import Truss from '@/components/animations/Truss'
 import styles from '@/styles/pages/Tests.module.scss'
 
 /*
@@ -118,7 +118,7 @@ export default function Tests() {
             
         {/* SVG graphic test */}
         <motion.div className={styles.card}>
-          <Bar />
+          <Truss />
         </motion.div>
       </div>
     </motion.div>

@@ -28,6 +28,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 4px 13px 14px -5px,
     rgba(0, 0, 0, 0.3) 0px 14px 16px -8px;
     .sectionTitle {
+      font-size: 1.25rem;
       color: $bg-d;
       min-width: 420px;
       text-align: justify;
@@ -55,7 +56,7 @@
           text-align: center;
           margin: 0.44rem;
           padding: 0.64rem 0.44rem 0.64rem 0.44rem;
-          line-height: 2;
+          line-height: 1.5;
         }
       }
     }
