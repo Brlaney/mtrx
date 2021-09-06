@@ -3,6 +3,8 @@ export interface IApi1 {
   link: string;
   name: string;
   path: string;
+  width: number;
+  height: number;
 };
 
 export interface Choice1 {
@@ -10,6 +12,8 @@ export interface Choice1 {
   link: string;
   name: string;
   path: string;
+  width: number;
+  height: number;
 };
 
 export interface IApi2 {

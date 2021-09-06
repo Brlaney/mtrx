@@ -43,19 +43,24 @@ const Matrix = ({ choices }: InferGetStaticPropsType<typeof getStaticProps>) => 
             >
               <motion.div
                 id={styles.image}
-                className='uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
+                className='uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark'
                 onMouseEnter={() => setName(choice.name)}
                 onMouseLeave={() => setName('')}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.9 }} 
+                whileHover={{
+                  scale: 1.02,
+                  transition: {
+                    duration: .25
+                  }
+                }}
+                whileTap={{ scale: 0.95 }} 
               >
                 <Image
                   layout='fixed'
                   className={styles.img}
                   alt={choice.name}
                   src={choice.path}
-                  width={200}
-                  height={164.25}
+                  width={choice.width}
+                  height={choice.height}
                 />
               </motion.div>
             </Link>

@@ -15,8 +15,8 @@ const GoBack = () => {
     >
       <IoGridOutline
         className='brandIcon'
-        size='2.25rem'
-        color='#e5e5e5'
+        size='2rem'
+        color='#ffffff'
       />
     </motion.div>
   )

@@ -11,7 +11,7 @@ import { Elem3 } from './components/trusses/Elem3'
 import { motion } from 'framer-motion'
 import styles from '@/styles/pages/Learning.module.scss'
 
-const easing = [0.5, -0.03, 0.06, 1]
+const easing = [0.5, -0.03, 0.06, 1];
 
 const variants = {
   visible: (i: number) => ({
@@ -34,7 +34,7 @@ const variants = {
       ease: easing
     }
   }
-}
+};
 
 const Truss: React.FC<{ props }> = ({ props }) => {
   const [currentStep, setCurrentStep] = React.useState(0);
