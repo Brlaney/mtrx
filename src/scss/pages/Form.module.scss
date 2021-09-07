@@ -1,4 +1,4 @@
-﻿@import '../theme/theme';
+@import '../theme/theme';
 
 #back {
   position: absolute;
@@ -74,24 +74,9 @@
     padding: 2rem;
     flex-wrap: wrap;
     .column {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       max-width: 400px;
-      min-height: 256.2px;
       padding: 1rem;
       margin: 1rem;
-      border-radius: 10px;
-      border: 1px solid $border-color;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-      transition-delay: 0.15s, 0.05s;
-      transition-duration: 1s, 0.1s;
-    }
-    .column:hover {
-      cursor: pointer;
-      border: 1px solid $secondary;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
     #image {
       display: flex;
@@ -106,6 +91,68 @@
       .img {
         border: 0;
         padding: 0.5rem;
+      }
+    }
+    #image:hover {
+      cursor: pointer;
+      border: 2px solid $secondary;
+    }
+    .form {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      width: 100%;
+      padding: 1.44rem 1.88rem 0.42rem 1.88rem;
+      margin: 0;
+      border: 1px solid $border-color;
+      border-radius: 7px;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      #formSelect {
+        padding: 0;
+        margin: 0.75rem 0 1rem 0;
+        #selectionTitle {
+          font-size: 1rem;
+          width: 100%;
+          text-align: center;
+          padding-bottom: 0.52rem;
+          margin-bottom: 0.33rem;
+          border-bottom: 1px solid $bg-m;
+        }
+        #selectionControl {
+          padding-top: 0.77rem;
+          display: flex;
+          justify-content: space-between;
+          #select {
+            #selection {
+              padding-top: 1rem;
+            }
+          }
+        }
+      }
+      .formDiv {
+        padding: 0;
+        align-items: center;
+        margin: 0.75rem 0 1rem 0;
+        #label {
+          padding: 0.2rem;
+          font-size: 1rem;
+        }
+        #controls {
+          text-align: center;
+          #input {
+            width: 220px;
+            margin: 0.2rem 0 0.2rem 0;
+          }
+        }
+        #submit {
+          width: 100%;
+          max-width: 450px;
+          border-radius: 5px;
+          background-color: $secondary;
+          margin: 1rem 0 1.2rem 0;
+          padding: 0.4rem;
+          color: $white;
+        }
       }
     }
   }

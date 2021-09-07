@@ -1,40 +1,14 @@
-import * as React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import 'katex/dist/katex.min.css'
-import GoBack from '@/components/buttons/GoBack'
-import Forward from '@/components/buttons/Forward'
-import Back from '@/components/buttons/Back'
-import { Elem1 } from './components/trusses/Elem1'
-import { Elem2 } from './components/trusses/Elem2'
-import { Elem3 } from './components/trusses/Elem3'
-import { motion } from 'framer-motion'
-import styles from '@/styles/pages/Learning.module.scss'
-
-const easing = [0.5, -0.03, 0.06, 1];
-
-const variants = {
-  visible: (i: number) => ({
-    opacity: 1,
-    transition: {
-      staggerChildren: i + 20,
-    },
-  }),
-  hidden: { opacity: 0 },
-  initial: {
-    y: 60,
-    opacity: 0,
-    transition: { duration: 0.6, ease: easing }
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing
-    }
-  }
-};
+import * as React from 'react';
+import Link from 'next/link';
+import GoBack from '@/components/buttons/GoBack';
+import Forward from '@/components/buttons/Forward';
+import Back from '@/components/buttons/Back';
+import { Elem1 } from './components/trusses/Elem1';
+import { Elem2 } from './components/trusses/Elem2';
+import { Elem3 } from './components/trusses/Elem3';
+import { motion } from 'framer-motion';
+import { variants } from '@/lib/config/animations/trussComponents';
+import styles from '@/styles/pages/Learning.module.scss';
 
 const Truss: React.FC<{ props }> = ({ props }) => {
   const [currentStep, setCurrentStep] = React.useState(0);
@@ -186,6 +160,6 @@ const Truss: React.FC<{ props }> = ({ props }) => {
       </div>
     </motion.div>
   )
-}
+};
 
-export default Truss
+export default Truss;

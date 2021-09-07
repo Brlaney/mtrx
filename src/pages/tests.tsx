@@ -1,7 +1,9 @@
-import * as React from 'react'
-import { motion } from 'framer-motion'
-import Truss from '@/components/animations/Truss'
-import styles from '@/styles/pages/Tests.module.scss'
+import * as React from 'react';
+import { motion } from 'framer-motion';
+// import Truss from '@/components/animations/Truss';
+// import Beam from '@/components/animations/Beam';
+import Frame from '@/components/animations/Frame';
+import styles from '@/styles/pages/Tests.module.scss';
 
 /*
 import styles from '@/styles/pages/Learning.module.scss'
@@ -10,31 +12,31 @@ import {
   convertToRadians,
   convertToDegrees,
   coordinatesToL
-} from '@/lib/utils/matrix/convert'
+} from '@/lib/utils/matrix/convert';
 
 import { 
 calcAreaR,
   calcAreaD,
   multiplyMatrices 
-} from '@/lib/utils/matrix/calculate'
+} from '@/lib/utils/matrix/calculate';
 
 import {
   trussK,
   beamK
-} from '@/lib/utils/matrix/transform'
+} from '@/lib/utils/matrix/transform';
 
-import Image from 'next/image'
-import Link from 'next/link'
-import 'katex/dist/katex.min.css'
-import GoBack from '@/components/buttons/GoBack'
-import Forward from '@/components/buttons/Forward'
-import Back from '@/components/buttons/Back'
-import { Elem1 } from './components/trusses/Elem1'
-import { Elem2 } from './components/trusses/Elem2'
-import { Elem3 } from './components/trusses/Elem3'
+import Image from 'next/image';
+import Link from 'next/link';
+import 'katex/dist/katex.min.css';
+import GoBack from '@/components/buttons/GoBack';
+import Forward from '@/components/buttons/Forward';
+import Back from '@/components/buttons/Back';
+import { Elem1 } from './components/trusses/Elem1';
+import { Elem2 } from './components/trusses/Elem2';
+import { Elem3 } from './components/trusses/Elem3';
 
 
-const easing = [0.5, -0.03, 0.06, 1]
+const easing = [0.5, -0.03, 0.06, 1];
 
 const variants = {
   visible: (i: number) => ({
@@ -57,7 +59,7 @@ const variants = {
       ease: easing
     }
   }
-}
+};
 
 
 Declaring variables for conversion functions
@@ -118,9 +120,9 @@ export default function Tests() {
             
         {/* SVG graphic test */}
         <motion.div className={styles.card}>
-          <Truss />
+          <Frame />
         </motion.div>
       </div>
     </motion.div>
   )
-}
+};

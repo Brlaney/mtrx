@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import styles from '@/styles/pages/Learn.module.scss'
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import styles from '@/styles/pages/Learn.module.scss';
 
 export default function Learn() {
   return (
@@ -140,4 +140,4 @@ export default function Learn() {
       </div>
     </motion.div>
   )
-}
+};

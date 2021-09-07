@@ -1,6 +1,6 @@
-import { IoReturnUpBackOutline } from 'react-icons/io5'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { IoReturnUpBackOutline } from 'react-icons/io5';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const GoBack = ({ link }) => {
   return (
@@ -22,6 +22,6 @@ const GoBack = ({ link }) => {
       <div className='btnRow' />
     </motion.div>
   )
-}
+};
 
-export default GoBack
+export default GoBack;

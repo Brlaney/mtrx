@@ -1,14 +1,14 @@
-import * as React from 'react'
-import { AnimateSharedLayout, AnimatePresence } from 'framer-motion'
-import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
-import Layout from '@/components/Layout'
-import 'uikit/dist/js/uikit.js'
-import 'uikit/dist/css/uikit.css'
-import '@/styles/globals.scss'
+import * as React from 'react';
+import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import Layout from '@/components/Layout';
+import 'uikit/dist/js/uikit.js';
+import 'uikit/dist/css/uikit.css';
+import '@/styles/globals.scss';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <AnimateSharedLayout type='crossfade'>
@@ -19,4 +19,4 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </AnimatePresence>
     </AnimateSharedLayout>
   )
-}
+};

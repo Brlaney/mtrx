@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-export const Dotnav: React.FC<{step}> = ({step}) => {
+export const Dotnav: React.FC<{ step }> = ({ step }) => {
   return (
     <>
       <div className='dotnav'>
@@ -16,4 +16,4 @@ export const Dotnav: React.FC<{step}> = ({step}) => {
       </div>
     </>
   )
-}
+};

@@ -1,23 +1,15 @@
-import 'katex/dist/katex.min.css'
-import TeX from '@matejmazur/react-katex'
-import GoBack from '@/components/buttons/GoBack'
-import styles from '@/styles/pages/Learning.module.scss'
+import * as React from 'react';
+import Link from 'next/link';
+import GoBack from '@/components/buttons/GoBack';
+import Forward from '@/components/buttons/Forward';
+import Back from '@/components/buttons/Back';
+import { Elem1 } from './components/beams/Elem1';
+import { Elem2 } from './components/beams/Elem2';
+import styles from '@/styles/pages/Learning.module.scss';
 
-export default function Frame() {
+const Frame: React.FC<{ props }> = ({ props }) => {
+  const [currentStep, setCurrentStep] = React.useState(0);
   const endpoint = '/learn';
-
-  const Elem1 = <TeX
-    className={styles.inlineMath}
-    math='\sum ( All \ losses) = H = H_\epsilon + H_f'
-  />
-  const Elem2 = <TeX
-    className={styles.inlineMath}
-    math='\implies \ H = [  1 + K_e + \frac{29n^2L}{R^{1.33}} ]\frac{ V^2}{ 2g}'
-  />
-  const Elem3 = <TeX
-    className={styles.blockMath}
-    math=' HW_o + \frac{V_1^2}{2g} = TW_o + \frac{V_1^2}{2g} + H'
-  />
 
   return (
     <>
@@ -27,41 +19,92 @@ export default function Frame() {
 
       {/* Page parent container and header */}
       <div className={styles.parent}>
+
+        <div className={styles.topRow} />
+
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Matrix structural analysis
+            Discretize your truss
           </h1>
           <h2 className={styles.subtitle}>
-            An app that solves trusses, beams,
-            and frames using the stiffness method
+            Consistantly label local and global degrees of freedom
           </h2>
         </div>
 
-        <h2 className={styles.section}>Select the desired system to solve</h2>
+        {/* 1st Grid row (parent) */}
+        {currentStep === 0 && (
+          <div className={styles.card}>
+            <h2 className={styles.sectionTitle}>
+              Stiffness method - theory
+            </h2>
+            <div className={styles.content}>
+              <div className={styles.child}>
+                <Elem1 />
+              </div>
+              <button
+                className='uk-button uk-button-small'
+                onClick={() => setCurrentStep(1)}
+              >
+                <Forward props={props} />
+              </button>
+            </div>
+          </div>
+        )}
 
-        {/* 1 Grid row (parent) & 2 grid columns (children)  */}
-        <div
-          id={styles.grid}
-          className='uk-grid-row uk-grid-row-large uk-child-width-1-1 uk-text-center'
-        >
-          <div className={styles.element}>
-            {Elem1}
+        {/* 2nd Grid row (parent) */}
+        {currentStep === 1 && (
+          <div className={styles.card}>
+            <h2 className={styles.sectionTitle}>
+              Stiffness method - theory
+            </h2>
+            <div className={styles.content}>
+              <div className={styles.child}>
+                <Elem2 />
+              </div>
+              <button
+                className='uk-button uk-button-small'
+                onClick={() => setCurrentStep(0)}
+              >
+                <Back props={props} />
+              </button>
+              <button
+                className='uk-button uk-button-small'
+                onClick={() => setCurrentStep(2)}
+              >
+                <Forward props={props} />
+              </button>
+            </div>
           </div>
-          <div className={styles.element}>
-            {Elem2}
-          </div>
-        </div>
+        )}
 
-        {/* 2 Grid row (parent) & 1 grid columns (children)  */}
-        <div
-          id={styles.grid}
-          className='uk-grid-row uk-grid-row-large uk-child-width-1-1 uk-text-center'
-        >
-          <div className={styles.element}>
-            {Elem3}
+        {/* 3rd Grid row (parent) */}
+        {currentStep === 2 && (
+          <div className={styles.card}>
+            <h2 className={styles.title}>
+              Congratulations!
+            </h2>
+            <h3 className={styles.sectionTitle}>
+              You have completed the truss portion of the stiffness method tutorial
+            </h3>
+            <div className={styles.content}>
+              <Link href='/learn'>
+                <button className='uk-button uk-button-primary uk-margin uk-width-1-2 uk-align-center'>
+                  Learn more
+                </button>
+              </Link>
+            </div>
+            <div className={styles.content}>
+              <Link href='/'>
+                <button className='uk-button uk-button-primary uk-margin uk-width-1-2 uk-align-center'>
+                  Back to homepage
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   )
-}
+};
+
+export default Frame;

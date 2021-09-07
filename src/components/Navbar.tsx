@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import Brand from '@/components/buttons/Brand'
-import styles from '@/styles/components/Navbar.module.scss'
+import Link from 'next/link';
+import Brand from '@/components/buttons/Brand';
+import styles from '@/styles/components/Navbar.module.scss';
 
 const Navbar = () => {
   return (
@@ -49,6 +49,6 @@ const Navbar = () => {
       </nav>
     </div >
   )
-}
+};
 
-export default Navbar
+export default Navbar;

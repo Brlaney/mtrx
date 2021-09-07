@@ -6,7 +6,7 @@ import StepOne from '@/components/forms/truss/StepOne'
 import StepTwo from '@/components/forms/truss/StepTwo'
 import StepThree from '@/components/forms/truss/StepThree'
 import GoBack from '@/components/buttons/GoBack'
-import styles from '@/styles/pages/Matrix.module.scss'
+import styles from '@/styles/pages/Form.module.scss'
 
 const Truss: React.FC<{ props }> = () => {
   const endpoint = '/matrix';

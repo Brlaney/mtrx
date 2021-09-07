@@ -1,12 +1,12 @@
-import * as React from 'react'
-import * as yup from 'yup'
-import { Formik, Form, Field } from 'formik'
-import Forward from '@/components/buttons/Forward'
-import { Dotnav } from '@/components/buttons/Dotnav'
-import { Selection } from '../components/Selection'
-import { selectUnits } from '@/lib/config/forms/truss'
-// import { trussCheck } from '@/lib/utils/matrix/calculate'
-import styles from '@/styles/components/Steps.module.scss'
+import * as React from 'react';
+import * as yup from 'yup';
+import { Formik, Form, Field } from 'formik';
+import Forward from '@/components/buttons/Forward';
+import { Dotnav } from '@/components/buttons/Dotnav';
+import { Selection } from '../components/Selection';
+import { selectUnits } from '@/lib/config/forms/truss';
+// import { trussCheck } from '@/lib/utils/matrix/calculate';
+import styles from '@/styles/components/Steps.module.scss';
 
 const StepOne = (props) => {
   const handleSubmit = (values) => {
@@ -20,7 +20,7 @@ const StepOne = (props) => {
     units: yup.string().required(),
   });
 
-  console.log(props)
+  console.log(props);
 
   return (
     <>
@@ -126,6 +126,6 @@ const StepOne = (props) => {
       </Formik>
     </>
   )
-}
+};
 
-export default StepOne
+export default StepOne;

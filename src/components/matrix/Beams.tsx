@@ -1,5 +1,4 @@
-import React from 'react'
-import { Line } from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
 import { data, config } from '@/lib/config/matrix/beams';
 
@@ -16,6 +15,6 @@ const Beams = () => {
       />
     </>
   )
-}
+};
 
-export default Beams
+export default Beams;

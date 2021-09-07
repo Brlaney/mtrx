@@ -1,5 +1,5 @@
-import { IoChevronBackCircleOutline } from 'react-icons/io5'
-import { motion } from 'framer-motion'
+import { IoChevronBackCircleOutline } from 'react-icons/io5';
+import { motion } from 'framer-motion';
 
 const Back = ({ props }) => {
   return (
@@ -10,7 +10,7 @@ const Back = ({ props }) => {
           duration: .2
         }
       }}
-      whileTap={{ scale: 0.9 }} 
+      whileTap={{ scale: 0.9 }}
     >
       <IoChevronBackCircleOutline
         className='backIcon'
@@ -19,6 +19,6 @@ const Back = ({ props }) => {
       />
     </motion.div>
   )
-}
+};
 
-export default Back
+export default Back;

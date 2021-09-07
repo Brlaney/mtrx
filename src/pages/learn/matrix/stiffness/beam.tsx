@@ -1,12 +1,11 @@
-import * as React from 'react'
-import Link from 'next/link'
-import 'katex/dist/katex.min.css'
-import GoBack from '@/components/buttons/GoBack'
-import Forward from '@/components/buttons/Forward'
-import Back from '@/components/buttons/Back'
-import { Elem1 } from './components/beams/Elem1'
-import { Elem2 } from './components/beams/Elem2'
-import styles from '@/styles/pages/Learning.module.scss'
+import * as React from 'react';
+import Link from 'next/link';
+import GoBack from '@/components/buttons/GoBack';
+import Forward from '@/components/buttons/Forward';
+import Back from '@/components/buttons/Back';
+import { Elem1 } from './components/beams/Elem1';
+import { Elem2 } from './components/beams/Elem2';
+import styles from '@/styles/pages/Learning.module.scss';
 
 const Beam: React.FC<{ props }> = ({ props }) => {
   const [currentStep, setCurrentStep] = React.useState(0);
@@ -106,6 +105,6 @@ const Beam: React.FC<{ props }> = ({ props }) => {
       </div>
     </>
   )
-}
+};
 
-export default Beam
+export default Beam;

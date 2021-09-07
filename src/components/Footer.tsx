@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import styles from '@/styles/components/Footer.module.scss'
+import Link from 'next/link';
+import styles from '@/styles/components/Footer.module.scss';
 
 const Footer = () => {
   return (
@@ -28,6 +28,6 @@ const Footer = () => {
       </div>
     </>
   )
-}
+};
 
-export default Footer
+export default Footer;

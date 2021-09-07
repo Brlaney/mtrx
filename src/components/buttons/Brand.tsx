@@ -1,5 +1,5 @@
-import { IoGridOutline } from 'react-icons/io5'
-import { motion } from 'framer-motion'
+import { IoGridOutline } from 'react-icons/io5';
+import { motion } from 'framer-motion';
 
 const GoBack = () => {
   return (
@@ -20,6 +20,6 @@ const GoBack = () => {
       />
     </motion.div>
   )
-}
+};
 
-export default GoBack
+export default GoBack;

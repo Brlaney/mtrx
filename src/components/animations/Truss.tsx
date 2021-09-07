@@ -1,11 +1,10 @@
-import { motion, AnimationProps } from 'framer-motion'
+import { motion, AnimationProps } from 'framer-motion';
 
-const color1 = '#4E4E4E'
-const color2 = '#888888'
-const color3 = '#C4C4C4'
-const color4 = '#CADEFC'
-const color5 = '#252323'
-const color6 = '#D1D1D1'
+const color1 = '#4E4E4E';
+const color2 = '#888888';
+const color3 = '#C4C4C4';
+const color4 = '#CADEFC';
+const color5 = '#252323';
 
 const mainPathVariant: AnimationProps = {
   transition: { duration: 6, ease: 'easeInOut' },
@@ -426,6 +425,6 @@ const Truss = () => {
       </div>
     </motion.div>
   )
-}
+};
 
-export default Truss
+export default Truss;

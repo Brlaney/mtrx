@@ -1,11 +1,11 @@
-import * as React from 'react'
-import * as yup from 'yup'
-import Forward from '@/components/buttons/Forward'
-import Back from '@/components/buttons/Back'
-import { Formik, Form, Field } from 'formik'
-import { Selection } from '../components/Selection'
-import { SelectOne } from '../components/SelectOne'
-import styles from '@/styles/components/Steps.module.scss'
+import * as React from 'react';
+import * as yup from 'yup';
+import Forward from '@/components/buttons/Forward';
+import Back from '@/components/buttons/Back';
+import { Formik, Form, Field } from 'formik';
+import { Selection } from '../components/Selection';
+import { SelectOne } from '../components/SelectOne';
+import styles from '@/styles/components/Steps.module.scss';
 
 const StepThree = (props) => {
   const handleSubmit = (values) => {
@@ -79,6 +79,6 @@ const StepThree = (props) => {
       </Formik>
     </>
   )
-}
+};
 
-export default StepThree
+export default StepThree;

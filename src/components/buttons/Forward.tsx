@@ -1,5 +1,5 @@
-import { IoChevronForwardCircleOutline } from 'react-icons/io5'
-import { motion } from 'framer-motion'
+import { IoChevronForwardCircleOutline } from 'react-icons/io5';
+import { motion } from 'framer-motion';
 
 const Forward = ({ props }) => {
   return (
@@ -19,6 +19,6 @@ const Forward = ({ props }) => {
       />
     </motion.div>
   )
-}
+};
 
-export default Forward
+export default Forward;

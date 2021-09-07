@@ -1,6 +1,5 @@
-// import Image from 'next/image'
-import Footer from '@/components/Footer'
-import styles from '@/styles/pages/Home.module.scss'
+import Footer from '@/components/Footer';
+import styles from '@/styles/pages/Home.module.scss';
 
 export default function Home() {
   return (
@@ -28,4 +27,4 @@ export default function Home() {
       <Footer />
     </>
   )
-}
+};

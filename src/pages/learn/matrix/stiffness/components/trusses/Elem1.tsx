@@ -1,7 +1,7 @@
-import React from 'react'
-import TeX from '@matejmazur/react-katex'
-import 'katex/dist/katex.min.css'
-import styles from '@/styles/pages/Learning.module.scss'
+import React from 'react';
+import TeX from '@matejmazur/react-katex';
+import 'katex/dist/katex.min.css';
+import styles from '@/styles/pages/Learning.module.scss';
 
 export const Elem1: React.FC<{}> = ({ ...props }) => {
   const Elem1 = <TeX
@@ -18,11 +18,11 @@ export const Elem1: React.FC<{}> = ({ ...props }) => {
         F_{x1} \\
         F_{x2}
         \end{bmatrix}'
-  />
+  />;
 
   return (
     <div className={styles.child} {...props}>
       {Elem1}
     </div>
   )
-}
+};
