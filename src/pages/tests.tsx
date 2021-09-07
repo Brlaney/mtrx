@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-// import Truss from '@/components/animations/Truss';
-// import Beam from '@/components/animations/Beam';
+import Truss from '@/components/animations/Truss';
+import Beam from '@/components/animations/Beam';
 import Frame from '@/components/animations/Frame';
 import styles from '@/styles/pages/Tests.module.scss';
 
@@ -119,6 +119,12 @@ export default function Tests() {
         </div>
             
         {/* SVG graphic test */}
+        <motion.div className={styles.card}>
+          <Truss />
+        </motion.div>
+        <motion.div className={styles.card}>
+          <Beam />
+        </motion.div>
         <motion.div className={styles.card}>
           <Frame />
         </motion.div>
