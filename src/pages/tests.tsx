@@ -4,6 +4,44 @@ import Truss from '@/components/animations/Truss';
 import Beam from '@/components/animations/Beam';
 import Frame from '@/components/animations/Frame';
 import styles from '@/styles/pages/Tests.module.scss';
+import { useMediaQuery } from '@/lib/utils/hooks';
+
+const Component = () => {
+  const isSmall = useMediaQuery('(min-width: 1360px)');
+  // const isSmall = useIsSmall()
+  const variants = isSmall
+    ? {
+      animate: {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+      },
+      exit: {
+        opacity: 1,
+        scale: 1,
+        y: 500,
+      },
+    }
+    : {
+      animate: {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+      },
+      exit: {
+        opacity: 0,
+        scale: 0.9,
+        y: -10,
+      },
+    };
+
+  return (
+    <motion.div initial='exit' animate='animate' exit='exit'>
+      Animated
+    </motion.div>
+  );
+};
+
 
 /*
 import styles from '@/styles/pages/Learning.module.scss'
@@ -62,19 +100,17 @@ const variants = {
 };
 
 
-Declaring variables for conversion functions
+  Declaring variables for conversion functions
 let mtx1 = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1]
 let mtx2 = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 let d1 = 90;
 let d2 = 45;
 let r1 = 1;
 let r2 = 0.5;
-
-Represents: (x1, y1) & (x2, y2)
+  Represents: (x1, y1) & (x2, y2)
 let p1 = [0, 0];   
 let p2 = [10, 10];
-
-Declaring variables for calculation functions
+  Declaring variables for calculation functions
 let R1 = 3; inches
 let D1 = 6; inches */
 
@@ -117,7 +153,11 @@ export default function Tests() {
           <h2 className={styles.title}>The test page
           </h2>
         </div>
-            
+
+        <motion.div className={styles.animation}>
+          <Component />
+        </motion.div>
+
         {/* SVG graphic test */}
         <motion.div className={styles.card}>
           <Truss />
