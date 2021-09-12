@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import styles from '@/styles/pages/Home.module.scss';
+import Button from '@/components/animations/Button';
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
         {/* Grid row I - children = columns/cards */}
         <div className={styles.grid}>
           <div className='uk-text-center uk-width-expand uk-text-lead'>
-            Landing page content
+            <Button />
           </div>
         </div>
       </div>

@@ -139,7 +139,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
               <Link href='/learn'>
                 <button
                   id={styles.iconButton}
-                  className='uk-button uk-button-primary uk-margin uk-width-1-2 uk-align-center'
+                  className='uk-button uk-margin uk-width-1-2 uk-align-center'
                 >
                   Learn more
                 </button>
@@ -149,7 +149,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
               <Link href='/'>
                 <button
                   id={styles.iconButton}
-                  className='uk-button uk-button-primary uk-margin uk-width-1-2 uk-align-center'
+                  className='uk-button uk-margin uk-width-1-2 uk-align-center'
                 >
                   Back to homepage
                 </button>
