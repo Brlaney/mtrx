@@ -9,11 +9,11 @@ import styles from '@/styles/components/Steps.module.scss';
 
 const StepThree = (props) => {
   const handleSubmit = (values) => {
-    props.next(values, true);
+    props.next(values);
   };
 
   const StepThreeSchema = yup.object({
-    units: yup.string().required().label('Units'),
+    tests: yup.string().default('').nullable(),
   });
 
   return (
@@ -27,11 +27,11 @@ const StepThree = (props) => {
           <div className={styles.form}>
             <Form className='uk-grid-small' uk-grid='true'>
               <h2 className={styles.label}>
-                Step 2. <span className={styles.span}>Node coordinates</span>
+                Step 3. <span className={styles.span}>Boundary conditions</span>
               </h2>
               <div className='uk-width-1-1'>
                 <Field
-                  name='units'
+                  name='tests'
                   id={styles.input}
                   placeholder='Select units'
                   className='uk-select uk-width-1-1'
@@ -40,20 +40,6 @@ const StepThree = (props) => {
                     { label: 'Metric (SI)', value: 'metric' }
                   ]}
                   component={Selection}
-                />
-              </div>
-              <div className='uk-width-1-1'>
-                <Field
-                  name='length'
-                  id={styles.input}
-                  className='uk-margin'
-                  options={[
-                    { label: 'ft', value: 'feet' },
-                    { label: 'in', value: 'inches' },
-                    { label: 'm', value: 'meter' },
-                    { label: 'cm', value: 'centimeter' },
-                  ]}
-                  component={SelectOne}
                 />
               </div>
               <div className='uk-width-1-1'>

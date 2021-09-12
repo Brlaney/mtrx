@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import * as yup from 'yup';
+import { motion } from 'framer-motion';
 import { Dotnav } from '@/components/buttons/Dotnav';
 // import { SelectOne } from '../components/SelectOne';
 import { Formik, Form, Field } from 'formik';
@@ -57,12 +58,14 @@ const StepTwo = (props) => {
   }, [forceUnits, lengthUnits]);
 
   const handleSubmit = (values) => {
-    props.next(values, true);
+    props.next(values);
   };
 
   const stepTwoSchema = yup.object({
-    lengthUnits: yup.string().required(),
-    forceUnits: yup.string().required(),
+    x1: yup.number().defined().min(0),
+    y1: yup.number().defined().min(0),
+    x2: yup.number().defined().min(0),
+    y2: yup.number().defined().min(0)
   });
 
   // Testing the output
@@ -92,50 +95,82 @@ const StepTwo = (props) => {
                 Step 2. <span className={styles.span}>Specify units</span>
               </h2>
 
-              {/* Input coordinates for each node */}
-              {props.data.nodes.map((key, i) => (
-                <>
-                  <div key={i} className='uk-width-1-1'>
-                    <h6 className={styles.field}>Coordinates for member {i}</h6>
-                    <Field
-                      name='length'
-                      id={styles.input}
-                      className='uk-radio'
-                    // component={SelectOne}
-                    />
-                  </div>
-                </>
-              ))}
-
-              {/* Input units for length */}
+              {/* User inputs the members coordinates for node 1 */}
               <div className='uk-width-1-3'>
-                <h6 className={styles.field}>Forces</h6>
+                <h6 className={styles.field}>Node 1 coordinates</h6>
               </div>
-              <div className='uk-width-2-3'>
+              <div className='uk-width-1-3'>
                 <Field
-                  name='length'
+                  name='x1'
                   id={styles.input}
-                  className='uk-radio uk-margin'
-                // component={SelectOne}
+                  className='uk-input'
+                  type='text'
+                  placeholder='x1'
+                />
+              </div>
+              <div className='uk-width-1-3'>
+                <Field
+                  name='y1'
+                  id={styles.input}
+                  className='uk-input'
+                  type='text'
+                  placeholder='y1'
+                />
+              </div>
+
+              {/* User inputs the members coordinates for node 2 */}
+              <div className='uk-width-1-3'>
+                <h6 className={styles.field}>Node 2 coordinates</h6>
+              </div>
+              <div className='uk-width-1-3'>
+                <Field
+                  name='x2'
+                  id={styles.input}
+                  className='uk-input'
+                  type='text'
+                  placeholder='x2'
+                />
+              </div>
+              <div className='uk-width-1-3'>
+                <Field
+                  name='y2'
+                  id={styles.input}
+                  className='uk-input'
+                  type='text'
+                  placeholder='y2'
                 />
               </div>
 
               <div className='uk-width-1-1'>
-                <button
+                <motion.button
                   id={styles.iconButton}
                   type='button'
                   className='uk-button uk-align-left'
                   onClick={() => props.prev(values)}
+                  whileHover={{
+                    scale: 1.1,
+                    transition: {
+                      duration: .2
+                    }
+                  }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <Back props={props} />
-                </button>
-                <button
+                </motion.button>
+                <motion.button
                   id={styles.iconButton}
                   type='submit'
                   className='uk-button uk-align-right'
+                  whileHover={{
+                    scale: 1.1,
+                    transition: {
+                      duration: .2
+                    }
+                  }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <Forward props={props} />
-                </button>
+                </motion.button>
               </div>
 
             </Form>

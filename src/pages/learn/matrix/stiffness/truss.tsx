@@ -60,14 +60,20 @@ const Truss: React.FC<{ props }> = ({ props }) => {
               <div className={styles.child}>
                 <Elem1 />
               </div>
-              <button
+              <motion.button
                 id={styles.iconButton}
-
                 className='uk-button uk-button-small'
                 onClick={() => setCurrentStep(1)}
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Forward props={props} />
-              </button>
+              </motion.button>
             </div>
           </div>
         )}
@@ -82,20 +88,34 @@ const Truss: React.FC<{ props }> = ({ props }) => {
               <div className={styles.child}>
                 <Elem2 />
               </div>
-              <button
+              <motion.button
                 id={styles.iconButton}
                 className='uk-button uk-button-small'
                 onClick={() => setCurrentStep(0)}
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Back props={props} />
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 id={styles.iconButton}
                 className='uk-button uk-button-small'
                 onClick={() => setCurrentStep(2)}
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Forward props={props} />
-              </button>
+              </motion.button>
             </div>
           </div>
         )}
@@ -108,20 +128,34 @@ const Truss: React.FC<{ props }> = ({ props }) => {
             </h2>
             <div className={styles.content}>
               <Elem3 />
-              <button
+              <motion.button
                 id={styles.iconButton}
                 className='uk-button uk-button-small'
                 onClick={() => setCurrentStep(1)}
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Back props={props} />
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 id={styles.iconButton}
                 className='uk-button uk-button-small'
                 onClick={() => setCurrentStep(3)}
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Forward props={props} />
-              </button>
+              </motion.button>
             </div>
           </div>
         )}

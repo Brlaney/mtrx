@@ -1,12 +1,13 @@
-import * as React from 'react'
-import { step1 as st1 } from '@/lib/config/forms/truss'
-import { step2 as st2 } from '@/lib/config/forms/truss'
-import { step3 as st3 } from '@/lib/config/forms/truss'
-import StepOne from '@/components/forms/truss/StepOne'
-import StepTwo from '@/components/forms/truss/StepTwo'
-import StepThree from '@/components/forms/truss/StepThree'
-import GoBack from '@/components/buttons/GoBack'
-import styles from '@/styles/pages/Form.module.scss'
+import * as React from 'react';
+import { step1 as st1 } from '@/lib/config/forms/truss';
+import { step2 as st2 } from '@/lib/config/forms/truss';
+import { step3 as st3 } from '@/lib/config/forms/truss';
+import StepOne from '@/components/forms/truss/StepOne';
+import StepTwo from '@/components/forms/truss/StepTwo';
+import StepThree from '@/components/forms/truss/StepThree';
+import Results from '@/components/forms/truss/Results';
+import GoBack from '@/components/buttons/GoBack';
+import styles from '@/styles/pages/Form.module.scss';
 
 const Truss: React.FC<{ props }> = () => {
   const endpoint = '/matrix';
@@ -16,6 +17,11 @@ const Truss: React.FC<{ props }> = () => {
     members: '',
     reactions: '',
     units: '',
+    x1: '',
+    y1: '',
+    x2: '',
+    y2: '',
+    tests: '',
   });
 
   const makeRequest = (formData) => {
@@ -55,7 +61,7 @@ const Truss: React.FC<{ props }> = () => {
         <div className={styles.grid}>
           <div id={styles.card}>
 
-            {/* Step 1 - System properties */}
+            {/* Step 1 - System: Nodes, members, units */}
             {currentStep === 0 && (
               <StepOne
                 step={st1}
@@ -64,7 +70,7 @@ const Truss: React.FC<{ props }> = () => {
               />
             )}
 
-            {/* Step 2 - Specify Units */}
+            {/* Step 2 - Nodal coordinates */}
             {currentStep === 1 && (
               <StepTwo
                 step={st2}
@@ -74,7 +80,8 @@ const Truss: React.FC<{ props }> = () => {
               />
             )}
 
-            {/* Step 3 - Input node coordinates */}
+            {/* Step 3 - Boundary conditions: 
+            reactions, given forces/displacements */}
             {currentStep === 2 && (
               <StepThree
                 step={st3}
@@ -83,11 +90,18 @@ const Truss: React.FC<{ props }> = () => {
                 prev={handlePrevStep}
               />
             )}
+
+            {/* Completed - display the results calculated*/}
+            {currentStep === 3 && (
+              <Results
+                data={data}
+              />
+            )}
           </div>
         </div>
       </div>
     </>
   )
-}
+};
 
-export default Truss
+export default Truss;

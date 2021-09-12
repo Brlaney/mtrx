@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as yup from 'yup';
 import { Formik, Form, Field } from 'formik';
+import { motion } from 'framer-motion';
 import Forward from '@/components/buttons/Forward';
 import { Dotnav } from '@/components/buttons/Dotnav';
 import { Selection } from '../components/Selection';
@@ -112,13 +113,20 @@ const StepOne = (props) => {
               </div>
 
               <div className='formButton'>
-                <button
+                <motion.button
                   id={styles.iconButton}
                   type='submit'
                   className='uk-button uk-align-right'
+                  whileHover={{
+                    scale: 1.1,
+                    transition: {
+                      duration: .2
+                    }
+                  }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <Forward props={props} />
-                </button>
+                </motion.button>
               </div>
             </Form>
           </div>

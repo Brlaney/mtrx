@@ -38,18 +38,18 @@ h1, h2, h3, h4, h5, h6 {
 
 // Misc. global styles - button components
 .backIcon {
-  color: $secondary;
+  color: $light;
   font-weight: 400;
 }
 
 .forwardIcon {
-  color: $secondary;
+  color: $light;
   font-weight: 400;
 }
 
 #goback {
   position: absolute;
-  margin: 0.4rem;
+  margin: 1rem 0 1rem 0;
   background-color: $secondary;
   color: $light;
   border: 0;
@@ -69,14 +69,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dotnav {
+  margin: 0;
+  width: 60vw;
+  height: 15px;
   display: flex;
   flex-direction: row;
-  flex: 1;
-  align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 60vw;
-  margin: 0.5rem;
+  align-items: center;
+  flex: 1;
 }
 
 #dotnav:hover {
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .uk-active {
   #isa {
-    background-color: $primary;
+    background-color: $secondary;
   }
 }
 
