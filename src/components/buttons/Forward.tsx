@@ -14,7 +14,7 @@ const Forward = ({ props }) => {
     >
       <IoChevronForwardCircleOutline
         className='forwardIcon'
-        size='3rem'
+        size='2rem'
         {...props}
       />
     </motion.div>

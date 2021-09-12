@@ -14,10 +14,10 @@ const StepOne = (props) => {
   };
 
   const stepOneSchema = yup.object({
-    nodes: yup.number().required().min(1).max(50),
-    members: yup.number().required().min(1).max(50),
-    reactions: yup.number().required().min(0).max(20),
-    units: yup.string().required(),
+    nodes: yup.number().defined().min(1).max(50),
+    members: yup.number().defined().min(1).max(50),
+    reactions: yup.number().defined().min(0).max(20),
+    units: yup.string().default('').nullable(),
   });
 
   console.log(props);

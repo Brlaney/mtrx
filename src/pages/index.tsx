@@ -20,8 +20,10 @@ export default function Home() {
 
         {/* Grid row I - children = columns/cards */}
         <div className={styles.grid}>
-          <div className='uk-text-center uk-width-expand uk-text-lead'>
-            <Button />
+          <div className='uk-text-center'>
+            <button className='uk-button uk-button-default'>
+              <Button />
+            </button>
           </div>
         </div>
       </div>

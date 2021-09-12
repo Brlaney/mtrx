@@ -2,9 +2,8 @@
 
 #iconButton {
   align-self: flex-start;
-  width: 160px;
-  // height: 50px;
-  padding: 0.66rem 1.2rem;
+  width: $btn-width;
+  padding: 0.26rem 0.66rem;
   background-color: $secondary;
   color: $white;
   line-height: 1.5;
