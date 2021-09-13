@@ -17,6 +17,10 @@
       padding-bottom: 0.44rem;
       margin: 0;
       border-bottom: calc(0.3px + 0.02em) solid $bg-m;
+      .span {
+        color: $secondary;
+        font-weight: bold;
+      }
     }
   }
   .card {

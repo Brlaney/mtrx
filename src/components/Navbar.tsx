@@ -36,12 +36,17 @@ const Navbar = () => {
           >
             <li id={styles.listItem} className='uk-*'>
               <Link href='/matrix'>
+                <a id={styles.link}>Solver</a>
+              </Link>
+            </li>
+            <li id={styles.listItem} className='uk-*'>
+              <Link href='/learn/matrix'>
                 <a id={styles.link}>Matrix</a>
               </Link>
             </li>
             <li id={styles.listItem} className='uk-*'>
-              <Link href='/learn'>
-                <a id={styles.link}>Learn</a>
+              <Link href='/learn/bridge-design'>
+                <a id={styles.link}>Bridge design</a>
               </Link>
             </li>
           </ul>

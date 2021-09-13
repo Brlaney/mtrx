@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from '@/styles/pages/Learn.module.scss';
 
-export default function Learn() {
+export default function Matrix() {
   return (
     <motion.div className={styles.container}>
       {/* Page parent container */}
@@ -15,7 +15,7 @@ export default function Learn() {
           </h3>
         </div>
 
-        {/* Card 1 */}
+        {/* Tutorials and lessons card 1 - theory */}
         <div className={styles.card}>
           <h2 className={styles.sectionTitle}>
             Stiffness method - theory
@@ -56,7 +56,7 @@ export default function Learn() {
           </div>
         </div>
 
-        {/* Card 2 */}
+         {/* Tutorials and lessons card 2 - deformation graphs */}
         <div className={styles.card}>
           <h2 className={styles.sectionTitle}>
             Deformation graphs
@@ -91,47 +91,6 @@ export default function Learn() {
                   className='uk-button uk-width-1-1'
                 >
                   Frame graph
-                </motion.button>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className={styles.card}>
-          <h2 className={styles.sectionTitle}>
-            Bridge Design
-          </h2>
-          <div className={styles.content}>
-            <div className={styles.child}>
-              <Link href='/learn/bridge/components'>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }} 
-                  id={styles.button}
-                  className='uk-button uk-width-1-1'
-                >
-                  components
-                </motion.button>
-              </Link>
-              <Link href='/learn/bridge/deck-design'>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }} 
-                  id={styles.button}
-                  className='uk-button uk-width-1-1'
-                >
-                  Deck design
-                </motion.button>
-              </Link>
-              <Link href='/learn/bridge/parapets'>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }} 
-                  id={styles.button}
-                  className='uk-button uk-width-1-1'
-                >
-                  Parapets
                 </motion.button>
               </Link>
             </div>
