@@ -113,12 +113,6 @@ export default function Tests() {
       {/* Main parent container */}
       <div className={styles.parent}>
 
-        {/* Homepage header container */}
-        <div className={styles.header}>
-          <h2 className={styles.title}>The test page
-          </h2>
-        </div>
-
         {/* SVG graphic test */}
         <motion.div className={styles.card}>
           {graphic === 1 && (
@@ -152,20 +146,6 @@ export default function Tests() {
             Deformation 1
           </motion.button>
           <motion.button
-            id={styles.state2}
-            className='uk-button'
-            onClick={() => { setGraphic(2) }}
-            whileHover={{
-              scale: 1.05,
-              transition: {
-                duration: .25
-              }
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Deformation 2
-          </motion.button>
-          <motion.button
             id={styles.state3}
             className='uk-button'
             onClick={() => { setGraphic(3) }}
@@ -178,6 +158,20 @@ export default function Tests() {
             whileTap={{ scale: 0.95 }}
           >
             Deformation 3
+          </motion.button>
+          <motion.button
+            id={styles.state2}
+            className='uk-button'
+            onClick={() => { setGraphic(2) }}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                duration: .25
+              }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Deformation 2
           </motion.button>
           <motion.button
             id={styles.state4}
@@ -193,6 +187,16 @@ export default function Tests() {
           >
             Deformation 4
           </motion.button>
+        </motion.div>
+
+        {/* Controls state - buttons */}
+        <motion.div className={styles.box}>
+          <p id={styles.text} className='uk-text uk-text-justify uk-text-center'>
+            A truss local member is a 2-dimensional bar element. Each end represents a node. A node can be
+            a connection to another member, a free-end (cantilevar), or a support. Each node in a truss system
+            will contain two degrees of freedom, one for both horizontal displacement (d11/d21) and vertical
+            displacement (d12/d22).
+          </p>
         </motion.div>
       </div>
     </motion.div>
