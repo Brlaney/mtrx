@@ -73,7 +73,7 @@ export default function Home() {
             >
               <Col3 />
               <p className={styles.cta}>
-                Bridge Design Theory
+                Bridge Design
               </p>
             </motion.div>
           </Link>

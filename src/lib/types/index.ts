@@ -1,12 +1,3 @@
-export interface IApi1 {
-  id: number;
-  link: string;
-  name: string;
-  path: string;
-  width: number;
-  height: number;
-};
-
 export interface Choice1 {
   id: number;
   link: string;
@@ -16,7 +7,7 @@ export interface Choice1 {
   height: number;
 };
 
-export interface IApi2 {
+export interface IBridgeComponents {
   id: number;
   component: string;
   path: string;
@@ -24,10 +15,9 @@ export interface IApi2 {
   name: string;
 };
 
-export interface Choice2 {
+export interface IBridge {
   id: number;
-  component: string;
-  path: string;
-  source: string;
-  name: string;
+  title: string;
+  lower: string;
+  content?: any | null | undefined;
 };

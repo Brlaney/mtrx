@@ -1,6 +1,6 @@
-import { IApi2 } from '@/lib/types'
+import { IBridgeComponents } from '@/lib/types'
 
-export const components: IApi2[] = [
+export const components: IBridgeComponents[] = [
   { id: 1, component: 'Parapet', path: '/images/components/parapet.jpg', source: '#parapet', name: 'parapet' },
   { id: 2, component: 'Deck', path: '/images/components/deck.jpg', source: '#deck', name: 'deck' },
   { id: 3, component: 'Beams', path: '/images/components/beams.jpg', source: '#beams', name: 'beams' },

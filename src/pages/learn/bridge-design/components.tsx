@@ -2,7 +2,7 @@ import * as React from 'react'
 import Image from 'next/image'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { server } from '@/lib/config/server'
-import { Choice2 } from '@/lib/types'
+import { IBridgeComponents } from '@/lib/types'
 import { motion } from 'framer-motion'
 import { fadeInUp, stagger } from '@/lib/config/animations/components'
 import GoBack from '@/components/buttons/GoBack'
@@ -50,7 +50,7 @@ const Components = ({ components }: InferGetStaticPropsType<typeof getStaticProp
               <div id={styles.child} className='uk-child-width-expand@s' uk-grid>
                 <motion.div variants={stagger} className={styles.listContainer}>
                   <ul id={styles.list} className='uk-list uk-list-divider'>
-                    {componentsList.map((component: Choice2) => (
+                    {componentsList.map((component: IBridgeComponents) => (
                       <>
                         <motion.li
                           className={styles.item}
@@ -103,9 +103,9 @@ const Components = ({ components }: InferGetStaticPropsType<typeof getStaticProp
 };
 
 export const getStaticProps: GetStaticProps = async _context => {
-  const endpoint = `${server}/api/bridge`;
+  const endpoint = `${server}/api/bridge/components`;
   const res = await fetch(endpoint);
-  const components: Choice2[] = await res.json();
+  const components: IBridgeComponents[] = await res.json();
 
   return {
     props: {
