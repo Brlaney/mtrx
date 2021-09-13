@@ -1,9 +1,9 @@
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Column1 from '@/components/homepage/Column1';
-import Column2 from '@/components/homepage/Column2';
-import Column3 from '@/components/homepage/Column3';
+import Col1 from '@/components/animations/homepage/Col1';
+import Col2 from '@/components/animations/homepage/Col2';
+import Col3 from '@/components/animations/homepage/Col3';
 import styles from '@/styles/pages/Home.module.scss';
 
 export default function Home() {
@@ -31,13 +31,14 @@ export default function Home() {
               className='uk-width-1-3'
               whileHover={{
                 scale: 1.1,
-                transition: {
-                  duration: .25
-                }
+                transition: { duration: 0.25, ease: [0.6, 0.4, 0.8, 0.7] }
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <Column1 />
+              <Col1 />
+              <p className={styles.cta}>
+                Solver
+              </p>
             </motion.div>
           </Link>
           
@@ -48,13 +49,14 @@ export default function Home() {
               className='uk-width-1-3'
               whileHover={{
                 scale: 1.1,
-                transition: {
-                  duration: .25
-                }
+                transition: { duration: 0.25, ease: [0.6, 0.4, 0.8, 0.7] }
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <Column2 />
+              <Col2 />
+              <p className={styles.cta}>
+                Stiffness Theory
+              </p>
             </motion.div>
           </Link>
           
@@ -65,13 +67,14 @@ export default function Home() {
               className='uk-width-1-3'
               whileHover={{
                 scale: 1.1,
-                transition: {
-                  duration: .25
-                }
+                transition: { duration: 0.25, ease: [0.6, 0.4, 0.8, 0.7] }
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <Column3 />
+              <Col3 />
+              <p className={styles.cta}>
+                Bridge Design Theory
+              </p>
             </motion.div>
           </Link>
         </div>

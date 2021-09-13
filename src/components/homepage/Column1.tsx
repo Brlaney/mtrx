@@ -1,13 +1,10 @@
 import { BsGrid3X3 } from 'react-icons/Bs';
+import styles from '@/styles/pages/Home.module.scss';
 
 const Column1 = () => {
   return (
     <>
-      <BsGrid3X3
-        className='columnIcon'
-        size='2.5rem'
-        color='#ffffff'
-      />
+      <BsGrid3X3 className={styles.columnIcon} />
     </>
   )
 };

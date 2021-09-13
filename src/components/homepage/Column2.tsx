@@ -1,13 +1,10 @@
 import { BiShapeTriangle } from 'react-icons/Bi';
+import styles from '@/styles/pages/Home.module.scss';
 
 const Column2 = () => {
   return (
     <>
-      <BiShapeTriangle
-        className='columnIcon'
-        size='2.5rem'
-        color='#ffffff'
-      />
+      <BiShapeTriangle className={styles.columnIcon} />
     </>
   )
 };
