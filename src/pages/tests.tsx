@@ -1,51 +1,16 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import Truss from '@/components/animations/Truss';
-import Beam from '@/components/animations/Beam';
-import Frame from '@/components/animations/Frame';
+import F_11 from '@/components/animations/truss/f_11';
+import F_12 from '@/components/animations/truss/f_12';
+import F_21 from '@/components/animations/truss/f_21';
+import F_22 from '@/components/animations/truss/f_22';
 import styles from '@/styles/pages/Tests.module.scss';
-import { useMediaQuery } from '@/lib/utils/hooks';
-
-const Component = () => {
-  const isSmall = useMediaQuery('(min-width: 1360px)');
-  // const isSmall = useIsSmall()
-  const variants = isSmall
-    ? {
-      animate: {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-      },
-      exit: {
-        opacity: 1,
-        scale: 1,
-        y: 500,
-      },
-    }
-    : {
-      animate: {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-      },
-      exit: {
-        opacity: 0,
-        scale: 0.9,
-        y: -10,
-      },
-    };
-
-  return (
-    <motion.div initial='exit' animate='animate' exit='exit'>
-      Animated
-    </motion.div>
-  );
-};
-
 
 /*
 import styles from '@/styles/pages/Learning.module.scss'
-
+import Truss from '@/components/animations/Truss';
+import Beam from '@/components/animations/Beam';
+import Frame from '@/components/animations/Frame';
 import {
   convertToRadians,
   convertToDegrees,
@@ -73,7 +38,6 @@ import { Elem1 } from './components/trusses/Elem1';
 import { Elem2 } from './components/trusses/Elem2';
 import { Elem3 } from './components/trusses/Elem3';
 
-
 const easing = [0.5, -0.03, 0.06, 1];
 
 const variants = {
@@ -99,7 +63,6 @@ const variants = {
   }
 };
 
-
   Declaring variables for conversion functions
 let mtx1 = [4, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0, 4, 8, 4, 1]
 let mtx2 = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
@@ -115,6 +78,8 @@ let R1 = 3; inches
 let D1 = 6; inches */
 
 export default function Tests() {
+  const [graphic, setGraphic] = React.useState(1);
+
   /* let convertedResult1 = convertToRadians(d1);
    let convertedResult2 = convertToRadians(d2);
    let convertedResult3 = convertToDegrees(r1);
@@ -154,19 +119,80 @@ export default function Tests() {
           </h2>
         </div>
 
-        <motion.div className={styles.animation}>
-          <Component />
-        </motion.div>
-
         {/* SVG graphic test */}
         <motion.div className={styles.card}>
-          <Truss />
+          {graphic === 1 && (
+            <F_11 />
+          )}
+          {graphic === 2 && (
+            <F_12 />
+          )}
+          {graphic === 3 && (
+            <F_21 />
+          )}
+          {graphic === 4 && (
+            <F_22 />
+          )}
         </motion.div>
-        <motion.div className={styles.card}>
-          <Beam />
-        </motion.div>
-        <motion.div className={styles.card}>
-          <Frame />
+
+        {/* Controls state - buttons */}
+        <motion.div className={styles.controls}>
+          <motion.button
+            id={styles.state1}
+            className='uk-button'
+            onClick={() => { setGraphic(1) }}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                duration: .25
+              }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Deformation 1
+          </motion.button>
+          <motion.button
+            id={styles.state2}
+            className='uk-button'
+            onClick={() => { setGraphic(2) }}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                duration: .25
+              }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Deformation 2
+          </motion.button>
+          <motion.button
+            id={styles.state3}
+            className='uk-button'
+            onClick={() => { setGraphic(3) }}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                duration: .25
+              }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Deformation 3
+          </motion.button>
+          <motion.button
+            id={styles.state4}
+            className='uk-button'
+            onClick={() => { setGraphic(4) }}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                duration: .25
+              }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Deformation 4
+          </motion.button>
         </motion.div>
       </div>
     </motion.div>

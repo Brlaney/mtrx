@@ -19,13 +19,13 @@ export default function Home() {
         </div>
 
         {/* Grid row I - children = columns/cards */}
-        <div className={styles.grid}>
-          <div className='uk-text-center'>
-            <button className='uk-button uk-button-default'>
-              <Button />
-            </button>
-          </div>
-        </div>
+        {/* <div className={styles.grid}> */}
+          {/* <div className='uk-text-center'> */}
+            {/* <button className='uk-button uk-button-default'> */}
+              {/* <Button /> */}
+            {/* </button> */}
+          {/* </div> */}
+        {/* </div> */}
       </div>
       <Footer />
     </>
