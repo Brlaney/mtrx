@@ -8,12 +8,18 @@ import { IBridge } from '@/lib/types';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Learn.module.scss';
 
-const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const BridgeDesign = ({ topics, props: any }:
+  InferGetStaticPropsType<typeof getStaticProps>
+) => {
   const [topicsList] = React.useState(topics);
   const endpoint = '/';
 
   return (
-    <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
+    <motion.div
+      initial='initial'
+      animate='animate'
+      exit={{ opacity: 0 }}
+    >
 
       {/* Render the back button component */}
       <GoBack link={endpoint} />
@@ -35,9 +41,9 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
 
           {/* Dynamic topic cards */}
           {topicsList.map((topic: IBridge) => (
-            <motion.div variants={fadeInUp}>
-              <h2 key={topic.id} className={styles.sectionTitle}>
-                {topic.title}
+            <motion.div key={topic.id} className={styles.contents} variants={fadeInUp}>
+              <h2 className={styles.sectionTitle}>
+                <span className={styles.span}>{topic.id} .)</span> {topic.title}
               </h2>
               <div className={styles.content}>
                 <div className={styles.child}>
@@ -53,7 +59,7 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
                           <motion.h3
                             className={styles.link}
                             whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            whileTap={{ scale: 0.98 }}
                           >
                             <a className='uk-link-heading'>
                               {content.button}
@@ -64,18 +70,18 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
                     ))
                   )}
                   <Link
-                    key={topic.id}
-                    href='/learn/bridge-design/topic/['
+                    href='/learn/bridge-design/topic/[lower]'
                     as={`/learn/bridge-design/topic/${topic.lower}`}
                   >
-                    <motion.button
-                      id={styles.button}
-                      className='uk-button uk-width-1-1'
+                    <motion.h3
+                      className={styles.link}
                       whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileTap={{ scale: 0.98 }}
                     >
-                      {topic.lower}
-                    </motion.button>
+                      <a className='uk-link-heading'>
+                        {topic.title}
+                      </a>
+                    </motion.h3>
                   </Link>
                 </div>
               </div>

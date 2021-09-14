@@ -4,6 +4,8 @@ import styles from '@/styles/pages/Bridge.module.scss'
 const Lower = ({props}) => {
   const endpoint = '/learn/bridge-design';
 
+  console.log(props.topic);
+
   return (
     <>
       {/* Render the back button component */}
@@ -15,7 +17,8 @@ const Lower = ({props}) => {
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            {props.button}
+            {/* {props.button} */}
+            shit
           </h1>
         </div>
       </div>
