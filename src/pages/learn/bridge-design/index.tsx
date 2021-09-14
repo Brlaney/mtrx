@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { fadeInUp, stagger } from '@/lib/config/animations/components';
+import { fadeInUp, stagger } from '@/lib/config/animations/staggered';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
 import { IBridge } from '@/lib/types';
@@ -44,22 +44,23 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
 
                   {topic.content && (
                     topic.content.map((content, i) => (
-                      <motion.div variants={fadeInUp}>
+                      <>
                         <Link
                           key={content.key}
                           href={`/learn/bridge-design/topic/[lower]`}
                           as={`/learn/bridge-design/topic/${content.name}`}
                         >
-                          <motion.button
-                            id={styles.button}
-                            className='uk-button uk-width-1-1'
+                          <motion.h3
+                            className={styles.link}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                           >
-                            {content.button}
-                          </motion.button>
+                            <a className='uk-link-heading'>
+                              {content.button}
+                            </a>
+                          </motion.h3>
                         </Link>
-                      </motion.div>
+                      </>
                     ))
                   )}
                   <Link

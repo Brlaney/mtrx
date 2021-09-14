@@ -4,7 +4,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
 import { IBridgeComponents } from '@/lib/types';
 import { motion } from 'framer-motion';
-import { fadeInUp, stagger } from '@/lib/config/animations/components';
+import { fadeInUp, stagger } from '@/lib/config/animations/staggered';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Bridge.module.scss';
 
@@ -39,7 +39,6 @@ const Components = ({ components }: InferGetStaticPropsType<typeof getStaticProp
 
             {/* Card */}
             <div
-              id={styles.card}
               className='uk-card uk-card-secondary uk-light
               uk-box-shadow-large uk-card-large uk-card-body'
             >
@@ -62,7 +61,6 @@ const Components = ({ components }: InferGetStaticPropsType<typeof getStaticProp
                           <a
                             className={styles.modal}
                             href='#modal-media-image'
-                            // uk-toggle='true'
                           >
                             <span className={styles.span}>{component.id}. </span>
                             {component.component}
