@@ -1,8 +1,7 @@
-import { motion, AnimationProps } from 'framer-motion';
-
-const color1 = '#ffffff';
-const color2 = '#3d69c2';
-const color3 = '#252323';
+import {
+  motion,
+  AnimationProps
+} from 'framer-motion';
 
 const mainPathVariant: AnimationProps = {
   transition: { duration: 6, ease: 'easeInOut' },
@@ -31,34 +30,116 @@ const Col2 = () => {
     >
       <div>
         <motion.svg
-          width='1rem'
-          height='1rem'
-          viewBox='0 0 10 10'
-          xmlns='http://www.w3.org/2000/svg'
+          width='100'
+          height='100'
+          viewBox='0 0 100 100'
+          fill='none'
           {...shapeVariations}
-          animate='visible'
-          initial='hidden'
+          xmlns='http://www.w3.org/2000/svg'
         >
-          <g
-            id='col2'
-            data-name='Homepage column 2 icon'
-          >
+          <g id='col2' data-name='Homepage column 2 icon'>
             <motion.path
               {...mainPathVariant}
-              d='M18 15c-0.183 0-0.358 0.022-0.532 0.054L8.946 6.532C8.978 6.359 9 6.182 9
-                6c0-1.654-1.346-3-3-3S3 4.346 3 6 c0 1.302 0.839 2.401 2 2.815v6.369C3.839 15.599
-                3 16.698 3 18c0 1.654 1.346 3 3 3c1.302 0 2.401-0.838 2.815-2h6.369 c0.414 1.162
-                1.514 2 2.815 2c1.654 0 3-1.346 3-3S19.654 15 18 15z M7 15.184V8.816c0.329-0.118
-                0.629-0.291 0.894-0.508 l7.799,7.799c-0.218 0.265-0.391 0.564-0.508 0.894H8.815C8.514
-                16.153 7.848 15.486 7 15.184z M6 5c0.552 0 1 0.449 1 1 S6.552 7 6 7S5 6.551 5 6S5.448
-                5 6 5z M6 19c-0.552 0-1-0.449-1-1s0.448-1 1-1s1 0.449 1 1S6.552 19 6 19z M18 19
-                c-0.552 0-1-0.449-1-1s0.448-1 1-1s1 0.449 1 1S18.552 19 18 19z'
-              fill={color1}
-              stroke={color3}
-              strokeWidth='0.1'
+              d='M22 33L50 50L78 67'
+              stroke='white'
               {...shapeVariations}
               animate='visible'
               initial='hidden'
+            />
+            <motion.path
+              d='M78 33L50 50L22 67'
+              stroke='white'
+              {...shapeVariations}
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              d='M23 69H50H77'
+              stroke='white'
+              {...shapeVariations}
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              d='M20 66L20 50L20 34'
+              stroke='white'
+              {...shapeVariations}
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              d='M80 66L80 50L80 34'
+              stroke='white'
+              {...shapeVariations}
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              d='M23 31H50H77'
+              stroke='white'
+              {...shapeVariations}
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.ellipse
+              {...shapeVariations}
+              cx='20'
+              cy='69'
+              rx='3'
+              ry='3'
+              transform='rotate(-180 20 69)'
+              stroke='white'
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+              }}
+              initial={{ y: 60, opacity: 0 }}
+            />
+            <motion.ellipse
+              {...shapeVariations}
+              cx='80'
+              cy='69'
+              rx='3'
+              ry='3'
+              transform='rotate(-180 80 69)'
+              stroke='white'
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+              }}
+              initial={{ y: 60, opacity: 0 }}
+            />
+            <motion.ellipse
+              {...shapeVariations}
+              cx='20'
+              cy='31'
+              rx='3'
+              ry='3'
+              transform='rotate(-180 20 31)'
+              stroke='white'
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+              }}
+              initial={{ y: 60, opacity: 0 }}
+            />
+            <motion.ellipse
+              {...shapeVariations}
+              cx='80'
+              cy='31'
+              rx='3'
+              ry='3'
+              transform='rotate(-180 80 31)'
+              stroke='white'
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+              }}
+              initial={{ y: 60, opacity: 0 }}
             />
           </g>
         </motion.svg>

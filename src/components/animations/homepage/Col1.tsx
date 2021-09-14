@@ -1,13 +1,12 @@
-import { motion, AnimationProps } from 'framer-motion';
-
-const color1 = '#ffffff';
-const color2 = '#3d69c2';
-const color3 = '#252323';
+import {
+  motion,
+  AnimationProps
+} from 'framer-motion';
 
 const mainPathVariant: AnimationProps = {
   transition: { duration: 6, ease: 'easeInOut' },
   variants: { visible: { pathLength: 1 }, hidden: { pathLength: 0 } },
-};
+}
 
 const shapeVariations: AnimationProps = {
   transition: { delay: 0, duration: 1, ease: 'easeIn' },
@@ -19,7 +18,7 @@ const shapeVariations: AnimationProps = {
     },
     hidden: { fillOpacity: 0, pathLength: 0 },
   },
-};
+}
 
 const Col1 = () => {
   return (
@@ -34,25 +33,57 @@ const Col1 = () => {
           width='100'
           height='100'
           viewBox='0 0 100 100'
-          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
           {...shapeVariations}
-          animate='visible'
-          initial='hidden'
+          xmlns='http://www.w3.org/2000/svg'
         >
-          <g
-            id='col1'
-            data-name='Homepage column 1 icon'
-          >
+          <g id='col1' data-name='Homepage column 1 icon'>
             <motion.path
               {...mainPathVariant}
-              d='M0 1.5A1.5 1.5 0 011.5 0h13A1.5 1.5 0 0116 1.5v13a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 010
-                14.5v-13zM1.5 1a.5.5 0 00-.5.5V5h4V1H1.5zM5 6H1v4h4V6zm1 4V6h4v4H6zm-1 1H1v3.5a.5.5 0
-                00.5.5H5v-4zm1 0h4v4H6v-4zm5 0v4h3.5a.5.5 0 00.5-.5V11h-4zm0-1h4V6h-4v4zm0-5h4V1.5a.5.5 0
-                00-.5-.5H11v4zm-1 0H6V1h4v4z'
-              fill={color1}
-              stroke={color3}
-              strokeWidth='0.1'
+              d='M13 13.5V85.5C13 86.3284 13.6716 87 14.5 87H86.5C87.3284 87 88 86.3284 88 85.5V13.5C88 12.6716 87.3284 12 86.5 12H14.5C13.6716 12 13 12.6716 13 13.5Z'
+              stroke='white'
+              stroke-width='0.5'
               {...shapeVariations}
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              {...shapeVariations}
+              d='M10 10.5V88.5C10 89.3284 10.6716 90 11.5 90H89.5C90.3284 90 91 89.3284 91 88.5V10.5C91 9.67157 90.3284 9 89.5 9H11.5C10.6716 9 10 9.67157 10 10.5Z'
+              stroke='white'
+              stroke-width='0.5'
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              {...shapeVariations}
+              d='M13 37H88M13 62H88'
+              stroke='white'
+              stroke-width='0.5'
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              {...shapeVariations}
+              d='M13 36H88M13 61H88'
+              stroke='white'
+              stroke-width='0.5'
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              {...shapeVariations}
+              d='M38 87L38 12M63 87V12'
+              stroke='white'
+              stroke-width='0.5'
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              {...shapeVariations}
+              d='M37 87L37 12M64 87V12'
+              stroke='white'
+              stroke-width='0.5'
               animate='visible'
               initial='hidden'
             />
