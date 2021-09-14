@@ -1,12 +1,12 @@
-import * as React from 'react'
-import Image from 'next/image'
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { server } from '@/lib/config/server'
-import { IBridgeComponents } from '@/lib/types'
-import { motion } from 'framer-motion'
-import { fadeInUp, stagger } from '@/lib/config/animations/components'
-import GoBack from '@/components/buttons/GoBack'
-import styles from '@/styles/pages/Bridge.module.scss'
+import * as React from 'react';
+import Image from 'next/image';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { server } from '@/lib/config/server';
+import { IBridgeComponents } from '@/lib/types';
+import { motion } from 'framer-motion';
+import { fadeInUp, stagger } from '@/lib/config/animations/components';
+import GoBack from '@/components/buttons/GoBack';
+import styles from '@/styles/pages/Bridge.module.scss';
 
 const Components = ({ components }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [componentsList] = React.useState(components);

@@ -1,10 +1,17 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Learn.module.scss';
 
 export default function Matrix() {
+  const endpoint = '/';
+
   return (
-    <motion.div className={styles.container}>
+    <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
+
+      {/* Render the back button component */}
+      <GoBack link={endpoint} />
+
       {/* Page parent container */}
       <div className={styles.container}>
 

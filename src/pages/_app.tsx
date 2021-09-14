@@ -11,7 +11,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (
-    <AnimateSharedLayout type='crossfade'>
+    <AnimateSharedLayout>
       <AnimatePresence>
         <Layout>
           <Component {...pageProps} key={router.route} />

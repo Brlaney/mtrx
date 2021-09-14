@@ -1,8 +1,9 @@
 import GoBack from '@/components/buttons/GoBack'
 import styles from '@/styles/pages/Bridge.module.scss'
 
-export default function Parapets() {
-  const endpoint = '/learn';
+const Topic = ({props}) => {
+  const endpoint = '/learn/bridge-design';
+
   return (
     <>
       {/* Render the back button component */}
@@ -14,10 +15,12 @@ export default function Parapets() {
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Checking the parapet design
+            {props.title}
           </h1>
         </div>
       </div>
     </>
   )
 }
+
+export default Topic;
