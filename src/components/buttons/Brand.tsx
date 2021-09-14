@@ -1,10 +1,11 @@
 import { IoGridOutline } from 'react-icons/io5';
 import { motion } from 'framer-motion';
+import styles from '@/styles/components/Buttons.module.scss';
 
 const GoBack = () => {
   return (
     <motion.div
-      className='brandDiv'
+      className={styles.brandDiv}
       whileHover={{
         scale: 1.2,
         transition: {
@@ -14,7 +15,7 @@ const GoBack = () => {
       whileTap={{ scale: 0.9 }}
     >
       <IoGridOutline
-        className='brandIcon'
+        className={styles.brandIcon}
         size='2rem'
         color='#ffffff'
       />

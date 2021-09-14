@@ -1,10 +1,11 @@
 import * as React from 'react';
+import styles from '@/styles/components/Buttons.module.scss';
 
 export const Dotnav: React.FC<{ step }> = ({ step }) => {
   return (
     <>
-      <div className='dotnav'>
-        <ul id='dotnavInner' className='uk-dotnav'>
+      <div className={styles.dotnav}>
+        <ul id={styles.dotnavInner} className='uk-dotnav'>
           {step.map(value => (
             <li
               id={value.key}

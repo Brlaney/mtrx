@@ -1,4 +1,4 @@
-const easing = [0.9, -0.2, 0.5, 0.99]
+const easing = [0.3, 0.2, -0.2, 0.95];
 
 export const fadeInUp = {
   initial: {

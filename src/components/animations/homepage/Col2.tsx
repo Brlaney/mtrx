@@ -1,24 +1,10 @@
+import { motion } from 'framer-motion';
 import {
-  motion,
-  AnimationProps
-} from 'framer-motion';
-
-const mainPathVariant: AnimationProps = {
-  transition: { duration: 6, ease: 'easeInOut' },
-  variants: { visible: { pathLength: 1 }, hidden: { pathLength: 0 } },
-};
-
-const shapeVariations: AnimationProps = {
-  transition: { delay: 0, duration: 1, ease: 'easeIn' },
-  variants: {
-    visible: {
-      fillOpacity: 1,
-      pathLength: 1,
-      transition: { delay: 0, duration: 4 },
-    },
-    hidden: { fillOpacity: 0, pathLength: 0 },
-  },
-};
+  mainPathVariant,
+  shapeVariations,
+  fadeInUp,
+  stagger
+} from '@/lib/config/animations/columns';
 
 const Col2 = () => {
   return (
@@ -27,68 +13,74 @@ const Col2 = () => {
       initial='initial'
       animate='animate'
       exit={{ opacity: 0 }}
+      variants={stagger}
     >
       <div>
-        <motion.svg
+        <svg
           width='100'
           height='100'
           viewBox='0 0 100 100'
           fill='none'
-          {...shapeVariations}
           xmlns='http://www.w3.org/2000/svg'
         >
           <g id='col2' data-name='Homepage column 2 icon'>
             <motion.path
               {...mainPathVariant}
-              d='M22 33L50 50L78 67'
+              d='M52.4 33L72 50L91.6 67'
+              stroke='white'
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.path
+              d='M91.6 33L72 50L52.4 67'
               stroke='white'
               {...shapeVariations}
               animate='visible'
               initial='hidden'
             />
             <motion.path
-              d='M78 33L50 50L22 67'
+              d='M48.6 33L29 50L9.40004 67'
               stroke='white'
               {...shapeVariations}
               animate='visible'
               initial='hidden'
             />
             <motion.path
-              d='M23 69H50H77'
+              d='M53.1 69H72H90.9'
               stroke='white'
               {...shapeVariations}
               animate='visible'
               initial='hidden'
             />
             <motion.path
-              d='M20 66L20 50L20 34'
+              d='M51 66L51 50L51 34'
               stroke='white'
               {...shapeVariations}
               animate='visible'
               initial='hidden'
             />
             <motion.path
-              d='M80 66L80 50L80 34'
+              d='M93 66L93 50L93 34'
               stroke='white'
               {...shapeVariations}
               animate='visible'
               initial='hidden'
             />
             <motion.path
-              d='M23 31H50H77'
+              d='M53.1 31H72H90.9'
               stroke='white'
               {...shapeVariations}
               animate='visible'
               initial='hidden'
             />
             <motion.ellipse
-              {...shapeVariations}
-              cx='20'
-              cy='69'
-              rx='3'
-              ry='3'
-              transform='rotate(-180 20 69)'
+              cx='50.5'
+              cy='31.5'
+              rx='2.5'
+              ry='2.5'
+              transform='rotate(-180 50.5 31.5)'
               stroke='white'
+              variants={fadeInUp}
               animate={{
                 y: 0,
                 opacity: 1,
@@ -97,13 +89,13 @@ const Col2 = () => {
               initial={{ y: 60, opacity: 0 }}
             />
             <motion.ellipse
-              {...shapeVariations}
-              cx='80'
-              cy='69'
-              rx='3'
-              ry='3'
-              transform='rotate(-180 80 69)'
+              cx='50.5'
+              cy='68.5'
+              rx='2.5'
+              ry='2.5'
+              transform='rotate(-180 50.5 68.5)'
               stroke='white'
+              variants={fadeInUp}
               animate={{
                 y: 0,
                 opacity: 1,
@@ -112,13 +104,13 @@ const Col2 = () => {
               initial={{ y: 60, opacity: 0 }}
             />
             <motion.ellipse
-              {...shapeVariations}
-              cx='20'
-              cy='31'
-              rx='3'
-              ry='3'
-              transform='rotate(-180 20 31)'
+              cx='93.5'
+              cy='31.5'
+              rx='2.5'
+              ry='2.5'
+              transform='rotate(-180 93.5 31.5)'
               stroke='white'
+              variants={fadeInUp}
               animate={{
                 y: 0,
                 opacity: 1,
@@ -127,13 +119,35 @@ const Col2 = () => {
               initial={{ y: 60, opacity: 0 }}
             />
             <motion.ellipse
-              {...shapeVariations}
-              cx='80'
-              cy='31'
-              rx='3'
-              ry='3'
-              transform='rotate(-180 80 31)'
+              cx='93.5'
+              cy='68.5'
+              rx='2.5'
+              ry='2.5'
+              transform='rotate(-180 93.5 68.5)'
               stroke='white'
+              variants={fadeInUp}
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+              }}
+              initial={{ y: 60, opacity: 0 }}
+            />
+            <motion.path
+              stroke='white'
+              {...shapeVariations}
+              d='M10.1 69H29H47.9'
+              animate='visible'
+              initial='hidden'
+            />
+            <motion.ellipse
+              cx='7.5'
+              cy='68.5'
+              rx='2.5'
+              ry='2.5'
+              transform='rotate(-180 7.5 68.5)'
+              stroke='white'
+              variants={fadeInUp}
               animate={{
                 y: 0,
                 opacity: 1,
@@ -142,7 +156,7 @@ const Col2 = () => {
               initial={{ y: 60, opacity: 0 }}
             />
           </g>
-        </motion.svg>
+        </svg>
       </div>
     </motion.div>
   )

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Brand from '@/components/buttons/Brand';
 import styles from '@/styles/components/Navbar.module.scss';
 
-const Navbar = () => {
+export default function Navbar () {
   return (
     <div
       id={styles.navbar}
@@ -55,5 +55,3 @@ const Navbar = () => {
     </div >
   )
 };
-
-export default Navbar;

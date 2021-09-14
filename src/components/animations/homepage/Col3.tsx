@@ -1,24 +1,5 @@
-import {
-  motion,
-  AnimationProps
-} from 'framer-motion';
-
-const mainPathVariant: AnimationProps = {
-  transition: { duration: 6, ease: 'easeInOut' },
-  variants: { visible: { pathLength: 1 }, hidden: { pathLength: 0 } },
-};
-
-const shapeVariations: AnimationProps = {
-  transition: { delay: 0, duration: 1, ease: 'easeIn' },
-  variants: {
-    visible: {
-      fillOpacity: 1,
-      pathLength: 1,
-      transition: { delay: 0, duration: 4 },
-    },
-    hidden: { fillOpacity: 0, pathLength: 0 },
-  },
-};
+import { motion } from 'framer-motion';
+import { mainPathVariant, shapeVariations } from '@/lib/config/animations/columns';
 
 const Col3 = () => {
   return (

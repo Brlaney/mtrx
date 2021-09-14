@@ -69,8 +69,9 @@ const StepTwo = (props) => {
   });
 
   // Testing the output
-  console.log(forceUnits);
-  console.log(lengthUnits);
+  // console.log(forceUnits);
+  // console.log(lengthUnits);
+  console.log(numNodes);
 
   return (
     <>

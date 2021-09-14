@@ -34,20 +34,25 @@ const BridgeDesign = ({ topics, props: any }:
           </h3>
         </div>
 
-        <motion.div
-          className={styles.card}
-          variants={stagger}
-        >
+        <motion.div className={styles.card} variants={stagger}>
 
           {/* Dynamic topic cards */}
           {topicsList.map((topic: IBridge) => (
-            <motion.div key={topic.id} className={styles.contents} variants={fadeInUp}>
+            <motion.div
+              key={topic.id}
+              className={styles.contents}
+              variants={fadeInUp}
+            >
+
+              {/* Topic category title */}
               <h2 className={styles.sectionTitle}>
-                <span className={styles.span}>{topic.id} .)</span> {topic.title}
+                <span className={styles.span}>
+                  {topic.id}. )</span> {topic.title}
               </h2>
+
               <div className={styles.content}>
                 <div className={styles.child}>
-
+                  {/* If content exists, iterate through the array */}
                   {topic.content && (
                     topic.content.map((content, i) => (
                       <>
@@ -58,7 +63,7 @@ const BridgeDesign = ({ topics, props: any }:
                         >
                           <motion.h3
                             className={styles.link}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.98 }}
                           >
                             <a className='uk-link-heading'>
@@ -69,6 +74,8 @@ const BridgeDesign = ({ topics, props: any }:
                       </>
                     ))
                   )}
+
+                  {/* CHANGE THIS TO AN ELSE STATEMENT */}
                   <Link
                     href='/learn/bridge-design/topic/[lower]'
                     as={`/learn/bridge-design/topic/${topic.lower}`}
@@ -87,6 +94,7 @@ const BridgeDesign = ({ topics, props: any }:
               </div>
             </motion.div>
           ))}
+
         </motion.div>
       </motion.div>
     </motion.div>
