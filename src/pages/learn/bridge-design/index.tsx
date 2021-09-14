@@ -28,41 +28,23 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
           </h3>
         </div>
 
-        {/* Dynamic topic cards */}
-        {topicsList.map((topic: IBridge) => (
-          <>
-            <motion.div
-              className={styles.card}
-              key={topic.id}
-              variants={fadeInUp}
-            >
-              <h2 className={styles.sectionTitle}>
+        <motion.div
+          className={styles.card}
+          variants={stagger}
+        >
+
+          {/* Dynamic topic cards */}
+          {topicsList.map((topic: IBridge) => (
+            <motion.div variants={fadeInUp}>
+              <h2 key={topic.id} className={styles.sectionTitle}>
                 {topic.title}
               </h2>
               <div className={styles.content}>
                 <div className={styles.child}>
 
-                  {topic.content! && (
-                    <>
-                      <Link
-                        key={topic.id}
-                        href='/learn/bridge-design/topic/['
-                        as={`/learn/bridge-design/topic/${topic.lower}`}
-                      >
-                        <motion.button
-                          id={styles.button}
-                          className='uk-button uk-width-1-1'
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          {topic.lower}
-                        </motion.button>
-                      </Link>
-                    </>
-                  )}
                   {topic.content && (
                     topic.content.map((content, i) => (
-                      <>
+                      <motion.div variants={fadeInUp}>
                         <Link
                           key={content.key}
                           href={`/learn/bridge-design/topic/[lower]`}
@@ -77,15 +59,28 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
                             {content.button}
                           </motion.button>
                         </Link>
-                      </>
+                      </motion.div>
                     ))
                   )}
+                  <Link
+                    key={topic.id}
+                    href='/learn/bridge-design/topic/['
+                    as={`/learn/bridge-design/topic/${topic.lower}`}
+                  >
+                    <motion.button
+                      id={styles.button}
+                      className='uk-button uk-width-1-1'
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {topic.lower}
+                    </motion.button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
-          </>
-        ))}
-
+          ))}
+        </motion.div>
       </motion.div>
     </motion.div>
   )
