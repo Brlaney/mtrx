@@ -22,14 +22,15 @@ const Tests = () => {
       <motion.div className={styles.parent} variants={stagger}>
 
         {/* Test page 1 */}
-        <motion.div className={styles.card} variants={fadeInUp}>
+        <motion.div
+          className={styles.indexCard}
+          variants={fadeInUp}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.98 }}
+        >
           <div className={styles.content}>
             <Link href='/tests/test-one'>
-              <motion.h2
-                className={styles.link}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
+              <motion.h2 className={styles.link}>
                 Test page 1
               </motion.h2>
             </Link>
@@ -37,14 +38,15 @@ const Tests = () => {
         </motion.div>
 
         {/* Test page 2 */}
-        <motion.div className={styles.card} variants={fadeInUp}>
+        <motion.div
+          className={styles.indexCard}
+          variants={fadeInUp}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.98 }}
+        >
           <div className={styles.content}>
             <Link href='/tests/test-two'>
-              <motion.h2
-                className={styles.link}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
+              <motion.h2 className={styles.link}>
                 Test page 2
               </motion.h2>
             </Link>

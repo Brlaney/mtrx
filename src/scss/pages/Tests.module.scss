@@ -37,12 +37,38 @@
       justify-content: center;
       box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
         rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+    }
+
+    .indexCard {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: 120px;
+      border-radius: 10px;
+      margin: 0.5rem 0 0.5rem 0;
+      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+      align-items: center;
+      justify-content: center;
+      background-color: $bg-d;
+      box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
+        rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
 
       .content {
         .link {
+          color: $light;
           font-size: 1.25rem;
           font-family: $primary-font;
+          margin: 0;
+          padding: 0;
         }
+      }
+    }
+    .indexCard:hover {
+      cursor: pointer;
+      border: 1px solid $secondary;
+      .link {
+        text-decoration: underline;
+        text-decoration-color: $secondary;
       }
     }
 
