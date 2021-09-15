@@ -2,7 +2,9 @@ import { motion } from 'framer-motion';
 import {
   mainPathVariant,
   shapeVariations,
-} from '@/lib/config/animations/bar-deformations';
+  fadeInUp,
+  stagger
+} from '@/lib/config/animations/svgs/svgs';
 
 const wht = '#ffffff';
 
@@ -17,7 +19,7 @@ const colors = [
 ];
 
 const S1 = () => {
-  console.log(colors);
+  // console.log(colors);
 
   return (
     <motion.div
@@ -25,6 +27,7 @@ const S1 = () => {
       initial='initial'
       animate='animate'
       exit={{ opacity: 0 }}
+      variants={stagger}
     >
       <svg 
         width='52' 
@@ -325,11 +328,12 @@ const S1 = () => {
             initial='hidden'
           />
           <motion.circle
+            id='k11'
             cx='7'
             cy='6'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -338,11 +342,12 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k12'
             cx='17'
             cy='6'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -351,11 +356,12 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k13'
             cx='27'
             cy='6'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -364,11 +370,12 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k14'
             cx='37'
             cy='6'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -377,271 +384,12 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
-            cx='7'
-            cy='16'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='17'
-            cy='16'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='27'
-            cy='16'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='37'
-            cy='16'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='7'
-            cy='26'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='17'
-            cy='26'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='27'
-            cy='26'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='37'
-            cy='26'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='7'
-            cy='36'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='17'
-            cy='36'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='27'
-            cy='36'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='37'
-            cy='36'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='7'
-            cy='46'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='17'
-            cy='46'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='27'
-            cy='46'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='37'
-            cy='46'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='7'
-            cy='56'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='17'
-            cy='56'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='27'
-            cy='56'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
-            cx='37'
-            cy='56'
-            r='3'
-            fill='#3D69C2'
-            {...shapeVariations}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
-            }}
-            initial={{ y: 60, opacity: 0 }}
-          />
-          <motion.circle
+            id='k15'
             cx='47'
             cy='6'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -650,11 +398,12 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k16'
             cx='57'
             cy='6'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -663,11 +412,68 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k21'
+            cx='7'
+            cy='16'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k22'
+            cx='17'
+            cy='16'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k23'
+            cx='27'
+            cy='16'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k24'
+            cx='37'
+            cy='16'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k25'
             cx='47'
             cy='16'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -676,11 +482,12 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k26'
             cx='57'
             cy='16'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -689,11 +496,68 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k31'
+            cx='7'
+            cy='26'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k32'
+            cx='17'
+            cy='26'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k33'
+            cx='27'
+            cy='26'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k34'
+            cx='37'
+            cy='26'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k35'
             cx='47'
             cy='26'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -702,11 +566,27 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k36'
             cx='57'
             cy='26'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+
+          <motion.circle
+            id='k41'
+            cx='7'
+            cy='36'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -715,11 +595,54 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k42'
+            cx='17'
+            cy='36'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k43'
+            cx='27'
+            cy='36'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k44'
+            cx='37'
+            cy='36'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k45'
             cx='47'
             cy='36'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -728,11 +651,12 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k46'
             cx='57'
             cy='36'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -741,11 +665,68 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k51'
+            cx='7'
+            cy='46'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k52'
+            cx='17'
+            cy='46'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k53'
+            cx='27'
+            cy='46'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k54'
+            cx='37'
+            cy='46'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k55'
             cx='47'
             cy='46'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -754,11 +735,12 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k56'
             cx='57'
             cy='46'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -767,11 +749,68 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k61'
+            cx='7'
+            cy='56'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k62'
+            cx='17'
+            cy='56'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k63'
+            cx='27'
+            cy='56'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k64'
+            cx='37'
+            cy='56'
+            r='3'
+            fill='#3D69C2'
+            variants={fadeInUp}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
+            }}
+            initial={{ y: 60, opacity: 0 }}
+          />
+          <motion.circle
+            id='k65'
             cx='47'
             cy='56'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,
@@ -780,11 +819,12 @@ const S1 = () => {
             initial={{ y: 60, opacity: 0 }}
           />
           <motion.circle
+            id='k66'
             cx='57'
             cy='56'
             r='3'
             fill='#3D69C2'
-            {...shapeVariations}
+            variants={fadeInUp}
             animate={{
               y: 0,
               opacity: 1,

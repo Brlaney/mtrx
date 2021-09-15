@@ -4,7 +4,7 @@ import {
   shapeVariations,
   fadeInUp,
   stagger
-} from '@/lib/config/animations/columns';
+} from '@/lib/config/animations/svgs/svgs';
 
 const Col2 = () => {
   return (

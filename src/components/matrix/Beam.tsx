@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import {
   mainPathVariant,
   shapeVariations
-} from '@/lib/config/animations/bar-deformations';
+} from '@/lib/config/animations/svgs/svgs';
 
 const color1 = '#4E4E4E';
 const color2 = '#888888';

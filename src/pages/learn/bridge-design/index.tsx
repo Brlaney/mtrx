@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { fadeInUp, stagger } from '@/lib/config/animations/staggered';
+import { fadeInUp, stagger } from '@/lib/config/animations/svgs/staggered';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
 import { IBridge } from '@/lib/types';
@@ -13,6 +13,8 @@ const BridgeDesign = ({ topics, props: any }:
 ) => {
   const [topicsList] = React.useState(topics);
   const endpoint = '/';
+
+  console.log(topicsList.content);
 
   return (
     <motion.div

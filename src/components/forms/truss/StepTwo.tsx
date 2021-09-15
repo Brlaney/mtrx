@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import * as yup from 'yup';
 import { motion } from 'framer-motion';
 import { Dotnav } from '@/components/buttons/matrix/Dotnav';
-// import { SelectOne } from '../components/SelectOne';
 import { Formik, Form, Field } from 'formik';
 import Back from '@/components/buttons/matrix/Back';
 import Forward from '@/components/buttons/matrix/Forward';

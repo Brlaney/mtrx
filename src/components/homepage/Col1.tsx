@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import {
   mainPathVariant,
   shapeVariations
-} from '@/lib/config/animations/columns';
+} from '@/lib/config/animations/svgs/svgs';
 
 const Col1 = () => {
   return (

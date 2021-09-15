@@ -4,7 +4,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
 import { IBridgeComponents } from '@/lib/types';
 import { motion } from 'framer-motion';
-import { fadeInUp, stagger } from '@/lib/config/animations/staggered';
+import { fadeInUp, stagger } from '@/lib/config/animations/svgs/staggered';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Bridge.module.scss';
 

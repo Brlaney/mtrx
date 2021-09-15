@@ -1,4 +1,8 @@
-import { motion, AnimationProps } from 'framer-motion';
+import { motion } from 'framer-motion';
+import {
+  mainPathVariant,
+  shapeVariations
+} from '@/lib/config/animations/svgs/svgs';
 
 const color1 = '#252323';
 const color2 = '#2F2F2F';
@@ -7,23 +11,6 @@ const color4 = '#242121';
 const color5 = '#CADEFC';
 const color6 = 'rgba(37, 35, 35, 0.3)';
 const color7 = 'rgba(202, 222, 252, 0.7)';
-
-const mainPathVariant: AnimationProps = {
-  transition: { duration: 6, ease: 'easeInOut' },
-  variants: { visible: { pathLength: 1 }, hidden: { pathLength: 0, } }
-};
-
-const shapeVariations: AnimationProps = {
-  transition: { delay: 0, duration: 1, ease: 'easeIn' },
-  variants: {
-    visible: {
-      fillOpacity: 1,
-      pathLength: 1,
-      transition: { delay: 0, duration: 4 }
-    },
-    hidden: { fillOpacity: 0, pathLength: 0 }
-  }
-};
 
 const F_11 = () => {
   return (

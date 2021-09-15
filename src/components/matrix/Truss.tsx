@@ -1,27 +1,13 @@
-import { motion, AnimationProps } from 'framer-motion';
+import { motion } from 'framer-motion';
+import {
+  mainPathVariant,
+  shapeVariations
+} from '@/lib/config/animations/svgs/svgs';
 
 const color1 = '#4E4E4E';
 const color2 = '#888888';
-const color3 = '#C4C4C4';
-const color4 = '#CADEFC';
-const color5 = '#252323';
-
-const mainPathVariant: AnimationProps = {
-  transition: { duration: 6, ease: 'easeInOut' },
-  variants: { visible: { pathLength: 1 }, hidden: { pathLength: 0, } }
-};
-
-const shapeVariations: AnimationProps = {
-  transition: { delay: 0, duration: 1, ease: 'easeIn' },
-  variants: {
-    visible: {
-      fillOpacity: 1,
-      pathLength: 1,
-      transition: { delay: 0, duration: 4 }
-    },
-    hidden: { fillOpacity: 0, pathLength: 0 }
-  }
-};
+const color3 = '#CADEFC';
+const color4 = '#252323';
 
 const Truss = () => {
   return (
@@ -73,7 +59,7 @@ const Truss = () => {
               id='member1'
               data-name='Path 21'
               d='M40 145.85L120.5 83.9251L201 22'
-              stroke='#252323'
+              stroke={color4}
               fill={color2}
               {...shapeVariations}
               animate='visible'
@@ -83,7 +69,7 @@ const Truss = () => {
               id='member2'
               data-name='Path 24'
               d='M207 21L287.5 21L368 21'
-              stroke='#252323'
+              stroke={color4}
               fill={color2}
               {...shapeVariations}
               animate='visible'
@@ -93,7 +79,7 @@ const Truss = () => {
               id='member3'
               data-name='Path 17'
               d='M371 145V84.5V24'
-              stroke='#252323'
+              stroke={color4}
               fill={color2}
               {...shapeVariations}
               animate='visible'
@@ -103,7 +89,7 @@ const Truss = () => {
               id='member4'
               data-name='Path 19'
               d='M207 148H287.5H368'
-              stroke='#252323'
+              stroke={color4}
               fill={color2}
               {...shapeVariations}
               animate='visible'
@@ -113,7 +99,7 @@ const Truss = () => {
               id='member5'
               data-name='Path 20'
               d='M40 148H120.5H201'
-              stroke='#252323'
+              stroke={color4}
               fill={color2}
               {...shapeVariations}
               animate='visible'
@@ -123,7 +109,7 @@ const Truss = () => {
               id='member6'
               data-name='Path 22'
               d='M204 144V84V24'
-              stroke='#252323'
+              stroke={color4}
               fill={color2}
               {...shapeVariations}
               animate='visible'
@@ -133,7 +119,7 @@ const Truss = () => {
               id='member7'
               data-name='Path 18'
               d='M206 145.85L287 83.9251L368 22'
-              stroke='#252323'
+              stroke={color4}
               fill={color2}
               {...shapeVariations}
               animate='visible'
@@ -143,7 +129,7 @@ const Truss = () => {
               id='member8'
               data-name='Path 23'
               d='M207 22L287.556 83.9251L368.112 145.85'
-              stroke='#252323'
+              stroke={color4}
               fill={color2}
               {...shapeVariations}
               animate='visible'
@@ -153,7 +139,7 @@ const Truss = () => {
               id='support1'
               data-name='Path 25'
               d='M30.2883 162.875L37 151.25L43.7117 162.875H30.2883Z'
-              fill='#CADEFC'
+              fill={color3}
               stroke='black'
               stroke-width='0.25'
               {...shapeVariations}
@@ -164,7 +150,7 @@ const Truss = () => {
               id='support2'
               data-name='Path 16'
               d='M366.043 157.375L371 150.219L375.957 157.375H366.043Z'
-              fill='#CADEFC'
+              fill={color3}
               stroke='black'
               stroke-width='0.25'
               {...shapeVariations}
@@ -178,8 +164,8 @@ const Truss = () => {
               cy='160'
               r='1.75'
               {...shapeVariations}
-              fill={color4}
-              stroke={color5}
+              fill={color3}
+              stroke={color4}
               stroke-width='0.25'
               animate={{
                 y: 0,
@@ -196,8 +182,8 @@ const Truss = () => {
               r='1.75'
               {...shapeVariations}
               transform='rotate(-180 284 55)'
-              fill={color4}
-              stroke={color5}
+              fill={color3}
+              stroke={color4}
               stroke-width='0.25'
               animate={{
                 y: 0,
@@ -217,8 +203,8 @@ const Truss = () => {
               r='1.75'
               {...shapeVariations}
               transform='rotate(-180 284 55)'
-              fill={color4}
-              stroke={color5}
+              fill={color3}
+              stroke={color4}
               stroke-width='0.25'
               animate={{
                 y: 0,
@@ -239,7 +225,7 @@ const Truss = () => {
               {...shapeVariations}
               stroke='black'
               transform='rotate(-180 284 55)'
-              fill={color4}
+              fill={color3}
               stroke-width='0.5'
               animate={{
                 y: 0,
@@ -258,7 +244,7 @@ const Truss = () => {
               cy='147.5'
               r='3.5'
               {...shapeVariations}
-              fill='#CADEFC'
+              fill={color3}
               stroke='black'
               transform='rotate(-180 284 55)'
               stroke-width='0.5'
@@ -279,7 +265,7 @@ const Truss = () => {
               cy='20.5'
               r='3.5'
               {...shapeVariations}
-              fill='#CADEFC'
+              fill={color3}
               stroke='black'
               stroke-width='0.5'
               animate={{
@@ -299,7 +285,7 @@ const Truss = () => {
               cy='20.5'
               r='3.5'
               {...shapeVariations}
-              fill='#CADEFC'
+              fill={color3}
               stroke='black'
               stroke-width='0.5'
               animate={{
@@ -319,7 +305,7 @@ const Truss = () => {
               cy='147.5'
               r='3.5'
               {...shapeVariations}
-              fill='#CADEFC'
+              fill={color3}
               stroke='black'
               stroke-width='0.5'
               animate={{
@@ -336,7 +322,7 @@ const Truss = () => {
               id='m17'
               data-name='Path 28'
               d='M27 164L22 170'
-              stroke='#888888'
+              stroke={color2}
               stroke-width='0.5'
               fill={color2}
               {...shapeVariations}
@@ -347,7 +333,7 @@ const Truss = () => {
               id='m20'
               data-name='Path 31'
               d='M34 164L29 170'
-              stroke='#888888'
+              stroke={color2}
               stroke-width='0.5'
               fill={color2}
               {...shapeVariations}
@@ -358,7 +344,7 @@ const Truss = () => {
               id='m19'
               data-name='Path 30'
               d='M41 164L36 170'
-              stroke='#888888'
+              stroke={color2}
               stroke-width='0.5'
               fill={color2}
               {...shapeVariations}
@@ -369,7 +355,7 @@ const Truss = () => {
               id='m18'
               data-name='Path 29'
               d='M48 164L43 170'
-              stroke='#888888'
+              stroke={color2}
               stroke-width='0.5'
               fill={color2}
               {...shapeVariations}
@@ -380,7 +366,7 @@ const Truss = () => {
               id='m17'
               data-name='Path 32'
               d='M362 163L357 169'
-              stroke='#888888'
+              stroke={color2}
               stroke-width='0.5'
               fill={color2}
               {...shapeVariations}
@@ -391,7 +377,7 @@ const Truss = () => {
               id='m18'
               data-name='Path 33'
               d='M369 163L364 169'
-              stroke='#888888'
+              stroke={color2}
               stroke-width='0.5'
               fill={color2}
               {...shapeVariations}
@@ -402,7 +388,7 @@ const Truss = () => {
               id='m19'
               data-name='Path 34'
               d='M376 163L371 169'
-              stroke='#888888'
+              stroke={color2}
               stroke-width='0.5'
               fill={color2}
               {...shapeVariations}
@@ -413,7 +399,7 @@ const Truss = () => {
               id='m20'
               data-name='Path 35'
               d='M383 163L378 169'
-              stroke='#888888'
+              stroke={color2}
               stroke-width='0.5'
               fill={color2}
               {...shapeVariations}

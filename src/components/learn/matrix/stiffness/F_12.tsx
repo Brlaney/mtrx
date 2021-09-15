@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import {
   mainPathVariant,
   shapeVariations
-} from '@/lib/config/animations/bar-deformations';
+} from '@/lib/config/animations/svgs/svgs';
 
 const color1 = '#252323';
 const color2 = '#2F2F2F';
