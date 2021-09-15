@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
-import { mainPathVariant, shapeVariations } from '@/lib/config/animations/columns';
+import {
+  mainPathVariant,
+  shapeVariations
+} from '@/lib/config/animations/columns';
 
 const Col1 = () => {
   return (

@@ -1,11 +1,12 @@
 import { motion, AnimationProps } from 'framer-motion';
-import { cp } from 'fs';
 
 const color1 = '#252323';
 const color2 = '#2F2F2F';
 const color3 = '#4E4E4E';
 const color4 = '#242121';
 const color5 = '#CADEFC';
+const color6 = 'rgba(37, 35, 35, 0.3)';
+const color7 = 'rgba(202, 222, 252, 0.7)';
 
 const mainPathVariant: AnimationProps = {
   transition: { duration: 6, ease: 'easeInOut' },
@@ -47,7 +48,7 @@ const F_11 = () => {
             <motion.path
               {...mainPathVariant}
               d='M82 54H93H104'
-              stroke={color1}
+              stroke={color6}
               stroke-opacity='0.3'
               animate='visible'
               initial='hidden'
@@ -64,10 +65,8 @@ const F_11 = () => {
               cy='54'
               r='4'
               transform='rotate(-180 78 54)'
-              fill={color5}
-              fill-opacity='0.7'
-              stroke={color4}
-              stroke-opacity='0.3'
+              fill={color7}
+              stroke={color6}
               {...shapeVariations}
               animate={{
                 y: 0,
@@ -82,7 +81,7 @@ const F_11 = () => {
               r='4'
               transform='rotate(-180 108 54)'
               fill={color5}
-              stroke='black'
+              stroke={color4}
               {...shapeVariations}
               animate={{
                 y: 0,

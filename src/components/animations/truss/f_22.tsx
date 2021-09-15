@@ -4,6 +4,8 @@ const color1 = '#4E4E4E'
 const color2 = '#2F2F2F'
 const color3 = '#CADEFC'
 const color4 = '#252323'
+const color6 = 'rgba(37, 35, 35, 0.3)';
+const color7 = 'rgba(202, 222, 252, 0.7)';
 
 const mainPathVariant: AnimationProps = {
   transition: { duration: 6, ease: 'easeInOut' },
@@ -45,7 +47,7 @@ const F_22 = () => {
             <motion.path
               {...mainPathVariant}
               d='M203 54H251.5H300'
-              stroke={color4}
+              stroke={color6}
               stroke-opacity='0.3'
               {...shapeVariations}
               animate='visible'

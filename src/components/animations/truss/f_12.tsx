@@ -1,26 +1,15 @@
-import { motion, AnimationProps } from 'framer-motion'
+import { motion } from 'framer-motion'
+import {
+  mainPathVariant,
+  shapeVariations
+} from '@/lib/config/animations/bar-deformations';
 
 const color1 = '#252323';
 const color2 = '#2F2F2F';
 const color3 = '#4E4E4E';
 const color4 = '#CADEFC';
-
-const mainPathVariant: AnimationProps = {
-  transition: { duration: 6, ease: 'easeInOut' },
-  variants: { visible: { pathLength: 1 }, hidden: { pathLength: 0 } },
-}
-
-const shapeVariations: AnimationProps = {
-  transition: { delay: 0, duration: 1, ease: 'easeIn' },
-  variants: {
-    visible: {
-      fillOpacity: 1,
-      pathLength: 1,
-      transition: { delay: 0, duration: 4 },
-    },
-    hidden: { fillOpacity: 0, pathLength: 0 },
-  },
-}
+const color6 = 'rgba(37, 35, 35, 0.3)';
+const color7 = 'rgba(202, 222, 252, 0.7)';
 
 const F_21 = () => {
   return (
@@ -48,10 +37,9 @@ const F_21 = () => {
               cy='54'
               r='4'
               transform='rotate(-180 78 54)'
-              fill={color4}
-              fill-opacity='0.7'
-              stroke={color1}
-              stroke-opacity='0.3'
+              fill={color7}
+              stroke={color6}
+              strokeWidth='0.5'
               {...shapeVariations}
               animate={{
                 y: 0,
@@ -124,8 +112,8 @@ const F_21 = () => {
             />
             <motion.path
               d='M82 54H183.5'
-              stroke={color1}
-              stroke-opacity='0.3'
+              stroke={color6}
+              strokeDasharray='2 2'
               {...shapeVariations}
               animate='visible'
               initial='hidden'
