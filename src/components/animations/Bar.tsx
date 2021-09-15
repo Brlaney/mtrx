@@ -1,25 +1,12 @@
-import { motion, AnimationProps } from 'framer-motion'
+import { motion } from 'framer-motion';
+import {
+  mainPathVariant,
+  shapeVariations
+} from '@/lib/config/animations/bar-deformations';
 
 const pathColor = '#252323'
 const shapeColor = '#252323'
 const nodeColor = 'rgba(202, 221, 251, 0.4)'
-
-const mainPathVariant: AnimationProps = {
-  transition: { duration: 6, ease: 'easeInOut' },
-  variants: { visible: { pathLength: 1 }, hidden: { pathLength: 0, } }
-};
-
-const shapeVariations: AnimationProps = {
-  transition: { delay: 0, duration: 1, ease: 'easeIn' },
-  variants: {
-    visible: {
-      fillOpacity: 1,
-      pathLength: 1,
-      transition: { delay: 0, duration: 4 }
-    },
-    hidden: { fillOpacity: 0, pathLength: 0 }
-  }
-};
 
 const Bar = () => {
   return (

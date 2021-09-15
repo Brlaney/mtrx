@@ -56,10 +56,8 @@ const F_21 = () => {
               cy='54'
               r='4'
               transform='rotate(-180 304 54)'
-              fill={color3}
-              fill-opacity='0.7'
-              stroke={color2}
-              stroke-opacity='0.3'
+              fill={color7}
+              stroke={color6}
               {...shapeVariations}
               animate={{
                 y: 0,
@@ -107,7 +105,7 @@ const F_21 = () => {
             />
             <motion.path
               d='M308 54H330'
-              stroke={color6}
+              stroke={color2}
               {...shapeVariations}
               animate='visible'
               initial='hidden'
@@ -117,8 +115,8 @@ const F_21 = () => {
               cy='54'
               r='4'
               transform='rotate(-180 334 54)'
-              fill={color7}
-              stroke={color6}
+              fill={color3}
+              stroke={color4}
               {...shapeVariations}
               animate={{
                 y: 0,

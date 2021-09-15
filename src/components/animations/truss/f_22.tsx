@@ -1,4 +1,8 @@
-import { motion, AnimationProps } from 'framer-motion'
+import { motion } from 'framer-motion';
+import {
+  mainPathVariant,
+  shapeVariations
+} from '@/lib/config/animations/bar-deformations';
 
 const color1 = '#4E4E4E'
 const color2 = '#2F2F2F'
@@ -6,23 +10,6 @@ const color3 = '#CADEFC'
 const color4 = '#252323'
 const color6 = 'rgba(37, 35, 35, 0.3)';
 const color7 = 'rgba(202, 222, 252, 0.7)';
-
-const mainPathVariant: AnimationProps = {
-  transition: { duration: 6, ease: 'easeInOut' },
-  variants: { visible: { pathLength: 1 }, hidden: { pathLength: 0 } },
-}
-
-const shapeVariations: AnimationProps = {
-  transition: { delay: 0, duration: 1, ease: 'easeIn' },
-  variants: {
-    visible: {
-      fillOpacity: 1,
-      pathLength: 1,
-      transition: { delay: 0, duration: 4 },
-    },
-    hidden: { fillOpacity: 0, pathLength: 0 },
-  },
-}
 
 const F_22 = () => {
   return (
@@ -73,8 +60,8 @@ const F_22 = () => {
               cy='54'
               r='4'
               transform='rotate(-180 304 54)'
-              fill={color3}
-              stroke='black'
+              fill={color7}
+              stroke={color6}
               {...shapeVariations}
               animate={{
                 y: 0,
