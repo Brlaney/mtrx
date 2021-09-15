@@ -1,6 +1,6 @@
 import Link from 'next/link';
 // import Brand from '@/components/buttons/Brand';
-import S1 from '@/components/buttons/logo/S1';
+// import S1 from '@/components/buttons/logo/S1';
 import styles from '@/styles/components/Navbar.module.scss';
 
 export default function Navbar () {
@@ -27,7 +27,7 @@ export default function Navbar () {
             className='uk-navbar-item uk-logo uk-margin-large-left'
           >
             {/* <Brand /> Mtrx */}
-            <S1 /> [Mtrx]
+            [Mtrx]
           </a>
         </div>
 

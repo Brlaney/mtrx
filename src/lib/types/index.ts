@@ -22,6 +22,12 @@ export interface IBridge {
   content?: any | null | undefined;
 };
 
+export interface IMatrix {
+  id: number;
+  name: string;
+  link: string;
+}
+
 export interface NodeCoordinates {
   xn: number;
   yn: number;
