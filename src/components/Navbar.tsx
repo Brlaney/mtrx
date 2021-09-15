@@ -27,7 +27,7 @@ export default function Navbar () {
             className='uk-navbar-item uk-logo uk-margin-large-left'
           >
             {/* <Brand /> Mtrx */}
-            <S1 /> Mtrx
+            <S1 /> [Mtrx]
           </a>
         </div>
 
@@ -49,7 +49,7 @@ export default function Navbar () {
             </li>
             <li id={styles.listItem} className='uk-*'>
               <Link href='/learn/bridge-design'>
-                <a id={styles.link}>Bridge design</a>
+                <a id={styles.link}>Bridge</a>
               </Link>
             </li>
           </ul>

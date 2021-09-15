@@ -11,9 +11,11 @@
     padding: 0.22rem;
     align-items: center;
     justify-content: center;
+
     .header {
       width: 100%;
       margin-bottom: 1rem;
+
       .title {
         font-size: 3.2rem;
         text-align: center;
@@ -22,6 +24,7 @@
         border-bottom: calc(0.3px + 0.02em) solid $border-color;
       }
     }
+
     .card {
       display: flex;
       width: 500px;
@@ -34,12 +37,15 @@
       justify-content: center;
       box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
         rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
-      .img {
-        align-self: center;
-        justify-self: center;
-        text-align: center;
+
+      .content {
+        .link {
+          font-size: 1.25rem;
+          font-family: $primary-font;
+        }
       }
     }
+
     .controls {
       display: flex;
       flex-direction: column;
@@ -55,6 +61,7 @@
       justify-content: center;
       box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
         rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+
       button {
         font-size: 1rem;
         width: 220px;
@@ -66,20 +73,25 @@
         margin: 0.4rem 0 0.4rem 0;
         color: $white;
       }
+
       #state1 {
         border-radius: 3px;
       }
+
       #state2 {
         border-radius: 3px;
       }
+
       #state3 {
         border-radius: 3px;
       }
+
       #state4 {
         border-radius: 3px;
       }
     }
-     .box {
+
+    .box {
       display: flex;
       width: 500px;
       height: 200px;
@@ -91,11 +103,12 @@
       justify-content: center;
       box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
         rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
-        #text {
-          font-size: 1rem;
-          padding: 0.77rem 0.5rem 0.77rem 0.5rem;
-          margin: 1rem;
-        }
+
+      #text {
+        font-size: 1rem;
+        padding: 0.77rem 0.5rem 0.77rem 0.5rem;
+        margin: 1rem;
+      }
     }
   }
 }
