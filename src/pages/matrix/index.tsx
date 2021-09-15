@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Truss from '@/components/animations/Truss';
-import Beam from '@/components/animations/Beam';
-import Frame from '@/components/animations/Frame';
+import Truss from '@/components/matrix/Truss';
+import Beam from '@/components/matrix/Beam';
+import Frame from '@/components/matrix/Frame';
 import styles from '@/styles/pages/Matrix.module.scss';
 
 const Matrix = () => {

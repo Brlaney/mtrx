@@ -2,11 +2,11 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import * as yup from 'yup';
 import { motion } from 'framer-motion';
-import { Dotnav } from '@/components/buttons/Dotnav';
+import { Dotnav } from '@/components/buttons/matrix/Dotnav';
 // import { SelectOne } from '../components/SelectOne';
 import { Formik, Form, Field } from 'formik';
-import Back from '@/components/buttons/Back';
-import Forward from '@/components/buttons/Forward';
+import Back from '@/components/buttons/matrix/Back';
+import Forward from '@/components/buttons/matrix/Forward';
 import styles from '@/styles/components/Steps.module.scss';
 
 const StepTwo = (props) => {

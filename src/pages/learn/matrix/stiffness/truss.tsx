@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Link from 'next/link';
 import GoBack from '@/components/buttons/GoBack';
-import Forward from '@/components/buttons/Forward';
-import Back from '@/components/buttons/Back';
+import Forward from '@/components/buttons/matrix/Forward';
+import Back from '@/components/buttons/matrix/Back';
 import { Elem1 } from './components/trusses/Elem1';
 import { Elem2 } from './components/trusses/Elem2';
 import { Elem3 } from './components/trusses/Elem3';

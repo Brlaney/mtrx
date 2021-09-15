@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import S1 from '@/components/animations/icon/S1';
+import S1 from '@/components/buttons/logo/S1';
 import styles from '@/styles/pages/Tests.module.scss';
 
 export default function Tests() {

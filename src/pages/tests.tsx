@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import F_11 from '@/components/animations/truss/f_11';
-import F_12 from '@/components/animations/truss/f_12';
-import F_21 from '@/components/animations/truss/f_21';
-import F_22 from '@/components/animations/truss/f_22';
+import F_11 from '@/components/tests/F_11';
+import F_12 from '@/components/tests/F_12';
+import F_21 from '@/components/tests/F_21';
+import F_22 from '@/components/tests/F_22';
 import styles from '@/styles/pages/Tests.module.scss';
 
 const rows = [

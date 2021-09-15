@@ -4,10 +4,10 @@ import {
   shapeVariations
 } from '@/lib/config/animations/bar-deformations';
 
-const color1 = '#4E4E4E'
-const color2 = '#2F2F2F'
-const color3 = '#CADEFC'
-const color4 = '#252323'
+const color1 = '#4E4E4E';
+const color2 = '#2F2F2F';
+const color3 = '#CADEFC';
+const color4 = '#252323';
 const color6 = 'rgba(37, 35, 35, 0.3)';
 const color7 = 'rgba(202, 222, 252, 0.7)';
 

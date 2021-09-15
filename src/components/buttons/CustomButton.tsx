@@ -1,6 +1,5 @@
-// import { motion, AnimationProps } from 'framer-motion';
 
-const Button = () => {
+const CustomButton = () => {
   return (
     <div className='testbtn'>
       Next
@@ -14,11 +13,6 @@ const Button = () => {
         width='1.5rem'
         xmlns='http://www.w3.org/2000/svg'
       >
-        {/* <path fill='none' */}
-          // stroke-miterlimit='10'
-          // stroke-width='32'
-          // d='M64 256c0 106 86 192 192 192s192-86 192-192S362 64 256 64 64 150 64 256z'
-        // /
         <path
           fill='none'
           stroke-linecap='round'
@@ -31,4 +25,4 @@ const Button = () => {
   )
 };
 
-export default Button;
+export default CustomButton;

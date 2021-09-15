@@ -1,6 +1,6 @@
-import Trusses from '@/components/matrix/Trusses'
-import GoBack from '@/components/buttons/GoBack'
-import styles from '@/styles/pages/Charts.module.scss'
+import Trusses from '@/components/learn/matrix/deformations/Trusses';
+import GoBack from '@/components/buttons/GoBack';
+import styles from '@/styles/pages/Charts.module.scss';
 
 export default function Truss() {
   const endpoint = '/learn';
@@ -32,4 +32,4 @@ export default function Truss() {
       </div>
     </>
   )
-}
+};
