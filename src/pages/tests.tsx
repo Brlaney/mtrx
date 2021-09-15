@@ -42,8 +42,10 @@ export default function Tests() {
           </p>
         </motion.div>
 
-        {/* SVG graphic test */}
+        {/* Is this a switch case? */}
         <motion.div className={styles.card}>
+
+          {/* Your 'logic' hah */}
           {graphic === 1 && (
             <F_11 />
           )}
@@ -56,6 +58,7 @@ export default function Tests() {
           {graphic === 4 && (
             <F_22 />
           )}
+
         </motion.div>
 
         {/* Controls state - buttons */}
