@@ -17,10 +17,7 @@ const Truss: React.FC<{ props }> = () => {
     members: '',
     reactions: '',
     units: '',
-    x1: '',
-    y1: '',
-    x2: '',
-    y2: '',
+    coordinates: [],
     tests: '',
   });
 
@@ -49,7 +46,7 @@ const Truss: React.FC<{ props }> = () => {
 
   return (
     <>
-      {/* Go back a page - component */}
+  
       <GoBack link={endpoint} />
 
       {/* Page parent container and header */}

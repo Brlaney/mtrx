@@ -1,76 +1,65 @@
 import * as React from 'react';
-import { useEffect } from 'react';
 import * as yup from 'yup';
+import { SchemaOf } from 'yup';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Dotnav } from '@/components/buttons/matrix/Dotnav';
 import { Formik, Form, Field } from 'formik';
+import { forces, lengths } from '@/lib/config/forms/truss';
+import { NodeCoordinates, NodeMap } from '@/lib/types'
 import Back from '@/components/buttons/matrix/Back';
 import Forward from '@/components/buttons/matrix/Forward';
 import styles from '@/styles/components/Steps.module.scss';
 
+let nodeMatrix = [];
+
 const StepTwo = (props) => {
-  const [currentUnits] = React.useState(props.data.units);
-  const [numNodes, setNumNodes] = React.useState(props.data.nodes);
+  const [unitIndex] = React.useState(props.data.units - 1);
+  const [nRows] = React.useState(props.data.nodes);
   const [forceUnits, setForceUnits] = React.useState('');
   const [lengthUnits, setLengthUnits] = React.useState('');
 
+  // UseEffect hook to assemble node coordinate matrix
   useEffect(() => {
-    if (currentUnits === 'imperial1') {
-      setForceUnits('lbs');
-      setLengthUnits('in');
-    };
+    for (let i = 0; i < nRows; i++) {
+      let j = i + 1;
+      let addNum1 = j.toString();
+      let c1 = 'x' + addNum1;
+      let c2 = 'y' + addNum1;
 
-    if (currentUnits === 'imperial2') {
-      setForceUnits('lbs');
-      setLengthUnits('ft');
-    };
+      nodeMatrix[i] = [j, c1, c2];
+    }
+  }, []);
 
-    if (currentUnits === 'imperial3') {
-      setForceUnits('kips');
-      setLengthUnits('in');
-    };
-
-    if (currentUnits === 'imperial4') {
-      setForceUnits('kips');
-      setLengthUnits('ft');
-    };
-
-    if (currentUnits === 'metric1') {
-      setForceUnits('N');
-      setLengthUnits('cm');
-    };
-
-    if (currentUnits === 'metric2') {
-      setForceUnits('N');
-      setLengthUnits('m');
-    };
-
-    if (currentUnits === 'metric3') {
-      setForceUnits('KN');
-      setLengthUnits('cm');
-    };
-
-    if (currentUnits === 'metric4') {
-      setForceUnits('KN');
-      setLengthUnits('m');
+  // UseEffect hook to map the proper units selected
+  useEffect(() => {
+    if (unitIndex) {
+      setForceUnits(forces[unitIndex]);
+      setLengthUnits(lengths[unitIndex]);
     };
   }, [forceUnits, lengthUnits]);
 
+  // Handle next form step
   const handleSubmit = (values) => {
     props.next(values);
   };
 
-  const stepTwoSchema = yup.object({
-    x1: yup.number().defined().min(0),
-    y1: yup.number().defined().min(0),
-    x2: yup.number().defined().min(0),
-    y2: yup.number().defined().min(0)
-  });
+  const xySchema: SchemaOf<NodeCoordinates> = yup.object({
+    x1: yup.number().defined(),
+    y1: yup.number().defined(),
+  }).defined();
+
+  // Form validation schema
+  // const stepTwoSchema = yup.object({
+  //   coordinates: yup.array.of(xySchema)
+  // });
 
   // Testing the output
+  // console.log(currentUnits);
   // console.log(forceUnits);
   // console.log(lengthUnits);
-  console.log(numNodes);
+  // console.log(numNodes);
+  console.log(nodeMatrix);
 
   return (
     <>
@@ -82,7 +71,7 @@ const StepTwo = (props) => {
 
       {/* Form parent container */}
       <Formik
-        validationSchema={stepTwoSchema}
+        validationSchema={xySchema}
         initialValues={props.data}
         onSubmit={handleSubmit}
       >
@@ -95,52 +84,39 @@ const StepTwo = (props) => {
                 Step 2. <span className={styles.span}>Specify units</span>
               </h2>
 
-              {/* User inputs the members coordinates for node 1 */}
-              <div className='uk-width-1-3'>
-                <h6 className={styles.field}>Node 1 coordinates</h6>
-              </div>
-              <div className='uk-width-1-3'>
-                <Field
-                  name='x1'
-                  id={styles.input}
-                  className='uk-input'
-                  type='text'
-                  placeholder='x1'
-                />
-              </div>
-              <div className='uk-width-1-3'>
-                <Field
-                  name='y1'
-                  id={styles.input}
-                  className='uk-input'
-                  type='text'
-                  placeholder='y1'
-                />
-              </div>
+              {/* Iterate n times (where n = {number of nodes})
+              and display xn, yn coordinate inputs for the user */}
+              {nodeMatrix.map((index: number) => (
+                <>
+                  <div
+                    key={`nodeMatrix[index]`}
+                    className='uk-width-1-3'
+                  >
+                    <h6 className={styles.field}>
+                      Node {nodeMatrix[index]} coordinates</h6>
+                  </div>
+                  <div className='uk-width-1-3'>
+                    <Field
+                      name='x1'
+                      id={styles.input}
+                      className='uk-input'
+                      type='text'
+                      placeholder='x1'
+                    />
+                  </div>
+                  <div className='uk-width-1-3'>
+                    <Field
+                      name='y1'
+                      id={styles.input}
+                      className='uk-input'
+                      type='text'
+                      placeholder='y1'
+                    />
+                  </div>
+                </>
+              ))}
 
-              {/* User inputs the members coordinates for node 2 */}
-              <div className='uk-width-1-3'>
-                <h6 className={styles.field}>Node 2 coordinates</h6>
-              </div>
-              <div className='uk-width-1-3'>
-                <Field
-                  name='x2'
-                  id={styles.input}
-                  className='uk-input'
-                  type='text'
-                  placeholder='x2'
-                />
-              </div>
-              <div className='uk-width-1-3'>
-                <Field
-                  name='y2'
-                  id={styles.input}
-                  className='uk-input'
-                  type='text'
-                  placeholder='y2'
-                />
-              </div>
-
+              {/* Navigation buttons - back & forward */}
               <div className='uk-width-1-1'>
                 <motion.button
                   id={styles.iconButton}

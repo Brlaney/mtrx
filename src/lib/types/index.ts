@@ -21,3 +21,8 @@ export interface IBridge {
   lower: string;
   content?: any | null | undefined;
 };
+
+export interface NodeCoordinates {
+  xn: number;
+  yn: number;
+};
