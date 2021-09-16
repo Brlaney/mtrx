@@ -17,7 +17,7 @@
   .label {
     width: 100%;
     margin: 1.6rem 1.2rem 0.2rem 1.2rem;
-    color: $text-secondary;
+    color: $bg-m;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: justify;
@@ -39,8 +39,8 @@
   }
 }
 
-#input {
-  margin: 0.8rem 0 0.8rem 0;
+#inputm, #inputn, #inputr, #inputu {
+  margin: 0.6rem 0 0.6rem 0;
 }
 
 .field {
