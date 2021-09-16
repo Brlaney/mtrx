@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import F_11 from '@/components/learn/matrix/stiffness/beam/F_11';
-import F_12 from '@/components/learn/matrix/stiffness/beam/F_12';
-import F_21 from '@/components/learn/matrix/stiffness/beam/F_21';
-import F_22 from '@/components/learn/matrix/stiffness/beam/F_22';
+import F_11 from '@/components/learn/matrix/stiffness/beam/D_11';
+import F_12 from '@/components/learn/matrix/stiffness/beam/Bending';
+import F_21 from '@/components/learn/matrix/stiffness/beam/D_21';
+import F_22 from '@/components/learn/matrix/stiffness/beam/Forces';
 import styles from '@/styles/pages/Displacements.module.scss';
 
 export default function Beam() {

@@ -11,7 +11,7 @@ const color4 = '#252323';
 const color6 = 'rgba(37, 35, 35, 0.3)';
 const color7 = 'rgba(202, 222, 252, 0.7)';
 
-const F_21 = () => {
+const D_21 = () => {
   return (
     <motion.div
       className='animationParent'
@@ -27,7 +27,10 @@ const F_21 = () => {
           viewBox='0 0 388 116'
           fill='none'
         >
-          <g id='bar_element_21' data-name='Bar element deformation 3'>
+          <g
+            id='d_21'
+            data-name='d_21'
+          >
             <motion.path
               {...mainPathVariant}
               d='M82 54.5H191H300'
@@ -153,4 +156,4 @@ const F_21 = () => {
   )
 }
 
-export default F_21
+export default D_21

@@ -5,21 +5,20 @@ import F_12 from '@/components/learn/matrix/stiffness/truss/F_12';
 import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
 import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
 import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
+import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Tests.module.scss';
 
 export default function TrussDeformation() {
   const [graphic, setGraphic] = React.useState(1);
+  const endpoint = 'learn/matrix';
 
   return (
     <motion.div className={styles.container}>
-      {/* Main parent container */}
+
+    <GoBack link={endpoint} />
       <div className={styles.parent}>
 
-
-
-        {/* Is this a switch case? */}
         <motion.div className={styles.card}>
-
           {/* Your 'logic' hah */}
           {graphic === 1 && (
             <F_11 />

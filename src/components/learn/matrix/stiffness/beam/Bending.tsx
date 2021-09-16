@@ -11,7 +11,7 @@ const color4 = '#CADEFC';
 const color6 = 'rgba(37, 35, 35, 0.3)';
 const color7 = 'rgba(202, 222, 252, 0.7)';
 
-const F_21 = () => {
+const Bending = () => {
   return (
     <motion.div
       className='animationParent'
@@ -28,8 +28,8 @@ const F_21 = () => {
           fill='none'
         >
           <g
-            id='bar_element_12'
-            data-name='Bar element deformation 2'
+            id='beam_bending'
+            data-name='beam_bending'
           >
             <motion.circle
               {...mainPathVariant}
@@ -160,4 +160,4 @@ const F_21 = () => {
   )
 }
 
-export default F_21
+export default Bending
