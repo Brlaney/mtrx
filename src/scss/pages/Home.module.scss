@@ -12,15 +12,15 @@
     width: 60%;
     margin: 1.22rem 0 1.22rem 0;
     .title {
-      color: $bg-d;
+      font-weight: bold;
+      color: $bg-df-900;
       margin-bottom: 0;
       padding-bottom: 0.3rem;
       font-size: 3.5rem;
       letter-spacing: 0.1rem;
       border-bottom: calc(0.2px + 0.05rem) solid #e5e5e5;
-      #next {
+      #span {
         color: $secondary;
-        font-weight: bold;
       }
     }
     .subtitle {

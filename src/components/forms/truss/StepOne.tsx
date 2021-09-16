@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import * as yup from 'yup';
 import { Formik, Form, Field } from 'formik';
 import { motion } from 'framer-motion';
@@ -23,6 +23,10 @@ const StepOne = (props) => {
 
   console.log(props);
 
+  useEffect(() => {
+    console.log('UseEffect will run if values change');
+  }, [props.members, props.nodes, props.reactions]);
+  
   return (
     <>
       

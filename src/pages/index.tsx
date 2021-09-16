@@ -14,7 +14,7 @@ export default function Home() {
         {/* Homepage header container */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            <span id={styles.next}> Mtrx</span>
+            [<span id={styles.span}>Mtrx</span>]
           </h1>
           <h4 className={styles.subtitle}>
             A web application that implements the matrix displacement method
