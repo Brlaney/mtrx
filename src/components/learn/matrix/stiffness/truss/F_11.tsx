@@ -27,8 +27,8 @@ const F_11 = () => {
           fill='none'
         >
           <g
-            id='bar_element_11'
-            data-name='Bar element deformation 1'
+            id='truss_d11'
+            data-name='truss_d11'
           >
             <motion.path
               id='d11'
