@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import F_11 from '@/components/learn/matrix/stiffness/F_11';
-import F_12 from '@/components/learn/matrix/stiffness/F_12';
-import F_21 from '@/components/learn/matrix/stiffness/F_21';
-import F_22 from '@/components/learn/matrix/stiffness/F_22';
-import styles from '@/styles/pages/Tests.module.scss';
+import F_11 from '@/components/learn/matrix/stiffness/truss/F_11';
+import F_12 from '@/components/learn/matrix/stiffness/truss/F_12';
+import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
+import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
+import styles from '@/styles/pages/Displacements.module.scss';
 
-export default function Displacements() {
+export default function Truss() {
   const [graphic, setGraphic] = React.useState(1);
 
   return (

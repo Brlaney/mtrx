@@ -1,23 +1,13 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import F_11 from '@/components/learn/matrix/stiffness/truss/F_11';
-import F_12 from '@/components/learn/matrix/stiffness/truss/F_12';
-import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
-import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
-import styles from '@/styles/pages/Tests.module.scss';
-import { s1, s2, s3, s4, s5, s6, s7 } from '@/lib/config/states/logo';
+import F_11 from '@/components/learn/matrix/stiffness/beam/F_11';
+import F_12 from '@/components/learn/matrix/stiffness/beam/F_12';
+import F_21 from '@/components/learn/matrix/stiffness/beam/F_21';
+import F_22 from '@/components/learn/matrix/stiffness/beam/F_22';
+import styles from '@/styles/pages/Displacements.module.scss';
 
-export default function Tests() {
+export default function Beam() {
   const [graphic, setGraphic] = React.useState(1);
-
-  // Test these formats:
-  console.log(s1);
-  console.log(s2);
-  console.log(s3);
-  console.log(s4);
-  console.log(s5);
-  console.log(s6);
-  console.log(s7);
 
   return (
     <motion.div className={styles.container}>
