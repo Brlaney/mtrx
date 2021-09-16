@@ -4,35 +4,18 @@ import F_11 from '@/components/learn/matrix/stiffness/truss/F_11';
 import F_12 from '@/components/learn/matrix/stiffness/truss/F_12';
 import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
 import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
+import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
 import styles from '@/styles/pages/Tests.module.scss';
-import { s1, s2, s3, s4, s5, s6, s7 } from '@/lib/config/states/logo';
 
 export default function TrussDeformation() {
   const [graphic, setGraphic] = React.useState(1);
-
-  // Test these formats:
-  console.log(s1);
-  console.log(s2);
-  console.log(s3);
-  console.log(s4);
-  console.log(s5);
-  console.log(s6);
-  console.log(s7);
 
   return (
     <motion.div className={styles.container}>
       {/* Main parent container */}
       <div className={styles.parent}>
 
-        {/* Controls state - buttons */}
-        <motion.div className={styles.box}>
-          <p id={styles.text} className='uk-text uk-text-justify uk-text-center'>
-            A truss local member is a 2-dimensional bar element. Each end represents a node. A node can be
-            a connection to another member, a free-end (cantilevar), or a support. Each node in a truss system
-            will contain two degrees of freedom, one for both horizontal displacement (d11/d21) and vertical
-            displacement (d12/d22).
-          </p>
-        </motion.div>
+
 
         {/* Is this a switch case? */}
         <motion.div className={styles.card}>
@@ -49,6 +32,9 @@ export default function TrussDeformation() {
           )}
           {graphic === 4 && (
             <F_22 />
+          )}
+                   {graphic === 5 && (
+            <Forces />
           )}
 
         </motion.div>
@@ -70,20 +56,6 @@ export default function TrussDeformation() {
             Deformation 1
           </motion.button>
           <motion.button
-            id={styles.state3}
-            className='uk-button'
-            onClick={() => { setGraphic(3) }}
-            whileHover={{
-              scale: 1.05,
-              transition: {
-                duration: .25
-              }
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Deformation 3
-          </motion.button>
-          <motion.button
             id={styles.state2}
             className='uk-button'
             onClick={() => { setGraphic(2) }}
@@ -96,6 +68,20 @@ export default function TrussDeformation() {
             whileTap={{ scale: 0.95 }}
           >
             Deformation 2
+          </motion.button>
+          <motion.button
+            id={styles.state3}
+            className='uk-button'
+            onClick={() => { setGraphic(3) }}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                duration: .25
+              }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Deformation 3
           </motion.button>
           <motion.button
             id={styles.state4}
@@ -111,7 +97,32 @@ export default function TrussDeformation() {
           >
             Deformation 4
           </motion.button>
+          <motion.button
+            id={styles.state5}
+            className='uk-button uk-width-1-1'
+            onClick={() => { setGraphic(5) }}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                duration: .25
+              }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Member-end forces
+          </motion.button>
         </motion.div>
+        
+        {/* Information onClick */}
+        {/* <motion.div className={styles.box}>
+          <p id={styles.text} className='uk-text uk-text-justify uk-text-center'>
+            A truss local member is a 2-dimensional bar element. Each end represents a node. A node can be
+            a connection to another member, a free-end (cantilevar), or a support. Each node in a truss system
+            will contain two degrees of freedom, one for both horizontal displacement (d11/d21) and vertical
+            displacement (d12/d22).
+          </p>
+        </motion.div>
+       */}
       </div>
     </motion.div>
   )

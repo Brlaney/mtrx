@@ -74,11 +74,11 @@
 
     .controls {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       flex: 1;
       flex-wrap: wrap;
       width: 500px;
-      height: 150px;
+      height: 200px;
       border-radius: 10px;
       border: 1px solid $border-color;
       margin: 1rem 0 0 0;
@@ -96,25 +96,19 @@
         text-align: center;
         background-color: $secondary;
         padding: 0.25rem;
-        margin: 0.4rem 0 0.4rem 0;
+        margin: 0.4rem 0.1rem 0.4rem 0.1rem;
         color: $white;
       }
 
-      #state1 {
+      #state1, #state2, #state3, #state4, #state5{
         border-radius: 3px;
       }
 
-      #state2 {
-        border-radius: 3px;
+      #state5 {
+        width: 100%;
+        margin: 0.4rem 0.7rem;
       }
 
-      #state3 {
-        border-radius: 3px;
-      }
-
-      #state4 {
-        border-radius: 3px;
-      }
     }
 
     .box {
