@@ -43,7 +43,7 @@
 - 📝 Form handling simplified with
   - [Formik](https://formik.org/docs/overview)
   - [Yup](https://github.com/jquense/yup)
-- 📊 🧮 For charts and equations I used
+- 📊 For charts and equations I used
   - [Chart.js](https://www.chartjs.org/)
   - [Katex](https://github.com/KaTeX/KaTeX)
 - 🎨 Styled with `Ui-Kit`
