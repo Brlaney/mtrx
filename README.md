@@ -33,7 +33,9 @@
   - Spanish (es) - figure 2.
   - French (fr) - figure 3.
   - Hindi (hi) - figure 4.
-- ✅ Built from Material-UI's `Dashboard Template`. The [source code](https://github.com/mui-org/material-ui/tree/next/docs/src/pages/getting-started/templates/dashboard) and the live sample site can be found [here](https://next.material-ui.com/getting-started/templates/dashboard/).
+- 🎨 Styled with `Ui-Kit`
+  - ✅ [UiKit's main site](https://getuikit.com/)
+  - ✅ [UiKit's Github repository](https://github.com/uikit/uikit)
   
 </br>
 
