@@ -43,7 +43,7 @@ export default function Navbar () {
             </li>
             <li id={styles.listItem} className='uk-*'>
               <Link href='/learn/matrix'>
-                <a id={styles.link}>Matrix</a>
+                <a id={styles.link}>Stiffness</a>
               </Link>
             </li>
             <li id={styles.listItem} className='uk-*'>
