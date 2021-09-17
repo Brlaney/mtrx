@@ -107,8 +107,6 @@ This repository was created by Brendan Laney.
 ```text
 MIT License
 
-Copyright (c) 2021
-
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files, to deal 
 in the Software without restriction, including without limitation the
@@ -126,6 +124,8 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Brendan Laney | Copyright (c) 2021
 ```
 
 ## Contributions and issues
