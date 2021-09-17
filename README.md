@@ -11,26 +11,32 @@
     style="margin: 0; padding: 0;"
     width="100%"
   />
+</div>
+
+# [Mtrx]
+
+<div align="center" id="subheader">
   <p style="text-align: justify">
     A <b>Next.js</b> app that solves statically indeterminate </br>
     systems using the <b>matrix displacement method</b>.
   </p>
 </div>
 
-# Table Of Contents
+## Table Of Contents
 
+- [[Mtrx]](#mtrx)
 - [Table Of Contents](#table-of-contents)
 - [Features](#features)
 - [Quick Start](#quick-start)
   - [1. Clone repository](#1-clone-repository)
   - [2. Install dependencies](#2-install-dependencies)
-  - [3. Start your development server](#3-start-your-development-server)
+  - [3. Start development server](#3-start-development-server)
 - [Connect with me](#connect-with-me)
 - [References](#references)
 - [License](#license)
 - [Contributions and issues](#contributions-and-issues)
 
-# Features
+## Features
 
 - 💻 The following Technologies are used
   - [Next.js](https://nextjs.org/)
@@ -48,15 +54,15 @@
   
 </br>
 
-# Quick Start
+## Quick Start
 
-## 1. Clone repository
+### 1. Clone repository
 
 ```bash
 git clone https://github.com/Brlaney/mtrx.git
 ```
 
-## 2. Install dependencies
+### 2. Install dependencies
 
 ```bash
 cd mtrx
@@ -68,7 +74,7 @@ yarn install
 npm i 
 ```
 
-## 3. Start your development server
+### 3. Start development server
 
 ```bash
 yarn dev
@@ -83,20 +89,20 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 
 </br>
 
-# Connect with me
+## Connect with me
 
 - Email: <brlaney@outlook.com>
 - Twitter: [brendan_webdev](https://twitter.com/Brendan_webdev)
 - Instagram: [brlaney94](https://www.instagram.com/brlaney94/)
 
-# References
+## References
 
 - Wikipedia:
   - [Direct Stiffness Method](https://en.wikipedia.org/wiki/Direct_stiffness_method)
   - [Finite Element Method](https://en.wikipedia.org/wiki/Finite_element_method)
   - [Structural Analysis](https://en.wikipedia.org/wiki/Structural_analysis)
 
-# License
+## License
 
 This repository was created by Brendan Laney.
 
@@ -124,6 +130,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-# Contributions and issues
+## Contributions and issues
 
 I would love your feedback on my project - please feel free to make a pull request or submit an issue if you find any. Thanks for checking out my project!
