@@ -6,12 +6,13 @@
     <a href="#status"><img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=flat-square"></a>
   </p>
   <!-- <h1>[Mtrx]</h1> -->
+  <h1>
   <img
     src="https://user-images.githubusercontent.com/64326462/133838486-7e1b43b6-2273-4925-8f7e-3cdff62c2ec6.png"
     alt="Mtrx_Logo"
     style="width: 120px; height: 120px;"
   />
-  <hr/>
+  </h1>
   <p>
     A <b>Next.js</b> app that solves statically indeterminate systems using the <b>matrix displacement method</b>.
   </p>
