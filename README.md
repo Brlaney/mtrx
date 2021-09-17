@@ -102,8 +102,6 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 
 ## License
 
-This repository was created by Brendan Laney.
-
 ```text
 MIT License
 
