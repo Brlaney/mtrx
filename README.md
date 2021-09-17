@@ -16,8 +16,6 @@
   </p>
 </div>
 
-(https://user-images.githubusercontent.com/64326462/133838486-7e1b43b6-2273-4925-8f7e-3cdff62c2ec6.png)
-
 # Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
