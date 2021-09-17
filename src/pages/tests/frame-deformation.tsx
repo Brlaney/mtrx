@@ -4,13 +4,17 @@ import F_11 from '@/components/learn/matrix/stiffness/frame/F_11';
 import F_12 from '@/components/learn/matrix/stiffness/frame/F_12';
 import F_21 from '@/components/learn/matrix/stiffness/frame/F_21';
 import F_22 from '@/components/learn/matrix/stiffness/frame/F_22';
+import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Tests.module.scss';
 
 export default function FrameDeformation() {
   const [graphic, setGraphic] = React.useState(1);
+  const endpoint = '/tests';
 
   return (
     <motion.div className={styles.container}>
+      <GoBack link={endpoint} />
+
       {/* Main parent container */}
       <div className={styles.parent}>
 

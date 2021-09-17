@@ -4,6 +4,7 @@ import { motion, useCycle } from 'framer-motion';
 import { useDimensions } from '@/lib/config/animations/tests/useDimensions';
 import MenuToggle from '@/components/buttons/MenuToggle';
 import { Navigation } from '@/components/buttons/Navigation';
+import GoBack from '@/components/buttons/GoBack';
 // import styles from '@/styles/pages/Tests.module.scss';
 
 const sidebar = {
@@ -26,21 +27,25 @@ const sidebar = {
   }
 };
 
-export default function Example () {
+export default function Example() {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  const endpoint = '/tests';
 
   return (
-    <motion.nav
-      initial={false}
-      animate={isOpen ? 'open' : 'closed'}
-      custom={height}
-      ref={containerRef}
-    >
-      <motion.div className='background' variants={sidebar} />
-      <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
-    </motion.nav>
+    <>
+      <GoBack link={endpoint} />
+      <motion.nav
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        custom={height}
+        ref={containerRef}
+      >
+        <motion.div className='background' variants={sidebar} />
+        <Navigation />
+        <MenuToggle toggle={() => toggleOpen()} />
+      </motion.nav>
+    </>
   );
 };

@@ -10,7 +10,7 @@ import styles from '@/styles/pages/Tests.module.scss';
 
 export default function TrussDeformation() {
   const [graphic, setGraphic] = React.useState(1);
-  const endpoint = 'learn/matrix';
+  const endpoint = '/tests';
 
   return (
     <motion.div className={styles.container}>

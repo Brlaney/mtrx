@@ -4,13 +4,17 @@ import D_11 from '@/components/learn/matrix/stiffness/beam/D_11';
 import D_21 from '@/components/learn/matrix/stiffness/beam/D_21';
 import Forces from '@/components/learn/matrix/stiffness/beam/Forces';
 import Bending from '@/components/learn/matrix/stiffness/beam/Bending';
+import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Tests.module.scss';
 
 export default function BeamDeformation() {
   const [graphic, setGraphic] = React.useState(1);
+  const endpoint = '/tests';
 
   return (
     <motion.div className={styles.container}>
+      <GoBack link={endpoint} />
+
       {/* Main parent container */}
       <div className={styles.parent}>
 
