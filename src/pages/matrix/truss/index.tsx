@@ -17,7 +17,11 @@ const Truss: React.FC<{ props }> = () => {
     members: '',
     reactions: '',
     units: '',
-    coordinates: [],
+    x1: '',
+    y1: '',
+    x2: '',
+    y2: '',
+    // coordinates: [],
     tests: '',
   });
 

@@ -1,12 +1,39 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/svgs';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Tests.module.scss';
 
+import { trussCheck } from '@/lib/utils/matrix/calculate';
+
+const m = 3;
+const n = 12;
+const r = 6;
+
 const Tests = () => {
   const endpoint = '/';
+
+  const check = trussCheck(m, n, r);
+  const lhs = check[0];
+  const rhs = check[1];
+  const degreeOfIndeterminancy = check[2];
+
+  /* The following useEffect hook will run immedetiately upon the page loading
+  It will output either the degree of indeterminancy or that the system cannot be
+  solved by the matrix displacement method. */
+  useEffect(() => {
+    if (lhs > rhs) {
+      console.log(
+        'Your system is statically indeterminant to the '
+        + degreeOfIndeterminancy
+        + '-st degreee'
+      );
+    } else {
+      console.log('Your system is either unstable or determinant.');
+      console.log('Therefore, the matrix displacement method cannot be implemented.');
+    };
+  });
 
   return (
     <motion.div

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import F_11 from '@/components/learn/matrix/stiffness/beam/D_11';
-import F_12 from '@/components/learn/matrix/stiffness/beam/Bending';
-import F_21 from '@/components/learn/matrix/stiffness/beam/D_21';
-import F_22 from '@/components/learn/matrix/stiffness/beam/Forces';
+import D_11 from '@/components/learn/matrix/stiffness/beam/D_11';
+import D_21 from '@/components/learn/matrix/stiffness/beam/D_21';
+import Bending from '@/components/learn/matrix/stiffness/beam/Bending';
+import Forces from '@/components/learn/matrix/stiffness/beam/Forces';
 import styles from '@/styles/pages/Displacements.module.scss';
 
 export default function Beam() {
@@ -26,21 +26,18 @@ export default function Beam() {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.card}>
-
-          {/* Your 'logic' hah */}
           {graphic === 1 && (
-            <F_11 />
+            <D_11 />
           )}
           {graphic === 2 && (
-            <F_12 />
-          )}
+            <D_21 />
+            )}
           {graphic === 3 && (
-            <F_21 />
+            <Forces />
           )}
           {graphic === 4 && (
-            <F_22 />
+            <Bending />
           )}
-
         </motion.div>
 
         {/* Controls state - buttons */}

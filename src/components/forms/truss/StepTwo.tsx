@@ -6,7 +6,10 @@ import { motion } from 'framer-motion';
 import { Dotnav } from '@/components/buttons/matrix/Dotnav';
 import { Formik, Form, Field } from 'formik';
 import { forces, lengths } from '@/lib/config/forms/truss';
-import { NodeCoordinates, NodeMap } from '@/lib/types'
+import { NodeCoordinates } from '@/lib/types'
+import { trussCheck } from '@/lib/utils/matrix/calculate';
+import Success from '@/components/alerts/Success';
+import Error from '@/components/alerts/Error';
 import Back from '@/components/buttons/matrix/Back';
 import Forward from '@/components/buttons/matrix/Forward';
 import styles from '@/styles/components/Steps.module.scss';
@@ -14,22 +17,42 @@ import styles from '@/styles/components/Steps.module.scss';
 let nodeMatrix = [];
 
 const StepTwo = (props) => {
+  const [displayAlert, setDisplayAlert] = React.useState(0);
+  const [btnState, setBtnState] = React.useState(0);
   const [unitIndex] = React.useState(props.data.units - 1);
-  const [nRows] = React.useState(props.data.nodes);
+  const [m] = React.useState(props.data.members);
+  const [n] = React.useState(props.data.nodes);
+  const [r] = React.useState(props.data.reactions);
   const [forceUnits, setForceUnits] = React.useState('');
   const [lengthUnits, setLengthUnits] = React.useState('');
 
-  // UseEffect hook to assemble node coordinate matrix
-  useEffect(() => {
-    for (let i = 0; i < nRows; i++) {
-      let j = i + 1;
-      let addNum1 = j.toString();
-      let c1 = 'x' + addNum1;
-      let c2 = 'y' + addNum1;
+  const check = trussCheck(m, n, r);
+  // const degreeOfIndeterminancy = check[2];
 
-      nodeMatrix[i] = [j, c1, c2];
-    }
-  }, []);
+  /* The following useEffect hook will set the display alert state variable
+  to truthy if the system is indeterminate and falsey if else. */
+  useEffect(() => {
+    if (check[0] > check[1]) {
+      setDisplayAlert(1);
+      const degree = check[2];
+      return degree;
+    } else {
+      setDisplayAlert(0);
+      setBtnState(1);
+    };
+  });
+
+  // UseEffect hook to assemble node coordinate matrix
+  // useEffect(() => {
+  // for (let i = 0; i < n; i++) {
+  // let j = i + 1;
+  // let addNum1 = j.toString();
+  // let c1 = 'x' + addNum1;
+  // let c2 = 'y' + addNum1;
+  // 
+  // nodeMatrix[i] = [j, c1, c2];
+  // }
+  // }, []);
 
   // UseEffect hook to map the proper units selected
   useEffect(() => {
@@ -44,22 +67,19 @@ const StepTwo = (props) => {
     props.next(values);
   };
 
-  const xySchema: SchemaOf<NodeCoordinates> = yup.object({
+  const stepTwoSchema = yup.object({
     x1: yup.number().defined(),
     y1: yup.number().defined(),
-  }).defined();
-
-  // Form validation schema
-  // const stepTwoSchema = yup.object({
-  //   coordinates: yup.array.of(xySchema)
-  // });
+    x2: yup.number().defined(),
+    y2: yup.number().defined(),
+  });
 
   // Testing the output
   // console.log(currentUnits);
   // console.log(forceUnits);
   // console.log(lengthUnits);
   // console.log(numNodes);
-  console.log(nodeMatrix);
+  // console.log(nodeMatrix);
 
   return (
     <>
@@ -71,13 +91,21 @@ const StepTwo = (props) => {
 
       {/* Form parent container */}
       <Formik
-        validationSchema={xySchema}
+        validationSchema={stepTwoSchema}
         initialValues={props.data}
         onSubmit={handleSubmit}
       >
         {({ values }) => (
           <div className={styles.form}>
             <Form className='uk-grid-small' uk-grid='true'>
+
+              {displayAlert != 0 && (
+                <Success props={props} />
+              )}
+
+              {displayAlert == 0 && (
+                <Error props={props} />
+              )}
 
               {/* Header */}
               <h2 className={styles.label}>
@@ -133,22 +161,38 @@ const StepTwo = (props) => {
                 >
                   <Back props={props} />
                 </motion.button>
-                <motion.button
-                  id={styles.iconButton}
-                  type='submit'
-                  className='uk-button uk-align-right'
-                  whileHover={{
-                    scale: 1.1,
-                    transition: {
-                      duration: .2
-                    }
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Forward props={props} />
-                </motion.button>
+                {btnState == 1
+                  ?
+                  <motion.button
+                    id={styles.disabledBtn}
+                    type='submit'
+                    className='uk-button uk-align-right'
+                    whileHover={{
+                      scale: 0.90,
+                      transition: {
+                        duration: .9
+                      }
+                    }}
+                  >
+                    <Forward props={props} />
+                  </motion.button>
+                  :
+                  <motion.button
+                    id={styles.iconButton}
+                    type='submit'
+                    className='uk-button uk-align-right'
+                    whileHover={{
+                      scale: 1.1,
+                      transition: {
+                        duration: .2
+                      }
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Forward props={props} />
+                  </motion.button>
+                }
               </div>
-
             </Form>
           </div>
         )}

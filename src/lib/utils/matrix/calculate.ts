@@ -1,8 +1,8 @@
 /* Function 1.)
-
 Calculates area given a radius ~
   Input: cross-sectional radius
-  Output: cross-sectional area in US units */
+  Output: cross-sectional area in US units 
+*/
 export function calcAreaR(r) {
   let initial = Math.PI * r^2;
   let final = initial / 144; // Assumming the input is in, convert to sq ft.
@@ -15,10 +15,10 @@ export function calcAreaR(r) {
 
 
 /* Function 2.)
-
 Calculates area given a diameter ~
   Input: members angle of orientation in radians
-  Output: members angle of orientation in degrees */
+  Output: members angle of orientation in degrees 
+*/
 export function calcAreaD(d) {
   let initial = Math.PI * d^2;
   let final = initial / 576;  // Assumming the input is in, convert to sq ft. (576 = 4 * 12 * 12)
@@ -75,27 +75,20 @@ export function multiplyMatrices(matrixA, matrixB) {
 
 
 /* Function 5.)
-
 Checks if truss system is statically determinate or not ~
   Input: 
   - Number of members (m)
   - nodes/joints (n)
   - reaction forces (p)
-  Output: boolean variable check */
+  Output: boolean variable check 
+*/
 export function trussCheck(m, n, r) {
+  // For inequality check:
   let lhs = m + r;
   let rhs = 2 * n;
-  let check = null;
 
-  // True => statically determinate
-  if (lhs <= rhs) {
-    let check = true;
-  }
+  // Degree of indeterminancy:
+  let d = r + m - 2 * n;
 
-  // False => statically indeterminate
-  if (lhs > rhs) {
-    let check = false;
-  }
-
-  return check;
+  return [lhs, rhs, d];
 };
