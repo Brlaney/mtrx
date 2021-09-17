@@ -9,7 +9,6 @@
     src="https://user-images.githubusercontent.com/64326462/133859826-0752e150-f47a-44c9-860f-952094d4853b.png"
     alt="Mtrx_Logo"
     style="margin: 0; padding: 0;"
-    width="100%"
   />
 </div>
 
