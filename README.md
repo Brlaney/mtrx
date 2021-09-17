@@ -1,13 +1,15 @@
 <div align="center" id="top">
   <h1>Mtrx</h1>
+  <h5>A web application that solves statically indeterminate systems.</h5>
+  <p>
+    <b>Mtrx</b> is a <b>Next.js app</b> written in Typescript, and styled with Sass & Ui-Kit.
+  </p>
   <p>
     <a href="https://github.com/brlaney/mtrx/commits/master">
       <img src="https://img.shields.io/github/last-commit/brlaney/mtrx?style=flat-square">
     </a>
     <a href="#status"><img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=flat-square"></a>
   </p>
-  <h5>A web application that solves statically indeterminate systems.</h5>
-  <p><b>Mtrx</b> is a <b>Next.js app</b> written in Typescript, and styled with Sass & Ui-Kit.</p>
 </div>
 
 # Table Of Contents
