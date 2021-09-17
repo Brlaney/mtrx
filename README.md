@@ -1,16 +1,13 @@
 <div align="center" id="top">
-  <h1>[Mtrx]</h1>
-    <h5>
-      A web application that solves statically indeterminate systems using the matrix displacement method.
-    </h5>
-  <p>
-    <b>Mtrx</b> is a <b>Next.js app</b> written in <b>Typescript</b>, and styled with <b>Sass</b> & <b>Ui-Kit</b>.
-  </p>
   <p>
     <a href="https://github.com/brlaney/mtrx/commits/master">
       <img src="https://img.shields.io/github/last-commit/brlaney/mtrx?style=flat-square">
     </a>
     <a href="#status"><img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=flat-square"></a>
+  </p>
+  <h1>[Mtrx]</h1>
+  <p>
+    A <b>Next.js</b> app that solves statically indeterminate systems using the <b>matrix displacement method</b>.
   </p>
 </div>
 
