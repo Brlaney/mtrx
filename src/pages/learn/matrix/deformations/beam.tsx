@@ -1,9 +1,10 @@
-import Beams from '@/components/matrix/Beams'
-import GoBack from '@/components/buttons/GoBack'
-import styles from '@/styles/pages/Charts.module.scss'
+import Beams from '@/components/learn/matrix/deformations/Beams';
+import GoBack from '@/components/buttons/GoBack';
+import styles from '@/styles/pages/Charts.module.scss';
 
 export default function Beam() {
-  const endpoint = '/learn';
+  const endpoint = '/learn/matrix';
+
   return (
     <>
       {/* Render the back button component */}
@@ -31,4 +32,4 @@ export default function Beam() {
       </div>
     </>
   )
-}
+};

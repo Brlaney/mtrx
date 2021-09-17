@@ -24,6 +24,9 @@
     top: 11%;
     @include respond-below-height(xs) {
       top: 12%;
+      @include respond-below-height(xxs) {
+        top: 16%;
+      }
     }
   }
 }

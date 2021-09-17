@@ -5,22 +5,23 @@ import F_12 from '@/components/learn/matrix/stiffness/truss/F_12';
 import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
 import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
 import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
+import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
 export default function Truss() {
   const [graphic, setGraphic] = React.useState(1);
+  const endpoint = '/learn/matrix';
 
   return (
     <motion.div className={styles.container}>
+
+      <GoBack link={endpoint} />
+
       {/* Main parent container */}
       <div className={styles.parent}>
 
-
-
         {/* Is this a switch case? */}
         <motion.div className={styles.card}>
-
-          {/* Your 'logic' hah */}
           {graphic === 1 && (
             <F_11 />
           )}
@@ -36,7 +37,6 @@ export default function Truss() {
                    {graphic === 5 && (
             <Forces />
           )}
-
         </motion.div>
 
         {/* Controls state - buttons */}

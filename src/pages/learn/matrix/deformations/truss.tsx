@@ -3,7 +3,7 @@ import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Charts.module.scss';
 
 export default function Truss() {
-  const endpoint = '/learn';
+  const endpoint = '/learn/matrix';
 
   return (
     <>
