@@ -6,7 +6,7 @@
     <a href="#status"><img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=flat-square"></a>
   </p>
   <img
-    src="https://user-images.githubusercontent.com/64326462/133841212-5e5dcf58-eded-4b30-830a-ea717b1eb24b.png"
+    src="https://user-images.githubusercontent.com/64326462/133843982-db38865c-70ad-46bb-8825-0013d632b307.png"
     alt="Mtrx_Logo"
       style="margin: 0; padding: 0;"
   />
