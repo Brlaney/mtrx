@@ -55,7 +55,9 @@
 
 </br>
 
-![giphy](https://user-images.githubusercontent.com/64326462/133833359-5339d2aa-86be-49cd-a29e-1336a2ffbd91.gif)
+<div align="center" id="gif">
+  ![giphy](https://user-images.githubusercontent.com/64326462/133833359-5339d2aa-86be-49cd-a29e-1336a2ffbd91.gif)
+</div>
 
 </br>
 
