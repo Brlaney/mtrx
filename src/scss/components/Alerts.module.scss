@@ -1,0 +1,27 @@
+@import '../theme/theme';
+
+#formErrorAlert {
+  margin: 0;
+  padding: 0.8rem;
+  width: 100%;
+  display: flex;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+  .errorMessage {
+    font-size: 1.1rem;
+  }
+}
+
+#formSuccessAlert {
+  margin: 0;
+  padding: 0.8rem;
+  width: 100%;
+  display: flex;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+  .successMessage {
+    font-size: 1.1rem;
+  }
+}

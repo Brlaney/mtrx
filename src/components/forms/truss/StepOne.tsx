@@ -1,58 +1,45 @@
 import React, { useEffect } from 'react';
 import * as yup from 'yup';
-import { Formik, Form, Field, FormikHelpers } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import { motion } from 'framer-motion';
 import Forward from '@/components/buttons/matrix/Forward';
 import { Dotnav } from '@/components/buttons/matrix/Dotnav';
 import { Selection } from '@/components/forms/formik-components/Selection';
 import { selectUnits } from '@/lib/config/forms/truss';
-// import { trussCheck } from '@/lib/utils/matrix/calculate';
 import styles from '@/styles/components/Steps.module.scss';
 
-interface Values {
-  nodes: number;
-  members: number;
-  reactions: number;
-  units: string;
-};
-
 const StepOne = (props) => {
-  const [m, setM] = React.useState('');
-  const [n, setN] = React.useState('');
-  const [r, setR] = React.useState('');
-
   const handleSubmit = (values) => {
     props.next(values);
   };
+
+  const stepOneSchema = yup.object({
+    nodes: yup.number().defined().min(1).max(50),
+    members: yup.number().defined().min(1).max(50),
+    reactions: yup.number().defined().min(0).max(20),
+    units: yup.string().default('').nullable(),
+  });
 
   console.log(props);
 
   useEffect(() => {
     console.log('UseEffect will run if values change');
-  }, [m, n, r]);
-
+  }, [props.members, props.nodes, props.reactions]);
+  
   return (
     <>
+      
       {/* Dotnav container for component render */}
       <div className={styles.dotnavContainer}>
         <Dotnav step={props.step} />
       </div>
 
       <Formik
-        initialValues={{
-          nodes: 2,
-          members: 1,
-          reactions: 0,
-          units: '',
-        }}
-        onSubmit={(values: Values, { setSubmitting }: FormikHelpers<Values>) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 500);
-        }}
+        validationSchema={stepOneSchema}
+        initialValues={props.data}
+        onSubmit={handleSubmit}
       >
-        {(values) => (
+        {() => (
           <div className={styles.form}>
             <Form className='uk-grid-small uk-align-center' uk-grid='true'>
 
@@ -69,7 +56,7 @@ const StepOne = (props) => {
                   Number of members
                 </h6>
                 <Field
-                  id={styles.inputm}
+                  id={styles.input}
                   name='members'
                   placeholder='members (m)'
                   className='uk-input'
@@ -77,8 +64,6 @@ const StepOne = (props) => {
                   min='1'
                   max='50'
                   step='1'
-                  value={m}
-                  onChange={e => setM(e.target.value)}
                 />
               </div>
 
@@ -88,16 +73,14 @@ const StepOne = (props) => {
                   Number of nodes
                 </h6>
                 <Field
-                  id={styles.inputn}
+                  id={styles.input}
                   name='nodes'
                   placeholder='nodes (n)'
                   className='uk-input'
                   type='number'
-                  min='2'
+                  min='1'
                   max='50'
                   step='1'
-                  value={n}
-                  onChange={e => setN(e.target.value)}
                 />
               </div>
 
@@ -107,7 +90,7 @@ const StepOne = (props) => {
                   Number of reactions
                 </h6>
                 <Field
-                  id={styles.inputr}
+                  id={styles.input}
                   name='reactions'
                   placeholder='reactions (r)'
                   className='uk-input'
@@ -115,8 +98,6 @@ const StepOne = (props) => {
                   min='0'
                   max='20'
                   step='1'
-                  value={r}
-                  onChange={e => setR(e.target.value)}
                 />
               </div>
 
@@ -126,8 +107,8 @@ const StepOne = (props) => {
                   Select your units
                 </h6>
                 <Field
-                  id={styles.inputu}
                   name='units'
+                  id={styles.input}
                   className='uk-select'
                   options={selectUnits}
                   component={Selection}

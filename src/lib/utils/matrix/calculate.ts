@@ -83,19 +83,12 @@ Checks if truss system is statically determinate or not ~
   Output: boolean variable check 
 */
 export function trussCheck(m, n, r) {
+  // For inequality check:
   let lhs = m + r;
   let rhs = 2 * n;
-  let check = null;
 
-  // True => statically determinate
-  if (lhs <= rhs) {
-    let check = true;
-  }
+  // Degree of indeterminancy:
+  let d = r + m - 2 * n;
 
-  // False => statically indeterminate
-  if (lhs > rhs) {
-    let check = false;
-  }
-
-  return check;
+  return [lhs, rhs, d];
 };
