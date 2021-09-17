@@ -11,7 +11,7 @@
     alt="Mtrx_Logo"
     style="width: 120px; height: 120px;"
   />
-  <h1></h1>
+  <h1 style="padding: 0; margin: 0;"></h1>
   <p>
     A <b>Next.js</b> app that solves statically indeterminate systems using the <b>matrix displacement method</b>.
   </p>
