@@ -22,7 +22,6 @@
 
 ## Table Of Contents
 
-- [Table Of Contents](#table-of-contents)
 - [Features](#features)
 - [Quick Start](#quick-start)
   - [1. Clone repository](#1-clone-repository)
