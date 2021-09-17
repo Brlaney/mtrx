@@ -2,7 +2,7 @@
   <h1>[Mtrx]</h1>
   <h5>A web application that solves statically indeterminate systems.</h5>
   <p>
-    <b>Mtrx</b> is a <b>Next.js app</b> written in Typescript, and styled with Sass & Ui-Kit.
+    <b>Mtrx</b> is a <b>Next.js app</b> written in <b>Typescript</b>, and styled with <b>Sass</b> & <b>Ui-Kit</b>.
   </p>
   <p>
     <a href="https://github.com/brlaney/mtrx/commits/master">
