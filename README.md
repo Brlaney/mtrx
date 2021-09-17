@@ -8,9 +8,10 @@
   <img
     src="https://user-images.githubusercontent.com/64326462/133841212-5e5dcf58-eded-4b30-830a-ea717b1eb24b.png"
     alt="Mtrx_Logo"
+      style="margin: 0; padding: 0;"
   />
   <h1
-    style="margin-top: 0; padding-top: 0;"
+    style="margin: 0; padding: 0;"
    >
      [Mtrx]
    </h1>
