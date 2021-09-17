@@ -22,7 +22,6 @@
 
 ## Table Of Contents
 
-- [[Mtrx]](#mtrx)
 - [Table Of Contents](#table-of-contents)
 - [Features](#features)
 - [Quick Start](#quick-start)
