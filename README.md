@@ -13,9 +13,8 @@
   />
 </div>
 
-# [Mtrx]
-
-<div align="center" id="subheader">
+<div align="center">
+  <h1>[Mtrx]</h1>
   <p style="text-align: justify">
     A <b>Next.js</b> app that solves statically indeterminate </br>
     systems using the <b>matrix displacement method</b>.
