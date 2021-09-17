@@ -11,7 +11,7 @@
     style="margin: 0; padding: 0;"
     width="100%"
   />
-  <p>
+  <p width="250">
     A <b>Next.js</b> app that solves statically indeterminate systems using the <b>matrix displacement method</b>.
   </p>
 </div>
