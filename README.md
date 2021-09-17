@@ -27,7 +27,7 @@
 - [Quick Start](#quick-start)
   - [1. Clone repository](#1-clone-repository)
   - [2. Install dependencies](#2-install-dependencies)
-  - [3. Ready for development](#3-ready-for-development)
+  - [3. Start your development server](#3-start-your-development-server)
 - [Connect with me](#connect-with-me)
 - [References](#references)
 - [License](#license)
@@ -75,14 +75,14 @@
 
 ## 1. Clone repository
 
-```C
-git clone https://github.com/Brlaney/mui-dash.git
+```bash
+git clone https://github.com/Brlaney/mtrx.git
 ```
 
 ## 2. Install dependencies
 
 ```bash
-cd mui-dash
+cd mtrx
 
 # then for yarn users:
 yarn install
@@ -91,9 +91,9 @@ yarn install
 npm i 
 ```
 
-## 3. Ready for development
+## 3. Start your development server
 
-```C
+```bash
 yarn dev
 
 #or
