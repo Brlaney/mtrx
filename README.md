@@ -8,7 +8,6 @@
   <img
     src="https://user-images.githubusercontent.com/64326462/133839809-d19387d7-ad47-4527-bd8e-a25d291f32e6.png"
     alt="Mtrx_Logo"
-    style="width: 120px; height: 120px;"
   />
   <h1>[Mtrx]</h1>
   <p>
