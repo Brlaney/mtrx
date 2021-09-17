@@ -9,7 +9,7 @@
     src="https://user-images.githubusercontent.com/64326462/133841212-5e5dcf58-eded-4b30-830a-ea717b1eb24b.png"
     alt="Mtrx_Logo"
   />
-  <h1>[Mtrx]</h1>
+  <h1 style="margin-top: 0; padding-top: 0;" >[Mtrx]</h1>
   <p>
     A <b>Next.js</b> app that solves statically indeterminate systems using the <b>matrix displacement method</b>.
   </p>
