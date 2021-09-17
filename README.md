@@ -1,7 +1,7 @@
 <div align="center" id="top">
   <h1>[Mtrx]</h1>
     <h5>
-      A web application that solves statically indeterminate trusses, beams, and frames using the matrix displacement method.
+      A web application that solves statically indeterminate systems using the matrix displacement method.
     </h5>
   <p>
     <b>Mtrx</b> is a <b>Next.js app</b> written in <b>Typescript</b>, and styled with <b>Sass</b> & <b>Ui-Kit</b>.
