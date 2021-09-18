@@ -59,15 +59,12 @@ In any case, the goal of summarizing is to give your reader a clear understandin
   <img src="https://user-images.githubusercontent.com/64326462/133889994-3604d9ba-bfa8-43cc-a29b-86f4f91de762.png" alt="Homepage-desktop" style="width: 80%;" align="center" />
 </div>
 
+</br>
+
 <div align="center" style="text-align:center">
   <p><b>Homepage (mobile) - figure 2.</b></p>
   <img src="https://user-images.githubusercontent.com/64326462/133889664-4ed95b8b-6800-4d82-8f06-94b39c51ff80.png" alt="Homepage-mobile" style="height: 60%;" align="center" />
 </div>
-
-    <!-- <th>Homepage (desktop) - figure 1.</th>
-    <th>Select a system to solve - figure 2.</th>
-    <th>User inputs parameters - figure 3.</th>
-    <th>Homepage (mobile) - figure 4.</th> -->
 
 </br>
 
