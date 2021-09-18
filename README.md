@@ -30,7 +30,7 @@
   - [2. Install dependencies](#2-install-dependencies)
   - [3. Start development server](#3-start-development-server)
 - [Connect with me](#connect-with-me)
-- [References & resources](#references)
+- [References & resources](#references-&-resources)
 - [License](#license)
 - [Contributions and issues](#contributions-and-issues)
 
