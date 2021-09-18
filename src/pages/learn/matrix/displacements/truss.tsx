@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import F_11 from '@/components/learn/matrix/stiffness/truss/F_11';
 import F_12 from '@/components/learn/matrix/stiffness/truss/F_12';
@@ -11,6 +11,13 @@ import styles from '@/styles/pages/Displacements.module.scss';
 export default function Truss() {
   const [graphic, setGraphic] = React.useState(1);
   const endpoint = '/learn/matrix';
+  let k = 0;
+
+  // useEffect(() => {
+  //   if (k == 0) {
+  //     setDisplay('')
+  //   }
+  // }, [])
 
   return (
     <motion.div className={styles.container}>
@@ -34,7 +41,7 @@ export default function Truss() {
           {graphic === 4 && (
             <F_22 />
           )}
-                   {graphic === 5 && (
+          {graphic === 5 && (
             <Forces />
           )}
         </motion.div>
@@ -112,7 +119,7 @@ export default function Truss() {
             Member-end forces
           </motion.button>
         </motion.div>
-        
+
         {/* Information onClick */}
         {/* <motion.div className={styles.box}>
           <p id={styles.text} className='uk-text uk-text-justify uk-text-center'>

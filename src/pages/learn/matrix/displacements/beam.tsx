@@ -4,13 +4,19 @@ import D_11 from '@/components/learn/matrix/stiffness/beam/D_11';
 import D_21 from '@/components/learn/matrix/stiffness/beam/D_21';
 import Bending from '@/components/learn/matrix/stiffness/beam/Bending';
 import Forces from '@/components/learn/matrix/stiffness/beam/Forces';
+import GoBack from '@/components/buttons/GoBack';
+
 import styles from '@/styles/pages/Displacements.module.scss';
 
 export default function Beam() {
   const [graphic, setGraphic] = React.useState(1);
-
+  const endpoint = '/learn/matrix';
+  
   return (
     <motion.div className={styles.container}>
+      
+      <GoBack link={endpoint} />
+      
       {/* Main parent container */}
       <div className={styles.parent}>
 

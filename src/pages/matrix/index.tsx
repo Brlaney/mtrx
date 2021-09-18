@@ -34,7 +34,7 @@ const Matrix = () => {
               onMouseLeave={() => setName('')}
               whileHover={{
                 scale: 1.02,
-                transition: { duration: [1, 0.5], ease: [0.5, -0.1, 0.01, 0.45] }
+                transition: { duration: 0.2, ease: [0.5, -0.1, 0.01, 0.45] }
               }}
               whileTap={{ scale: 0.95 }}
             >
@@ -48,7 +48,7 @@ const Matrix = () => {
               onMouseLeave={() => setName('')}
               whileHover={{
                 scale: 1.02,
-                transition: { duration: [1, 0.5], ease: [0.5, -0.1, 0.01, 0.45] }
+                transition: { duration: 0.2, ease: [0.5, -0.1, 0.01, 0.45] }
               }}
               whileTap={{ scale: 0.95 }}
             >
@@ -62,7 +62,7 @@ const Matrix = () => {
               onMouseLeave={() => setName('')}
               whileHover={{
                 scale: 1.02,
-                transition: { duration: [1, 0.5], ease: [0.5, -0.1, 0.01, 0.45] }
+                transition: { duration: 0.2, ease: [0.5, -0.1, 0.01, 0.45] }
               }}
               whileTap={{ scale: 0.95 }}
             >

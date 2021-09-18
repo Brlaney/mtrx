@@ -6,6 +6,7 @@ import Back from '@/components/buttons/matrix/Back';
 import { Elem1 } from './components/trusses/Elem1';
 import { Elem2 } from './components/trusses/Elem2';
 import { Elem3 } from './components/trusses/Elem3';
+import Bar from '@/components/learn/Bar';
 import { motion } from 'framer-motion';
 import { variants } from '@/lib/config/animations/trussComponents';
 import styles from '@/styles/pages/Learning.module.scss';
@@ -35,7 +36,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
         </div>
 
         <motion.div variants={variants} className={styles.imagecard}>
-          <motion.img
+          {/* <motion.img
             className={styles.img}
             whileHover={{
               scale: 1.2,
@@ -47,7 +48,9 @@ const Truss: React.FC<{ props }> = ({ props }) => {
             src='/bar-labeled.svg'
             width={326}
             height={73}
-          />
+          /> */}
+          <Bar />
+
         </motion.div>
 
         {/* 1st component */}
