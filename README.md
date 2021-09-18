@@ -70,6 +70,17 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 ![giph2](https://user-images.githubusercontent.com/64326462/133891006-5d7c9a2e-7a31-4fe4-9c31-d82cd1ccfa49.gif)
 
+</br>
+
+<div align="center" style="text-align:center">
+  <img src="https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif" width="502px" />
+</div>
+
+</br>
+  
+<div align="center" style="text-align:center">
+  <img src="https://user-images.githubusercontent.com/64326462/133891006-5d7c9a2e-7a31-4fe4-9c31-d82cd1ccfa49.gif" width="502px" />
+</div>
 
 </br>
 
