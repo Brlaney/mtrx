@@ -58,7 +58,6 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </div>
 
 </br>
-
 </br>
 
 <div align="center">
@@ -67,7 +66,6 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </div>
 
 </br>
-
 </br>
 
 <div align="center">
@@ -76,7 +74,6 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </div>
 
 </br>
-
 </br>
   
 <div align="center">
@@ -95,6 +92,8 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 - 📝 Form handling simplified with
   - [Formik](https://formik.org/docs/overview)
   - [Yup](https://github.com/jquense/yup)
+- 🎞️ Animations
+  - [Framer-motion](https://www.framer.com/docs/)
 - 📊 For charts and equations I used
   - [Chart.js](https://www.chartjs.org/)
   - [Katex](https://github.com/KaTeX/KaTeX)
