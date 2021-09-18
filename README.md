@@ -60,7 +60,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
     <th>Homepage (mobile) - figure 2.</th>
   </tr></thead>
   <tbody><tr>
-    <td><img src="https://user-images.githubusercontent.com/64326462/133889663-2bed6eb7-668c-4dad-99f9-71700090f023.png" alt="Homepage-desktop" style="width: 400px;"/></td>
+    <td><img src="https://user-images.githubusercontent.com/64326462/133889994-3604d9ba-bfa8-43cc-a29b-86f4f91de762.png" alt="Homepage-desktop" style="width: 400px;"/></td>
     <td><img src="https://user-images.githubusercontent.com/64326462/133889664-4ed95b8b-6800-4d82-8f06-94b39c51ff80.png" alt="Homepage-mobile" style="width: 200px;"/></td>
   </tr><tr>
     <td><img src="https://user-images.githubusercontent.com/64326462/133889809-ffb5b00d-6465-40b0-aa95-e48bb69009da.png" alt="Select-system" style="width: 400px;"/></td>
