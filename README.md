@@ -22,8 +22,10 @@
 
 ## Table Of Contents
 
+- [Project summary](#Summary)
+- [Project demo](#Demo)
 - [Features](#features)
-- [Quick Start](#quick-start)
+- [Quick start](#quick-start)
   - [1. Clone repository](#1-clone-repository)
   - [2. Install dependencies](#2-install-dependencies)
   - [3. Start development server](#3-start-development-server)
@@ -31,6 +33,28 @@
 - [References](#references)
 - [License](#license)
 - [Contributions and issues](#contributions-and-issues)
+
+### Summary
+
+There are many situations in which you might have to summarize an article or other source:
+
+- As a stand-alone assignment to show you’ve understood the material.
+- To keep notes that will help you remember what you’ve read.
+- To give an overview of other researchers’ work in a literature review.
+
+When you’re writing an academic text like an essay, research paper, or dissertation, you’ll engage with other researchers’ work in a variety of ways. Sometimes you might use a brief quote to support your point; sometimes you might paraphrase a few sentences or paragraphs.
+
+But it’s often appropriate to summarize a whole article or chapter if it is especially relevant to your own research, or to provide an overview of a source before you analyze or critique it.
+
+In any case, the goal of summarizing is to give your reader a clear understanding of the original source. Follow the 4 steps outline below to write a good summary.
+
+</br>
+
+### Demo
+
+![matrix-proj](https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif)
+
+</br>
 
 ### Features
 
@@ -50,7 +74,7 @@
   
 </br>
 
-### Quick Start
+### Quick start
 
 #### 1. Clone repository
 
