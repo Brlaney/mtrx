@@ -7,6 +7,7 @@ import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
 import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
+import { selection } from '@/lib/data/config/options';
 
 export default function Truss() {
   const [graphic, setGraphic] = React.useState(1);
