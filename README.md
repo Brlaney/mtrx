@@ -50,10 +50,6 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 ### Demo
 
-![matrix-proj](https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif)
-
-</br>
-
 <div align="center" style="text-align:center">
   <p><b>Homepage (desktop) - figure 1.</b></p>
   <img src="https://user-images.githubusercontent.com/64326462/133890461-9b39db9f-989a-49d6-8217-8b91810e8ced.png" alt="Homepage-desktop" style="width: 502px;" align="center" />
@@ -65,6 +61,10 @@ In any case, the goal of summarizing is to give your reader a clear understandin
   <p><b>Homepage (mobile) - figure 2.</b></p>
   <img src="https://user-images.githubusercontent.com/64326462/133890530-dcf45c5b-c4a5-4bf5-bb15-46b837ca7154.png" alt="Homepage-mobile" style="height: 40%;" align="center" />
 </div>
+
+</br>
+
+![matrix-proj](https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif)
 
 </br>
 
