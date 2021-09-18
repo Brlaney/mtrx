@@ -53,7 +53,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </br>
 
 <div align="center">
-  <p><b>Homepage (desktop) - figure 1.</b></p>
+  <h4><b>Homepage (desktop) - figure 1.</b></h4>
   <img src="https://user-images.githubusercontent.com/64326462/133890461-9b39db9f-989a-49d6-8217-8b91810e8ced.png" alt="Homepage-desktop" style="width: 502px" align="center" />
 </div>
 
@@ -62,7 +62,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </br>
 
 <div align="center">
-  <p><b>Homepage (mobile) - figure 2.</b></p>
+  <h4><b>Homepage (mobile) - figure 2.</b></h4>
   <img src="https://user-images.githubusercontent.com/64326462/133890530-dcf45c5b-c4a5-4bf5-bb15-46b837ca7154.png" alt="Homepage-mobile" style="height: 40%;" align="center" />
 </div>
 
@@ -71,7 +71,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </br>
 
 <div align="center">
-  <p><b>Animations using Framer-motion - figure 3.</b></p>
+  <h4><b>Animations using Framer-motion - figure 3.</b></h4>
   <img src="https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif" width="50%" />
 </div>
 
@@ -80,7 +80,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </br>
   
 <div align="center">
-  <p><b>Matrix displacement solver form - figure 4.</b></p>
+  <h4><b>Matrix displacement solver form - figure 4.</b></h4>
   <img src="https://user-images.githubusercontent.com/64326462/133891006-5d7c9a2e-7a31-4fe4-9c31-d82cd1ccfa49.gif" width="50%" />
 </div>
 
