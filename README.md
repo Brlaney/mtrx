@@ -72,7 +72,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
   </tr>
 </table>
 
-<div style="text-align:center">
+<div align="center" style="text-align:center">
   <p>Homepage (mobile) - figure 5.</p>
   <img src="https://user-images.githubusercontent.com/64326462/133889664-4ed95b8b-6800-4d82-8f06-94b39c51ff80.png" alt="Homepage-mobile" style="height: 100%;" align="center" />
 </div>
