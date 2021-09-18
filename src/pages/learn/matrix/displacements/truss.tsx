@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { fadeInSide, stagger } from '@/lib/config/animations/svgs/displacements';
 import F_11 from '@/components/learn/matrix/stiffness/truss/F_11';
 import F_12 from '@/components/learn/matrix/stiffness/truss/F_12';
 import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
@@ -49,10 +50,16 @@ export default function Truss() {
         </motion.div>
 
         {/* Information onClick */}
-        <motion.div className={styles.box}>
+        <motion.div
+          className={styles.box}
+          variants={stagger}
+        >
           <motion.p
             id={styles.text}
             className='uk-text uk-text-justify uk-text-center'
+            animate='visible'
+            initial='hidden'
+            variants={fadeInSide}
           >
             {display}
           </motion.p>
