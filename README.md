@@ -36,6 +36,8 @@
 
 ### Summary
 
+</br>
+
 There are many situations in which you might have to summarize an article or other source:
 
 - As a stand-alone assignment to show you’ve understood the material.
@@ -51,6 +53,8 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </br>
 
 ### Demo
+
+</br>
 
 ![matrix-proj](https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif)
 
