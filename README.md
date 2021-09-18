@@ -64,7 +64,12 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 </br>
 
-![matrix-proj](https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif)
+![matrix-proj-1](https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif)
+
+</br>
+
+![matrix-proj-2](https://user-images.githubusercontent.com/64326462/133890949-c5a97821-9309-49b6-8c7b-7ad98ef6e73d.mp4)
+
 
 </br>
 
