@@ -1,31 +1,17 @@
 import React from 'react';
-import {
-  WithUserAgentProps,
-  withUserAgent
-} from 'next-useragent';
+import { NextPage } from 'next'
 
-class Check extends React.Component<WithUserAgentProps> {
-  static async getInitialProps(ctx) {
-    return { useragent: ctx.ua.source }
-  };
-  
-  render() {
-    const { ua, useragent } = this.props;
-    
-    console.log(ua);
-    console.log(useragent);
+interface Props {
+  userAgent?: string;
+}
 
-    return (
-      <>
-        <p>{useragent}</p>
-        {ua.isMobile ? (
-          <div>Mobile device is being used</div>
-        ) : (
-          <div> Desktop/laptop device is being used</div>
-        )}
-      </>
-    )
-  }
-};
+const Check: NextPage<Props> = ({ userAgent }) => (
+  <main>Your user agent: {userAgent}</main>
+)
 
-export default withUserAgent(Check);
+Check.getInitialProps = async ({ req }) => {
+  const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
+  return { userAgent }
+}
+
+export default Check;
