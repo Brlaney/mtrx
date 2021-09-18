@@ -1,6 +1,7 @@
 ﻿import Head from 'next/head';
 import seo from '@/lib/data/seo';
 import Navbar from './Navbar';
+// import Nav from './Nav';
 import styles from '@/styles/components/Layout.module.scss';
 
 const Layout = ({ children }) => {
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
         <title>{seo.title}</title>
       </Head>
       <Navbar />
+      {/* <Nav />  */}
       <div className={styles.container}>
         <main className={styles.main}>
           {children}
