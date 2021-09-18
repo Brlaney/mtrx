@@ -6,19 +6,20 @@ import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
 import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
 import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
 import GoBack from '@/components/buttons/GoBack';
+import { data } from '@/lib/data/config/options';
+import { buttonTexts } from '@/lib/data/config/optionsTwo';
+import { IDispl } from '@/lib/types';
 import styles from '@/styles/pages/Displacements.module.scss';
-import { selection } from '@/lib/data/config/options';
 
 export default function Truss() {
   const [graphic, setGraphic] = React.useState(1);
   const endpoint = '/learn/matrix';
-  let k = 0;
+  const [display, setDisplay] = React.useState('');
 
-  // useEffect(() => {
-  //   if (k == 0) {
-  //     setDisplay('')
-  //   }
-  // }, [])
+  useEffect(() => {
+    let k = graphic - 1;
+    setDisplay(data[k]);
+  }, [graphic, display]);
 
   return (
     <motion.div className={styles.container}>
@@ -47,90 +48,35 @@ export default function Truss() {
           )}
         </motion.div>
 
-        {/* Controls state - buttons */}
-        <motion.div className={styles.controls}>
-          <motion.button
-            id={styles.state1}
-            className='uk-button'
-            onClick={() => { setGraphic(1) }}
-            whileHover={{
-              scale: 1.05,
-              transition: {
-                duration: .25
-              }
-            }}
-            whileTap={{ scale: 0.95 }}
+        {/* Information onClick */}
+        <motion.div className={styles.box}>
+          <motion.p
+            id={styles.text}
+            className='uk-text uk-text-justify uk-text-center'
           >
-            Deformation 1
-          </motion.button>
-          <motion.button
-            id={styles.state2}
-            className='uk-button'
-            onClick={() => { setGraphic(2) }}
-            whileHover={{
-              scale: 1.05,
-              transition: {
-                duration: .25
-              }
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Deformation 2
-          </motion.button>
-          <motion.button
-            id={styles.state3}
-            className='uk-button'
-            onClick={() => { setGraphic(3) }}
-            whileHover={{
-              scale: 1.05,
-              transition: {
-                duration: .25
-              }
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Deformation 3
-          </motion.button>
-          <motion.button
-            id={styles.state4}
-            className='uk-button'
-            onClick={() => { setGraphic(4) }}
-            whileHover={{
-              scale: 1.05,
-              transition: {
-                duration: .25
-              }
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Deformation 4
-          </motion.button>
-          <motion.button
-            id={styles.state5}
-            className='uk-button uk-width-1-1'
-            onClick={() => { setGraphic(5) }}
-            whileHover={{
-              scale: 1.05,
-              transition: {
-                duration: .25
-              }
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Member-end forces
-          </motion.button>
+            {display}
+          </motion.p>
         </motion.div>
 
-        {/* Information onClick */}
-        {/* <motion.div className={styles.box}>
-          <p id={styles.text} className='uk-text uk-text-justify uk-text-center'>
-            A truss local member is a 2-dimensional bar element. Each end represents a node. A node can be
-            a connection to another member, a free-end (cantilevar), or a support. Each node in a truss system
-            will contain two degrees of freedom, one for both horizontal displacement (d11/d21) and vertical
-            displacement (d12/d22).
-          </p>
+        {/* Controls state - buttons */}
+        <motion.div className={styles.controls}>
+          {buttonTexts.map((buttonText: IDispl) => (
+            <motion.button
+              id={styles.state1}
+              className='uk-button'
+              onClick={() => { setGraphic(buttonText.id) }}
+              whileHover={{
+                scale: 1.05,
+                transition: {
+                  duration: .25
+                }
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {buttonText.text}
+            </motion.button>
+          ))}
         </motion.div>
-       */}
       </div>
     </motion.div>
   )

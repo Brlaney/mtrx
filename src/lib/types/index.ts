@@ -32,3 +32,8 @@ export interface NodeCoordinates {
   xn: number;
   yn: number;
 };
+
+export interface IDispl {
+  id: number;
+  text: string;
+};
