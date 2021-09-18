@@ -5,8 +5,11 @@ import Col2 from '@/components/homepage/Col2';
 import Col3 from '@/components/homepage/Col3';
 import Footer from '@/components/Footer';
 import styles from '@/styles/pages/Home.module.scss';
+// import { uaString } from '@/lib/utils/hooks';
 
-export default function Home() {
+export default function Home(props) {
+  // console.log(props.uaString);
+
   return (
     <>
       <div className={styles.parent}>

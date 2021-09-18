@@ -7,32 +7,60 @@
     border-bottom: '1px solid $text-light';
     display: flex;
     flex-direction: row;
+
     #parent {
       #brand {
         font-family: $primary-font;
         font-size: 1.6rem;
         color: $white;
       }
+
       #brand:hover {
         text-decoration: underline;
         text-decoration-color: $secondary;
       }
+
+      ul {
+        color: $bg-d;
+        li {
+          #brand {
+            margin-left: 1rem;
+          }
+        }
+      }
     }
+
     div {
       #listItem {
         margin: 0 1rem 0 0;
         padding: 0;
       }
+
       .navLink {
         font-weight: bold;
         color: $bg-dark;
       }
+
       #list {
         font-size: 2rem;
       }
+
       #link {
         font-size: 1rem;
       }
     }
   }
+}
+
+#listItem1, #listItem2, #listItem3, #listItem4 {
+  margin: 0 1rem 0 0;
+  padding: 0;
+}
+
+.link1, .link2, .link3, .link4 {
+    color: $bg-d;
+  }
+
+#listHeader {
+  color: $bg-d;
 }
