@@ -7,14 +7,14 @@ import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
 import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
 import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
 import GoBack from '@/components/buttons/GoBack';
-import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements';
+import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements/truss';
 import { IDispl } from '@/lib/types';
 import styles from '@/styles/pages/Displacements.module.scss';
 
 export default function Truss() {
   const [graphic, setGraphic] = React.useState(1);
-  const endpoint = '/learn/matrix';
   const [display, setDisplay] = React.useState('');
+  const endpoint = '/learn/matrix';
 
   useEffect(() => {
     let k = graphic - 1;
@@ -31,21 +31,11 @@ export default function Truss() {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.card}>
-          {graphic === 1 && (
-            <F_11 />
-          )}
-          {graphic === 2 && (
-            <F_12 />
-          )}
-          {graphic === 3 && (
-            <F_21 />
-          )}
-          {graphic === 4 && (
-            <F_22 />
-          )}
-          {graphic === 5 && (
-            <Forces />
-          )}
+          {graphic === 1 && <F_11 />}
+          {graphic === 2 && <F_12 />}
+          {graphic === 3 && <F_21 />}
+          {graphic === 4 && <F_22 />}
+          {graphic === 5 && <Forces />}
         </motion.div>
 
         {/* Information onClick */}
