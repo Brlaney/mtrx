@@ -30,7 +30,7 @@
   - [2. Install dependencies](#2-install-dependencies)
   - [3. Start development server](#3-start-development-server)
 - [Connect with me](#connect-with-me)
-- [References & resources](#references-&-resources)
+- [References and resources](#references-and-resources)
 - [License](#license)
 - [Contributions and issues](#contributions-and-issues)
 
@@ -140,7 +140,7 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 - Twitter: [brendan_webdev](https://twitter.com/Brendan_webdev)
 - Instagram: [brlaney94](https://www.instagram.com/brlaney94/)
 
-### References & resources
+### References and resources
 
 - Great introduction video by [Dr. Structure](https://youtu.be/kFkU1M7xVbg)
 - Wikipedia:
