@@ -54,28 +54,22 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 </br>
 
-<table>
-  <thead><tr>
-    <th>Homepage (desktop) - figure 1.</th>
-    <th>Select a system to solve - figure 2.</th>
-  </tr></thead>
-  <tbody><tr>
-    <td><div style="text-align:center"><img src="https://user-images.githubusercontent.com/64326462/133889994-3604d9ba-bfa8-43cc-a29b-86f4f91de762.png" alt="Homepage-desktop" style="width: 100%;"/></div></td>
-    <td><div style="text-align:center"><img src="https://user-images.githubusercontent.com/64326462/133889809-ffb5b00d-6465-40b0-aa95-e48bb69009da.png" alt="Select-system" style="width: 100%;"/></div></td>
-  </tr><tr>
-    <td><div style="text-align:center"><img src="https://user-images.githubusercontent.com/64326462/133889811-c8805248-eece-4e3e-a11e-fc05768f563a.png" alt="Solver-form" style="width: 100%;"/></div></td>
-    <td></td>
-  </tr></tbody>
-  <tr>
-    <th>User inputs parameters - figure 3.</th>
-    <th>Homepage (mobile) - figure 4.</th>
-  </tr>
-</table>
+<div align="center" style="text-align:center">
+  <p><b>Homepage (desktop) - figure 1.</b></p>
+  <img src="https://user-images.githubusercontent.com/64326462/133889994-3604d9ba-bfa8-43cc-a29b-86f4f91de762.png" alt="Homepage-desktop" style="width: 80%;" align="center" />
+</div>
 
 <div align="center" style="text-align:center">
-  <p><b>Homepage (mobile) - figure 5.</b></p>
-  <img src="https://user-images.githubusercontent.com/64326462/133889664-4ed95b8b-6800-4d82-8f06-94b39c51ff80.png" alt="Homepage-mobile" style="height: 100%;" align="center" />
+  <p><b>Homepage (mobile) - figure 2.</b></p>
+  <img src="https://user-images.githubusercontent.com/64326462/133889664-4ed95b8b-6800-4d82-8f06-94b39c51ff80.png" alt="Homepage-mobile" style="height: 60%;" align="center" />
 </div>
+
+    <!-- <th>Homepage (desktop) - figure 1.</th>
+    <th>Select a system to solve - figure 2.</th>
+    <th>User inputs parameters - figure 3.</th>
+    <th>Homepage (mobile) - figure 4.</th> -->
+
+</br>
 
 ### Features
 
