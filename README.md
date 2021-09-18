@@ -50,10 +50,14 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 ### Demo
 
+</br>
+
 <div align="center">
   <p><b>Homepage (desktop) - figure 1.</b></p>
   <img src="https://user-images.githubusercontent.com/64326462/133890461-9b39db9f-989a-49d6-8217-8b91810e8ced.png" alt="Homepage-desktop" style="width: 502px" align="center" />
 </div>
+
+</br>
 
 </br>
 
@@ -64,10 +68,14 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 </br>
 
+</br>
+
 <div align="center">
   <p><b>Animations using Framer-motion - figure 3.</b></p>
   <img src="https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif" width="50%" />
 </div>
+
+</br>
 
 </br>
   
