@@ -24,7 +24,7 @@ export default function Navbar () {
           <a
             id={styles.brand}
             href='/'
-            className='uk-navbar-item uk-logo uk-margin-large-left'
+            className='uk-navbar-item uk-logo'
           >
             [Mtrx]
           </a>

@@ -1,9 +1,10 @@
 $breakpoints: (
-  xxs: 550px,
+  xxs: 575px,
   xs: 650px,
-  sm: 720px,
-  md: 840px,
-  lg: 960px,
+  sm: 725px,
+  md: 800px,
+  lg: 875px,
+  xlg: 960px,
 );
 
 @mixin respond-above-height($breakpoint) {
