@@ -7,8 +7,7 @@ import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
 import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
 import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
 import GoBack from '@/components/buttons/GoBack';
-import { data } from '@/lib/data/config/options';
-import { buttonTexts } from '@/lib/data/config/optionsTwo';
+import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements';
 import { IDispl } from '@/lib/types';
 import styles from '@/styles/pages/Displacements.module.scss';
 
