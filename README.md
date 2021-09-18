@@ -36,8 +36,6 @@
 
 ### Summary
 
-</br>
-
 There are many situations in which you might have to summarize an article or other source:
 
 - As a stand-alone assignment to show you’ve understood the material.
@@ -50,15 +48,9 @@ But it’s often appropriate to summarize a whole article or chapter if it is es
 
 In any case, the goal of summarizing is to give your reader a clear understanding of the original source. Follow the 4 steps outline below to write a good summary.
 
-</br>
-
 ### Demo
 
-</br>
-
 ![matrix-proj](https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif)
-
-</br>
 
 ### Features
 
@@ -76,8 +68,6 @@ In any case, the goal of summarizing is to give your reader a clear understandin
   - [Documentation](https://getuikit.com/)
   - [Github repository](https://github.com/uikit/uikit)
   
-</br>
-
 ### Quick start
 
 #### 1. Clone repository
@@ -110,8 +100,6 @@ npm run dev
 ```
 
 Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it out.
-
-</br>
 
 ### Connect with me
 
