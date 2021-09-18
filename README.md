@@ -56,7 +56,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center" style="text-align:center">
   <p><b>Homepage (desktop) - figure 1.</b></p>
-  <img src="https://user-images.githubusercontent.com/64326462/133889994-3604d9ba-bfa8-43cc-a29b-86f4f91de762.png" alt="Homepage-desktop" style="width: 50%;" align="center" />
+  <img src="https://user-images.githubusercontent.com/64326462/133889994-3604d9ba-bfa8-43cc-a29b-86f4f91de762.png" alt="Homepage-desktop" style="width: 502px;" align="center" />
 </div>
 
 </br>
