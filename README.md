@@ -36,8 +36,6 @@
 
 ### Summary
 
-<hr/>
-
 There are many situations in which you might have to summarize an article or other source:
 
 - As a stand-alone assignment to show you’ve understood the material.
@@ -51,8 +49,6 @@ But it’s often appropriate to summarize a whole article or chapter if it is es
 In any case, the goal of summarizing is to give your reader a clear understanding of the original source. Follow the 4 steps outline below to write a good summary.
 
 ### Demo
-
-<hr/>
 
 <div align="center">
   <p><b>Homepage (desktop) - figure 1.</b></p>
@@ -82,8 +78,6 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 ### Features
 
-<hr/>
-
 - 💻 The following Technologies are used
   - [Next.js](https://nextjs.org/)
   - [Typescript](https://www.typescriptlang.org/)
@@ -99,8 +93,6 @@ In any case, the goal of summarizing is to give your reader a clear understandin
   - [Github repository](https://github.com/uikit/uikit)
   
 ### Quick start
-
-<hr/>
 
 #### 1. Clone repository
 
@@ -135,15 +127,11 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 
 ### Connect with me
 
-<hr/>
-
 - Email: <brlaney@outlook.com>
 - Twitter: [brendan_webdev](https://twitter.com/Brendan_webdev)
 - Instagram: [brlaney94](https://www.instagram.com/brlaney94/)
 
 ### References
-
-<hr/>
 
 - Wikipedia:
   - [Direct Stiffness Method](https://en.wikipedia.org/wiki/Direct_stiffness_method)
@@ -151,8 +139,6 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
   - [Structural Analysis](https://en.wikipedia.org/wiki/Structural_analysis)
 
 ### License
-
-<hr/>
 
 ```text
 MIT License
