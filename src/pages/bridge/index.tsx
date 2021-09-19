@@ -5,10 +5,10 @@ import { fadeInUp, stagger } from '@/lib/config/animations/svgs/staggered';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
 import { IBridge } from '@/lib/types';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Learn.module.scss';
 
-const BridgeDesign = ({ topics, props: any }:
+const Bridge = ({ topics, props: any }:
   InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const [topicsList] = React.useState(topics);
@@ -115,4 +115,4 @@ export const getStaticProps: GetStaticProps = async _context => {
   }
 };
 
-export default BridgeDesign;
+export default Bridge;

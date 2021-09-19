@@ -1,5 +1,5 @@
 import Trusses from '@/components/stiffness/deformations/Trusses';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Charts.module.scss';
 
 export default function Truss() {

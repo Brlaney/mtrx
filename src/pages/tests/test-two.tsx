@@ -2,9 +2,9 @@ import * as React from 'react';
 import { useRef } from 'react';
 import { motion, useCycle } from 'framer-motion';
 import { useDimensions } from '@/lib/config/animations/tests/useDimensions';
-import MenuToggle from '@/components/buttons/MenuToggle';
-import { Navigation } from '@/components/buttons/Navigation';
-import GoBack from '@/components/buttons/GoBack';
+import MenuToggle from '@/components/global/buttons/MenuToggle';
+import { Navigation } from '@/components/global/buttons/Navigation';
+import GoBack from '@/components/global/buttons/GoBack';
 // import styles from '@/styles/pages/Tests.module.scss';
 
 const sidebar = {

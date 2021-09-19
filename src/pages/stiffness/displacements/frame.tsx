@@ -5,7 +5,7 @@ import D11 from '@/components/stiffness/displacements/frame/D11';
 import D12 from '@/components/stiffness/displacements/frame/D12';
 import D21 from '@/components/stiffness/displacements/frame/D21';
 import D22 from '@/components/stiffness/displacements/frame/D22';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import { data, buttonTexts } from '@/lib/data/stiffness/displacements/frame';
 import { IDispl } from '@/lib/types';
 import styles from '@/styles/pages/Displacements.module.scss';

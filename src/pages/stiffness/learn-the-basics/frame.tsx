@@ -1,15 +1,15 @@
 import * as React from 'react';
 import Link from 'next/link';
-import GoBack from '@/components/buttons/GoBack';
-import Forward from '@/components/buttons/matrix/Forward';
-import Back from '@/components/buttons/matrix/Back';
+import GoBack from '@/components/global/buttons/GoBack';
+import Forward from '@/components/global/buttons/matrix/Forward';
+import Back from '@/components/global/buttons/matrix/Back';
 import { Elem1 } from './components/beams/Elem1';
 import { Elem2 } from './components/beams/Elem2';
 import styles from '@/styles/pages/Learning.module.scss';
 
 const Frame: React.FC<{ props }> = ({ props }) => {
   const [currentStep, setCurrentStep] = React.useState(0);
-  const endpoint = '/learn/matrix';
+  const endpoint = '/stiffness';
 
   return (
     <>

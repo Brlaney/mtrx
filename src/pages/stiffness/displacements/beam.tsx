@@ -7,7 +7,7 @@ import Bending from '@/components/stiffness/learn-the-basics/beam/Bending';
 import Forces from '@/components/stiffness/learn-the-basics/beam/Forces';
 import { data, buttonTexts } from '@/lib/data/stiffness/displacements/beam';
 import { IDispl } from '@/lib/types';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
 export default function Beam() {

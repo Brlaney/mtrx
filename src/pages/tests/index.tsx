@@ -2,7 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/tests/svgs';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Tests.module.scss';
 
 const Tests = () => {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as yup from 'yup';
-import Forward from '@/components/buttons/matrix/Forward';
-import Back from '@/components/buttons/matrix/Back';
+import Forward from '@/components/global/buttons/matrix/Forward';
+import Back from '@/components/global/buttons/matrix/Back';
 import { Formik, Form, Field } from 'formik';
 import { Selection } from '../formik-components/Selection';
 // import { SelectOne } from '../components/SelectOne';

@@ -5,7 +5,7 @@ import { fadeInUp, stagger } from '@/lib/config/animations/svgs/staggered';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
 import { IMatrix } from '@/lib/types';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Learn.module.scss';
 
 const Stiffness = ({ topics, props: any }:

@@ -10,7 +10,7 @@ import T4 from '@/components/stiffness/examples/T4';
 import T5 from '@/components/stiffness/examples/T5';
 import { data, buttonTexts } from '@/lib/data/stiffness/examples/truss-example';
 import { IDispl } from '@/lib/types';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
 export default function TrussExample() {

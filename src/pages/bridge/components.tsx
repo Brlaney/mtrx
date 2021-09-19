@@ -5,12 +5,13 @@ import { server } from '@/lib/config/server';
 import { IBridgeComponents } from '@/lib/types';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/staggered';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Bridge.module.scss';
 
-const Components = ({ components }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Components = ({ components }:
+  InferGetStaticPropsType<typeof getStaticProps>) => {
   const [componentsList] = React.useState(components);
-  const endpoint = '/learn';
+  const endpoint = '/bridge';
 
   return (
     <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>

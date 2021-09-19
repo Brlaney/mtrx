@@ -3,15 +3,15 @@ import * as yup from 'yup';
 import { SchemaOf } from 'yup';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Dotnav } from '@/components/buttons/matrix/Dotnav';
+import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
 import { Formik, Form, Field } from 'formik';
 import { forces, lengths } from '@/lib/config/forms/truss';
-import { NodeCoordinates } from '@/lib/types'
+import { NodeCoordinates } from '@/lib/types';
 import { trussCheck } from '@/lib/utils/matrix/calculate';
-import Success from '@/components/alerts/Success';
-import Error from '@/components/alerts/Error';
-import Back from '@/components/buttons/matrix/Back';
-import Forward from '@/components/buttons/matrix/Forward';
+import Success from '@/components/global/alerts/Success';
+import Error from '@/components/global/alerts/Error';
+import Back from '@/components/global/buttons/matrix/Back';
+import Forward from '@/components/global/buttons/matrix/Forward';
 import styles from '@/styles/components/Steps.module.scss';
 
 let nodeMatrix = [];

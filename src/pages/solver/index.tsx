@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Truss from '@/components/solver/Truss';
 import Beam from '@/components/solver/Beam';
 import Frame from '@/components/solver/Frame';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Matrix.module.scss';
 
 const Solver = () => {

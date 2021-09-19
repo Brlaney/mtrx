@@ -6,7 +6,7 @@ import StepOne from '@/components/forms/truss/StepOne';
 import StepTwo from '@/components/forms/truss/StepTwo';
 import StepThree from '@/components/forms/truss/StepThree';
 import Results from '@/components/forms/truss/Results';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Form.module.scss';
 
 const Truss: React.FC<{ props }> = () => {

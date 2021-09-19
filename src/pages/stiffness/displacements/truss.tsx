@@ -8,7 +8,7 @@ import F22 from '@/components/stiffness/learn-the-basics/truss/F22';
 import Forces from '@/components/stiffness/learn-the-basics/truss/Forces';
 import { data, buttonTexts } from '@/lib/data/stiffness/displacements/truss';
 import { IDispl } from '@/lib/types';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
 export default function Truss() {

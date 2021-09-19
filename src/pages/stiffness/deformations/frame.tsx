@@ -1,6 +1,6 @@
 import Frames from '@/components/stiffness/deformations/Frames';
 import styles from '@/styles/pages/Charts.module.scss';
-import GoBack from '@/components/buttons/GoBack';
+import GoBack from '@/components/global/buttons/GoBack';
 
 export default function Frame() {
   const endpoint = '/stiffness';

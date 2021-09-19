@@ -1,5 +1,5 @@
 ﻿import Head from 'next/head';
-import seo from '@/lib/data/seo';
+import seo from '@/lib/config/seo';
 import Navbar from './Navbar';
 // import Nav from './Nav';
 import styles from '@/styles/components/Layout.module.scss';
