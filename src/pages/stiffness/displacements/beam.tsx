@@ -1,22 +1,19 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import E from '@/components/learn/matrix/examples/E';
-import D from '@/components/learn/matrix/examples/D';
-import T1 from '@/components/learn/matrix/examples/T1';
-import T2 from '@/components/learn/matrix/examples/T2';
-import T3 from '@/components/learn/matrix/examples/T3';
-import T4 from '@/components/learn/matrix/examples/T4';
-import T5 from '@/components/learn/matrix/examples/T5';
-import { data, buttonTexts } from '@/lib/data/matrix/learn/examples/truss-example';
+import D11 from '@/components/stiffness/learn-the-basics/beam/D11';
+import D21 from '@/components/stiffness/learn-the-basics/beam/D21';
+import Bending from '@/components/stiffness/learn-the-basics/beam/Bending';
+import Forces from '@/components/stiffness/learn-the-basics/beam/Forces';
+import { data, buttonTexts } from '@/lib/data/stiffness/displacements/beam';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
-const TrussExample: React.FC<{ props }> = ({ props }) => {
+export default function Beam() {
   const [display, setDisplay] = React.useState('');
   const [graphic, setGraphic] = React.useState(1);
-  const endpoint = '/learn/matrix';
+  const endpoint = '/stiffness';
 
   useEffect(() => {
     let k = graphic - 1;
@@ -24,7 +21,7 @@ const TrussExample: React.FC<{ props }> = ({ props }) => {
   }, [graphic, display]);
 
   return (
-    <motion.div className={styles.container} {...props}>
+    <motion.div className={styles.container}>
 
       <GoBack link={endpoint} />
 
@@ -33,13 +30,10 @@ const TrussExample: React.FC<{ props }> = ({ props }) => {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.display}>
-          {graphic === 1 && < E />}
-          {graphic === 2 && < D />}
-          {graphic === 3 && < T1 />}
-          {graphic === 4 && < T2 />}
-          {graphic === 5 && < T3 />}
-          {graphic === 6 && < T4 />}
-          {graphic === 7 && < T5 />}
+          {graphic === 1 && <D11 />}
+          {graphic === 2 && <D21 />}
+          {graphic === 3 && <Bending />}
+          {graphic === 4 && <Forces />}
         </motion.div>
 
         {/* Information onClick */}
@@ -81,5 +75,3 @@ const TrussExample: React.FC<{ props }> = ({ props }) => {
     </motion.div>
   )
 };
-
-export default TrussExample;

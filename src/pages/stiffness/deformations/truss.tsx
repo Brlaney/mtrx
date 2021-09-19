@@ -1,9 +1,9 @@
-import Frames from '@/components/learn/matrix/deformations/Frames';
-import styles from '@/styles/pages/Charts.module.scss';
+import Trusses from '@/components/stiffness/deformations/Trusses';
 import GoBack from '@/components/buttons/GoBack';
+import styles from '@/styles/pages/Charts.module.scss';
 
-export default function Frame() {
-  const endpoint = '/learn/matrix';
+export default function Truss() {
+  const endpoint = '/stiffness';
 
   return (
     <>
@@ -16,7 +16,7 @@ export default function Frame() {
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Frame example
+            Truss example
           </h1>
         </div>
 
@@ -26,10 +26,10 @@ export default function Frame() {
         {/* This pages main content */}
         <div className={styles.content}>
           <div className={styles.chartContainer}>
-            <Frames />
+            <Trusses />
           </div>
         </div>
       </div>
     </>
   )
-}
+};

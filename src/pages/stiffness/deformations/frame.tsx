@@ -1,9 +1,9 @@
-import Beams from '@/components/learn/matrix/deformations/Beams';
-import GoBack from '@/components/buttons/GoBack';
+import Frames from '@/components/stiffness/deformations/Frames';
 import styles from '@/styles/pages/Charts.module.scss';
+import GoBack from '@/components/buttons/GoBack';
 
-export default function Beam() {
-  const endpoint = '/learn/matrix';
+export default function Frame() {
+  const endpoint = '/stiffness';
 
   return (
     <>
@@ -16,7 +16,7 @@ export default function Beam() {
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Continuous beam graph
+            Frame example
           </h1>
         </div>
 
@@ -26,10 +26,10 @@ export default function Beam() {
         {/* This pages main content */}
         <div className={styles.content}>
           <div className={styles.chartContainer}>
-            <Beams />
+            <Frames />
           </div>
         </div>
       </div>
     </>
   )
-};
+}

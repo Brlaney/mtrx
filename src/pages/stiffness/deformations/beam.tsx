@@ -1,9 +1,9 @@
-import Trusses from '@/components/learn/matrix/deformations/Trusses';
+import Beams from '@/components/stiffness/deformations/Beams';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Charts.module.scss';
 
-export default function Truss() {
-  const endpoint = '/learn/matrix';
+export default function Beam() {
+  const endpoint = '/stiffness';
 
   return (
     <>
@@ -16,7 +16,7 @@ export default function Truss() {
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Truss example
+            Continuous beam graph
           </h1>
         </div>
 
@@ -26,7 +26,7 @@ export default function Truss() {
         {/* This pages main content */}
         <div className={styles.content}>
           <div className={styles.chartContainer}>
-            <Trusses />
+            <Beams />
           </div>
         </div>
       </div>

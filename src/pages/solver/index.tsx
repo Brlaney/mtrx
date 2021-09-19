@@ -1,16 +1,21 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Truss from '@/components/matrix/Truss';
-import Beam from '@/components/matrix/Beam';
-import Frame from '@/components/matrix/Frame';
+import Truss from '@/components/solver/Truss';
+import Beam from '@/components/solver/Beam';
+import Frame from '@/components/solver/Frame';
+import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Matrix.module.scss';
 
-const Matrix = () => {
+const Solver = () => {
   const [name, setName] = React.useState('');
+  const endpoint = '/';
 
   return (
     <motion.div className={styles.container}>
+      
+      <GoBack link={endpoint} />
+
       <div className={styles.parent}>
 
         {/* Header - conditionally render */}
@@ -27,7 +32,7 @@ const Matrix = () => {
 
         {/* Row of content - 3 child columns */}
         <div id={styles.grid} className='uk-flex uk-flex-center uk-flex-middle'>
-          <Link href='/matrix/truss' as='/matrix/truss'>
+          <Link href='/solver/truss' as='/solver/truss'>
             <motion.div
               className={styles.column}
               onMouseEnter={() => setName('Truss')}
@@ -41,7 +46,7 @@ const Matrix = () => {
               <Truss />
             </motion.div>
           </Link>
-          <Link href='/matrix/beam' as='/matrix/beam'>
+          <Link href='/solver/beam' as='/solver/beam'>
             <motion.div
               className={styles.column}
               onMouseEnter={() => setName('Beam')}
@@ -55,7 +60,7 @@ const Matrix = () => {
               <Beam />
             </motion.div>
           </Link>
-          <Link href='/matrix/frame' as='/matrix/frame'>
+          <Link href='/solver/frame' as='/solver/frame'>
             <motion.div
               className={styles.column}
               onMouseEnter={() => setName('Frame')}
@@ -75,4 +80,4 @@ const Matrix = () => {
   )
 };
 
-export default Matrix;
+export default Solver;

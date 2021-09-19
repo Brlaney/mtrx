@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Col1 from '@/components/homepage/Col1';
 import Col2 from '@/components/homepage/Col2';
 import Col3 from '@/components/homepage/Col3';
-import Footer from '@/components/Footer';
+import Footer from '@/components/global/Footer';
 import styles from '@/styles/pages/Home.module.scss';
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
         <div className={styles.grid}>
 
           {/* Link 1 - Matrix displacement solver */}
-          <Link href='/matrix'>
+          <Link href='/solver'>
             <motion.div
               id={styles.col}
               className='uk-width-1-3'
@@ -43,7 +43,7 @@ export default function Home() {
           </Link>
           
           {/* Link 2 - Matrix displacement theory/tutorials */}
-          <Link href='/learn/matrix'>
+          <Link href='/stiffness'>
             <motion.div
               id={styles.col}
               className='uk-width-1-3'

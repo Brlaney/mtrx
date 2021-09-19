@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/staggered';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
-import { IBridge } from '@/lib/types';
+import { IMatrix } from '@/lib/types';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Learn.module.scss';
 
-const BridgeDesign = ({ topics, props: any }:
+const Stiffness = ({ topics, props: any }:
   InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const [topicsList] = React.useState(topics);
@@ -32,63 +32,29 @@ const BridgeDesign = ({ topics, props: any }:
         {/* Header */}
         <div className={styles.header}>
           <h3 className={styles.title}>
-            Bridge Design <span className={styles.span}> topics</span>
+            Matrix structural analysis <span className={styles.span}> topics</span>
           </h3>
         </div>
 
         <motion.div className={styles.card} variants={stagger}>
 
           {/* Dynamic topic cards */}
-          {topicsList.map((topic: IBridge) => (
+          {topicsList.map((topic: IMatrix) => (
             <motion.div
               key={topic.id}
               className={styles.contents}
               variants={fadeInUp}
             >
-
-              {/* Topic category title */}
-              <h2 className={styles.sectionTitle}>
-                <span className={styles.span}>
-                  {topic.id}. )</span> {topic.title}
-              </h2>
-
               <div className={styles.content}>
                 <div className={styles.child}>
-                  {/* If content exists, iterate through the array */}
-                  {topic.content && (
-                    topic.content.map((content, i) => (
-                      <>
-                        <Link
-                          key={content.key}
-                          href={`/learn/bridge-design/topic/[lower]`}
-                          as={`/learn/bridge-design/topic/${content.name}`}
-                        >
-                          <motion.h3
-                            className={styles.link}
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.98 }}
-                          >
-                            <a className='uk-link-heading'>
-                              {content.button}
-                            </a>
-                          </motion.h3>
-                        </Link>
-                      </>
-                    ))
-                  )}
-
-                  {/* CHANGE THIS TO AN ELSE STATEMENT */}
-                  <Link
-                    href='/learn/bridge-design/topic/[lower]'
-                    as={`/learn/bridge-design/topic/${topic.lower}`}
-                  >
+                  <Link href={topic.link}>
                     <motion.h3
                       className={styles.link}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                     >
                       <a className='uk-link-heading'>
-                        {topic.title}
+                        {topic.name}
                       </a>
                     </motion.h3>
                   </Link>
@@ -96,7 +62,6 @@ const BridgeDesign = ({ topics, props: any }:
               </div>
             </motion.div>
           ))}
-
         </motion.div>
       </motion.div>
     </motion.div>
@@ -104,9 +69,9 @@ const BridgeDesign = ({ topics, props: any }:
 };
 
 export const getStaticProps: GetStaticProps = async _context => {
-  const endpoint = `${server}/api/bridge/learn`;
+  const endpoint = `${server}/api/stiffness`;
   const res = await fetch(endpoint);
-  const topics: IBridge[] = await res.json();
+  const topics: IMatrix[] = await res.json();
 
   return {
     props: {
@@ -115,4 +80,4 @@ export const getStaticProps: GetStaticProps = async _context => {
   }
 };
 
-export default BridgeDesign;
+export default Stiffness;

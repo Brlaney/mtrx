@@ -1,20 +1,22 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import F11 from '@/components/learn/matrix/stiffness/truss/F11';
-import F12 from '@/components/learn/matrix/stiffness/truss/F12';
-import F21 from '@/components/learn/matrix/stiffness/truss/F21';
-import F22 from '@/components/learn/matrix/stiffness/truss/F22';
-import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
-import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements/truss';
+import E from '@/components/stiffness/examples/E';
+import D from '@/components/stiffness/examples/D';
+import T1 from '@/components/stiffness/examples/T1';
+import T2 from '@/components/stiffness/examples/T2';
+import T3 from '@/components/stiffness/examples/T3';
+import T4 from '@/components/stiffness/examples/T4';
+import T5 from '@/components/stiffness/examples/T5';
+import { data, buttonTexts } from '@/lib/data/stiffness/examples/truss-example';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
-export default function Truss() {
+export default function TrussExample() {
   const [display, setDisplay] = React.useState('');
   const [graphic, setGraphic] = React.useState(1);
-  const endpoint = '/learn/matrix';
+  const endpoint = '/stiffness';
 
   useEffect(() => {
     let k = graphic - 1;
@@ -31,11 +33,13 @@ export default function Truss() {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.display}>
-          {graphic === 1 && <F11 />}
-          {graphic === 2 && <F12 />}
-          {graphic === 3 && <F21 />}
-          {graphic === 4 && <F22 />}
-          {graphic === 5 && <Forces />}
+          {graphic === 1 && < E />}
+          {graphic === 2 && < D />}
+          {graphic === 3 && < T1 />}
+          {graphic === 4 && < T2 />}
+          {graphic === 5 && < T3 />}
+          {graphic === 6 && < T4 />}
+          {graphic === 7 && < T5 />}
         </motion.div>
 
         {/* Information onClick */}

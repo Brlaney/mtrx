@@ -35,7 +35,7 @@ export default function Navbar () {
             className='uk-navbar-nav uk-margin-large-right'
           >
             <li id={styles.listItem} className='uk-*'>
-              <Link href='/matrix'>
+              <Link href='/solver'>
                 <a id={styles.link}>Solver</a>
               </Link>
             </li>

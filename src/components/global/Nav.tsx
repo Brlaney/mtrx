@@ -34,7 +34,7 @@ export default function Nav() {
                     [Mtrx]
                   </li>
                   <li id={styles.listItem2} className='uk-*'>
-                    <Link href='/matrix'>
+                    <Link href='/solver'>
                       <a className={styles.link2}>Solver</a>
                     </Link>
                   </li>

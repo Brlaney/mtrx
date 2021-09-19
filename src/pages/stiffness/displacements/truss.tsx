@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import D11 from '@/components/learn/matrix/displacements/frame/D11';
-import D12 from '@/components/learn/matrix/displacements/frame/D12';
-import D21 from '@/components/learn/matrix/displacements/frame/D21';
-import D22 from '@/components/learn/matrix/displacements/frame/D22';
-import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
-import GoBack from '@/components/buttons/GoBack';
-import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements/frame';
+import F11 from '@/components/stiffness/learn-the-basics/truss/F11';
+import F12 from '@/components/stiffness/learn-the-basics/truss/F12';
+import F21 from '@/components/stiffness/learn-the-basics/truss/F21';
+import F22 from '@/components/stiffness/learn-the-basics/truss/F22';
+import Forces from '@/components/stiffness/learn-the-basics/truss/Forces';
+import { data, buttonTexts } from '@/lib/data/stiffness/displacements/truss';
 import { IDispl } from '@/lib/types';
+import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
-export default function Frame() {
-  const [graphic, setGraphic] = React.useState(1);
+export default function Truss() {
   const [display, setDisplay] = React.useState('');
-  const endpoint = '/learn/matrix';
+  const [graphic, setGraphic] = React.useState(1);
+  const endpoint = '/stiffness';
 
   useEffect(() => {
     let k = graphic - 1;
@@ -30,11 +30,11 @@ export default function Frame() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.framecard}>
-          {graphic === 1 && <D11 />}
-          {graphic === 2 && <D12 />}
-          {graphic === 3 && <D21 />}
-          {graphic === 4 && <D22 />}
+        <motion.div className={styles.display}>
+          {graphic === 1 && <F11 />}
+          {graphic === 2 && <F12 />}
+          {graphic === 3 && <F21 />}
+          {graphic === 4 && <F22 />}
           {graphic === 5 && <Forces />}
         </motion.div>
 
