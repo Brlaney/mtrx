@@ -13,7 +13,7 @@ import styles from '@/styles/pages/Learning.module.scss';
 
 const Truss: React.FC<{ props }> = ({ props }) => {
   const [currentStep, setCurrentStep] = React.useState(0);
-  const endpoint = '/learn';
+  const endpoint = '/learn/matrix';
 
   return (
     <motion.div className={styles.container}>
@@ -36,21 +36,7 @@ const Truss: React.FC<{ props }> = ({ props }) => {
         </div>
 
         <motion.div variants={variants} className={styles.imagecard}>
-          {/* <motion.img
-            className={styles.img}
-            whileHover={{
-              scale: 1.2,
-              transition: {
-                duration: .2
-              }
-            }}
-            alt='bar-element'
-            src='/bar-labeled.svg'
-            width={326}
-            height={73}
-          /> */}
           <Bar />
-
         </motion.div>
 
         {/* 1st component */}

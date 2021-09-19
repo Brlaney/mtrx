@@ -527,4 +527,3 @@ export const Forces = (
     </svg>
   </motion.div>
 );
-

@@ -7,7 +7,7 @@ import { IDispl } from '@/lib/types';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
-export default function Truss() {
+const Truss = ({props}) => {
   const [display, setDisplay] = React.useState('');
   const [graphic, setGraphic] = React.useState(1);
   const endpoint = '/learn/matrix';
@@ -18,7 +18,7 @@ export default function Truss() {
   }, [graphic, display]);
 
   return (
-    <motion.div className={styles.container}>
+    <motion.div className={styles.container} {...props}>
 
       <GoBack link={endpoint} />
 
@@ -73,3 +73,5 @@ export default function Truss() {
     </motion.div>
   )
 };
+
+export default Truss;

@@ -9,7 +9,7 @@ import styles from '@/styles/pages/Learning.module.scss';
 
 const Frame: React.FC<{ props }> = ({ props }) => {
   const [currentStep, setCurrentStep] = React.useState(0);
-  const endpoint = '/learn';
+  const endpoint = '/learn/matrix';
 
   return (
     <>
