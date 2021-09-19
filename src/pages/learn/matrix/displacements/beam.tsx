@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import { D_11, D_21, Bending, Forces } from '@/components/learn/matrix/stiffness/beam/Beams';
+import D11 from '@/components/learn/matrix/stiffness/beam/D11';
+import D21 from '@/components/learn/matrix/stiffness/beam/D21';
+import Bending from '@/components/learn/matrix/stiffness/beam/Bending';
+import Forces from '@/components/learn/matrix/stiffness/beam/Forces';
 import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements/beam';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/buttons/GoBack';
@@ -26,11 +29,11 @@ export default function Beam() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.card}>
-          {graphic === 1 && { D_11 }}
-          {graphic === 2 && { D_21 }}
-          {graphic === 3 && { Bending }}
-          {graphic === 4 && { Forces }}
+        <motion.div className={styles.display}>
+          {graphic === 1 && <D11 />}
+          {graphic === 2 && <D21 />}
+          {graphic === 3 && <Bending />}
+          {graphic === 4 && <Forces />}
         </motion.div>
 
         {/* Information onClick */}

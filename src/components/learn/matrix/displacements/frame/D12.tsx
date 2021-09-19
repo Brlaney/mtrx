@@ -11,7 +11,7 @@ const color4 = '#CADEFC';
 const color6 = 'rgba(37, 35, 35, 0.3)';
 const color7 = 'rgba(202, 222, 252, 0.7)';
 
-const D_21 = () => {
+const D21 = () => {
   return (
     <motion.div
       className='animationParent'
@@ -160,4 +160,4 @@ const D_21 = () => {
   )
 }
 
-export default D_21
+export default D21

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import D_11 from '@/components/learn/matrix/displacements/frame/D_11';
-import F_12 from '@/components/learn/matrix/stiffness/truss/F_12';
-import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
-import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
+import D11 from '@/components/learn/matrix/displacements/frame/D11';
+import D12 from '@/components/learn/matrix/displacements/frame/D12';
+import D21 from '@/components/learn/matrix/displacements/frame/D21';
+import D22 from '@/components/learn/matrix/displacements/frame/D22';
 import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
 import GoBack from '@/components/buttons/GoBack';
 import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements/frame';
@@ -31,10 +31,10 @@ export default function Frame() {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.framecard}>
-          {graphic === 1 && <D_11 />}
-          {graphic === 2 && <F_12 />}
-          {graphic === 3 && <F_21 />}
-          {graphic === 4 && <F_22 />}
+          {graphic === 1 && <D11 />}
+          {graphic === 2 && <D12 />}
+          {graphic === 3 && <D21 />}
+          {graphic === 4 && <D22 />}
           {graphic === 5 && <Forces />}
         </motion.div>
 

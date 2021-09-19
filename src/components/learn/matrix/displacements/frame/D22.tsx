@@ -11,7 +11,7 @@ const color4 = '#252323';
 const color6 = 'rgba(37, 35, 35, 0.3)';
 const color7 = 'rgba(202, 222, 252, 0.7)';
 
-const D_22 = () => {
+const D22 = () => {
   return (
     <motion.div
       className='animationParent'
@@ -157,4 +157,4 @@ const D_22 = () => {
   )
 };
 
-export default D_22;
+export default D22;
