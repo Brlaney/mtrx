@@ -1,18 +1,15 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { fadeInSide, stagger } from '@/lib/config/animations/svgs/displacements';
-import D_11 from '@/components/learn/matrix/stiffness/beam/D_11';
-import D_21 from '@/components/learn/matrix/stiffness/beam/D_21';
-import Bending from '@/components/learn/matrix/stiffness/beam/Bending';
-import Forces from '@/components/learn/matrix/stiffness/beam/Forces';
-import GoBack from '@/components/buttons/GoBack';
+import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
+import { D_11, D_21, Bending, Forces } from '@/components/learn/matrix/stiffness/beam/Beams';
 import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements/beam';
 import { IDispl } from '@/lib/types';
+import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
-export default function Truss() {
-  const [graphic, setGraphic] = React.useState(1);
+export default function Beam() {
   const [display, setDisplay] = React.useState('');
+  const [graphic, setGraphic] = React.useState(1);
   const endpoint = '/learn/matrix';
 
   useEffect(() => {
@@ -30,10 +27,10 @@ export default function Truss() {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.card}>
-          {graphic === 1 && <D_11 />}
-          {graphic === 2 && <D_21 />}
-          {graphic === 3 && <Bending />}
-          {graphic === 4 && <Forces />}
+          {graphic === 1 && { D_11 }}
+          {graphic === 2 && { D_21 }}
+          {graphic === 3 && { Bending }}
+          {graphic === 4 && { Forces }}
         </motion.div>
 
         {/* Information onClick */}
@@ -46,7 +43,7 @@ export default function Truss() {
             className='uk-text uk-text-justify uk-text-center'
             animate='visible'
             initial='hidden'
-            variants={fadeInSide}
+            variants={fadeInUp}
           >
             {display}
           </motion.p>

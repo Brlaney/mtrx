@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import { F_11, F_12, F_21, F_22, Forces } from '@/components/learn/matrix/stiffness/truss/Trusses';
-import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements/truss';
+import { Example, Discretized, T1, T2, T3, T4, T5 } from '@/components/learn/matrix/examples/TrussExample';
+import { data, buttonTexts } from '@/lib/data/matrix/learn/examples/truss-example';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
-export default function Truss() {
+export default function TrussExample() {
   const [display, setDisplay] = React.useState('');
   const [graphic, setGraphic] = React.useState(1);
   const endpoint = '/learn/matrix';
@@ -27,11 +27,13 @@ export default function Truss() {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.card}>
-          {graphic === 1 && { F_11 }}
-          {graphic === 2 && { F_12 }}
-          {graphic === 3 && { F_21 }}
-          {graphic === 4 && { F_22 }}
-          {graphic === 5 && { Forces }}
+          {graphic === 1 && { Example }}
+          {graphic === 2 && { Discretized }}
+          {graphic === 3 && { T1 }}
+          {graphic === 4 && { T2 }}
+          {graphic === 5 && { T3 }}
+          {graphic === 6 && { T4 }}
+          {graphic === 7 && { T5 }}
         </motion.div>
 
         {/* Information onClick */}

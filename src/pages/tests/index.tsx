@@ -21,54 +21,6 @@ const Tests = () => {
       {/* Page parent container */}
       <motion.div className={styles.parent} variants={stagger}>
 
-        {/* Test page 1 */}
-        <Link href='/tests/truss-deformation'>
-          <motion.div
-            className={styles.indexCard}
-            variants={fadeInUp}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className={styles.content}>
-              <motion.h2 className={styles.link}>
-                Truss deformation
-              </motion.h2>
-            </div>
-          </motion.div>
-        </Link>
-
-        {/* Test page 2 */}
-        <Link href='/tests/beam-deformation'>
-          <motion.div
-            className={styles.indexCard}
-            variants={fadeInUp}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className={styles.content}>
-              <motion.h2 className={styles.link}>
-                Beam deformation
-              </motion.h2>
-            </div>
-          </motion.div>
-        </Link>
-
-        {/* Test page 3 */}
-        <Link href='/tests/frame-deformation'>
-          <motion.div
-            className={styles.indexCard}
-            variants={fadeInUp}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className={styles.content}>
-              <motion.h2 className={styles.link}>
-                Frame deformation
-              </motion.h2>
-            </div>
-          </motion.div>
-        </Link>
-
         {/* Test page 4 */}
         <Link href='/tests/test-two'>
           <motion.div
