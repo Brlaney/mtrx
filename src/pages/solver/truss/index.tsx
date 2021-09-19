@@ -2,15 +2,15 @@ import * as React from 'react';
 import { step1 as st1 } from '@/lib/config/forms/truss';
 import { step2 as st2 } from '@/lib/config/forms/truss';
 import { step3 as st3 } from '@/lib/config/forms/truss';
-import StepOne from '@/components/forms/truss/StepOne';
-import StepTwo from '@/components/forms/truss/StepTwo';
-import StepThree from '@/components/forms/truss/StepThree';
-import Results from '@/components/forms/truss/Results';
+import StepOne from '@/components/solver/forms/truss/StepOne';
+import StepTwo from '@/components/solver/forms/truss/StepTwo';
+import StepThree from '@/components/solver/forms/truss/StepThree';
+import Results from '@/components/solver/forms/truss/Results';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Form.module.scss';
 
 const Truss: React.FC<{ props }> = () => {
-  const endpoint = '/matrix';
+  const endpoint = '/solver';
   const [currentStep, setCurrentStep] = React.useState(0);
   const [data, setData] = React.useState({
     nodes: '',

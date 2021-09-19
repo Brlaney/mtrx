@@ -1,12 +1,11 @@
 import * as React from 'react';
 import * as yup from 'yup';
-import { SchemaOf } from 'yup';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
 import { Formik, Form, Field } from 'formik';
 import { forces, lengths } from '@/lib/config/forms/truss';
-import { NodeCoordinates } from '@/lib/types';
+// import { NodeCoordinates } from '@/lib/types';
 import { trussCheck } from '@/lib/utils/matrix/calculate';
 import Success from '@/components/global/alerts/Success';
 import Error from '@/components/global/alerts/Error';
@@ -43,16 +42,16 @@ const StepTwo = (props) => {
   });
 
   // UseEffect hook to assemble node coordinate matrix
-  // useEffect(() => {
-  // for (let i = 0; i < n; i++) {
-  // let j = i + 1;
-  // let addNum1 = j.toString();
-  // let c1 = 'x' + addNum1;
-  // let c2 = 'y' + addNum1;
-  // 
-  // nodeMatrix[i] = [j, c1, c2];
-  // }
-  // }, []);
+  useEffect(() => {
+  for (let i = 0; i < n; i++) {
+  let j = i + 1;
+  let addNum1 = j.toString();
+  let c1 = 'x' + addNum1;
+  let c2 = 'y' + addNum1;
+  
+  nodeMatrix[i] = [j, c1, c2];
+  }
+  }, []);
 
   // UseEffect hook to map the proper units selected
   useEffect(() => {

@@ -4,7 +4,7 @@ import { Formik, Form, Field } from 'formik';
 import { motion } from 'framer-motion';
 import Forward from '@/components/global/buttons/matrix/Forward';
 import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
-import { Selection } from '@/components/forms/formik-components/Selection';
+import { Selection } from '@/components/solver/forms/formik-components/Selection';
 import { selectUnits } from '@/lib/config/forms/truss';
 import styles from '@/styles/components/Steps.module.scss';
 
