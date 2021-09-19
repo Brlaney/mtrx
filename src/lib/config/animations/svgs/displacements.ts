@@ -1,6 +1,6 @@
 const easing = [0.2, 0.4, -0.3, 0.95];
 
-export const fadeInSide = {
+export const fadeInUp = {
   initial: {
     y: -100,
     opacity: 0,

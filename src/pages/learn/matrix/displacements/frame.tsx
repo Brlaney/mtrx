@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import F_11 from '@/components/learn/matrix/stiffness/truss/F_11';
+import D_11 from '@/components/learn/matrix/displacements/frame/D_11';
 import F_12 from '@/components/learn/matrix/stiffness/truss/F_12';
 import F_21 from '@/components/learn/matrix/stiffness/truss/F_21';
 import F_22 from '@/components/learn/matrix/stiffness/truss/F_22';
 import Forces from '@/components/learn/matrix/stiffness/truss/Forces';
 import GoBack from '@/components/buttons/GoBack';
-import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements/truss';
+import { data, buttonTexts } from '@/lib/data/matrix/learn/displacements/frame';
 import { IDispl } from '@/lib/types';
 import styles from '@/styles/pages/Displacements.module.scss';
 
-export default function Truss() {
+export default function Frame() {
   const [graphic, setGraphic] = React.useState(1);
   const [display, setDisplay] = React.useState('');
   const endpoint = '/learn/matrix';
@@ -30,8 +30,8 @@ export default function Truss() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.card}>
-          {graphic === 1 && <F_11 />}
+        <motion.div className={styles.framecard}>
+          {graphic === 1 && <D_11 />}
           {graphic === 2 && <F_12 />}
           {graphic === 3 && <F_21 />}
           {graphic === 4 && <F_22 />}
