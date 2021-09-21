@@ -9,7 +9,7 @@ export const data = [
 
 export const buttonTexts = [
   { id: 1, text: 'Problem statement' },
-  { id: 2, text: 'Degrees of freedom' },
+  { id: 2, text: 'Global forces' },
   { id: 3, text: 'Element 1 forces' },
   { id: 4, text: 'Element 2 forces' },
   { id: 5, text: 'Element 3 forces' },

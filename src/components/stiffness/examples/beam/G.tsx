@@ -18,9 +18,9 @@ const G = () => {
       exit={{ opacity: 0 }}
     >
       <svg
-        width='600'
-        height='380'
-        viewBox='0 0 600 380'
+        width='446'
+        height='220'
+        viewBox='0 0 446 220'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >

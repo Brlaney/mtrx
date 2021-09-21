@@ -31,7 +31,7 @@ export default function Beam() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.display}>
+        <motion.div className={styles.beamdisplay}>
           {graphic === 1 && < E />}
           {graphic === 2 && < G />}
           {graphic === 3 && < LF1 />}
