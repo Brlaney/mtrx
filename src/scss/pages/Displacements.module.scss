@@ -35,11 +35,29 @@
       box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
         rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
     }
-    .display {
+    .trussdisplay {
       display: flex;
       width: 500px;
       height: 350px;
       border-radius: 10px;
+      margin: 0.5rem 0 0.5rem 0;
+      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .beamdisplay {
+      display: flex;
+      width: 446px;
+      height: 350px;
+      margin: 0.5rem 0 0.5rem 0;
+      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .framedisplay {
+      display: flex;
+      width: 600px;
+      height: 400px;
       margin: 0.5rem 0 0.5rem 0;
       padding: 0.5rem 1.5rem 0.5rem 1.5rem;
       align-items: center;

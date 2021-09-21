@@ -27,7 +27,7 @@ export default function Frame() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.display}>
+        <motion.div className={styles.framedisplay}>
           {graphic === 1 && < E />}
           {graphic === 2 && < D />}
         </motion.div>

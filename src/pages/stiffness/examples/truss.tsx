@@ -32,7 +32,7 @@ export default function Truss() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.display}>
+        <motion.div className={styles.trussdisplay}>
           {graphic === 1 && < E />}
           {graphic === 2 && < D />}
           {graphic === 3 && < T1 />}
