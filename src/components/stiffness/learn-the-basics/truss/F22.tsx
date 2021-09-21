@@ -33,7 +33,7 @@ const F22 = () => {
           <motion.path
             {...mainPathVariant}
             d='M181 61L229.5 61L278 61'
-            stroke={color6}
+            stroke={color3}
             {...shapeVariations}
             animate='visible'
             initial='hidden'
@@ -77,7 +77,7 @@ const F22 = () => {
           />
           <motion.path
             d='M282 57L282 45'
-            stroke={color6}
+            stroke={color3}
             {...shapeVariations}
             animate='visible'
             initial='hidden'
@@ -121,9 +121,8 @@ const F22 = () => {
             cx='282'
             cy='61'
             r='4'
-            transform='rotate(-180 282 61)'
-            fill={color5}
-            stroke={color4}
+            fill={color4}
+            stroke={color3}
             {...shapeVariations}
             animate={{
               y: 0,
@@ -136,9 +135,8 @@ const F22 = () => {
             cx='86'
             cy='61'
             r='4'
-            transform='rotate(-180 86 61)'
             fill={color2}
-            stroke={color3}
+            stroke='black'
             {...shapeVariations}
             animate={{
               y: 0,

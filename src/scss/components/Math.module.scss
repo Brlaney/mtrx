@@ -1,0 +1,14 @@
+@import '../theme/theme';
+
+.div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+  padding: 0 1rem;
+  .span {
+    // margin: 0 0.5rem;
+    padding: 0 0.5rem;
+  }
+}

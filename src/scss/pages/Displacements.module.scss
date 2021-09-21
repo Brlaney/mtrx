@@ -38,7 +38,7 @@
     .trussdisplay {
       display: flex;
       width: 500px;
-      height: 350px;
+      height: 280px;
       border-radius: 10px;
       margin: 0.5rem 0 0.5rem 0;
       padding: 0.5rem 1.5rem 0.5rem 1.5rem;
@@ -118,21 +118,29 @@
         text-align: center;
         background-color: $secondary;
         padding: 0.25rem;
-        margin: 0.4rem 0.1rem 0.4rem 0.1rem;
+        margin: 0.1rem 0.1rem 0.1rem 0.1rem;
         color: $white;
+        text-transform: none;
+      }
+      #gridbtn {
+        border-radius: 3px;
+      }
+      #fullwidthbtn {
+        border-radius: 3px;
+        width: 440px;
       }
       #state1, #state2, #state3, #state4, #state5{
         border-radius: 3px;
       }
       #state5 {
         width: 100%;
-        margin: 0.4rem 0.7rem;
+        margin: 0.1rem 0.1rem;
       }
     }
     .box {
       display: flex;
       width: 500px;
-      height: 75px;
+      height: 150px;
       border-radius: 10px;
       border: 1px solid $border-color;
       margin: 0.5rem 0 0.5rem 0;

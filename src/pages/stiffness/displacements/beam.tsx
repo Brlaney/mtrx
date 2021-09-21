@@ -6,6 +6,9 @@ import D21 from '@/components/stiffness/learn-the-basics/beam/D21';
 import Bending from '@/components/stiffness/learn-the-basics/beam/Bending';
 import Forces from '@/components/stiffness/learn-the-basics/beam/Forces';
 import { data, buttonTexts } from '@/lib/data/stiffness/displacements/beam';
+import { Button1 } from '@/components/stiffness/learn-the-basics/beam/buttons/Button1';
+import { Button2 } from '@/components/stiffness/learn-the-basics/beam/buttons/Button2';
+import { Button3 } from '@/components/stiffness/learn-the-basics/beam/buttons/Button3';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
@@ -29,7 +32,7 @@ export default function Beam() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.display}>
+        <motion.div className={styles.beamdisplay}>
           {graphic === 1 && <D11 />}
           {graphic === 2 && <D21 />}
           {graphic === 3 && <Bending />}
@@ -67,7 +70,10 @@ export default function Beam() {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              {buttonText.text}
+              {buttonText.id === 1 && <Button1 />}
+              {buttonText.id === 2 && <Button2 />}
+              {buttonText.id === 3 && <Button3 />}
+              {buttonText.id === 4 && buttonText.text}
             </motion.button>
           ))}
         </motion.div>

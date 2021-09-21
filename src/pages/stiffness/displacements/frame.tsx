@@ -29,7 +29,7 @@ export default function Frame() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.framecard}>
+        <motion.div className={styles.framedisplay}>
           {graphic === 1 && <D11 />}
           {graphic === 2 && <D12 />}
           {graphic === 3 && <D21 />}

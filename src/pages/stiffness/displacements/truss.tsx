@@ -30,7 +30,7 @@ export default function Truss() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.display}>
+        <motion.div className={styles.trussdisplay}>
           {graphic === 1 && <F11 />}
           {graphic === 2 && <F12 />}
           {graphic === 3 && <F21 />}
@@ -58,7 +58,7 @@ export default function Truss() {
         <motion.div className={styles.controls}>
           {buttonTexts.map((buttonText: IDispl) => (
             <motion.button
-              id={styles.state1}
+              id={buttonText.id < 5 ? styles.gridbtn : styles.fullwidthbtn}
               className='uk-button'
               onClick={() => { setGraphic(buttonText.id) }}
               whileHover={{

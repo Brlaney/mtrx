@@ -93,11 +93,7 @@ const Truss: React.FC<{ props }> = () => {
             )}
 
             {/* Completed - display the results calculated*/}
-            {currentStep === 3 && (
-              <Results
-                data={data}
-              />
-            )}
+            {currentStep === 3 &&  <Results data={data} /> }
           </div>
         </div>
       </div>

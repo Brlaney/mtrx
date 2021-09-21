@@ -3,11 +3,19 @@ import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
 import E from '@/components/stiffness/examples/truss/E';
 import D from '@/components/stiffness/examples/truss/D';
+import G from '@/components/stiffness/examples/truss/G';
+import Un from '@/components/stiffness/examples/truss/Un';
 import T1 from '@/components/stiffness/examples/truss/T1';
 import T2 from '@/components/stiffness/examples/truss/T2';
 import T3 from '@/components/stiffness/examples/truss/T3';
 import T4 from '@/components/stiffness/examples/truss/T4';
 import T5 from '@/components/stiffness/examples/truss/T5';
+import A from '@/components/stiffness/examples/truss/solutions/A';
+import { Button5 } from '@/components/stiffness/examples/truss/buttons/Button5';
+import { Button6 } from '@/components/stiffness/examples/truss/buttons/Button6';
+import { Button7 } from '@/components/stiffness/examples/truss/buttons/Button7';
+import { Button8 } from '@/components/stiffness/examples/truss/buttons/Button8';
+import { Button9 } from '@/components/stiffness/examples/truss/buttons/Button9';
 import { data, buttonTexts } from '@/lib/data/stiffness/examples/truss';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
@@ -33,13 +41,16 @@ export default function Truss() {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.trussdisplay}>
-          {graphic === 1 && < E />}
-          {graphic === 2 && < D />}
-          {graphic === 3 && < T1 />}
-          {graphic === 4 && < T2 />}
-          {graphic === 5 && < T3 />}
-          {graphic === 6 && < T4 />}
-          {graphic === 7 && < T5 />}
+          {graphic === 1 && <E />}
+          {graphic === 2 && <D />}
+          {graphic === 3 && <G />}
+          {graphic === 4 && <Un />}
+          {graphic === 5 && <T1 />}
+          {graphic === 6 && <T2 />}
+          {graphic === 7 && <T3 />}
+          {graphic === 8 && <T4 />}
+          {graphic === 9 && <T5 />}
+          {graphic === 10 && <A />}
         </motion.div>
 
         {/* Information onClick */}
@@ -62,7 +73,7 @@ export default function Truss() {
         <motion.div className={styles.controls}>
           {buttonTexts.map((buttonText: IDispl) => (
             <motion.button
-              id={styles.state1}
+              id={buttonText.id < 11 ? styles.gridbtn : styles.fullwidthbtn}
               className='uk-button'
               onClick={() => { setGraphic(buttonText.id) }}
               whileHover={{
@@ -73,7 +84,16 @@ export default function Truss() {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              {buttonText.text}
+              {buttonText.id === 1 && buttonText.text}
+              {buttonText.id === 2 && buttonText.text}
+              {buttonText.id === 3 && buttonText.text}
+              {buttonText.id === 4 && buttonText.text}
+              {buttonText.id === 5 && <Button5 />}
+              {buttonText.id === 6 && <Button6 />}
+              {buttonText.id === 7 && <Button7 />}
+              {buttonText.id === 8 && <Button8 />}
+              {buttonText.id === 9 && <Button9 />}
+              {buttonText.id === 10 && buttonText.text}
             </motion.button>
           ))}
         </motion.div>

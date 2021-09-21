@@ -101,7 +101,7 @@ const Forces = () => {
             r='4'
             transform='rotate(-180 82 52)'
             fill={color2}
-            stroke={color3}
+            stroke={color6}
             {...shapeVariations}
             animate={{
               y: 0,
@@ -117,7 +117,7 @@ const Forces = () => {
             r='4'
             transform='rotate(-180 308 52)'
             fill={color2}
-            stroke={color3}
+            stroke={color6}
             {...shapeVariations}
             animate={{
               y: 0,
