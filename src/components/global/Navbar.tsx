@@ -40,12 +40,12 @@ export default function Navbar () {
               </Link>
             </li>
             <li id={styles.listItem} className='uk-*'>
-              <Link href='/learn/matrix'>
+              <Link href='/stiffness'>
                 <a id={styles.link}>Stiffness</a>
               </Link>
             </li>
             <li id={styles.listItem} className='uk-*'>
-              <Link href='/learn/bridge-design'>
+              <Link href='/bridge'>
                 <a id={styles.link}>Bridge</a>
               </Link>
             </li>

@@ -1,13 +1,8 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import E from '@/components/stiffness/examples/E';
-import D from '@/components/stiffness/examples/truss/D';
-import T1 from '@/components/stiffness/examples/T1';
-import T2 from '@/components/stiffness/examples/T2';
-import T3 from '@/components/stiffness/examples/T3';
-import T4 from '@/components/stiffness/examples/T4';
-import T5 from '@/components/stiffness/examples/T5';
+import E from '@/components/stiffness/examples/frame/E';
+import D from '@/components/stiffness/examples/frame/D';
 import { data, buttonTexts } from '@/lib/data/stiffness/examples/frame';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
@@ -35,11 +30,6 @@ export default function Frame() {
         <motion.div className={styles.display}>
           {graphic === 1 && < E />}
           {graphic === 2 && < D />}
-          {graphic === 3 && < T1 />}
-          {graphic === 4 && < T2 />}
-          {graphic === 5 && < T3 />}
-          {graphic === 6 && < T4 />}
-          {graphic === 7 && < T5 />}
         </motion.div>
 
         {/* Information onClick */}

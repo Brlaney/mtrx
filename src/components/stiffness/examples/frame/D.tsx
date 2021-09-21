@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import {
   mainPathVariant,
   shapeVariations,
-} from '@/lib/config/animations/svgs/svgs'
+} from '@/lib/config/animations/svgs/svgs';
 
 const color1 = '#CADEFC';
 const color2 = '#4E4E4E';
