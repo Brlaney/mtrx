@@ -70,7 +70,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Animations use Framer-motion - figure 3.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif" width="50%" />
+  <img src="https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif" />
 </div>
 
 </br>
@@ -78,7 +78,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
   
 <div align="center">
   <h4><b>Matrix displacement solver form - figure 4.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/133891006-5d7c9a2e-7a31-4fe4-9c31-d82cd1ccfa49.gif" width="50%" />
+  <img src="https://user-images.githubusercontent.com/64326462/133891006-5d7c9a2e-7a31-4fe4-9c31-d82cd1ccfa49.gif" />
 </div>
 
 </br>
