@@ -52,6 +52,15 @@
           font-weight: bold;
         }
       }
+      .sectionTitleStiffness {
+        font-size: 1.3rem;
+        color: $secondary;
+        min-width: 420px;
+        text-align: justify;
+        margin: 2rem 0 0 0;
+        padding: 0 0 0.44rem 0;
+        border-bottom: calc(0.3px + 0.02em) solid $bg-l;
+      }
     }
 
     .content {

@@ -1,15 +1,15 @@
-// Function 1.)
-// Converts radians into degrees
-// Only use locally within this script.
+/* Function 1.)
+Converts radians into degrees
+Only use locally within this script. */
 function radToDeg(thetaRad) {
   let initial = thetaRad * 180;
   let converted = Math.round(initial / Math.PI);
   return converted;
 };
 
-// Function 2.)
-// Converts degrees into radians
-// Only use locally within this script.
+/* Function 2.)
+Converts degrees into radians
+Only use locally within this script. */
 function degToRad(thetaDeg) {
   let initial = thetaDeg * Math.PI;
   let final = initial / 180;
@@ -27,8 +27,7 @@ Case 4: oriented at 270 degrees
 Case 5: Quadrant I    (0 < theta < 90)
 Case 6: Quadrant II   (90 < theta < 180)
 Case 7: Quadrant III  (180 < theta < 270)
-Case 8: Quadrant IV   (270 < theta < 360)  
-*/
+Case 8: Quadrant IV   (270 < theta < 360). */
 export function orientation(dx, dy) {
   if (dx > 0 && dy == 0) {
     let t = 0;
@@ -62,9 +61,9 @@ export function orientation(dx, dy) {
 };
 
 
-// Function 4.) 
-//  Local degrees of freedom in kn1, kn2, kn3, kn4
-// within lDof [kn1, kn2, kn3, kn4, ... ]
+/* Function 4.) 
+Local degrees of freedom in kn1, kn2, kn3, kn4
+within lDof [kn1, kn2, kn3, kn4, ... ]  */
 export function deltas(end1, end2, coordinates) {
   if (end1 == 1 && end2 == 2) {
     // Each nodes (x, y) coordinates
@@ -104,11 +103,9 @@ Inputs:
     element_m. Col 1. is local member-end 1 and Col 2. 
     is local member-end 2.
    
-    Uncomment the following line and change return to [elemL, elemT, elemR]   
-    let elemT = []; //Will contain each elements theta (degrees)
-    if you desire the output of the element orientation angles in degrees.
-*/
-  // 
+  Uncomment the following line and change return to [elemL, elemT, elemR]   
+let elemT = []; //Will contain each elements theta (degrees)
+if you desire the output of the element orientation angles in degrees. */
 export function elementLengths(coordinates, connects) {
   const m = connects.length / 2;    // Number of members in system
   const n = coordinates.length / 2; // Number of global in system
@@ -154,19 +151,14 @@ export function elementLengths(coordinates, connects) {
 
 /* Function 6.)
 Transformation function for Truss members
-
   Inputs: 
-  - m, number of members in the system
-  - radV, theta vector containing theta for each element in radians
-  - lengthV, length vector containing the length of each element (ft.)
-  - AV, cross - sectional area vector, in^2 or m^2)
-  - EV, modulus of elasticity vector, psi or Pa [N/m^2])
-  
-  Is this necessary? Will determine while testing function
-  - u == units. Either imperial or metric ( ft & psi || m & Pa )
+- m, number of members in the system
+- radV, theta vector containing theta for each element in radians
+- lengthV, length vector containing the length of each element (ft.)
+- AV, cross - sectional area vector, in^2 or m^2)
+- EV, modulus of elasticity vector, psi or Pa [N/m^2])
 
-  Output: local truss member stiffness matrix in global coordinates
-*/
+Output: local truss member stiffness matrix in global coordinates. */
 export function localK(m, radV, lengthV, EV, AV) {
   let T = []; // Will append all k_ij's
 

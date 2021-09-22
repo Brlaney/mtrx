@@ -4,13 +4,11 @@ import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/staggered';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
-import { IMatrix } from '@/lib/types';
+import { IStiffnessTopics, Isection } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Learn.module.scss';
 
-const Stiffness = ({ topics, props: any }:
-  InferGetStaticPropsType<typeof getStaticProps>
-) => {
+const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [topicsList] = React.useState(topics);
   const endpoint = '/';
 
@@ -39,25 +37,32 @@ const Stiffness = ({ topics, props: any }:
         <motion.div className={styles.card} variants={stagger}>
 
           {/* Dynamic topic cards */}
-          {topicsList.map((topic: IMatrix) => (
+          {topicsList.map((topic: IStiffnessTopics) => (
             <motion.div
               key={topic.id}
               className={styles.contents}
               variants={fadeInUp}
             >
+              <h2 className={styles.sectionTitleStiffness}>{topic.title}</h2>
               <div className={styles.content}>
                 <div className={styles.child}>
-                  <Link href={topic.link}>
-                    <motion.h3
-                      className={styles.link}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <a className='uk-link-heading'>
-                        {topic.name}
-                      </a>
-                    </motion.h3>
-                  </Link>
+                  {topic.sections && (
+                    topic.sections.map((section: Isection) => (
+                      <>
+                        <Link key={section.key} href={section.link}>
+                          <motion.h3
+                            className={styles.link}
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            <a className='uk-link-heading'>
+                              {section.name}
+                            </a>
+                          </motion.h3>
+                        </Link>
+                      </>
+                    ))
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -71,7 +76,7 @@ const Stiffness = ({ topics, props: any }:
 export const getStaticProps: GetStaticProps = async _context => {
   const endpoint = `${server}/api/stiffness`;
   const res = await fetch(endpoint);
-  const topics: IMatrix[] = await res.json();
+  const topics: IStiffnessTopics[] = await res.json();
 
   return {
     props: {

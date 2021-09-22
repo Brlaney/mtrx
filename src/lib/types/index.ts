@@ -22,8 +22,14 @@ export interface IBridge {
   content?: any | null | undefined;
 };
 
-export interface IMatrix {
+export interface IStiffnessTopics {
   id: number;
+  title: string;
+  sections?: any | null | undefined;
+}
+
+export interface Isection {
+  key: number;
   name: string;
   link: string;
 }
