@@ -5,7 +5,7 @@ import Truss from '@/components/solver/Truss';
 import Beam from '@/components/solver/Beam';
 import Frame from '@/components/solver/Frame';
 import GoBack from '@/components/global/buttons/GoBack';
-import styles from '@/styles/pages/Matrix.module.scss';
+import styles from '@/styles/pages/Solver.module.scss';
 
 const Solver = () => {
   const [name, setName] = React.useState('');
@@ -13,21 +13,24 @@ const Solver = () => {
 
   return (
     <motion.div className={styles.container}>
-      
       <GoBack link={endpoint} />
-
+      <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
       <div className={styles.parent}>
 
         {/* Header - conditionally render */}
         {name && (
-          <h2 className={styles.heading}>
-            Select a system <span className={styles.conditional}> {name}</span>
-          </h2>
+          <>
+            <h2 className={styles.pageTitle}>
+              Select a system to solve <span className={styles.conditional}> {name}</span>
+            </h2>
+          </>
         )}
         {!name && (
-          <h2 className={styles.heading}>
-            Select a system
-          </h2>
+          <>
+            <h2 className={styles.pageTitle}>
+              Select a system to solve
+            </h2>
+          </>
         )}
 
         {/* Row of content - 3 child columns */}
@@ -39,7 +42,7 @@ const Solver = () => {
               onMouseLeave={() => setName('')}
               whileHover={{
                 scale: 1.02,
-                transition: { duration: 0.2, ease: [0.5, -0.1, 0.01, 0.45] }
+                transition: { duration: 0, ease: [0.1, -0.1, 0.01, 0.85] }
               }}
               whileTap={{ scale: 0.95 }}
             >
@@ -53,7 +56,7 @@ const Solver = () => {
               onMouseLeave={() => setName('')}
               whileHover={{
                 scale: 1.02,
-                transition: { duration: 0.2, ease: [0.5, -0.1, 0.01, 0.45] }
+                transition: { duration: 0, ease: [0.1, -0.1, 0.01, 0.85] }
               }}
               whileTap={{ scale: 0.95 }}
             >
@@ -67,7 +70,7 @@ const Solver = () => {
               onMouseLeave={() => setName('')}
               whileHover={{
                 scale: 1.02,
-                transition: { duration: 0.2, ease: [0.5, -0.1, 0.01, 0.45] }
+                transition: { duration: 0, ease: [0.1, -0.1, 0.01, 0.85] }
               }}
               whileTap={{ scale: 0.95 }}
             >

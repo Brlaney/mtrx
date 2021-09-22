@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
 import { Formik, Form, Field } from 'formik';
 import { forces, lengths } from '@/lib/config/forms/truss';
-// import { NodeCoordinates } from '@/lib/types';
 import { trussCheck } from '@/lib/utils/matrix/calculate';
 import Success from '@/components/global/alerts/Success';
 import Error from '@/components/global/alerts/Error';
