@@ -27,7 +27,7 @@ const Unrestrained = () => {
             <motion.path
               {...mainPathVariant}
               d='M91.5 79.5V267'
-              stroke='#818181'
+              stroke={color1}
               stroke-linecap='round'
               {...shapeVariations}
               animate='visible'
@@ -35,7 +35,7 @@ const Unrestrained = () => {
             />
             <motion.path
               d='M91.5 79.5H255.5'
-              stroke='#818181'
+              stroke={color1}
               stroke-linecap='round'
               {...shapeVariations}
               animate='visible'
@@ -43,7 +43,7 @@ const Unrestrained = () => {
             />
             <motion.path
               d='M255.5 79.5V267'
-              stroke='#818181'
+              stroke={color1}
               stroke-linecap='round'
               {...shapeVariations}
               animate='visible'
