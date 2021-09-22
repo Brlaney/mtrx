@@ -29,16 +29,16 @@ export default function FixedEndMoments() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.beamdisplay}>
+        <motion.div className={styles.femdisplay}>
           {graphic === 1 && <Distributed />}
-          {graphic === 2 && <Eqn1 />}
+          {graphic === 2 && (<><Distributed /><Eqn1 /></>)}
           {graphic === 3 && <Point />}
-          {graphic === 4 && <Eqn2 />}
+          {graphic === 4 && (<> <Point /> <Eqn2 /></>)}
         </motion.div>
 
         {/* Information onClick */}
         <motion.div
-          className={styles.box}
+          className={styles.fembox}
           variants={stagger}
         >
           <motion.p
@@ -53,10 +53,10 @@ export default function FixedEndMoments() {
         </motion.div>
 
         {/* Controls state - buttons */}
-        <motion.div className={styles.controls}>
+        <motion.div className={styles.femcontrols}>
           {buttonTexts.map((buttonText: IDispl) => (
             <motion.button
-              id={buttonText.id < 5 ? styles.gridbtn : styles.fullwidthbtn}
+              id={buttonText.id < 1 ? styles.fullwidthbtn : styles.gridbtn}
               className='uk-button'
               onClick={() => { setGraphic(buttonText.id) }}
               whileHover={{

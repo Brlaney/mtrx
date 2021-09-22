@@ -1,6 +1,8 @@
 @import '../theme/theme';
 
 .container {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   .parent {
     width: 100%;
     height: 100%;
@@ -58,6 +60,16 @@
       display: flex;
       width: 600px;
       height: 350px;
+      margin: 0.5rem 0 0.5rem 0;
+      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .femdisplay {
+      display: flex;
+      width: 100%;
+      max-width: 700px;
+      height: 380px;
       margin: 0.5rem 0 0.5rem 0;
       padding: 0.5rem 1.5rem 0.5rem 1.5rem;
       align-items: center;
@@ -137,6 +149,49 @@
         margin: 0.1rem 0.1rem;
       }
     }
+    .femcontrols {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      flex-wrap: wrap;
+      width: 80%;
+      max-width: 700px;
+      height: 150px;
+      border-radius: 10px;
+      border: 1px solid $border-color;
+      margin: 0.5rem 0 0 0;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
+        rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+      button {
+        font-size: 1rem;
+        width: 45%;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        background-color: $secondary;
+        padding: 0.25rem;
+        margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+        color: $white;
+        text-transform: none;
+      }
+      #gridbtn {
+        border-radius: 3px;
+      }
+      #fullwidthbtn {
+        border-radius: 3px;
+        width: 440px;
+      }
+      #state1, #state2, #state3, #state4, #state5{
+        border-radius: 3px;
+      }
+      #state5 {
+        width: 100%;
+        margin: 0.1rem 0.1rem;
+      }
+    }
     .box {
       display: flex;
       width: 500px;
@@ -175,6 +230,27 @@
         font-size: 1.1rem;
         padding: 0.77rem 0.5rem 0.77rem 0.5rem;
         margin: 1rem;
+      }
+    }
+    .fembox {
+      display: flex;
+      width: 80%;
+      max-width: 700px;
+      height: 125px;
+      border-radius: 10px;
+      border: 1px solid $border-color;
+      margin: 0.5rem 0 0.5rem 0;
+      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
+        rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+      #text {
+        color: $text-secondary;
+        text-align: justify;
+        font-size: 1.1rem;
+        padding: 0.77rem 0.5rem 0.77rem 0.5rem;
+        margin: 0;
       }
     }
   }
