@@ -169,7 +169,6 @@ Transformation function for Truss members
 */
 export function localK(m, radV, lengthV, EV, AV) {
   let T = []; // Will append all k_ij's
-  let R = []; // Will append all elements theta's in radians
 
   for (let i = 0; i < m; i++) {
     let theta = radV[i];

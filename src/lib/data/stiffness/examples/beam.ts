@@ -4,7 +4,6 @@ export const data = [
   'Element number 1 member-end forces.',
   'Element number 2 member-end forces.',
   'Element number 3 member-end forces.',
-  'v1, f1, v2, f2 which represent left-end shear, left-end moment, right-end shear, and right-end moment.'
 ];
 
 export const buttonTexts = [
@@ -12,6 +11,5 @@ export const buttonTexts = [
   { id: 2, text: 'Global forces' },
   { id: 3, text: 'Element 1 forces' },
   { id: 4, text: 'Element 2 forces' },
-  { id: 5, text: 'Element 3 forces' },
-  { id: 6, text: 'Material properties' }
+  { id: 5, text: 'Element 3 forces' }
 ];

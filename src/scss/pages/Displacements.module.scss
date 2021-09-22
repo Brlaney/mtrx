@@ -39,7 +39,7 @@
     }
     .trussdisplay {
       display: flex;
-      width: 500px;
+      width: 100%;
       height: 280px;
       border-radius: 10px;
       margin: 0.5rem 0 0.5rem 0;
@@ -209,7 +209,7 @@
         text-align: justify;
         font-size: 1.1rem;
         padding: 0.77rem 0.5rem 0.77rem 0.5rem;
-        margin: 1rem;
+        margin: 0;
       }
     }
     .framebox {
@@ -229,7 +229,7 @@
         text-align: justify;
         font-size: 1.1rem;
         padding: 0.77rem 0.5rem 0.77rem 0.5rem;
-        margin: 1rem;
+        margin: 0;
       }
     }
     .fembox {

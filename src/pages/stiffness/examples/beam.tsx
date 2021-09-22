@@ -32,12 +32,11 @@ export default function Beam() {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.beamdisplay}>
-          {graphic === 1 && < E />}
+          {graphic === 1 && (<>< E />< Info /></>)}
           {graphic === 2 && < G />}
           {graphic === 3 && < LF1 />}
           {graphic === 4 && < LF2 />}
           {graphic === 5 && < LF3 />}
-          {graphic === 6 && < Info />}
         </motion.div>
 
         {/* Information onClick */}
@@ -60,7 +59,7 @@ export default function Beam() {
         <motion.div className={styles.controls}>
           {buttonTexts.map((buttonText: IDispl) => (
             <motion.button
-              id={styles.state1}
+              id={buttonText.id < 5 ? styles.gridbtn : styles.fullwidthbtn}
               className='uk-button'
               onClick={() => { setGraphic(buttonText.id) }}
               whileHover={{

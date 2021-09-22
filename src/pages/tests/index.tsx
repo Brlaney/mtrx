@@ -23,7 +23,7 @@ const Tests = () => {
   console.log('Each elements orientation in radians:')
   console.log(testOutput[1]);
 
-  console.log('Each elements orientation in radians:')
+  console.log('Each elements orientation in degrees:')
   console.log(testOutput[2]);
 
   console.log("Each n row maps local k_ij's to global degree of freedom:");
