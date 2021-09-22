@@ -12,5 +12,6 @@ export const topics: IMatrix[] = [
   { id: 9, name: 'Frame deformations', link: '/stiffness/deformations/frame' },
   { id: 10, name: 'Truss stiffness theory', link: '/stiffness/learn-the-basics/truss' },
   { id: 11, name: 'Beam stiffness theory', link: '/stiffness/learn-the-basics/beam' },
-  { id: 12, name: 'Frame stiffness theory', link: '/stiffness/learn-the-basics/frame' }
+  { id: 12, name: 'Frame stiffness theory', link: '/stiffness/learn-the-basics/frame' },
+  { id: 13, name: 'Accounting for fixed-end moments', link: '/stiffness/learn-the-basics/fixed-end-moments' },
 ];

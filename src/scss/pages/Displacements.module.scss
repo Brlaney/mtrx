@@ -57,7 +57,7 @@
     .framedisplay {
       display: flex;
       width: 600px;
-      height: 400px;
+      height: 350px;
       margin: 0.5rem 0 0.5rem 0;
       padding: 0.5rem 1.5rem 0.5rem 1.5rem;
       align-items: center;
@@ -141,6 +141,26 @@
       display: flex;
       width: 500px;
       height: 150px;
+      border-radius: 10px;
+      border: 1px solid $border-color;
+      margin: 0.5rem 0 0.5rem 0;
+      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
+        rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+      #text {
+        color: $text-secondary;
+        text-align: justify;
+        font-size: 1.1rem;
+        padding: 0.77rem 0.5rem 0.77rem 0.5rem;
+        margin: 1rem;
+      }
+    }
+    .framebox {
+      display: flex;
+      width: 500px;
+      height: 215px;
       border-radius: 10px;
       border: 1px solid $border-color;
       margin: 0.5rem 0 0.5rem 0;

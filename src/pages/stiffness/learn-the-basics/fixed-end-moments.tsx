@@ -1,20 +1,18 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import Blank from '@/components/stiffness/displacements/frame/Blank';
-import Nodes from '@/components/stiffness/displacements/frame/Nodes';
-import Global from '@/components/stiffness/displacements/frame/Global';
-import Unrestrained from '@/components/stiffness/displacements/frame/Unrestrained';
-import SideswayRotation from '@/components/stiffness/displacements/frame/SideswayRotation';
-import Sidesway from '@/components/stiffness/displacements/frame/Sidesway';
-import GoBack from '@/components/global/buttons/GoBack';
-import { data, buttonTexts } from '@/lib/data/stiffness/displacements/frame';
+import Distributed from '@/components/stiffness/learn-the-basics/fem/Distributed';
+import Eqn1 from '@/components/stiffness/learn-the-basics/fem/Eqn1';
+import Point from '@/components/stiffness/learn-the-basics/fem/Point';
+import Eqn2 from '@/components/stiffness/learn-the-basics/fem/Eqn2';
+import { data, buttonTexts } from '@/lib/data/stiffness/learn-the-basics/fixed-end-moments';
 import { IDispl } from '@/lib/types';
+import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
-export default function Frame() {
-  const [graphic, setGraphic] = React.useState(1);
+export default function FixedEndMoments() {
   const [display, setDisplay] = React.useState('');
+  const [graphic, setGraphic] = React.useState(1);
   const endpoint = '/stiffness';
 
   useEffect(() => {
@@ -31,18 +29,16 @@ export default function Frame() {
       <div className={styles.parent}>
 
         {/* Is this a switch case? */}
-        <motion.div className={styles.framedisplay}>
-          {graphic === 1 &&  <Blank />}
-          {graphic === 2 &&  <Nodes />}
-          {graphic === 3 &&  <Global />}
-          {graphic === 4 &&  <Unrestrained />}
-          {graphic === 5 &&  <Sidesway />}
-          {graphic === 6 &&  <SideswayRotation />}
+        <motion.div className={styles.beamdisplay}>
+          {graphic === 1 && <Distributed />}
+          {graphic === 2 && <Eqn1 />}
+          {graphic === 3 && <Point />}
+          {graphic === 4 && <Eqn2 />}
         </motion.div>
 
         {/* Information onClick */}
         <motion.div
-          className={styles.framebox}
+          className={styles.box}
           variants={stagger}
         >
           <motion.p
@@ -60,7 +56,7 @@ export default function Frame() {
         <motion.div className={styles.controls}>
           {buttonTexts.map((buttonText: IDispl) => (
             <motion.button
-              id={styles.state1}
+              id={buttonText.id < 5 ? styles.gridbtn : styles.fullwidthbtn}
               className='uk-button'
               onClick={() => { setGraphic(buttonText.id) }}
               whileHover={{

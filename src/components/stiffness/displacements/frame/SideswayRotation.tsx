@@ -115,24 +115,21 @@ const SideswayRotation = () => {
             />
             <motion.path
               d='M95 80L173.5 80L252 80'
-              stroke='black'
-              stroke-opacity='0.3'
+              stroke={color1}
               {...shapeVariations}
               animate='visible'
               initial='hidden'
             />
             <motion.path
               d='M256 83L256 175'
-              stroke='black'
-              stroke-opacity='0.3'
+              stroke={color1}
               {...shapeVariations}
               animate='visible'
               initial='hidden'
             />
             <motion.path
               d='M92 83L92 175'
-              stroke='black'
-              stroke-opacity='0.3'
+              stroke={color1}
               {...shapeVariations}
               animate='visible'
               initial='hidden'
