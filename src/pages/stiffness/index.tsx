@@ -6,13 +6,11 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
 import { IStiffnessTopics, Isection } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
-import styles from '@/styles/pages/Learn.module.scss';
+import styles from '@/styles/pages/Stiffness.module.scss';
 
 const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [topicsList] = React.useState(topics);
   const endpoint = '/';
-
-  console.log(topicsList.content);
 
   return (
     <motion.div
@@ -27,6 +25,8 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
       {/* Page parent container */}
       <motion.div className={styles.container} variants={stagger}>
 
+        <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
+
         {/* Header */}
         <div className={styles.header}>
           <h3 className={styles.title}>
@@ -34,36 +34,41 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
           </h3>
         </div>
 
-        <motion.div className={styles.card} variants={stagger}>
-
+        <motion.div className={styles.grid} variants={stagger}>
           {/* Dynamic topic cards */}
           {topicsList.map((topic: IStiffnessTopics) => (
             <motion.div
-              key={topic.id}
-              className={styles.contents}
+              id={styles.cardId}
+              className={topic.id == 5 ? styles.wideCard : styles.card}
               variants={fadeInUp}
             >
-              <h2 className={styles.sectionTitleStiffness}>{topic.title}</h2>
-              <div className={styles.content}>
-                <div className={styles.child}>
+              <div
+                key={topic.id}
+                className={styles.cardbody}
+              >
+                <h2 className={styles.sectionTitle}>{topic.title}</h2>
+                <motion.div className={styles.child} variants={fadeInUp}>
                   {topic.sections && (
                     topic.sections.map((section: Isection) => (
-                      <>
-                        <Link key={section.key} href={section.link}>
+                      <Link key={topic.id} href={section.link}>
+                        <motion.div
+                          className={styles.contents}
+                          variants={fadeInUp}
+                        >
                           <motion.h3
-                            className={styles.link}
+                            className={styles.linktext}
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.98 }}
                           >
-                            <a className='uk-link-heading'>
+                            <a id={styles.text} className='uk-link-heading'>
                               {section.name}
                             </a>
                           </motion.h3>
-                        </Link>
-                      </>
+                        </motion.div>
+                      </Link>
                     ))
                   )}
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}

@@ -30,8 +30,10 @@ export const topics: IStiffnessTopics[] = [
     ]
   },
   {
-    id: 5, title: 'Fixed end moments', sections: [
-      { key: 1, name: 'Truss', link: '/stiffness/learn-the-basics/fixed-end-moments' }
+    id: 5, title: 'Other topics', sections: [
+      { key: 1, name: 'Discretization', link: '#' },
+      { key: 2, name: 'Fixed-end-moments', link: '/stiffness/learn-the-basics/fixed-end-moments' },
+      { key: 3, name: 'Restrained & unrestrained nodes', link: '#' }
     ]
   }
 ];

@@ -8,10 +8,8 @@
   flex: 1;
   justify-content: flex-start;
   align-items: center;
-
   .header {
     margin: 1rem 0 0.22rem 0;
-
     .title {
       font-size: 1.5rem;
       color: $text-secondary;
@@ -19,14 +17,12 @@
       padding-bottom: 0.44rem;
       margin: 0;
       border-bottom: calc(0.3px + 0.02em) solid $bg-m;
-
       .span {
         color: $secondary;
         font-weight: bold;
       }
     }
   }
-
   .card {
     border-radius: 10px;
     border: 1px solid $border-color;
@@ -34,9 +30,7 @@
     padding: 0.77rem 1.77rem 1.77rem 1.77rem;
     box-shadow: rgba(50, 50, 93, 0.25) 4px 13px 14px -5px,
       rgba(0, 0, 0, 0.3) 0px 14px 16px -8px;
-
     .contents {
-
       .sectionTitle {
         font-size: 1.3rem;
         color: $text-secondary;
@@ -45,24 +39,13 @@
         margin: 2rem 0 0 0;
         padding: 0 0 0.44rem 0;
         border-bottom: calc(0.3px + 0.02em) solid $bg-l;
-
         .span {
           font-size: 1.45rem;
           color: $bg-d-700;
           font-weight: bold;
         }
       }
-      .sectionTitleStiffness {
-        font-size: 1.3rem;
-        color: $secondary;
-        min-width: 420px;
-        text-align: justify;
-        margin: 2rem 0 0 0;
-        padding: 0 0 0.44rem 0;
-        border-bottom: calc(0.3px + 0.02em) solid $bg-l;
-      }
     }
-
     .content {
       margin: 0;
       width: 100%;
@@ -70,7 +53,6 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-
       .child {
         display: flex;
         flex-direction: column;
@@ -81,19 +63,16 @@
     }
   }
 }
-
 .link {
   font-size: 1.1rem;
   margin: 0.24rem 0 0.24rem 0.77rem;
   padding: 0;
   text-align: left;
   min-width: 420px;
-
   a {
     font-family: $primary-font;
     color: $bg-m;
   }
-
   a:hover {
     color: $secondary;
   }
