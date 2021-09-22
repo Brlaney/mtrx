@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import D11 from '@/components/stiffness/displacements/frame/D11';
-import D12 from '@/components/stiffness/displacements/frame/D12';
-import D21 from '@/components/stiffness/displacements/frame/D21';
-import D22 from '@/components/stiffness/displacements/frame/D22';
+import Blank from '@/components/stiffness/displacements/frame/Blank';
+import Nodes from '@/components/stiffness/displacements/frame/Nodes';
+import Global from '@/components/stiffness/displacements/frame/Global';
+import Unrestrained from '@/components/stiffness/displacements/frame/Unrestrained';
+import Sidesway from '@/components/stiffness/displacements/frame/SideswayRotation';
+import SideswayRotation from '@/components/stiffness/displacements/frame/Sidesway';
 import GoBack from '@/components/global/buttons/GoBack';
 import { data, buttonTexts } from '@/lib/data/stiffness/displacements/frame';
 import { IDispl } from '@/lib/types';
@@ -30,10 +32,12 @@ export default function Frame() {
 
         {/* Is this a switch case? */}
         <motion.div className={styles.framedisplay}>
-          {graphic === 1 && <D11 />}
-          {graphic === 2 && <D12 />}
-          {graphic === 3 && <D21 />}
-          {graphic === 4 && <D22 />}
+          {graphic === 1 &&  <Blank />}
+          {graphic === 2 &&  <Nodes />}
+          {graphic === 3 &&  <Global />}
+          {graphic === 4 &&  <Unrestrained />}
+          {graphic === 5 &&  <Sidesway />}
+          {graphic === 6 &&  <SideswayRotation />}
         </motion.div>
 
         {/* Information onClick */}
