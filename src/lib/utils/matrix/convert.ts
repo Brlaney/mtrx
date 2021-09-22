@@ -3,15 +3,12 @@
 Converts degrees to radians ~
   Input: members angle of orientation in degrees
   Output: members angle of orientation in radians */
-export function convertToRadians(angleInDegrees) {
-  let initial = angleInDegrees * Math.PI;
+export function degToRad(thetaDeg) {
+  let initial = thetaDeg * Math.PI;
   let final = initial / 180;
-
-  // Rounded to whole number
-  let thetaR = Math.round(final);
-
-  return thetaR;
-}
+  let converted = final.toFixed(1);
+  return converted;
+};
 
 
 /* Function 2.)
@@ -19,15 +16,11 @@ export function convertToRadians(angleInDegrees) {
 Converts radians to degrees ~
   Input: members angle of orientation in radians
   Output: members angle of orientation in degrees */
-export function convertToDegrees(angleInRadians) {
-  let initial = angleInRadians * 180;
-  let final = initial / Math.PI;
-
-  // Rounded to whole number
-  let thetaD = Math.round(final);
-
-  return thetaD;
-}
+export function radToDeg(thetaRad) {
+  let initial = thetaRad * 180;
+  let converted = Math.round(initial / Math.PI);
+  return converted;
+};
 
 
 /* Function 3.)
