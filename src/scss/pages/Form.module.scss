@@ -10,148 +10,153 @@
   top: 10%;
 }
 
-.parent {
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  margin: 1.3rem 0.2rem 0.2rem 0.2rem;
-  padding: 0.22rem;
-  align-items: center;
-  justify-content: center;
-  .header {
+.container {
+  #space {
+    height: 80px;
+  }
+  .parent {
     width: 50vw;
-    margin: 0.65rem 0 1rem 0;
-    .title {
-      text-align: center;
-      margin: 0.4rem;
-      color: $bg-d;
-      font-size: 1.8rem;
-      padding-bottom: 0.34rem;
-      .span {
-        font-weight: bold;
-        color: $secondary;
-      }
-    }
-    .currentStep {
-      text-align: justify;
-      margin: 0.4rem;
-      color: $text-secondary;
-      font-size: 1.15rem;
-      .span {
-        font-weight: bold;
-        color: $secondary;
-      }
-    }
-    .subtitle {
-      text-align: center;
-      margin: 0.4rem 0 0.8rem 0;
-      color: $text-secondary;
-      font-size: 1.2rem;
-    }
-  }
-  .heading {
-    margin: 1.3rem 0 0 0;
-    color: $bg-d;
-    width: 80%;
-    text-align: left;
-    font-size: 1.5rem;
-    padding: 0 0 0.3rem 0;
-    border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
-    align-items: stretch;
-    .conditional {
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: $secondary;
-      text-align: right;
-    }
-  }
-  #grid {
-    width: 100vw;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    margin: 1.3rem 0.2rem 0.2rem 0.2rem;
+    padding: 0.22rem;
     align-items: center;
-    padding: 2rem;
-    flex-wrap: wrap;
-    .column {
-      max-width: 400px;
-      padding: 1rem;
-      margin: 1rem;
-    }
-    #image {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      flex: 1;
-      border-radius: 7px;
-      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-      margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-      padding: 2rem;
-      background-color: $white;
-      .img {
-        border: 0;
-        padding: 0.5rem;
+    justify-content: center;
+    .header {
+      width: 50vw;
+      margin: 0.65rem 0 1rem 0;
+      .title {
+        text-align: center;
+        margin: 0.4rem;
+        color: $bg-d;
+        font-size: 1.8rem;
+        padding-bottom: 0.34rem;
+        .span {
+          font-weight: bold;
+          color: $secondary;
+        }
+      }
+      .currentStep {
+        text-align: justify;
+        margin: 0.4rem;
+        color: $text-secondary;
+        font-size: 1.15rem;
+        .span {
+          font-weight: bold;
+          color: $secondary;
+        }
+      }
+      .subtitle {
+        text-align: center;
+        margin: 0.4rem 0 0.8rem 0;
+        color: $text-secondary;
+        font-size: 1.2rem;
       }
     }
-    #image:hover {
-      cursor: pointer;
-      border: 2px solid $secondary;
+    .heading {
+      margin: 1.3rem 0 0 0;
+      color: $bg-d;
+      width: 80%;
+      text-align: left;
+      font-size: 1.5rem;
+      padding: 0 0 0.3rem 0;
+      border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
+      align-items: stretch;
+      .conditional {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: $secondary;
+        text-align: right;
+      }
     }
-    .form {
+    #grid {
+      width: 100vw;
       display: flex;
       flex-direction: row;
-      flex: 1;
-      width: 100%;
-      padding: 1.44rem 1.88rem 0.42rem 1.88rem;
-      margin: 0;
-      border: 1px solid $border-color;
-      border-radius: 7px;
-      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-      #formSelect {
-        padding: 0;
-        margin: 0.75rem 0 1rem 0;
-        #selectionTitle {
-          font-size: 1rem;
-          width: 100%;
-          text-align: center;
-          padding-bottom: 0.52rem;
-          margin-bottom: 0.33rem;
-          border-bottom: 1px solid $bg-m;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      flex-wrap: wrap;
+      .column {
+        max-width: 400px;
+        padding: 1rem;
+        margin: 1rem;
+      }
+      #image {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1;
+        border-radius: 7px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+        margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+        padding: 2rem;
+        background-color: $white;
+        .img {
+          border: 0;
+          padding: 0.5rem;
         }
-        #selectionControl {
-          padding-top: 0.77rem;
-          display: flex;
-          justify-content: space-between;
-          #select {
-            #selection {
-              padding-top: 1rem;
+      }
+      #image:hover {
+        cursor: pointer;
+        border: 2px solid $secondary;
+      }
+      .form {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        width: 100%;
+        padding: 1.44rem 1.88rem 0.42rem 1.88rem;
+        margin: 0;
+        border: 1px solid $border-color;
+        border-radius: 7px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        #formSelect {
+          padding: 0;
+          margin: 0.75rem 0 1rem 0;
+          #selectionTitle {
+            font-size: 1rem;
+            width: 100%;
+            text-align: center;
+            padding-bottom: 0.52rem;
+            margin-bottom: 0.33rem;
+            border-bottom: 1px solid $bg-m;
+          }
+          #selectionControl {
+            padding-top: 0.77rem;
+            display: flex;
+            justify-content: space-between;
+            #select {
+              #selection {
+                padding-top: 1rem;
+              }
             }
           }
         }
-      }
-      .formDiv {
-        padding: 0;
-        align-items: center;
-        margin: 0.75rem 0 1rem 0;
-        #label {
-          padding: 0.2rem;
-          font-size: 1rem;
-        }
-        #controls {
-          text-align: center;
-          #input {
-            width: 220px;
-            margin: 0.2rem 0 0.2rem 0;
+        .formDiv {
+          padding: 0;
+          align-items: center;
+          margin: 0.75rem 0 1rem 0;
+          #label {
+            padding: 0.2rem;
+            font-size: 1rem;
           }
-        }
-        #submit {
-          width: 100%;
-          max-width: 450px;
-          border-radius: 5px;
-          background-color: $secondary;
-          margin: 1rem 0 1.2rem 0;
-          padding: 0.4rem;
-          color: $white;
+          #controls {
+            text-align: center;
+            #input {
+              width: 220px;
+              margin: 0.2rem 0 0.2rem 0;
+            }
+          }
+          #submit {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 5px;
+            background-color: $secondary;
+            margin: 1rem 0 1.2rem 0;
+            padding: 0.4rem;
+            color: $white;
+          }
         }
       }
     }

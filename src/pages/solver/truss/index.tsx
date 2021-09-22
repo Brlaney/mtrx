@@ -49,14 +49,16 @@ const Truss: React.FC<{ props }> = () => {
   // console.log('data', data);
 
   return (
-    <>
+    <div className={styles.container}>
   
       <GoBack link={endpoint} />
 
+      <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
+
       {/* Page parent container and header */}
       <div className={styles.parent}>
-        <div className={styles.header}>
-        </div>
+        {/* <div className={styles.header}> */}
+        {/* </div> */}
 
         {/* Container - conditionally render the current form step */}
         <div className={styles.grid}>
@@ -97,7 +99,7 @@ const Truss: React.FC<{ props }> = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 };
 
