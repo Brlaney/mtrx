@@ -16,7 +16,7 @@ const Truss: React.FC<{ props }> = () => {
     nodes: '',
     members: '',
     reactions: '',
-    units: '',
+    units: 1,
     x1: '',
     y1: '',
     x2: '',

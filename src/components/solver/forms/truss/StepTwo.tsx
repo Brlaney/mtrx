@@ -42,14 +42,14 @@ const StepTwo = (props) => {
 
   // UseEffect hook to assemble node coordinate matrix
   useEffect(() => {
-  for (let i = 0; i < n; i++) {
-  let j = i + 1;
-  let addNum1 = j.toString();
-  let c1 = 'x' + addNum1;
-  let c2 = 'y' + addNum1;
-  
-  nodeMatrix[i] = [j, c1, c2];
-  }
+    for (let i = 0; i < n; i++) {
+      let j = i + 1;
+      let addNum1 = j.toString();
+      let c1 = 'x' + addNum1;
+      let c2 = 'y' + addNum1;
+
+      nodeMatrix[i] = [j, c1, c2];
+    }
   }, []);
 
   // UseEffect hook to map the proper units selected

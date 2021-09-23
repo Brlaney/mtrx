@@ -4,7 +4,7 @@ import { FieldProps } from 'formik'
 export const Selection: React.FC<
   FieldProps & {
     label?: string;
-    options: Array<{ label: string; value: string }>;
+    options: Array<{ value: string; label: string;  }>;
   }
 > = ({ field, form, label, options, ...props }) => {
   return (

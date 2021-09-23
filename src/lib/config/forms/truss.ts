@@ -1,13 +1,18 @@
-export const selectUnits = [
-  { label: 'Select your units', value: '' },
-  { label: 'Force: lbs, Length: in', value: 1 },
-  { label: 'Force: lbs, Length: ft', value: 2 },
-  { label: 'Force: K, Length: in', value: 3 },
-  { label: 'Force: K, Length: ft', value: 4 },
-  { label: 'Force: N, Length: cm', value: 5 },
-  { label: 'Force: N, Length: m', value: 6 },
-  { label: 'Force: KN, Length: cm', value: 7 },
-  { label: 'Force: KN, Length: m', value: 8 },
+// export const selectUnits = [
+//   { label: 'Select your units', value: '' },
+//   { label: 'Force: lbs, Length: in', value: 1 },
+//   { label: 'Force: lbs, Length: ft', value: 2 },
+//   { label: 'Force: K, Length: in', value: 3 },
+//   { label: 'Force: K, Length: ft', value: 4 },
+//   { label: 'Force: N, Length: cm', value: 5 },
+//   { label: 'Force: N, Length: m', value: 6 },
+//   { label: 'Force: KN, Length: cm', value: 7 },
+//   { label: 'Force: KN, Length: m', value: 8 },
+// ];
+
+export const units = [
+  { value: 1, label: 'US (Imperial)'},
+  { value: 2, label: 'Metric'},
 ];
 
 export const forces = ['lbs', 'lbs', 'K', 'K', 'N', 'N', 'KN', 'KN'];

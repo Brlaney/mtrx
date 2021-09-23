@@ -1,12 +1,14 @@
-import React from 'react'
-import { FieldProps } from 'formik'
+import React from 'react';
+import { FieldProps } from 'formik';
 
 export const SelectOne: React.FC<
   FieldProps & {
-    label?: string;
+    value: number;
+    label: string;
+    formState: number;
     options: Array<{ label: string; value: string }>;
   }
-> = ({ field, form, label, options, ...props }) => {
+> = ({ field, form, value, label, formState, options, ...props }) => {
   return (
     <>
       <div
@@ -15,21 +17,20 @@ export const SelectOne: React.FC<
         {...props}
         {...field}
       >
-        {options.map(op => (
-          <div key={op.value} className='uk-width-1-4'>
-            <label>
+        <div className='uk-width-1-1'>
+          {options.map(op => (
+            <label key={op.value}>
               <input
                 name={op.value}
                 value={op.value}
-                className='uk-radio uk-margin'
+                className={op.formState == 1 ? 'uk-radio uk-margin active' : 'uk-radio uk-margin'}
                 type='radio'
               />
               {op.label}
             </label>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );
 };
-
