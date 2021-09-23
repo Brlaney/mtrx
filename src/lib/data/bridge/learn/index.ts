@@ -5,22 +5,22 @@ export const topics: IBridge[] = [
   { id: 2, title: 'Parapet Design', lower: 'parapet-design' },
   {
     id: 3, title: 'Deck Design', lower: 'deck-design', content: [
-      { key: 1, button: 'Overhang', name: 'overhang', disabled: 1 },
-      { key: 2, button: 'Interior Bays', name: 'interior-bays', disabled: 1 }
+      { key: 1, name: 'Overhang', link: 'overhang', disabled: 1 },
+      { key: 2, name: 'Interior Bays', link: 'interior-bays', disabled: 1 }
     ]
   },
   {
     id: 4, title: 'Precast Prestressed Concrete Girder', lower: 'precast-prestressed-concrete-girder', content: [
-      { key: 1, button: 'Interior', name: 'interior', disabled: 1 },
-      { key: 2, button: 'Exterior', name: 'exterior', disabled: 1 },
-      { key: 3, button: 'Preliminary Design', name: 'preliminary-design', disabled: 1 }
+      { key: 1, name: 'Interior', link: 'interior', disabled: 1 },
+      { key: 2, name: 'Exterior', link: 'exterior', disabled: 1 },
+      { key: 3, name: 'Preliminary Design', link: 'preliminary-design', disabled: 1 }
     ]
   },
   {
     id: 5, title: 'Steel Bridge Girders', lower: 'steel-bridge-girders', content: [
-      { key: 1, button: 'Fatigue', name: 'fatigue', disabled: 1 },
-      { key: 2, button: 'Analysis', name: 'analysis', disabled: 1 },
-      { key: 3, button: 'Preliminary Design', name: 'preliminary-design', disabled: 1 }
+      { key: 1, name: 'Fatigue', link: 'fatigue', disabled: 1 },
+      { key: 2, name: 'Analysis', link: 'analysis', disabled: 1 },
+      { key: 3, name: 'Preliminary Design', link: 'preliminary-design', disabled: 1 }
     ]
   },
   { id: 6, title: 'Pier Cap', lower: 'pier-cap' },

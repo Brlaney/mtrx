@@ -30,8 +30,10 @@ export default function Home() {
               id={styles.col}
               className='uk-width-1-3'
               whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.25, ease: [0.6, 0.4, 0.8, 0.7] }
+                position: 'relative',
+                zIndex: 1,
+                scale: 1.06,
+                transition: { duration: 0.2 }
               }}
               whileTap={{ scale: 0.95 }}
             >
@@ -48,8 +50,10 @@ export default function Home() {
               id={styles.col}
               className='uk-width-1-3'
               whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.25, ease: [0.6, 0.4, 0.8, 0.7] }
+                position: 'relative',
+                zIndex: 1,
+                scale: 1.06,
+                transition: { duration: 0.2 }
               }}
               whileTap={{ scale: 0.95 }}
             >
@@ -61,13 +65,15 @@ export default function Home() {
           </Link>
           
           {/* Link 3 - Bridge Design theory/tutorials */}
-          <Link href='/learn/bridge-design'>
+          <Link href='/bridge-design'>
             <motion.div
               id={styles.col}
               className='uk-width-1-3'
               whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.25, ease: [0.6, 0.4, 0.8, 0.7] }
+                position: 'relative',
+                zIndex: 1,
+                scale: 1.06,
+                transition: { duration: 0.2 }
               }}
               whileTap={{ scale: 0.95 }}
             >

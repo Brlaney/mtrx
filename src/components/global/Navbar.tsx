@@ -45,7 +45,7 @@ export default function Navbar () {
               </Link>
             </li>
             <li id={styles.listItem} className='uk-*'>
-              <Link href='/bridge'>
+              <Link href='/bridge-design'>
                 <a id={styles.link}>Bridge</a>
               </Link>
             </li>

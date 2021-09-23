@@ -8,7 +8,7 @@ import { IBridge } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Learn.module.scss';
 
-const Bridge = ({ topics, props: any }:
+const BridgeDesign = ({ topics, props: any }:
   InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const [topicsList] = React.useState(topics);
@@ -65,8 +65,13 @@ const Bridge = ({ topics, props: any }:
                         >
                           <motion.h3
                             className={styles.link}
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.98 }}
+                            whileHover={{
+                              position: 'relative',
+                              zIndex: 1,
+                              scale: 1.03,
+                              transition: { duration: 0.2 }
+                            }}
+                            whileTap={{ scale: 0.97 }}
                           >
                             <a className='uk-link-heading'>
                               {content.button}
@@ -84,8 +89,13 @@ const Bridge = ({ topics, props: any }:
                   >
                     <motion.h3
                       className={styles.link}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileHover={{
+                        position: 'relative',
+                        zIndex: 1,
+                        scale: 1.03,
+                        transition: { duration: 0.2 }
+                      }}
+                      whileTap={{ scale: 0.97 }}
                     >
                       <a className='uk-link-heading'>
                         {topic.title}
@@ -96,7 +106,6 @@ const Bridge = ({ topics, props: any }:
               </div>
             </motion.div>
           ))}
-
         </motion.div>
       </motion.div>
     </motion.div>
@@ -115,4 +124,4 @@ export const getStaticProps: GetStaticProps = async _context => {
   }
 };
 
-export default Bridge;
+export default BridgeDesign;

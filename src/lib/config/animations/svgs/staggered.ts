@@ -4,13 +4,17 @@ export const fadeInUp = {
   initial: {
     y: 100,
     opacity: 0,
-    transition: { duration: 0.8, ease: easing }
+    transition: {
+      delay: 0.5,
+      duration: 0.8,
+      ease: easing
+    }
   },
   animate: {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 0,
+      delay: 0.4,
       duration: 2,
       ease: easing
     }
@@ -20,7 +24,7 @@ export const fadeInUp = {
 export const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.3
+      staggerChildren: 0.6
     }
   }
 };

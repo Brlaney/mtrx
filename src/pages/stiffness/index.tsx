@@ -23,14 +23,14 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
       <GoBack link={endpoint} />
 
       {/* Page parent container */}
-      <motion.div className={styles.container} variants={stagger}>
+      <div className={styles.container}>
 
         <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
 
         {/* Header */}
         <div className={styles.header}>
           <h3 className={styles.title}>
-            Matrix structural analysis <span className={styles.span}> topics</span>
+            The <span className={styles.span}>stiffness</span> method 
           </h3>
         </div>
 
@@ -47,23 +47,24 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
                 className={styles.cardbody}
               >
                 <h2 className={styles.sectionTitle}>{topic.title}</h2>
-                <motion.div className={styles.child} variants={fadeInUp}>
+                <motion.div className={styles.child}>
                   {topic.sections && (
                     topic.sections.map((section: Isection) => (
                       <Link key={topic.id} href={section.link}>
                         <motion.div
                           className={styles.contents}
                           variants={fadeInUp}
-                        >
-                          <motion.h3
-                            className={styles.linktext}
-                            whileHover={{ scale: 1.03 }}
+                          whileHover={{
+                              position: 'relative',
+                              zIndex: 1,
+                              scale: 1.04,
+                              transition: { duration: 0.2 }
+                            }}
                             whileTap={{ scale: 0.98 }}
-                          >
-                            <a id={styles.text} className='uk-link-heading'>
-                              {section.name}
-                            </a>
-                          </motion.h3>
+                        >
+                          <motion.a id={styles.link} className='uk-link-heading'>
+                            {section.name}
+                          </motion.a>
                         </motion.div>
                       </Link>
                     ))
@@ -73,7 +74,7 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
     </motion.div>
   )
 };
