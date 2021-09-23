@@ -69,8 +69,8 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </br>
 
 <div align="center">
-  <h4><b>Animations use Framer-motion - figure 3.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/133889245-29dbd8c0-d9b1-4a92-a620-94dd60d6c367.gif" />
+  <h4><b>Framer-motion Animations and responsive design - figure 3.</b></h4>
+  <img src="https://user-images.githubusercontent.com/64326462/134567611-744b98d7-6f69-4f50-a5fd-7d98716d4519.gif" />
 </div>
 
 </br>
