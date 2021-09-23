@@ -17,7 +17,7 @@ export default function Navbar () {
         {/* Navbar title/brand - left-end of navbar */}
         <div
           id={styles.parent}
-          className='uk-navbar-left uk-margin-large-left'
+          className='uk-navbar-left uk-margin-left'
         >
           <a
             id={styles.brand}
@@ -29,24 +29,27 @@ export default function Navbar () {
         </div>
 
         {/* Navbar links - right-end of navbar */}
-        <div className='uk-navbar-right uk-margin-large-right'>
+        <div
+          id={styles.rightside}
+          className='uk-navbar-right uk-margin-right'
+        >
           <ul
             id={styles.list}
-            className='uk-navbar-nav uk-margin-large-right'
+            className='uk-navbar-nav'
           >
             <li id={styles.listItem} className='uk-*'>
               <Link href='/solver'>
-                <a id={styles.link}>Solver</a>
+                <a className={styles.link}>Solver</a>
               </Link>
             </li>
             <li id={styles.listItem} className='uk-*'>
               <Link href='/stiffness'>
-                <a id={styles.link}>Stiffness</a>
+                <a className={styles.link}>Stiffness</a>
               </Link>
             </li>
             <li id={styles.listItem} className='uk-*'>
               <Link href='/bridge-design'>
-                <a id={styles.link}>Bridge</a>
+                <a className={styles.link}>Bridge</a>
               </Link>
             </li>
           </ul>

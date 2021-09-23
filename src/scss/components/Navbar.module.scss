@@ -1,25 +1,23 @@
 @import '../theme/theme';
 
 #navbar {
+  font-family: $primary-font !important;
   #navcontainer {
     position: sticky;
     background-color: $bg-d;
     border-bottom: '1px solid $text-light';
     display: flex;
     flex-direction: row;
-
     #parent {
       #brand {
         font-family: $primary-font;
         font-size: 1.6rem;
         color: $white;
       }
-
       #brand:hover {
         text-decoration: underline;
         text-decoration-color: $secondary;
       }
-
       ul {
         color: $bg-d;
         li {
@@ -29,37 +27,36 @@
         }
       }
     }
-
-    div {
-      #listItem {
-        margin: 0 1rem 0 0;
-        padding: 0;
-      }
-
-      .navLink {
-        font-weight: bold;
-        color: $bg-dark;
-      }
-
+    #rightside {
+      font-family: $secondary-font;
       #list {
-        font-size: 2rem;
-      }
-
-      #link {
-        font-size: 1rem;
+        #listItem {
+          .link {
+            font-size: 1rem;
+            font-weight: 500;
+            color: $bg-l;
+          }
+          .link:hover {
+            color: $light;
+            text-decoration: underline;
+            text-decoration-color: $secondary;
+          }
+        }
       }
     }
   }
 }
 
 #listItem1, #listItem2, #listItem3, #listItem4 {
+  font-family: $primary-font;
   margin: 0 1rem 0 0;
   padding: 0;
 }
 
 .link1, .link2, .link3, .link4 {
-    color: $bg-d;
-  }
+  color: $bg-d;
+  font-family: $primary-font !important;
+}
 
 #listHeader {
   color: $bg-d;
