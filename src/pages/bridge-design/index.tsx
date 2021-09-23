@@ -8,9 +8,7 @@ import { IBridge } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Learn.module.scss';
 
-const BridgeDesign = ({ topics, props: any }:
-  InferGetStaticPropsType<typeof getStaticProps>
-) => {
+const BridgeDesign = ({ topics, props: any }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [topicsList] = React.useState(topics);
   const endpoint = '/';
 

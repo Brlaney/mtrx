@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
+// import { initial, pageAnimate } from '@/lib/config/animations/global'
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import Layout from '@/components/global/Layout';
