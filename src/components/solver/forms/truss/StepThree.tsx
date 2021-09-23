@@ -4,7 +4,6 @@ import Forward from '@/components/global/buttons/matrix/Forward';
 import Back from '@/components/global/buttons/matrix/Back';
 import { Formik, Form, Field } from 'formik';
 import { Selection } from '../formik-components/Selection';
-// import { SelectOne } from '../components/SelectOne';
 import styles from '@/styles/components/Steps.module.scss';
 
 const StepThree = (props) => {

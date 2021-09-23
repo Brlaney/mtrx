@@ -11,9 +11,6 @@ import {
 import { motion } from 'framer-motion';
 import Forward from '@/components/global/buttons/matrix/Forward';
 import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
-// import { Selection } from '@/components/solver/forms/formik-components/Selection';
-// import { SelectOne } from '@/components/solver/forms/formik-components/SelectOne';
-
 import { units } from '@/lib/config/forms/truss';
 import styles from '@/styles/components/Steps.module.scss';
 

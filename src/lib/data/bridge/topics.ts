@@ -10,46 +10,46 @@ export const topics: ITopicB[] = [
     ] 
   },
   {
-    id: 2, title: 'Precast Prestressed Concrete Girder', sections: [
-      { key: 1, name: 'Interior', link: 'interior-pcc' },
-      { key: 2, name: 'Exterior', link: 'exterior-pcc' },
-      { key: 3, name: 'Preliminary Design', link: 'preliminary-design' }
+    id: 2, title: 'Precast Prestressed Concrete Girders', sections: [
+      { key: 5, name: 'Interior', link: 'interior-pcc' },
+      { key: 6, name: 'Exterior', link: 'exterior-pcc' },
+      { key: 7, name: 'Preliminary Design', link: 'preliminary-design' }
     ]
   },
   {
     id: 3, title: 'Steel Bridge Girders', sections: [
-      { key: 1, name: 'Fatigue', link: 'fatigue' },
-      { key: 2, name: 'Analysis', link: 'analysis' },
-      { key: 3, name: 'Preliminary Design', link: 'preliminary-design' }
+      { key: 8, name: 'Fatigue', link: 'fatigue' },
+      { key: 9, name: 'Analysis', link: 'analysis' },
+      { key: 10, name: 'Preliminary Design', link: 'preliminary-design' }
     ]
   },
   {
     id: 4, title: 'Piers and Piles', sections: [
-      { key: 1, name: 'Pier Cap', link: 'pier-cap' },
-      { key: 2, name: 'Pier Column', link: 'pier-column' },
-      { key: 3, name: 'Pile Cap', link: 'pile-cap' }
+      { key: 11, name: 'Pier Cap', link: 'pier-cap' },
+      { key: 12, name: 'Pier Column', link: 'pier-column' },
+      { key: 13, name: 'Pile Cap', link: 'pile-cap' }
     ]
   },
   {
     id: 5, title: 'Footings, abutments, and more', sections: [
-      { id: 1, name: 'Spread Footing ', link: 'spread-footing' },
-      { id: 2, name: 'Drilled Shaft', link: 'drilled-shaft' },
-      { id: 3, name: 'Abutment Design', link: 'abutment-design' },
-      { id: 4, name: 'Standard PPC I-Beams', link: 'standard-ppc-i-beams' },
+      { key: 14, name: 'Spread Footing ', link: 'spread-footing' },
+      { key: 15, name: 'Drilled Shaft', link: 'drilled-shaft' },
+      { key: 16, name: 'Abutment Design', link: 'abutment-design' },
+      { key: 17, name: 'Standard PPC I-Beams', link: 'standard-ppc-i-beams' },
     ]
   },
   {
-    id: 6, title: 'Piers and Piles', sections: [
-      { id: 1, name: 'Miscellaneous Loads on Bridges', link: 'miscellaneous-loads-on-bridges' },
-      { id: 2, name: 'Load Combinations and Limit States', link: 'load-combinations-and-limit-states' },
-      { id: 3, name: 'Bridge Construction Stages', link: 'bridge-construction-stages' },
+    id: 6, title: 'Loads and construction', sections: [
+      { key: 18, name: 'Miscellaneous Loads on Bridges', link: 'miscellaneous-loads-on-bridges' },
+      { key: 19, name: 'Load Combinations and Limit States', link: 'load-combinations-and-limit-states' },
+      { key: 20, name: 'Bridge Construction Stages', link: 'bridge-construction-stages' },
     ]
   },
   {
     id: 7, title: 'Piers and Piles', sections: [
-      { id: 1, name: 'Interior Bay Deck Design Moments', link: 'interior-bay-deck-design-moments' },
-      { id: 2, name: 'Pile Driving Equipment', link: 'pile-driving-equipment' },
-      { id: 3, name: 'Preliminary Field Splice Design', link: 'preliminary-field-splice-design' }
+      { key: 21, name: 'Interior Bay Deck Design Moments', link: 'interior-bay-deck-design-moments' },
+      { key: 22, name: 'Pile Driving Equipment', link: 'pile-driving-equipment' },
+      { key: 23, name: 'Preliminary Field Splice Design', link: 'preliminary-field-splice-design' }
     ]
   },
 ];

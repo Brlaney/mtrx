@@ -42,3 +42,10 @@ export interface IDispl {
   id: number;
   text: string;
 };
+
+export interface INav {
+  id: number;
+  name: string;
+  link: string;
+  active: number;
+}

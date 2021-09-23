@@ -8,8 +8,7 @@ import { ITopicB, Isection } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Topics.module.scss';
 
-const BridgeDesign = (
-  { topics, props: any }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [topicsList] = React.useState(topics);
   const endpoint = '/';
 
@@ -19,16 +18,10 @@ const BridgeDesign = (
       animate='animate'
       exit={{ opacity: 0 }}
     >
-
-      {/* Render the back button component */}
       <GoBack link={endpoint} />
-
-      {/* Page parent container */}
       <div className={styles.container}>
-
         <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
 
-        {/* Header */}
         <div className={styles.header}>
           <h3 className={styles.title}>
             Bridge Design <span className={styles.span}> topics</span>
@@ -39,19 +32,17 @@ const BridgeDesign = (
         <motion.div className={styles.grid} variants={stagger}>
           {topicsList.map((topic: ITopicB) => (
             <motion.div
+              key={topic.id}
               id={topic.id < 7 ? styles.bridge : styles.stiffness}
               className={topic.id < 7 ? styles.card : styles.wideCard}
               variants={fadeInUp}
             >
-              <div
-                key={topic.id}
-                className={styles.cardbody}
-              >
+              <div className={styles.cardbody}>
                 <h2 className={styles.sectionTitle}>{topic.title}</h2>
                 <motion.div className={styles.child}>
                   {topic.sections && (
                     topic.sections.map((section: Isection) => (
-                      <Link key={topic.id} href={section.link}>
+                      <Link key={section.key} href={section.link}>
                         <motion.div
                           className={styles.contents}
                           variants={fadeInUp}

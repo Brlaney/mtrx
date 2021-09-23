@@ -1,7 +1,17 @@
+import React, { useEffect } from 'react';
 import Link from 'next/link';
+import { INav } from '@/lib/types';
 import styles from '@/styles/components/Navbar.module.scss';
 
-export default function Navbar () {
+const navLinks = [
+  { id: 1, name: 'Solver', link: '/solver', active: 0 },
+  { id: 2, name: 'Stiffness', link: '/stiffness', active: 0 },
+  { id: 3, name: 'Bridge', link: '/bridge-design', active: 0 },
+];
+
+export default function Navbar() {
+  const [active, setActive] = React.useState('');
+
   return (
     <div
       id={styles.navbar}
@@ -9,16 +19,10 @@ export default function Navbar () {
       uk-sticky='sel-target: .uk-navbar-container;
        cls-active: uk-navbar-sticky;'
     >
-      <nav
-        id={styles.navcontainer}
-        className='uk-navbar-container'
-      >
+      <nav id={styles.navcontainer} className='uk-navbar-container'>
 
         {/* Navbar title/brand - left-end of navbar */}
-        <div
-          id={styles.parent}
-          className='uk-navbar-left uk-margin-left'
-        >
+        <div id={styles.parent} className='uk-navbar-left uk-margin-left'>
           <a
             id={styles.brand}
             href='/'
@@ -28,30 +32,22 @@ export default function Navbar () {
           </a>
         </div>
 
+        {/* ATTENTION!!! NEED TO ADD ONCLICK EVENT HANDLER BELOW! */}
+
         {/* Navbar links - right-end of navbar */}
-        <div
-          id={styles.rightside}
-          className='uk-navbar-right uk-margin-right'
-        >
-          <ul
-            id={styles.list}
-            className='uk-navbar-nav'
-          >
-            <li id={styles.listItem} className='uk-*'>
-              <Link href='/solver'>
-                <a className={styles.link}>Solver</a>
-              </Link>
-            </li>
-            <li id={styles.listItem} className='uk-*'>
-              <Link href='/stiffness'>
-                <a className={styles.link}>Stiffness</a>
-              </Link>
-            </li>
-            <li id={styles.listItem} className='uk-*'>
-              <Link href='/bridge-design'>
-                <a className={styles.link}>Bridge</a>
-              </Link>
-            </li>
+        <div id={styles.rightside} className='uk-navbar-right uk-margin-right'>
+          <ul id={styles.list} className='uk-navbar-nav'>
+            {navLinks.map((navlink: INav) => (
+              <li
+                key={navlink.id}
+                id='styles.${navlink.id}'
+                className={navlink.active == 1 ? styles.active : styles.notactive}
+              >
+                <Link href={navlink.link}>
+                  <a className={styles.link}>{navlink.name}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>

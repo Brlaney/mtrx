@@ -8,7 +8,7 @@ import { ITopicS, Isection } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Topics.module.scss';
 
-const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Stiffness = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [topicsList] = React.useState(topics);
   const endpoint = '/';
 
@@ -17,40 +17,33 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
       initial='initial'
       animate='animate'
       exit={{ opacity: 0 }}
+      layout
     >
-
-      {/* Render the back button component */}
       <GoBack link={endpoint} />
-
-      {/* Page parent container */}
-      <div className={styles.container}>
-
+      <motion.div className={styles.container} variants={stagger}>
         <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
 
-        {/* Header */}
-        <div className={styles.header}>
+        <motion.div className={styles.header} variants={fadeInUp}>
           <h3 className={styles.title}>
             The <span className={styles.span}>stiffness</span> method 
           </h3>
-        </div>
+        </motion.div>
 
         {/* Dynamic topic cards */}
         <motion.div className={styles.grid} variants={stagger}>
           {topicsList.map((topic: ITopicS) => (
             <motion.div
+              key={topic.id}
               id={topic.id < 5 ? styles.stiffness : null}
               className={topic.id < 5 ? styles.card : styles.wideCard}
               variants={fadeInUp}
             >
-              <div
-                key={topic.id}
-                className={styles.cardbody}
-              >
+              <div className={styles.cardbody}>
                 <h2 className={styles.sectionTitle}>{topic.title}</h2>
                 <motion.div className={styles.child}>
                   {topic.sections && (
                     topic.sections.map((section: Isection) => (
-                      <Link key={topic.id} href={section.link}>
+                      <Link key={section.key} href={section.link}>
                         <motion.div
                           className={styles.contents}
                           variants={fadeInUp}
@@ -74,7 +67,7 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
             </motion.div>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   )
 };
