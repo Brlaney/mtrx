@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/staggered';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
-import { IStiffnessTopics, Isection } from '@/lib/types';
+import { ITopicS, Isection } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
-import styles from '@/styles/pages/Stiffness.module.scss';
+import styles from '@/styles/pages/Topics.module.scss';
 
 const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [topicsList] = React.useState(topics);
@@ -34,12 +34,12 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
           </h3>
         </div>
 
+        {/* Dynamic topic cards */}
         <motion.div className={styles.grid} variants={stagger}>
-          {/* Dynamic topic cards */}
-          {topicsList.map((topic: IStiffnessTopics) => (
+          {topicsList.map((topic: ITopicS) => (
             <motion.div
-              id={styles.cardId}
-              className={topic.id == 5 ? styles.wideCard : styles.card}
+              id={topic.id < 5 ? styles.stiffness : null}
+              className={topic.id < 5 ? styles.card : styles.wideCard}
               variants={fadeInUp}
             >
               <div
@@ -58,7 +58,7 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
                               position: 'relative',
                               zIndex: 1,
                               scale: 1.04,
-                              transition: { duration: 0.2 }
+                              transition: { duration: 0.3 }
                             }}
                             whileTap={{ scale: 0.98 }}
                         >
@@ -82,7 +82,7 @@ const Stiffness = ({ topics, props: any }: InferGetStaticPropsType<typeof getSta
 export const getStaticProps: GetStaticProps = async _context => {
   const endpoint = `${server}/api/stiffness`;
   const res = await fetch(endpoint);
-  const topics: IStiffnessTopics[] = await res.json();
+  const topics: ITopicS[] = await res.json();
 
   return {
     props: {

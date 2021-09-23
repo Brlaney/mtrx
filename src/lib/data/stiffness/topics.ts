@@ -1,6 +1,6 @@
-import { IStiffnessTopics } from '@/lib/types';
+import { ITopicS } from '@/lib/types';
 
-export const topics: IStiffnessTopics[] = [
+export const topics: ITopicS[] = [
   {
     id: 1, title: 'Introduction', sections: [
       { key: 1, name: 'Truss', link: '/stiffness/displacements/truss' },

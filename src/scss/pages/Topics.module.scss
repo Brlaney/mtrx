@@ -38,21 +38,21 @@
     align-items: center;
     flex-wrap: wrap;
     flex: 1;
-    .card {
-      width: 45%;
+    #bridge {
+      height: 200px;
+    }
+    #stiffness {
+      height: 175px;
     }
     .wideCard {
+      height: 175px;
       width: 100%;
-    }
-    #cardId {
-      min-width: 350px;
-      height: 200px;
       justify-content: center;
       align-items: center;
       border-radius: 10px;
       border: 1px solid $border-color;
-      margin: 1rem 0.2rem 0.5rem 0.2rem;
-      padding: 0 1.77rem 1.77rem 1.77rem;
+      margin: 1rem 0.2rem 0 0.2rem;
+      padding: 0 1.77rem 0 1.77rem;
       box-shadow: rgba(50, 50, 93, 0.25) 4px 6px 5px -5px,
       rgba(0, 0, 0, 0.3) 0px 6px 7px -8px;
       .cardbody {
@@ -62,22 +62,76 @@
           font-weight: 500;
           color: $secondary;
           text-align: justify;
-          margin: 1.5rem 0 0.4rem 0;
-          padding: 0 0 0.24rem 0;
+          margin: 1rem 0 0.4rem 0;
+          padding: 0.5rem 0 0.24rem 0;
           border-bottom: calc(0.3px + 0.02em) solid $bg-l;
         }
         .child {
           margin: 0;
+          padding: 0;
           display: flex;
           flex-direction: column;
           .contents {
+            z-index: 1;
             #link {
               font-family: $primary-font;
               font-size: 1.1rem;
-              margin: 0.1rem 0 0.2rem 0;
-              padding: 0.15rem 0 0.15rem 0;
+              margin: 0.5rem 0 0.5rem 0;
+              padding: 0.5rem 0 0.5rem 0;
               text-align: justify;
-              // color: $text-secondary;
+              color: $bg-m;
+            }
+            #link:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+    .card {
+      width: 45%;
+      min-width: 350px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      border: 1px solid $border-color;
+      margin: 1rem 0.2rem 0 0.2rem;
+      padding: 0 1.77rem 0 1.77rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 4px 6px 5px -5px,
+      rgba(0, 0, 0, 0.3) 0px 6px 7px -8px;
+      @include respond-below-width(sm) {
+        width: 100%; 
+      }
+      @include respond-above-width(md) {
+        width: 440px;
+      }
+      @include  respond-between-width(sm, md) {
+        width: 49%;
+      }
+      .cardbody {
+        width: 100%;
+        .sectionTitle {
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: $secondary;
+          text-align: justify;
+          margin: 1rem 0 0.4rem 0;
+          padding: 0.5rem 0 0.24rem 0;
+          border-bottom: calc(0.3px + 0.02em) solid $bg-l;
+        }
+        .child {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          .contents {
+            z-index: 1;
+            #link {
+              font-family: $primary-font;
+              font-size: 1.1rem;
+              margin: 0.5rem 0 0.5rem 0;
+              padding: 0.5rem 0 0.5rem 0;
+              text-align: justify;
               color: $bg-m;
             }
             #link:hover {

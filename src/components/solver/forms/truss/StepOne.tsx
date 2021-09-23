@@ -17,10 +17,6 @@ import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
 import { units } from '@/lib/config/forms/truss';
 import styles from '@/styles/components/Steps.module.scss';
 
-
-
-
-
 const StepOne = (props) => {
   // const [selectedUnits, setSelectedUnits] = React.useState(1);
   // const [label, setLabel] = React.useState('Imperial system (US)');

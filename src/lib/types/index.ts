@@ -15,24 +15,23 @@ export interface IBridgeComponents {
   name: string;
 };
 
-export interface IBridge {
-  id: number;
-  title: string;
-  lower: string;
-  content?: any | null | undefined;
-};
-
-export interface IStiffnessTopics {
+export interface ITopicB {
   id: number;
   title: string;
   sections?: any | null | undefined;
-}
+};
+
+export interface ITopicS {
+  id: number;
+  title: string;
+  sections?: any | null | undefined;
+};
 
 export interface Isection {
   key: number;
   name: string;
   link: string;
-}
+};
 
 export interface NodeCoordinates {
   xn: number;
