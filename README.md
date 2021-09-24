@@ -81,6 +81,9 @@ In any case, the goal of summarizing is to give your reader a clear understandin
   <img src="https://user-images.githubusercontent.com/64326462/134724824-d225b37f-18b2-4263-b4cc-dd18e4b8d253.png" alt="Homepage-mobile"  align="center" />
 </div>
 
+</br>
+</br>
+
 <div align="center">
   <h4><b>Framer-motion Animations and responsive design - figure 5.</b></h4>
   <img src="https://user-images.githubusercontent.com/64326462/134567611-744b98d7-6f69-4f50-a5fd-7d98716d4519.gif" />
