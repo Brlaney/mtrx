@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { motion } from 'framer-motion';
 import { step1 as st1 } from '@/lib/config/forms/truss';
 import { step2 as st2 } from '@/lib/config/forms/truss';
 import { step3 as st3 } from '@/lib/config/forms/truss';
@@ -50,7 +51,7 @@ const Truss: React.FC<{ props }> = () => {
 
   return (
     <div className={styles.container}>
-  
+
       <GoBack link={endpoint} />
 
       <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
@@ -66,36 +67,83 @@ const Truss: React.FC<{ props }> = () => {
 
             {/* Step 1 - System: Nodes, members, units */}
             {currentStep === 0 && (
-              <StepOne
-                step={st1}
-                data={data}
-                next={handleNextStep}
-              />
+              <motion.div
+                initial={{ x: 300, y: 0, opacity: 1 }}
+                animate={{ x: 0, y: 0, opacity: 1 }}
+                transition={{
+                  delay: 3,
+                  x: { type: 'spring', stiffness: 60, velocity: 0.1 },
+                  default: { duration: 1 },
+                }}
+                exit={{ opacity: 0, x: 200 }}
+                layout
+              >
+                <StepOne
+                  step={st1}
+                  data={data}
+                  next={handleNextStep}
+                />
+              </motion.div>
             )}
 
             {/* Step 2 - Nodal coordinates */}
             {currentStep === 1 && (
-              <StepTwo
-                step={st2}
-                data={data}
-                next={handleNextStep}
-                prev={handlePrevStep}
-              />
+              <motion.div
+                initial={{ x: 300, y: 0, opacity: 1 }}
+                animate={{ x: 0, y: 0, opacity: 1 }}
+                transition={{
+                  delay: 3,
+                  x: { type: 'spring', stiffness: 80, velocity: 1 },
+                  default: { duration: 1 },
+                }}
+                layout
+              >
+                <StepTwo
+                  step={st2}
+                  data={data}
+                  next={handleNextStep}
+                  prev={handlePrevStep}
+                />
+              </motion.div>
             )}
 
             {/* Step 3 - Boundary conditions: 
             reactions, given forces/displacements */}
             {currentStep === 2 && (
-              <StepThree
-                step={st3}
-                data={data}
-                next={handleNextStep}
-                prev={handlePrevStep}
-              />
+              <motion.div
+                initial={{ x: 300, y: 0, opacity: 1 }}
+                animate={{ x: 0, y: 0, opacity: 1 }}
+                transition={{
+                  delay: 3,
+                  x: { type: 'spring', stiffness: 80, velocity: 1 },
+                  default: { duration: 1 },
+                }}
+                layout
+              >
+                <StepThree
+                  step={st3}
+                  data={data}
+                  next={handleNextStep}
+                  prev={handlePrevStep}
+                />
+              </motion.div>
             )}
 
             {/* Completed - display the results calculated*/}
-            {currentStep === 3 &&  <Results data={data} /> }
+            {currentStep === 3 && (
+              <motion.div
+                initial={{ x: 300, y: 0, opacity: 1 }}
+                animate={{ x: 0, y: 0, opacity: 1 }}
+                transition={{
+                  delay: 3,
+                  x: { type: 'spring', stiffness: 80, velocity: 1 },
+                  default: { duration: 1 },
+                }}
+                layout
+              >
+                <Results data={data} />
+              </motion.div>
+            )}
           </div>
         </div>
       </div>

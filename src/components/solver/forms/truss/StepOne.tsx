@@ -11,7 +11,6 @@ import {
 import { motion } from 'framer-motion';
 import Forward from '@/components/global/buttons/matrix/Forward';
 import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
-import { units } from '@/lib/config/forms/truss';
 import styles from '@/styles/components/Steps.module.scss';
 
 const StepOne = (props) => {
@@ -57,12 +56,13 @@ const StepOne = (props) => {
       >
         {() => (
           <Form id={styles.form} className='uk-form-horizontal uk-margin-large'>
-            <div className={styles.row}>
 
+            {/* Row 1 */}
+            <div className={styles.row}>
               {/* Input no of members */}
               <div className='uk-width-1-2'>
                 <h6 className={styles.field}>
-                  Number of members
+                  No. of members
                 </h6>
                 <Field
                   id={styles.inputm}
@@ -79,7 +79,7 @@ const StepOne = (props) => {
               {/* Input number of nodes/connections */}
               <div className='uk-width-1-2'>
                 <h6 className={styles.field}>
-                  Number of nodes
+                  No. of nodes
                 </h6>
                 <Field
                   id={styles.inputn}
@@ -94,12 +94,12 @@ const StepOne = (props) => {
               </div>
             </div>
 
+            {/* Row 2 */}
             <div className={styles.row}>
-
               {/* Define your supports and external forces */}
-              <div className='uk-width-1-2'>
+              <div id={styles.buttonColStep1} className='uk-width-1-2'>
                 <h6 className={styles.field}>
-                  Number of reactions
+                  No. of support reactions
                 </h6>
                 <Field
                   id={styles.inputr}
@@ -115,54 +115,56 @@ const StepOne = (props) => {
 
               {/* Select your type of units */}
               <div id={styles.radio} className='uk-width-1-2'>
-                <h6 className={styles.field}>Units</h6>
                 <div className={styles.col}>
+                  <h6 className={styles.field}>Units</h6>
+                </div>
+                <div className={styles.row}>
                   <label className={styles.radiolabel}>
                     <input
-                      id={styles.inputu}
+                      id={styles.imperial}
                       className='uk-radio'
                       type='radio'
                       name='units'
                       value='imperial'
                       aria-label='Imperial (US)'
-                    />
-                    Imperial (US)
+                    /> Imperial
                   </label>
-                </div>
-                <div className={styles.col}>
-                  <label>
+                  <label className={styles.radiolabel}>
                     <input
+                      id={styles.metric}
                       className='uk-radio'
                       type='radio'
                       name='units'
                       value='metric'
                       aria-label='Metric (SI)'
-                    />
-                    Metric (SI)
+                    />  Metric
                   </label>
                 </div>
               </div>
             </div>
 
-            <div className='formButton'>
-              <motion.button
-                id={styles.iconButton}
-                type='submit'
-                className='uk-button uk-align-right'
-                whileHover={{
-                  scale: 1.08,
-                  transition: {
-                    duration: .2
-                  }
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Forward props={props} />
-              </motion.button>
+            <div className={styles.row}>
+              <div className={styles.buttonRight}>
+                <motion.button
+                  id={styles.iconButton}
+                  type='submit'
+                  className='uk-button uk-align-right'
+                  whileHover={{
+                    zIndex: 1,
+                    scale: 1.05,
+                    transition: {
+                      duration: .3
+                    }
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Forward props={props} />
+                </motion.button>
+              </div>
             </div>
           </Form>
         )}
-      </Formik>
+    </Formik>
     </>
   )
 };

@@ -6,16 +6,20 @@ export const data = {
       label: 'Continuous beam',
       data: [
         { x: 0, y: 0, },
-        { x: 5, y: 0, },
-        { x: 10, y: 0, },
-        { x: 20, y: 0, },
-        { x: 30, y: 0 }
+        { x: 10, y: 10, },
+        { x: 20, y: 10, },
+        { x: 30, y: 0, },
+        { x: 10, y: 10, },
+        { x: 0, y: 0, },
+        { x: 20, y: 10, },
       ],
       backgroundColor: 'rgba(41, 105, 255, 0.2)',
-      borderColor: 'rgba(41, 105, 255, 1)',
+      borderColor: 'rgba(52, 58, 64, 0.5)',
+      borderDash: [10],
+      hitRadius: 5,
       borderWidth: 1,
-      pointRadius: 2,
-      pointHoverRadius: 4,
+      pointRadius: 4,
+      pointHoverRadius: 7,
       yAxisID: 'y'
     },
     {
@@ -23,18 +27,20 @@ export const data = {
       label: 'Deformation',
       data: [
         { x: 0, y: 0, },
-        { x: 5, y: -0.1, },
-        { x: 10, y: 0, },
-        { x: 20, y: 0.16, },
-        { x: 30, y: 0 }
+        { x: 10.34, y: 9.4, },
+        { x: 20.2, y: 10.15, },
+        { x: 30, y: 0, },
+        { x: 10.34, y: 9.4, },
+        { x: 0, y: 0, },
+        { x: 20.2, y: 10.15, },
       ],
-      fill: true,
-      backgroundColor: 'rgba(191, 26, 47, 0.2)',
+      backgroundColor: 'rgba(191, 26, 47, 0.5)',
       borderColor: 'rgba(191, 26, 47, 1)',
+      hitRadius: 5,
       borderWidth: 1,
-      pointRadius: 2,
-      pointHoverRadius: 4,
-      lineTension: 0.25,
+      pointRadius: 4,
+      pointHoverRadius: 7,
+      // lineTension: -0.05,
       yAxisID: 'y'
     },
   ]
@@ -45,10 +51,6 @@ export const config = {
   data: data,
   options: {
     responsive: true,
-    interaction: {
-      mode: 'index',
-      intersect: true,
-    },
     stacked: false,
     layout: {
       padding: '10px',
@@ -60,16 +62,12 @@ export const config = {
       },
     }
   },
-  interaction: {
-    mode: 'index',
-    intersect: false
-  },
   scales: {
     x: {
       type: 'linear',
       display: true,
-      max: 35,
-      min: -5,
+      max: 40,
+      min: -10,
       ticks: {
         stepSize: 5,
         callback: function (value) {
@@ -81,8 +79,8 @@ export const config = {
       type: 'linear',
       display: true,
       position: 'left',
-      max: 2,
-      min: -2,
+      max: 15,
+      min: -5,
       ticks: {
         stepSize: 1,
         callback: function (value) {

@@ -9,8 +9,9 @@ export const Dotnav: React.FC<{ step }> = ({ step }) => {
           {step.map(value => (
             <li
               id={value.key}
-              className={value.classname}>
-              <a id='isa'>{value.name}</a>
+              className={value.classname}
+            >
+              <a className={value.classname}>{value.name}</a>
             </li>
           ))}
         </ul>

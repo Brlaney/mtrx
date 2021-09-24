@@ -1,22 +1,21 @@
 import Frames from '@/components/stiffness/deformations/Frames';
 import styles from '@/styles/pages/Charts.module.scss';
+import { motion } from 'framer-motion';
 import GoBack from '@/components/global/buttons/GoBack';
 
 export default function Frame() {
   const endpoint = '/stiffness';
 
   return (
-    <>
-      {/* Render the back button component */}
+    <motion.div className={styles.container}>
       <GoBack link={endpoint} />
-
-      {/* Page parent container */}
-      <div className={styles.container}>
+      <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
+      <div className={styles.parent}>
 
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.title}>
-            Frame example
+            Frame deformation graph
           </h1>
         </div>
 
@@ -30,6 +29,6 @@ export default function Frame() {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   )
 }

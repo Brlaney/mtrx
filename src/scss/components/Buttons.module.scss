@@ -50,43 +50,63 @@
   justify-content: center;
   align-items: center;
   flex: 1;
+  #dotnavInner {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 400px;
+    height: 30px;
+    vertical-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    .active {
+      background-color: $secondary;
+      width: 80px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      margin: auto;
+      padding: auto;
+      .active {
+        background-color: $secondary;
+        width: 80px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        margin: auto;
+        padding: auto;
+      }
+    }
+    .notactive {
+      background-color: transparent;
+      width: 80px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      margin: auto;
+      padding: auto;
+      .notactive {
+        background-color: transparent;
+        width: 80px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        margin: auto;
+        padding: auto;
+      }
+    }
+  }
 }
 
 #dotnav:hover {
   cursor: none;
 }
 
-#dotnavInner {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 400px;
-  height: 30px;
-  vertical-align: center;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5rem;
-}
-
-#is {
-  width: 80px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  margin: auto;
-  padding: auto;
-}
-
-#not {
-  width: 80px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  margin: auto;
-  padding: auto;
-}
 
 #not:hover {
   cursor: none;

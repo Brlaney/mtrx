@@ -6,16 +6,17 @@ export const data = {
       label: 'Continuous beam',
       data: [
         { x: 0, y: 0, },
-        { x: 5, y: 0, },
+        { x: 0, y: 25, },
+        { x: 10, y: 25, },
         { x: 10, y: 0, },
-        { x: 20, y: 0, },
-        { x: 30, y: 0 }
       ],
       backgroundColor: 'rgba(41, 105, 255, 0.2)',
-      borderColor: 'rgba(41, 105, 255, 1)',
+      borderColor: 'rgba(52, 58, 64, 0.5)',
+      borderDash: [10],
+      hitRadius: 4,
       borderWidth: 1,
-      pointRadius: 2,
-      pointHoverRadius: 4,
+      pointRadius: 3,
+      pointHoverRadius: 5,
       yAxisID: 'y'
     },
     {
@@ -23,18 +24,18 @@ export const data = {
       label: 'Deformation',
       data: [
         { x: 0, y: 0, },
-        { x: 5, y: -0.1, },
-        { x: 10, y: 0, },
-        { x: 20, y: 0.16, },
-        { x: 30, y: 0 }
+        { x: 0.16, y: 23.97, },
+        { x: 10.5, y: 24.95, },
+        { x: 10, y: 0, }
       ],
-      fill: true,
+      // fill: true,
       backgroundColor: 'rgba(191, 26, 47, 0.2)',
       borderColor: 'rgba(191, 26, 47, 1)',
+      hitRadius: 4,
       borderWidth: 1,
-      pointRadius: 2,
-      pointHoverRadius: 4,
-      lineTension: 0.25,
+      pointRadius: 3,
+      pointHoverRadius: 5,
+      lineTension: -0.05,
       yAxisID: 'y'
     },
   ]
@@ -72,8 +73,8 @@ export const config = {
     x: {
       type: 'linear',
       display: true,
-      max: 35,
-      min: -5,
+      max: 20,
+      min: -10,
       ticks: {
         stepSize: 5,
         callback: function (value) {
@@ -85,12 +86,12 @@ export const config = {
       type: 'linear',
       display: true,
       position: 'left',
-      max: 2,
-      min: -2,
+      max: 30,
+      min: -10,
       ticks: {
-        stepSize: 1,
+        stepSize: 5,
         callback: function (value) {
-          return value + ' in';
+          return value + ' ft';
         }
       },
     },

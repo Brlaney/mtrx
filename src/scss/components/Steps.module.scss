@@ -20,68 +20,79 @@
   display: flex;
   flex-direction: column;
   min-height: 300px;
-  padding: 0.5rem 2rem 0 2rem;
   justify-content: center;
   align-items: center;
   border-radius: 7px;
+  padding: 1.5rem 2rem 0.3rem 2rem;
   margin: 2rem 0 1.5rem 0;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 18px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 12px -8px;
+  #steptwo {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
   .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 0.4rem 0 0.8rem 0;
+    margin: 0.4rem 0 0.4rem 0;
     #radio {
-      height: 100%;
+      width: 50%;
       display: flex;
       flex-direction: column;
-      .field {
+      align-items: flex-start;
+      .col {
         width: 100%;
+        padding: 0 0 0.5rem 1rem;
+        .field {
+          margin: 0.2rem 0 0.2rem 0;
+          padding: 0.2rem 0 0 0;
+          width: 100%;
+        }
       }
       .radiolabel {
+        margin: 0 0 0 0.4rem;
+        padding: 0 0 0.5rem 0.7rem;
         width: 100%;
+        color: $bg-d-700;
+        #imperial {
+          padding: 0;
+        }
       }
     }
-  }
-  .formButton {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
-    button {
-      padding: 0;
-      border-radius: 3px;
-      width: 76px;
-      height: 38px;
-      align-self: flex-start;
-      background-color: $secondary;
-    }
-    #iconButton {
-      padding: 0;
-      border-radius: 3px;
-      width: 76px;
-      height: 38px;
-      align-self: flex-start;
-      background-color: $secondary;
+    .buttonRight {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0.3rem 0 0 0;
+      justify-content: flex-end;
+      align-items: flex-end;
     }
   }
 }
+
 #inputm, #inputn, #inputr {
   width: 100%;
   margin: 0.6rem 0 0.6rem 0;
 }
+
 .field {
   color: $text-secondary;
   font-size: 1.1rem;
   margin: 0;
-  padding: 0.5rem 0 0.3rem 0;
+  padding: 0.75rem 0 0 0;
   text-align: left;
 }
-#isa {
-  background-color: $ui-primary;
+
+#iconButton {
+  padding: 0;
+  border-radius: 3px;
+  width: 76px;
+  height: 38px;
+  align-self: flex-end;
+  background-color: $secondary;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 10px -5px,
+  rgba(0, 0, 0, 0.3) 0px 6px 4px -5px;
 }
