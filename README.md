@@ -54,22 +54,35 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Homepage (desktop) - figure 1.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/133890461-9b39db9f-989a-49d6-8217-8b91810e8ced.png" alt="Homepage-desktop" style="width: 502px" align="center" />
+  <img src="https://user-images.githubusercontent.com/64326462/134724586-54de6d33-2256-4a51-9d3e-2588113cf988.png" alt="Homepage-desktop" style="width: 502px" align="center" />
 </div>
 
 </br>
 </br>
 
 <div align="center">
-  <h4><b>Homepage (mobile) - figure 2.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/133890530-dcf45c5b-c4a5-4bf5-bb15-46b837ca7154.png" alt="Homepage-mobile" style="height: 40%;" align="center" />
+  <h4><b>Truss deformation - figure 2.</b></h4>
+  <img src="https://user-images.githubusercontent.com/64326462/134724423-c10d5857-a5f1-42ba-93b7-064a105700a9.png" alt="Homepage-mobile" style="height: 40%;" align="center" />
 </div>
 
 </br>
 </br>
 
 <div align="center">
-  <h4><b>Framer-motion Animations and responsive design - figure 3.</b></h4>
+  <h4><b>Beam deformation - figure 3.</b></h4>
+  <img src="https://user-images.githubusercontent.com/64326462/134724418-f1d49387-073a-4223-aaaa-94f38e9cfd3f.png" alt="Homepage-mobile" style="height: 40%;" align="center" />
+</div>
+
+</br>
+</br>
+
+<div align="center">
+  <h4><b>Frame deformation - figure 4.</b></h4>
+  <img src="https://user-images.githubusercontent.com/64326462/134724420-25f76f2a-0dcc-458c-bef2-53f4c6c2790c.png" alt="Homepage-mobile" style="height: 40%;" align="center" />
+</div>
+
+<div align="center">
+  <h4><b>Framer-motion Animations and responsive design - figure 5.</b></h4>
   <img src="https://user-images.githubusercontent.com/64326462/134567611-744b98d7-6f69-4f50-a5fd-7d98716d4519.gif" />
 </div>
 
@@ -77,8 +90,8 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 </br>
   
 <div align="center">
-  <h4><b>Matrix displacement solver form - figure 4.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/133891006-5d7c9a2e-7a31-4fe4-9c31-d82cd1ccfa49.gif" />
+  <h4><b>Visualize deformations - figure 6.</b></h4>
+  <img src="https://user-images.githubusercontent.com/64326462/134724525-a7463f65-4986-464d-b305-584b27eabb4b.gif" />
 </div>
 
 </br>
