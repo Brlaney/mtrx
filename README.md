@@ -54,7 +54,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Homepage (desktop) - figure 1.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/134724980-d1f4154d-cebc-46fb-b858-13619afa8518.png" alt="Homepage-desktop" style="width: 50%" align="center" />
+  <img src="https://user-images.githubusercontent.com/64326462/134724980-d1f4154d-cebc-46fb-b858-13619afa8518.png" alt="Homepage-desktop"  align="center" />
 </div>
 
 </br>
@@ -62,7 +62,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Truss deformation - figure 2.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/134724827-af72a1c0-87c1-4493-9696-6b4b62abf176.png" alt="Homepage-mobile" style="width: 50%" align="center" />
+  <img src="https://user-images.githubusercontent.com/64326462/134724827-af72a1c0-87c1-4493-9696-6b4b62abf176.png" alt="Homepage-mobile"  align="center" />
 </div>
 
 </br>
@@ -70,7 +70,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Beam deformation - figure 3.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/134724822-58fc4eba-5e64-43a1-aa85-d78f843ae770.png" alt="Homepage-mobile" style="width: 50%" align="center" />
+  <img src="https://user-images.githubusercontent.com/64326462/134724822-58fc4eba-5e64-43a1-aa85-d78f843ae770.png" alt="Homepage-mobile"  align="center" />
 </div>
 
 </br>
@@ -78,7 +78,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Frame deformation - figure 4.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/134724824-d225b37f-18b2-4263-b4cc-dd18e4b8d253.png" alt="Homepage-mobile" style="width: 50%" align="center" />
+  <img src="https://user-images.githubusercontent.com/64326462/134724824-d225b37f-18b2-4263-b4cc-dd18e4b8d253.png" alt="Homepage-mobile"  align="center" />
 </div>
 
 <div align="center">
