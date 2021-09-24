@@ -42,7 +42,11 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
                 <motion.div className={styles.child}>
                   {topic.sections && (
                     topic.sections.map((section: Isection) => (
-                      <Link key={section.key} href={section.link}>
+                      <Link
+                        key={section.key}
+                        href={section.link}
+                        as='/bridge-design/topics/[link]'
+                      >
                         <motion.div
                           className={styles.contents}
                           variants={fadeInUp}
@@ -72,7 +76,7 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
 };
 
 export const getStaticProps: GetStaticProps = async _context => {
-  const endpoint = `${server}/api/bridge/topics`;
+  const endpoint = `${server}/api/bridge-design/topics`;
   const res = await fetch(endpoint);
   const topics: ITopicB[] = await res.json();
 

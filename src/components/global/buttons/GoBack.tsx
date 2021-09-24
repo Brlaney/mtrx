@@ -5,13 +5,17 @@ import styles from '@/styles/components/Buttons.module.scss';
 
 const GoBack = ({ link }) => {
   return (
-    <motion.div>
+    <motion.div layout>
       <Link href={link}>
         <motion.button
           id={styles.goback}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 1.05 }}
-          className='uk-button uk-button-default uk-button-small uk-align-left'
+          whileHover={{
+            zIndex: 1,
+            scale: 1.06,
+            transition: { duration: 0.2, easing: 'ease'}
+          }}
+          whileTap={{ scale: 0.9 }}
+          className='uk-button uk-button-small uk-align-left'
         >
           <IoReturnUpBackOutline
             className={styles.backIcon}

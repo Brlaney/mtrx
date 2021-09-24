@@ -30,17 +30,25 @@
     #rightside {
       font-family: $secondary-font;
       #list {
-        #listItem {
-          .link {
-            font-size: 1rem;
-            font-weight: 500;
-            color: $bg-l;
-          }
-          .link:hover {
-            color: $light;
-            text-decoration: underline;
-            text-decoration-color: $secondary;
-          }
+        .active {
+          font-size: 1rem;
+          font-weight: 500;
+          color: $light;
+        }
+        .notactive {
+          font-size: 1rem;
+          font-weight: 500;
+          color: $bg-d;
+        }
+        .active:hover {
+          color: $text-light;
+          text-decoration: underline;
+          text-decoration-color: $secondary;
+        }
+        .notactive:hover {
+          color: $light;
+          text-decoration: underline;
+          text-decoration-color: $secondary;
         }
       }
     }

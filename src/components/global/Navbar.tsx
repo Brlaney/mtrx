@@ -40,11 +40,16 @@ export default function Navbar() {
             {navLinks.map((navlink: INav) => (
               <li
                 key={navlink.id}
-                id='styles.${navlink.id}'
-                className={navlink.active == 1 ? styles.active : styles.notactive}
+                // id='styles.${navlink.id}'
+                className={navlink.name === active ? styles.active : styles.notactive}
               >
                 <Link href={navlink.link}>
-                  <a className={styles.link}>{navlink.name}</a>
+                  <a
+                    className={styles.link}
+                    onClick={() => { setActive(navlink.name) }}
+                  >
+                    {navlink.name}
+                  </a>
                 </Link>
               </li>
             ))}

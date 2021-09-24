@@ -2,7 +2,7 @@ import GoBack from '@/components/global/buttons/GoBack'
 import styles from '@/styles/pages/Bridge.module.scss'
 
 const Lower = ({props}) => {
-  const endpoint = '/bridge';
+  const endpoint = '/bridge-design';
 
   console.log(props.topic);
 
