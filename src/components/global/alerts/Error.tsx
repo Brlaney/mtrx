@@ -1,13 +1,23 @@
+
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '@/lib/config/animations/svgs/staggered';
 import styles from '@/styles/components/Alerts.module.scss';
+
 
 const Error = ({ props }) => {
   return (
-    <>
-      <div
+    <motion.div
+      initial='initial'
+      animate='animate'
+      exit={{ opacity: 0 }}
+      layout
+    >
+      <motion.div
         id={styles.formErrorAlert}
-        className='uk-alert-danger'
+        className='uk-alert-danger uk-width-1-2'
         uk-alert
+        variants={fadeInUp}
         {...props}
       >
         <a className='uk-alert-close' uk-close />
@@ -15,8 +25,8 @@ const Error = ({ props }) => {
           Your system is either unstable or determinant.
           Therefore, the matrix displacement method cannot be implemented.
         </p>
-      </div>
-    </>
+      </motion.div>
+    </motion.div>
   )
 }
 

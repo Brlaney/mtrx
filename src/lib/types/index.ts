@@ -48,4 +48,9 @@ export interface INav {
   name: string;
   link: string;
   active: number;
-}
+};
+
+export interface ISteps {
+  id: number;
+  title: string;
+};

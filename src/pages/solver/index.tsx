@@ -41,7 +41,6 @@ const Solver = () => {
               onMouseEnter={() => setName('Truss')}
               onMouseLeave={() => setName('')}
               whileHover={{
-                position: 'relative',
                 zIndex: 1,
                 scale: 1.03,
                 transition: { duration: 0.2 }
@@ -57,12 +56,11 @@ const Solver = () => {
               onMouseEnter={() => setName('Beam')}
               onMouseLeave={() => setName('')}
               whileHover={{
-                position: 'relative',
                 zIndex: 1,
-                scale: 1.06,
+                scale: 1.03,
                 transition: { duration: 0.2 }
               }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.97 }}
             >
               <Beam />
             </motion.div>
@@ -73,12 +71,11 @@ const Solver = () => {
               onMouseEnter={() => setName('Frame')}
               onMouseLeave={() => setName('')}
               whileHover={{
-                position: 'relative',
                 zIndex: 1,
-                scale: 1.06,
+                scale: 1.03,
                 transition: { duration: 0.2 }
               }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.97 }}
             >
               <Frame />
             </motion.div>

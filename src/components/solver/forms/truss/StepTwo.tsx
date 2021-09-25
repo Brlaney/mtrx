@@ -15,7 +15,7 @@ import styles from '@/styles/components/Steps.module.scss';
 let nodeMatrix = [];
 
 const StepTwo = (props) => {
-  const [displayAlert, setDisplayAlert] = React.useState(0);
+  const [show, setShow] = React.useState(0);
   const [btnState, setBtnState] = React.useState(0);
   const [unitIndex] = React.useState(props.data.units - 1);
   const [m] = React.useState(props.data.members);
@@ -24,21 +24,24 @@ const StepTwo = (props) => {
   const [forceUnits, setForceUnits] = React.useState('');
   const [lengthUnits, setLengthUnits] = React.useState('');
 
+  const delay = 5;
   const check = trussCheck(m, n, r);
-  // const degreeOfIndeterminancy = check[2];
 
   /* The following useEffect hook will set the display alert state variable
   to truthy if the system is indeterminate and falsey if else. */
   useEffect(() => {
     if (check[0] > check[1]) {
-      setDisplayAlert(1);
+      let timer1 = setTimeout(() => setShow(1), delay * 2500);
       const degree = check[2];
-      return degree;
+      clearTimeout(timer1);
+      return [timer1, degree];
     } else {
-      setDisplayAlert(0);
-      setBtnState(1);
-    };
-  });
+      let timer1 = setTimeout(() => setShow(2), delay * 2500);
+      clearTimeout(timer1);
+      return timer1;
+    }
+  }, []
+  );
 
   // UseEffect hook to assemble node coordinate matrix
   useEffect(() => {
@@ -103,11 +106,11 @@ const StepTwo = (props) => {
         {({ values }) => (
           <Form id={styles.form} className='uk-form-horizontal uk-margin-large'>
 
-            {displayAlert != 0 && (
+            {show == 1 && (
               <Success props={props} />
             )}
 
-            {displayAlert == 0 && (
+            {show == 2 && (
               <Error props={props} />
             )}
 
