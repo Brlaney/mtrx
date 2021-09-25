@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import * as yup from 'yup';
-import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
 import { Formik, Form, Field } from 'formik';
@@ -15,8 +14,6 @@ import styles from '@/styles/components/Steps.module.scss';
 let nodeMatrix = [];
 
 const StepTwo = (props) => {
-  const [show, setShow] = React.useState(0);
-  const [btnState, setBtnState] = React.useState(0);
   const [unitIndex] = React.useState(props.data.units - 1);
   const [m] = React.useState(props.data.members);
   const [n] = React.useState(props.data.nodes);
@@ -24,24 +21,19 @@ const StepTwo = (props) => {
   const [forceUnits, setForceUnits] = React.useState('');
   const [lengthUnits, setLengthUnits] = React.useState('');
 
-  const delay = 5;
+  let timer: null | ReturnType<typeof setTimeout> = null
+
   const check = trussCheck(m, n, r);
+  const [show, setShow] = React.useState(check);
 
   /* The following useEffect hook will set the display alert state variable
   to truthy if the system is indeterminate and falsey if else. */
   useEffect(() => {
-    if (check[0] > check[1]) {
-      let timer1 = setTimeout(() => setShow(1), delay * 2500);
-      const degree = check[2];
-      clearTimeout(timer1);
-      return [timer1, degree];
-    } else {
-      let timer1 = setTimeout(() => setShow(2), delay * 2500);
-      clearTimeout(timer1);
-      return timer1;
+    if (show == 1) {
+      let timer = setTimeout(() => setShow(0), 5000);
+      clearTimeout(timer);
     }
-  }, []
-  );
+  }, []);
 
   // UseEffect hook to assemble node coordinate matrix
   useEffect(() => {
@@ -52,7 +44,7 @@ const StepTwo = (props) => {
       let c2 = 'y' + addNum1;
 
       nodeMatrix[i] = [j, c1, c2];
-    }
+    };
   }, []);
 
   // UseEffect hook to map the proper units selected
@@ -106,18 +98,17 @@ const StepTwo = (props) => {
         {({ values }) => (
           <Form id={styles.form} className='uk-form-horizontal uk-margin-large'>
 
-            {show == 1 && (
-              <Success props={props} />
-            )}
-
-            {show == 2 && (
-              <Error props={props} />
-            )}
+            {show == 1 && <Success props={props} />}
+            {show == 2 && <Error props={props} />}
 
             {/* Iterate n times (where n = {number of nodes})
               and display xn, yn coordinate inputs for the user */}
             {nodeMatrix.map((index: number) => (
-              <div id={styles.steptwo} className={styles.row}>
+              <div
+                key={index}
+                id={styles.steptwo}
+                className={styles.row}
+              >
                 <div
                   key={`nodeMatrix[index]`}
                   className='uk-width-1-3'
@@ -163,37 +154,20 @@ const StepTwo = (props) => {
               >
                 <Back props={props} />
               </motion.button>
-              {btnState == 1
-                ?
-                <motion.button
-                  id={styles.disabledBtn}
-                  type='submit'
-                  className='uk-button uk-align-right'
-                  whileHover={{
-                    scale: 0.90,
-                    transition: {
-                      duration: .9
-                    }
-                  }}
-                >
-                  <Forward props={props} />
-                </motion.button>
-                :
-                <motion.button
-                  id={styles.iconButton}
-                  type='submit'
-                  className='uk-button uk-align-right'
-                  whileHover={{
-                    scale: 1.1,
-                    transition: {
-                      duration: .2
-                    }
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Forward props={props} />
-                </motion.button>
-              }
+              <motion.button
+                id={styles.iconButton}
+                type='submit'
+                className='uk-button uk-align-right'
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Forward props={props} />
+              </motion.button>
             </div>
           </Form>
         )}

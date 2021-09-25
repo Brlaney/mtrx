@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { fadeInUp } from '@/lib/config/animations/svgs/staggered';
+import { popUp } from '@/lib/config/animations/alert';
 import styles from '@/styles/components/Alerts.module.scss';
 
 const Success = ({ props }) => {
@@ -15,10 +15,10 @@ const Success = ({ props }) => {
         id={styles.formSuccessAlert}
         className='uk-alert-success uk-width-1-2'
         uk-alert
-        variants={fadeInUp}
+        variants={popUp}
         {...props}
         >
-        <a className='uk-alert-close' uk-close />
+        <a className='uk-alert-close' uk-close='true' />
         <p className={styles.successMessage}>
           Your system is able to be solved by the matrix displacement method.
           The degree of indeterminancy is.

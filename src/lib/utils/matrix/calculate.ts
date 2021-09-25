@@ -90,5 +90,11 @@ export function trussCheck(m, n, r) {
   // Degree of indeterminancy:
   let d = r + m - 2 * n;
 
-  return [lhs, rhs, d];
+  if (lhs > rhs) {
+    // 1 implies success
+    return 1;
+  } else if (lhs <= rhs) {
+    // 2 implies error
+    return 2;
+  }
 };
