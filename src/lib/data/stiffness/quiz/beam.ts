@@ -1,7 +1,7 @@
 export const questions = [
   {
     questionText:
-      'How many websites do you think Facebook saves for an average/infrequent user?',
+      'How many degrees of freedom does a Truss system have?',
     answerOptions: [
       { answerText: '50', isCorrect: false },
       { answerText: '100', isCorrect: false },
@@ -11,7 +11,7 @@ export const questions = [
   },
   {
     questionText:
-      "How many tweets were created in January 2021 containing the word 'qanon'?",
+      'How many degrees of freedom does a Beam system have?',
     answerOptions: [
       { answerText: '500', isCorrect: false },
       { answerText: '5000', isCorrect: false },

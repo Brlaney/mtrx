@@ -31,13 +31,16 @@
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
   }
-  .row {
+  #btnrow {
+    margin-top: 1rem;
+  }
+  .row, #button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 0.4rem 0 0.4rem 0;
+    margin-bottom: 0.4rem;
     #radio {
       width: 50%;
       display: flex;

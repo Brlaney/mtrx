@@ -44,11 +44,7 @@ const StepTwo = (props) => {
   useEffect(() => {
     for (let i = 0; i < n; i++) {
       let j = i + 1;
-      let addNum1 = j.toString();
-      let c1 = 'x' + addNum1;
-      let c2 = 'y' + addNum1;
-
-      nodeMatrix[i] = [j, c1, c2];
+      nodeMatrix[i] = [j];
     };
   }, [nodeMatrix]);
 
@@ -108,18 +104,12 @@ const StepTwo = (props) => {
 
             {/* Iterate n times (where n = {number of nodes})
               and display xn, yn coordinate inputs for the user */}
-            {nodeMatrix.map((index: number) => (
-              <div
-                key={index}
-                id={styles.steptwo}
-                className={styles.row}
-              >
-                <div
-                  key={`nodeMatrix[index]`}
-                  className='uk-width-1-3'
-                >
+            {nodeMatrix.map((j: number) => (
+              <div key={j} id={styles.steptwo} className={styles.row}>
+                <div className='uk-width-2-3'>
                   <h6 className={styles.field}>
-                    Node {nodeMatrix[index]} coordinates</h6>
+                    Coordinates for Node {j}
+                  </h6>
                 </div>
                 <div className='uk-width-1-3'>
                   <Field
@@ -127,16 +117,14 @@ const StepTwo = (props) => {
                     id={styles.input}
                     className='uk-input'
                     type='text'
-                    placeholder='x1'
+                    placeholder=
                   />
-                </div>
-                <div className='uk-width-1-3'>
                   <Field
                     name='y1'
                     id={styles.input}
                     className='uk-input'
                     type='text'
-                    placeholder='y1'
+                    placeholder=''
                   />
                 </div>
               </div>
@@ -163,6 +151,7 @@ const StepTwo = (props) => {
                 id={styles.iconButton}
                 type='submit'
                 className='uk-button uk-align-right'
+                onClick={() => props.next(values)}
                 whileHover={{
                   scale: 1.1,
                   transition: {

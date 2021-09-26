@@ -139,7 +139,7 @@ const StepOne = (props) => {
               </div>
             </div>
 
-            <div className={styles.row}>
+            <div id={styles.btnrow} className={styles.row}>
               <div className={styles.buttonRight}>
                 <motion.button
                   id={styles.iconButton}
