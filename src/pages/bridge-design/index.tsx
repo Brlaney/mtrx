@@ -19,14 +19,14 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
       exit={{ opacity: 0 }}
     >
       <GoBack link={endpoint} />
-      <div className={styles.container}>
+      <motion.div className={styles.container} variants={stagger}>
         <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
 
-        <div className={styles.header}>
+        <motion.div className={styles.header} variants={fadeInUp}>
           <h3 className={styles.title}>
             Bridge Design <span className={styles.span}> topics</span>
           </h3>
-        </div>
+        </motion.div>
 
         {/* Dynamic topic cards */}
         <motion.div className={styles.grid} variants={stagger}>
@@ -70,7 +70,7 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
             </motion.div>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   )
 };

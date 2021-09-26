@@ -30,7 +30,7 @@ const Stiffness = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>) =
         </motion.div>
 
         {/* Dynamic topic cards */}
-        <motion.div className={styles.grid} variants={stagger}>
+        <motion.div className={styles.grid} variants={fadeInUp}>
           {topicsList.map((topic: ITopicS) => (
             <motion.div
               key={topic.id}

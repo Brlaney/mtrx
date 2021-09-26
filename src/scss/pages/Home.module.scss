@@ -2,7 +2,7 @@
 @import '../mixins/width.scss';
 @import '../mixins/height.scss';
 
-.parent {
+.container {
   height: 100%;
   width: 100vw;
   color: $bg-d;
@@ -88,7 +88,7 @@
         }  
       }
     }
-    #col {
+    #col1, #col2, #col3 {
       display: flex;
       flex-direction: column;
       align-items: center;

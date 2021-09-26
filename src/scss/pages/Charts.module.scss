@@ -55,16 +55,6 @@
         line-height: 2;
       }
     }
-    .subheader {
-      margin-top: 2.5rem;
-      width: 83%;
-      .states {
-        text-align: center;
-        border-bottom: 1px solid $bg-m;
-        margin-bottom: 1.44rem;
-        padding-bottom: 0.44rem;
-      }
-    }
     .listContainer {
       display: flex;
       flex-direction: row;
@@ -81,13 +71,11 @@
     .chartContainer {
       margin: 0;
       padding: 0;
-      min-width: 500px;
       height: 600px;
     }
     .chartContainerWide {
       margin: 0;
       padding: 0;
-      min-width: 800px;
       height: 600px;
     }
   }

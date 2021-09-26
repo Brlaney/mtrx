@@ -24,6 +24,7 @@ export const fadeInUp = {
 export const stagger = {
   animate: {
     transition: {
+      delay: 0.2,
       staggerChildren: 0.6
     }
   }
