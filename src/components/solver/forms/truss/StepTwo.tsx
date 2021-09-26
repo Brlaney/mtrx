@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import * as React from 'react';
+import { useEffect } from 'react';
 import * as yup from 'yup';
 import { motion } from 'framer-motion';
-import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
+// import Dotnav from '@/components/global/buttons/matrix/Dotnav';
 import { Formik, Form, Field } from 'formik';
 import { forces, lengths } from '@/lib/config/forms/truss';
 import { trussCheck } from '@/lib/utils/matrix/calculate';
@@ -21,17 +22,21 @@ const StepTwo = (props) => {
   const [forceUnits, setForceUnits] = React.useState('');
   const [lengthUnits, setLengthUnits] = React.useState('');
 
-  let timer: null | ReturnType<typeof setTimeout> = null
+  // let timer: null | ReturnType<typeof setTimeout> = null;
 
   const check = trussCheck(m, n, r);
   const [show, setShow] = React.useState(check);
+
+  let C = [];
 
   /* The following useEffect hook will set the display alert state variable
   to truthy if the system is indeterminate and falsey if else. */
   useEffect(() => {
     if (show == 1) {
-      let timer = setTimeout(() => setShow(0), 5000);
+      let timer = setTimeout(() => setShow(1), 5000);
       clearTimeout(timer);
+
+      setShow(0);
     }
   }, []);
 
@@ -45,7 +50,7 @@ const StepTwo = (props) => {
 
       nodeMatrix[i] = [j, c1, c2];
     };
-  }, []);
+  }, [nodeMatrix]);
 
   // UseEffect hook to map the proper units selected
   useEffect(() => {
@@ -85,9 +90,9 @@ const StepTwo = (props) => {
       </h2>
 
       {/* Dotnav container for component render */}
-      <div className={styles.dotnavContainer}>
-        <Dotnav step={props.step} />
-      </div>
+      {/* <div className={styles.dotnavContainer}>
+        <Dotnav props={props.step} />
+      </div> */}
 
       {/* Form parent container */}
       <Formik
@@ -98,8 +103,8 @@ const StepTwo = (props) => {
         {({ values }) => (
           <Form id={styles.form} className='uk-form-horizontal uk-margin-large'>
 
-            {show == 1 && <Success props={props} />}
-            {show == 2 && <Error props={props} />}
+            {show == 1 ? <Success props={props} /> : null}
+            {show == 2 ? <Error props={props} /> : null}
 
             {/* Iterate n times (where n = {number of nodes})
               and display xn, yn coordinate inputs for the user */}
@@ -152,7 +157,7 @@ const StepTwo = (props) => {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Back props={props} />
+                <Back />
               </motion.button>
               <motion.button
                 id={styles.iconButton}
@@ -166,7 +171,7 @@ const StepTwo = (props) => {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Forward props={props} />
+                <Forward />
               </motion.button>
             </div>
           </Form>

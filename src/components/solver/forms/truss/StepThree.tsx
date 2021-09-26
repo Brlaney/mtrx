@@ -48,14 +48,14 @@ const StepThree = (props) => {
                   className='uk-button uk-align-left'
                   onClick={() => props.prev(values)}
                 >
-                  <Back props={props} />
+                  <Back />
                 </button>
                 <button
                   id={styles.iconButton}
                   type='submit'
                   className='uk-button uk-align-right'
                 >
-                  <Forward props={props} />
+                  <Forward />
                 </button>
               </div>
             </Form>

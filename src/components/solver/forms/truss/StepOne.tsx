@@ -1,21 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useEffect } from 'react';
 import * as yup from 'yup';
 import {
   Formik,
   Form,
   Field,
-  useField,
-  FieldAttributes,
-  FieldArray
 } from 'formik';
 import { motion } from 'framer-motion';
 import Forward from '@/components/global/buttons/matrix/Forward';
-import { Dotnav } from '@/components/global/buttons/matrix/Dotnav';
+// import Dotnav from '@/components/global/buttons/matrix/Dotnav';
 import styles from '@/styles/components/Steps.module.scss';
 
 const StepOne = (props) => {
-  // const [selectedUnits, setSelectedUnits] = React.useState(1);
-  // const [label, setLabel] = React.useState('Imperial system (US)');
   const handleSubmit = (values) => {
     props.next(values);
   };
@@ -27,7 +23,7 @@ const StepOne = (props) => {
     units: yup.number().default(1).min(1).max(2),
   });
 
-  console.log(props);
+  console.log(props.step);
 
   useEffect(() => {
     console.log('UseEffect will run if values change');
@@ -45,9 +41,9 @@ const StepOne = (props) => {
       </h2>
 
       {/* Dotnav container for component render */}
-      <div className={styles.dotnavContainer}>
-        <Dotnav step={props.step} />
-      </div>
+      {/* <div className={styles.dotnavContainer}>
+        <Dotnav props={props} />
+      </div> */}
 
       <Formik
         validationSchema={stepOneSchema}
@@ -158,7 +154,7 @@ const StepOne = (props) => {
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Forward props={props} />
+                  <Forward />
                 </motion.button>
               </div>
             </div>

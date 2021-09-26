@@ -1,13 +1,12 @@
 import { IoArrowBack } from 'react-icons/io5';
 import styles from '@/styles/components/Buttons.module.scss';
 
-const Back = ({ props }) => {
+const Back = () => {
   return (
     <>
       <IoArrowBack
         className={styles.backIcon}
         size='1.8rem'
-        {...props}
       />
     </>
   )

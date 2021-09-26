@@ -1,8 +1,5 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { step1 as st1 } from '@/lib/config/forms/truss';
-import { step2 as st2 } from '@/lib/config/forms/truss';
-import { step3 as st3 } from '@/lib/config/forms/truss';
 import StepOne from '@/components/solver/forms/truss/StepOne';
 import StepTwo from '@/components/solver/forms/truss/StepTwo';
 import StepThree from '@/components/solver/forms/truss/StepThree';
@@ -51,17 +48,11 @@ const Truss: React.FC<{ props }> = () => {
 
   return (
     <div className={styles.container}>
-
       <GoBack link={endpoint} />
-
       <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
 
       {/* Page parent container and header */}
       <div className={styles.parent}>
-        {/* <div className={styles.header}> */}
-        {/* </div> */}
-
-        {/* Container - conditionally render the current form step */}
         <div className={styles.grid}>
           <div id={styles.card}>
 
@@ -79,7 +70,7 @@ const Truss: React.FC<{ props }> = () => {
                 layout
               >
                 <StepOne
-                  step={st1}
+                  step={1}
                   data={data}
                   next={handleNextStep}
                 />
@@ -99,7 +90,7 @@ const Truss: React.FC<{ props }> = () => {
                 layout
               >
                 <StepTwo
-                  step={st2}
+                  step={2}
                   data={data}
                   next={handleNextStep}
                   prev={handlePrevStep}
@@ -121,7 +112,7 @@ const Truss: React.FC<{ props }> = () => {
                 layout
               >
                 <StepThree
-                  step={st3}
+                  step={3}
                   data={data}
                   next={handleNextStep}
                   prev={handlePrevStep}
