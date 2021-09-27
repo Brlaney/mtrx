@@ -159,14 +159,14 @@ Transformation function for Truss members
 - EV, modulus of elasticity vector, psi or Pa [N/m^2])
 
 Output: local truss member stiffness matrix in global coordinates. */
-export function localK(m, radV, lengthV, EV, AV) {
+export function localK(m, radians, lengths, elasticity, area) {
   let T = []; // Will append all k_ij's
 
   for (let i = 0; i < m; i++) {
-    let theta = radV[i];
-    let L = lengthV[i] * 12;
-    let A = AV[i];
-    let E = EV[i];
+    let theta = radians[i];
+    let L = lengths[i] * 12;
+    let A = area[i];
+    let E = elasticity[i];
     
     let s = Math.sin(theta);
     let c = Math.cos(theta);
@@ -197,11 +197,58 @@ export function localK(m, radV, lengthV, EV, AV) {
     let k44 = coeff * s * s;
     
     T.push([
-      k11, k12, k13, k14,
-      k21, k22, k23, k24,
-      k31, k32, k33, k34,
-      k41, k42, k43, k44
+      k11.toFixed(2), k12.toFixed(2), k13.toFixed(2), k14.toFixed(2),
+      k21.toFixed(2), k22.toFixed(2), k23.toFixed(2), k24.toFixed(2),
+      k31.toFixed(2), k32.toFixed(2), k33.toFixed(2), k34.toFixed(2),
+      k41.toFixed(2), k42.toFixed(2), k43.toFixed(2), k44.toFixed(2)
     ]);   
+  };
+  return T;
+};
+
+export function gDeltas(K, d, f) {
+  let T = []; // Will append all k_ij's
+
+  // for (let i = 0; i < m; i++) {
+  //   let theta = radians[i];
+  //   let L = lengths[i] * 12;
+  //   let A = area[i];
+  //   let E = elasticity[i];
+    
+  //   let s = Math.sin(theta);
+  //   let c = Math.cos(theta);
+  //   let coeff = A * E / L;
+    
+  //   // Row 1
+  //   let k11 = coeff * c * c;
+  //   let k12 = coeff * c * s;
+  //   let k13 = coeff * - c * c;
+  //   let k14 = coeff * - c * s;
+    
+  //   // Row 2
+  //   let k21 = coeff * c * s;
+  //   let k22 = coeff * s * s;
+  //   let k23 = coeff * - c * s;
+  //   let k24 = coeff * - s * s;
+    
+  //   // Row 3
+  //   let k31 = coeff * - c * c;
+  //   let k32 = coeff * -c * s;
+  //   let k33 = coeff * c * c;
+  //   let k34 = coeff * c * s;
+    
+  //   // Row 4
+  //   let k41 = coeff * - c * s;
+  //   let k42 = coeff * - s * s;
+  //   let k43 = coeff * c * s;
+  //   let k44 = coeff * s * s;
+    
+  //   T.push([
+  //     k11.toFixed(2), k12.toFixed(2), k13.toFixed(2), k14.toFixed(2),
+  //     k21.toFixed(2), k22.toFixed(2), k23.toFixed(2), k24.toFixed(2),
+  //     k31.toFixed(2), k32.toFixed(2), k33.toFixed(2), k34.toFixed(2),
+  //     k41.toFixed(2), k42.toFixed(2), k43.toFixed(2), k44.toFixed(2)
+  //   ]);   
   };
   return T;
 };

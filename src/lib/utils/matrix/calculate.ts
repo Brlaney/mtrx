@@ -24,7 +24,7 @@ export function calcAreaD(d) {
   let final = initial / 576;  // Assumming the input is in, convert to sq ft. (576 = 4 * 12 * 12)
 
   // Rounded to two decimal places
-  let A = final.toFixed(3); 
+  let A = final.toFixed(2); 
 
   return A;
 };
