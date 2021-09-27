@@ -113,7 +113,9 @@
         line-height: 1.3;
       }
     }
-    #col:hover {
+    #col1:hover,
+    #col2:hover,
+    #col3:hover {
       cursor: pointer;
       border: 1px solid $secondary;
       background-color: $bg-df-900;

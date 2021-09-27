@@ -12,6 +12,7 @@ import Forward from '@/components/global/buttons/matrix/Forward';
 import styles from '@/styles/components/Steps.module.scss';
 
 const StepOne = (props) => {
+  const [radioState, setRadioState] = React.useState(1);
   const handleSubmit = (values) => {
     props.next(values);
   };
@@ -22,8 +23,6 @@ const StepOne = (props) => {
     reactions: yup.number().defined().min(0).max(20),
     units: yup.number().default(1).min(1).max(2),
   });
-
-  console.log(props.step);
 
   useEffect(() => {
     console.log('UseEffect will run if values change');
@@ -119,19 +118,20 @@ const StepOne = (props) => {
                     <input
                       id={styles.imperial}
                       className='uk-radio'
-                      type='radio'
                       name='units'
-                      value='imperial'
+                      type='radio'
+                      value='1'
                       aria-label='Imperial (US)'
+                      checked
                     /> Imperial
                   </label>
                   <label className={styles.radiolabel}>
                     <input
                       id={styles.metric}
                       className='uk-radio'
-                      type='radio'
                       name='units'
-                      value='metric'
+                      type='radio'
+                      value='2'
                       aria-label='Metric (SI)'
                     />  Metric
                   </label>

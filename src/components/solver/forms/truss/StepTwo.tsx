@@ -104,31 +104,35 @@ const StepTwo = (props) => {
 
             {/* Iterate n times (where n = {number of nodes})
               and display xn, yn coordinate inputs for the user */}
-            {nodeMatrix.map((j: number) => (
-              <div key={j} id={styles.steptwo} className={styles.row}>
-                <div className='uk-width-2-3'>
-                  <h6 className={styles.field}>
-                    Coordinates for Node {j}
-                  </h6>
+            {nodeMatrix.map((j: number) => {
+              const coordinate1 = 'x' + j;
+              const coordinate2 = 'y' + j;
+              
+              return (
+                <div key={j} className={styles.row}>
+                  <div id={styles.label} className='uk-width-1-3'>
+                    <h6 className={styles.cfield}>Node {j}</h6>
+                  </div>
+                  <div className={styles.inputs}>
+                    <Field
+                      id={styles.inputx}
+                      className='uk-input'
+                      name='x1'
+                      type='text'
+                      placeholder={coordinate1}
+                    />
+                    <Field
+                      id={styles.inputy}
+                      className='uk-input'
+                      name='y1'
+                      type='text'
+                      placeholder={coordinate2}
+                    />
+                  </div>
                 </div>
-                <div className='uk-width-1-3'>
-                  <Field
-                    name='x1'
-                    id={styles.input}
-                    className='uk-input'
-                    type='text'
-                    placeholder=
-                  />
-                  <Field
-                    name='y1'
-                    id={styles.input}
-                    className='uk-input'
-                    type='text'
-                    placeholder=''
-                  />
-                </div>
-              </div>
-            ))}
+              )
+            }
+            )}
 
             {/* Navigation buttons - back & forward */}
             <div className='uk-width-1-1'>

@@ -2,7 +2,7 @@ const easing = [0.4, 0.1, -0.3, 0.95];
 
 export const fadeInUp = {
   initial: {
-    y: 100,
+    y: 250,
     opacity: 0,
     transition: {
       delay: 0.5,

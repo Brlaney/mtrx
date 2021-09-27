@@ -41,6 +41,27 @@
     align-items: center;
     width: 100%;
     margin-bottom: 0.4rem;
+    #label {
+      margin: 0;
+      padding: 0;
+      .cfield {
+        color: $text-secondary;
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+    }
+    .inputs {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0.8rem 0 0.8rem 0;
+      #inputx, #inputy {
+        font-size: 1rem;
+      }
+    }
     #radio {
       width: 50%;
       display: flex;
@@ -51,7 +72,7 @@
         padding: 0 0 0.5rem 1rem;
         .field {
           margin: 0.2rem 0 0.2rem 0;
-          padding: 0.2rem 0 0 0;
+          // padding: 0.2rem 0 0 0;
           width: 100%;
         }
       }
@@ -85,7 +106,15 @@
   color: $text-secondary;
   font-size: 1.1rem;
   margin: 0;
-  padding: 0.75rem 0 0 0;
+  // padding: 0.75rem 0 0 0;
+  text-align: left;
+}
+
+.cfield {
+  color: $text-secondary;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
   text-align: left;
 }
 

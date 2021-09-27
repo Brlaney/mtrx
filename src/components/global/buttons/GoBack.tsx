@@ -19,12 +19,11 @@ const GoBack = ({ link }) => {
         >
           <IoReturnUpBackOutline
             className={styles.backIcon}
-            size='1.5rem'
+            size='2rem'
             color='white'
           />
         </motion.button>
       </Link>
-      <div className='btnRow' />
     </motion.div>
   )
 };
