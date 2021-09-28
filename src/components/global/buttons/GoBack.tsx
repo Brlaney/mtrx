@@ -1,6 +1,6 @@
 import { IoReturnUpBackOutline } from 'react-icons/io5';
 import { motion } from 'framer-motion';
-import { fadeInUp2 } from '@/lib/config/animations/svgs/learn';
+import { fadeInUp } from '@/lib/config/animations/svgs/learn';
 import Link from 'next/link';
 import styles from '@/styles/components/Buttons.module.scss';
 
@@ -15,7 +15,7 @@ const GoBack = ({ link }) => {
       <Link href={link}>
         <motion.button
           id={styles.goback}
-          variants={fadeInUp2}
+          variants={fadeInUp}
           whileHover={{
             zIndex: 1,
             scale: 1.06,

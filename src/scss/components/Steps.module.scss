@@ -52,6 +52,27 @@
         text-align: left;
       }
     }
+    #uniform1, #uniform2 {
+      .labelInner {
+        font-weight: 400;
+        color: $text-secondary;
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+    }
+    #uniform2 {
+      #radiolabel {
+        margin: 0 0 0 0.4rem;
+        padding: 0 0 0.5rem 0.7rem;
+        width: 100%;
+        color: $bg-d-700;
+        #input1, #input2 {
+          padding: 0;
+        }
+      }
+    }
     .inputs {
       display: flex;
       flex-direction: row;

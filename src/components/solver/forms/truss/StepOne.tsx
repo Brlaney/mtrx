@@ -44,6 +44,7 @@ const StepOne = (props) => {
         <Dotnav props={props} />
       </div> */}
 
+      {/* Form | Step 1 */}
       <Formik
         validationSchema={stepOneSchema}
         initialValues={props.data}
@@ -52,9 +53,8 @@ const StepOne = (props) => {
         {() => (
           <Form id={styles.form} className='uk-form-horizontal uk-margin-large'>
 
-            {/* Row 1 */}
+            {/* Row 1 | Number of elements & nodes */}
             <div className={styles.row}>
-              {/* Input no of members */}
               <div className='uk-width-1-2'>
                 <h6 className={styles.field}>
                   No. of members
@@ -70,8 +70,6 @@ const StepOne = (props) => {
                   step='1'
                 />
               </div>
-
-              {/* Input number of nodes/connections */}
               <div className='uk-width-1-2'>
                 <h6 className={styles.field}>
                   No. of nodes
@@ -89,9 +87,8 @@ const StepOne = (props) => {
               </div>
             </div>
 
-            {/* Row 2 */}
+            {/* Row 2 | Support reactions & units */}
             <div className={styles.row}>
-              {/* Define your supports and external forces */}
               <div id={styles.buttonColStep1} className='uk-width-1-2'>
                 <h6 className={styles.field}>
                   No. of support reactions
@@ -107,8 +104,6 @@ const StepOne = (props) => {
                   step='1'
                 />
               </div>
-
-              {/* Select your type of units */}
               <div id={styles.radio} className='uk-width-1-2'>
                 <div className={styles.col}>
                   <h6 className={styles.field}>Units</h6>
@@ -139,6 +134,7 @@ const StepOne = (props) => {
               </div>
             </div>
 
+            {/* Fordward button if valid inputs */}
             <div id={styles.btnrow} className={styles.row}>
               <div className={styles.buttonRight}>
                 <motion.button

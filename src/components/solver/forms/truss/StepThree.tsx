@@ -7,16 +7,36 @@ import { Selection } from '../form-components/Selection';
 import styles from '@/styles/components/Steps.module.scss';
 
 const StepThree = (props) => {
+  const [unif] = React.useState(props.data.uniform);
+  const [m] = React.useState(props.data.members);
+  const [n] = React.useState(props.data.nodes);
+
   const handleSubmit = (values) => {
     props.next(values);
   };
 
   const StepThreeSchema = yup.object({
-    tests: yup.string().default('').nullable(),
+    dof: yup.number().defined(),
+    f: yup.number().defined(),
+    A: yup.number().defined(),
+    E: yup.number().defined(),
   });
 
   return (
     <>
+      {/* Header */}
+      <h2 className={styles.label}>
+        Step 3. <span className={styles.span}>
+          Unrestrained &amp; restrained degrees of freedom
+        </span>
+      </h2>
+
+      {/* Dotnav container for component render */}
+      {/* <div className={styles.dotnavContainer}>
+        <Dotnav props={props.step} />
+      </div> */}
+
+      {/* Form | Step 3 */}
       <Formik
         validationSchema={StepThreeSchema}
         initialValues={props.data}
@@ -25,9 +45,7 @@ const StepThree = (props) => {
         {({ values }) => (
           <div className={styles.form}>
             <Form className='uk-grid-small' uk-grid='true'>
-              <h2 className={styles.label}>
-                Step 3. <span className={styles.span}>Boundary conditions</span>
-              </h2>
+       
               <div className='uk-width-1-1'>
                 <Field
                   name='tests'
