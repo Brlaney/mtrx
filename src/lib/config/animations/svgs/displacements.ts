@@ -16,6 +16,22 @@ export const fadeInUp = {
   }
 };
 
+export const fadeInUp2 = {
+  initial: {
+    y: 200,
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing }
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing
+    }
+  }
+};
+
 export const stagger = {
   animate: {
     transition: {

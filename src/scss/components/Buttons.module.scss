@@ -1,16 +1,6 @@
 @import '../theme/theme';
 @import '../mixins/height.scss';
 
-.backIcon {
-  color: $light;
-  font-weight: 400;
-}
-
-.forwardIcon {
-  color: $light;
-  font-weight: 400;
-}
-
 #goback {
   position: absolute;
   width: 46px;

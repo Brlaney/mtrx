@@ -1,174 +1,116 @@
-import * as React from 'react';
-import Link from 'next/link';
-import GoBack from '@/components/global/buttons/GoBack';
-import Forward from '@/components/global/buttons/matrix/Forward';
-import Back from '@/components/global/buttons/matrix/Back';
-import Bar from '@/components/stiffness/Bar';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { variants } from '@/lib/config/animations/trussComponents';
-import styles from '@/styles/pages/Learning.module.scss';
+import { fadeInUp2, stagger } from '@/lib/config/animations/svgs/displacements';
+import Blank from '@/components/stiffness/examples/truss/solutions/Blank';
+import A from '@/components/stiffness/examples/truss/solutions/A';
+import Elem1 from '@/components/stiffness/examples/truss/solutions/Elem1';
+import Elem2 from '@/components/stiffness/examples/truss/solutions/Elem2';
+import Elem3 from '@/components/stiffness/examples/truss/solutions/Elem3';
+import Elem4 from '@/components/stiffness/examples/truss/solutions/Elem4';
+import Elem5 from '@/components/stiffness/examples/truss/solutions/Elem5';
+import State1 from '@/components/stiffness/examples/truss/solutions/State1';
+import State2 from '@/components/stiffness/examples/truss/solutions/State2';
+import State3 from '@/components/stiffness/examples/truss/solutions/State3';
+import State4 from '@/components/stiffness/examples/truss/solutions/State4';
+import State5 from '@/components/stiffness/examples/truss/solutions/State5';
+import { data } from '@/lib/data/stiffness/learn-the-basics/truss';
+import GoBack from '@/components/global/buttons/GoBack';
+import Back from '@/components/global/buttons/matrix/Back';
+import Forward from '@/components/global/buttons/matrix/Forward';
+import { nextMod, prevMod } from '@/lib/utils/matrix/calculate';
+import styles from '@/styles/pages/Displacements.module.scss';
 
-const Truss: React.FC<{ props }> = () => {
-  const [currentStep, setCurrentStep] = React.useState(0);
+export default function Truss() {
+  const [display, setDisplay] = React.useState('');
+  const [graphic, setGraphic] = React.useState(1);
   const endpoint = '/stiffness';
 
+  const handleBack = () => {
+    let newStep = prevMod(graphic, 13);
+    setGraphic(newStep);
+
+    return newStep;
+  };
+
+  const handleFwd = () => {
+    let newStep = nextMod(graphic, 13);
+    setGraphic(newStep);
+
+    return newStep;
+  };
+
+  useEffect(() => {
+    let k = graphic - 1;
+    setDisplay(data[k]);
+  }, [graphic, display]);
+
   return (
-    <motion.div className={styles.container}>
+    <motion.div
+      className={styles.container}
+      initial='initial'
+      animate='animate'
+      exit={{ opacity: 0 }}
+      layout
+    >
+
       <GoBack link={endpoint} />
+
+      {/* Main parent container */}
       <div className={styles.parent}>
-        <div className={styles.topRow} />
-        <div className={styles.header}>
-          <h1 className={styles.title}>
-            Discretize your truss
-          </h1>
-          <h2 className={styles.subtitle}>
-            Consistantly label local and global degrees of freedom
-          </h2>
-        </div>
-        <motion.div variants={variants} className={styles.imagecard}>
-          <Bar />
+
+        {/* Is this a switch case? */}
+        <motion.div className={styles.wideDisplay}>
+          {graphic === 1 && (<><Blank /><A /></>)}
+          {graphic === 2 && (<><Elem1 /><State1 /></>)}
+          {graphic === 3 && (<><Elem2 /><State2 /></>)}
+          {graphic === 4 && (<><Elem3 /><State3 /></>)}
+          {graphic === 5 && (<><Elem4 /><State4 /></>)}
+          {graphic === 6 && (<><Elem5 /><State5 /></>)}
         </motion.div>
-        {currentStep === 0 && (
-          <div className={styles.card1}>
-            <h2 className={styles.sectionTitle}>
-              Stiffness method - theory
-            </h2>
-            <div className={styles.content}>
-              <div className={styles.child}>
-              </div>
-              <motion.button
-                id={styles.iconButton}
-                className='uk-button uk-button-small'
-                onClick={() => setCurrentStep(1)}
-                whileHover={{
-                  scale: 1.1,
-                  transition: {
-                    duration: .2
-                  }
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Forward />
-              </motion.button>
-            </div>
-          </div>
-        )}
 
-        {/* 2nd component */}
-        {currentStep === 1 && (
-          <div className={styles.card}>
-            <h2 className={styles.sectionTitle}>
-              Stiffness method - theory
-            </h2>
-            <div className={styles.content}>
-              <div className={styles.child}>
-                {/* component here */}
-              </div>
-              <motion.button
-                id={styles.iconButton}
-                className='uk-button uk-button-small'
-                onClick={() => setCurrentStep(0)}
-                whileHover={{
-                  scale: 1.1,
-                  transition: {
-                    duration: .2
-                  }
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Back />
-              </motion.button>
-              <motion.button
-                id={styles.iconButton}
-                className='uk-button uk-button-small'
-                onClick={() => setCurrentStep(2)}
-                whileHover={{
-                  scale: 1.1,
-                  transition: {
-                    duration: .2
-                  }
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Forward />
-              </motion.button>
-            </div>
-          </div>
-        )}
+        {/* Information onClick */}
+        <div className={styles.box}>
+          <p className={styles.text}>
+            {display}
+          </p>
+        </div>
 
-        {/* 3rd component */}
-        {currentStep === 2 && (
-          <div className={styles.card}>
-            <h2 className={styles.sectionTitle}>
-              Stiffness method - theory
-            </h2>
-            <div className={styles.content}>
-              <motion.button
-                id={styles.iconButton}
-                className='uk-button uk-button-small'
-                onClick={() => setCurrentStep(1)}
-                whileHover={{
-                  scale: 1.1,
-                  transition: {
-                    duration: .2
-                  }
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Back />
-              </motion.button>
-              <motion.button
-                id={styles.iconButton}
-                className='uk-button uk-button-small'
-                onClick={() => setCurrentStep(3)}
-                whileHover={{
-                  scale: 1.1,
-                  transition: {
-                    duration: .2
-                  }
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Forward />
-              </motion.button>
-            </div>
-          </div>
-        )}
-
-        {/* 4th component */}
-        {currentStep === 3 && (
-          <div className={styles.card}>
-            <h2 className={styles.title}>
-              Congratulations!
-            </h2>
-            <h3 className={styles.sectionTitle}>
-              You have completed the truss portion of the stiffness method tutorial
-            </h3>
-            <div className={styles.content}>
-              <Link href='/learn'>
-                <button
-                  id={styles.iconButton}
-                  className='uk-button uk-margin uk-width-1-2 uk-align-center'
-                >
-                  Learn more
-                </button>
-              </Link>
-            </div>
-            <div className={styles.content}>
-              <Link href='/'>
-                <button
-                  id={styles.iconButton}
-                  className='uk-button uk-margin uk-width-1-2 uk-align-center'
-                >
-                  Back to homepage
-                </button>
-              </Link>
-            </div>
-          </div>
-        )}
+        {/* Controls state - buttons */}
+        <motion.div className={styles.controlSwitch}>
+          {/* <motion.div className={styles.buttonRow} variants={stagger}> */}
+            <motion.button
+              id={styles.bckBtn}
+              className='uk-button'
+              onClick={handleBack}
+              variants={fadeInUp2}
+              whileHover={{
+                scale: 1.05,
+                transition: {
+                  duration: .25
+                }
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Back />
+            </motion.button>
+            <motion.button
+              id={styles.fwdBtn}
+              className='uk-button'
+              onClick={handleFwd}
+              variants={fadeInUp2}
+              whileHover={{
+                scale: 1.05,
+                transition: {
+                  duration: .25
+                }
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Forward />
+            </motion.button>
+          {/* </motion.div> */}
+        </motion.div>
       </div>
     </motion.div>
   )
 };
-
-export default Truss;

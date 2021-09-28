@@ -41,20 +41,11 @@ export default function Frame() {
         </motion.div>
 
         {/* Information onClick */}
-        <motion.div
-          className={styles.framebox}
-          variants={stagger}
-        >
-          <motion.p
-            id={styles.text}
-            className='uk-text uk-text-justify uk-text-center'
-            animate='visible'
-            initial='hidden'
-            variants={fadeInUp}
-          >
+        <div className={styles.box}>
+          <p className={styles.text}>
             {display}
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
         {/* Controls state - buttons */}
         <motion.div className={styles.controls}>

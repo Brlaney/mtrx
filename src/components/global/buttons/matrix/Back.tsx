@@ -7,6 +7,7 @@ const Back = () => {
       <IoArrowBack
         className={styles.backIcon}
         size='1.8rem'
+        color='white'
       />
     </>
   )

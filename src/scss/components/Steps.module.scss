@@ -1,20 +1,20 @@
 @import '../theme/theme';
 
-  .label {
-    width: 100%;
-    margin: 1.6rem 1.2rem 0.2rem 1.2rem;
-    color: $bg-m;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: justify;
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.34rem;
-    border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
-    .span {
-      font-weight: 400;
-      color: $secondary;
-    }
+.label {
+  width: 100%;
+  margin: 1.6rem 1.2rem 0.2rem 1.2rem;
+  color: $bg-m;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: justify;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.34rem;
+  border-bottom: calc(0.3px + 0.02em) solid #e5e5e5;
+  .span {
+    font-weight: 400;
+    color: $secondary;
   }
+}
 
 #form {
   display: flex;
@@ -72,7 +72,6 @@
         padding: 0 0 0.5rem 1rem;
         .field {
           margin: 0.2rem 0 0.2rem 0;
-          // padding: 0.2rem 0 0 0;
           width: 100%;
         }
       }
@@ -106,7 +105,6 @@
   color: $text-secondary;
   font-size: 1.1rem;
   margin: 0;
-  // padding: 0.75rem 0 0 0;
   text-align: left;
 }
 

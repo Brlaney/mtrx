@@ -7,6 +7,7 @@ const Forward = () => {
       <IoArrowForward
         className={styles.forwardIcon}
         size='1.8rem'
+        color='white'
       />
     </>
   )
