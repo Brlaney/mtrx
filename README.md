@@ -169,8 +169,6 @@ In this section I will sumarize my problem solving process for any issues that a
 
 Link to a short video I uploaded to youtube showing this issue and how it was debugged: [Framer-motion bug fix](https://youtu.be/uJpbSbn3jOc)
 
-</br>
-
 ## Project code summary
 
 - **Date:** `2021-09-28 12:34:34`
