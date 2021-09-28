@@ -16,7 +16,7 @@
   <h1>[Mtrx]</h1>
   <p style="text-align: justify">
     A <b>Next.js</b> app that solves statically indeterminate </br>
-    systems using the <b>matrix displacement method</b>.
+    trusses, beams, and frames using the <b>matrix displacement method</b>.
   </p>
 </div>
 
@@ -171,7 +171,8 @@ Link to a short video I uploaded to youtube showing this issue and how it was de
 
 ## Project code summary
 
-- **Date:** `2021-09-28 12:34:34`
+- **Date updated:** `09-28-2021`
+- **First commit:** `08-20-2021`
 - **Directory:** `\mtrx\src`
 - **Totals:** 
   - `204 files`
