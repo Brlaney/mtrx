@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { fadeInUp2, stagger } from '@/lib/config/animations/svgs/displacements';
+import { fadeInUp, fadeInUp2, stagger } from '@/lib/config/animations/svgs/learn';
 import Blank from '@/components/stiffness/examples/truss/solutions/Blank';
 import A from '@/components/stiffness/examples/truss/solutions/A';
 import Elem1 from '@/components/stiffness/examples/truss/solutions/Elem1';
@@ -28,20 +28,21 @@ export default function Truss() {
   const handleBack = () => {
     let newStep = prevMod(graphic, 13);
     setGraphic(newStep);
-
+    console.log(graphic);
     return newStep;
   };
 
   const handleFwd = () => {
     let newStep = nextMod(graphic, 13);
     setGraphic(newStep);
-
+    console.log(graphic);
     return newStep;
   };
 
   useEffect(() => {
     let k = graphic - 1;
     setDisplay(data[k]);
+    console.log(graphic);
   }, [graphic, display]);
 
   return (
@@ -52,24 +53,87 @@ export default function Truss() {
       exit={{ opacity: 0 }}
       layout
     >
-
       <GoBack link={endpoint} />
 
-      {/* Main parent container */}
+      {/* Render the correct svg's conditionally */}
       <div className={styles.parent}>
-
-        {/* Is this a switch case? */}
-        <motion.div className={styles.wideDisplay}>
-          {graphic === 1 && (<><Blank /><A /></>)}
-          {graphic === 2 && (<><Elem1 /><State1 /></>)}
-          {graphic === 3 && (<><Elem2 /><State2 /></>)}
-          {graphic === 4 && (<><Elem3 /><State3 /></>)}
-          {graphic === 5 && (<><Elem4 /><State4 /></>)}
-          {graphic === 6 && (<><Elem5 /><State5 /></>)}
+        <motion.div className={styles.wideDisplay} variants={stagger}>
+          {graphic === 1 && (
+            <motion.div
+              className={styles.graphic}
+              variants={fadeInUp}
+              initial='initial'
+              animate='animate'
+              exit={{ opacity: 0 }}
+              layout
+            >
+              <Blank /><A />
+            </motion.div>
+          )}
+          {graphic === 2 && (
+            <motion.div
+              className={styles.graphic}
+              variants={fadeInUp}
+              initial='initial'
+              animate='animate'
+              exit={{ opacity: 0 }}
+              layout
+            >
+              <State1 /><Elem1 />
+            </motion.div>
+          )}
+          {graphic === 3 && (
+            <motion.div
+              className={styles.graphic}
+              variants={fadeInUp}
+              initial='initial'
+              animate='animate'
+              exit={{ opacity: 0 }}
+              layout
+            >
+              <State2 /><Elem2 />
+            </motion.div>
+          )}
+          {graphic === 4 && (
+            <motion.div
+              className={styles.graphic}
+              variants={fadeInUp}
+              initial='initial'
+              animate='animate'
+              exit={{ opacity: 0 }}
+              layout
+            >
+              <State3 /><Elem3 />
+            </motion.div>
+          )}
+          {graphic === 5 && (
+            <motion.div
+              className={styles.graphic}
+              variants={fadeInUp}
+              initial='initial'
+              animate='animate'
+              exit={{ opacity: 0 }}
+              layout
+            >
+              <State4 /><Elem4 />
+            </motion.div>
+          )}
+          {graphic === 6 && (
+            <motion.div
+              className={styles.graphic}
+              variants={fadeInUp}
+              initial='initial'
+              animate='animate'
+              exit={{ opacity: 0 }}
+              layout
+            >
+              <State5 /><Elem5 />
+            </motion.div>
+          )}
         </motion.div>
 
         {/* Information onClick */}
-        <div className={styles.box}>
+        <div className={styles.tallBox}>
           <p className={styles.text}>
             {display}
           </p>
@@ -77,38 +141,36 @@ export default function Truss() {
 
         {/* Controls state - buttons */}
         <motion.div className={styles.controlSwitch}>
-          {/* <motion.div className={styles.buttonRow} variants={stagger}> */}
-            <motion.button
-              id={styles.bckBtn}
-              className='uk-button'
-              onClick={handleBack}
-              variants={fadeInUp2}
-              whileHover={{
-                scale: 1.05,
-                transition: {
-                  duration: .25
-                }
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Back />
-            </motion.button>
-            <motion.button
-              id={styles.fwdBtn}
-              className='uk-button'
-              onClick={handleFwd}
-              variants={fadeInUp2}
-              whileHover={{
-                scale: 1.05,
-                transition: {
-                  duration: .25
-                }
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Forward />
-            </motion.button>
-          {/* </motion.div> */}
+          <motion.button
+            id={styles.bckBtn}
+            className='uk-button'
+            onClick={handleBack}
+            variants={fadeInUp2}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                duration: .25
+              }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Back />
+          </motion.button>
+          <motion.button
+            id={styles.fwdBtn}
+            className='uk-button'
+            onClick={handleFwd}
+            variants={fadeInUp2}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                duration: .25
+              }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Forward />
+          </motion.button>
         </motion.div>
       </div>
     </motion.div>

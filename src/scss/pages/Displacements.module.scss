@@ -1,4 +1,5 @@
 @import '../theme/theme';
+@import '../mixins/width.scss';
 
 .container {
   padding-bottom: 1rem;
@@ -84,6 +85,9 @@
       padding: 0.5rem 1.5rem 0.5rem 1.5rem;
       align-items: center;
       justify-content: space-around;
+      // .graphic {
+
+      // }
     }
     .indexCard {
       display: flex;
@@ -236,6 +240,43 @@
         margin: 0;
       }
     }
+    .tallBox {
+      display: flex;
+      height: 200px;
+      z-index: 1;
+      border-radius: 10px;
+      border: 1px solid $border-color;
+      margin: 1rem 0.25rem;
+      padding: 2rem 1rem;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
+        rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+      @include respond-below-width(xs) {
+        width: 70%;
+        height: 100%;
+      }
+      @include respond-above-width(xs) {
+        width: 550px;
+        height: 100%;
+        @include respond-above-width(sm) {
+          width: 650px;
+          @include respond-above-width(md) {
+            width: 750px;
+            @include respond-above-width(lg) {
+              width: 850px;
+            }
+          }
+        }
+      }
+      .text {
+        color: $text-secondary;
+        text-align: justify;
+        font-size: 1.1rem;
+        padding: 0.77rem 0.5rem 0.77rem 0.5rem;
+        margin: 0;
+      }
+    }
     .framebox {
       display: flex;
       width: 500px;
@@ -281,29 +322,31 @@
 }
 
 #bckBtn {
+  z-index: 1;
   position: absolute;
   padding: 0.1rem 0.5rem;
   background-color: $secondary;
   color: $light;
   border: 0;
   border-radius: 3px;
-  left: 15%;
+  left: 2%;
   margin: 1rem 0 1rem 0;
-  top: 53.5%;
+  top: 55%;
   box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
   rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
 }
 
 #fwdBtn {
+  z-index: 1;
   position: absolute;
   padding: 0.1rem 0.5rem;
   background-color: $secondary;
   color: $light;
   border: 0;
   border-radius: 3px;
-  right: 15%;
+  right: 2%;
   margin: 1rem 0 1rem 0;
-  top: 53.5%;
-  box-shadow: rgba(50, 50, 93, 0.25) 5px 7px 9px -5px,
-  rgba(72, 72, 72, 0.3) 4px 8px 4px -6px;
+  top: 55%;
+  box-shadow: rgba(64, 64, 94, 0.25) 3px 4px 5px -2px,
+  rgba(123, 123, 123, 0.3) 4px 2px 4px -4px;
 }
