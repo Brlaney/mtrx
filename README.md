@@ -181,11 +181,11 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 ### Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| . | 204 | 21,670 | 337 | 970 | 22,977 |
-| components | 101 | 16,286 | 40 | 421 | 16,747 |
-| lib | 42 | 1,474 | 274 | 196 | 1,944 |
-| pages | 39 | 1,891 | 14 | 246 | 2,151 |
-| scss | 22 | 2,019 | 9 | 107 | 2,135 |
+| src/ | 204 | 21,670 | 337 | 970 | 22,977 |
+| src/components | 101 | 16,286 | 40 | 421 | 16,747 |
+| src/lib | 42 | 1,474 | 274 | 196 | 1,944 |
+| src/pages | 39 | 1,891 | 14 | 246 | 2,151 |
+| src/scss | 22 | 2,019 | 9 | 107 | 2,135 |
 
 </br>
 
