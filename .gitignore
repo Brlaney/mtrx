@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# Project summary extension directory
+/.VSCodeCounter
+
 # testing
 /coverage
 
