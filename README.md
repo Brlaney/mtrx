@@ -115,16 +115,15 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 - 📝 Form handling simplified with
   - [Formik](https://formik.org/docs/overview)
   - [Yup](https://github.com/jquense/yup)
-- 🎞️ Animations
-  - [Framer-motion](https://www.framer.com/docs/)
+- 🎞️ Animations created with [Framer-motion](https://www.framer.com/docs/)
 - 📊 For charts and equations I used
   - [Chart.js](https://www.chartjs.org/)
   - [Katex](https://github.com/KaTeX/KaTeX)
-</br>- 🎨 Styled with `Ui-Kit`
+- 🎨 Styled with `Ui-Kit`
   - [Documentation](https://getuikit.com/)
   - [Github repository](https://github.com/uikit/uikit)
   
-
+</br>
 
 ## Quick start
 
@@ -146,7 +145,7 @@ yarn install
 npm i 
 ```
 
-</br>### 3. Start development server
+### 3. Start development server
 
 ```bash
 yarn dev
@@ -159,7 +158,7 @@ npm run dev
 
 Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it out.
 
-
+</br>
 
 ## Project code summary
 
@@ -179,7 +178,7 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 | SCSS | 22 | 2,019 | 9 | 107 | 2,135 |
 | TypeScript | 49 | 1,544 | 283 | 217 | 2,044 |
 
-</br>### Directories
+### Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
 | . | 204 | 21,670 | 337 | 970 | 22,977 |
@@ -188,7 +187,7 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 | pages | 39 | 1,891 | 14 | 246 | 2,151 |
 | scss | 22 | 2,019 | 9 | 107 | 2,135 |
 
-
+</br>
 
 ## Connect with me
 
@@ -201,12 +200,12 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 ## References and resources
 
 - Great introduction video by [Dr. Structure](https://youtu.be/kFkU1M7xVbg)
-</br>- Wikipedia:
+- Wikipedia:
   - [Direct Stiffness Method](https://en.wikipedia.org/wiki/Direct_stiffness_method)
   - [Finite Element Method](https://en.wikipedia.org/wiki/Finite_element_method)
   - [Structural Analysis](https://en.wikipedia.org/wiki/Structural_analysis)
 
-
+</br>
 
 ## License
 
