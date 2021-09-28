@@ -35,6 +35,8 @@
 - [License](#license)
 - [Contributions and issues](#contributions-and-issues)
 
+</br>
+
 ## Summary
 
 There are many situations in which you might have to summarize an article or other source:
@@ -48,6 +50,8 @@ When you’re writing an academic text like an essay, research paper, or dissert
 But it’s often appropriate to summarize a whole article or chapter if it is especially relevant to your own research, or to provide an overview of a source before you analyze or critique it.
 
 In any case, the goal of summarizing is to give your reader a clear understanding of the original source. Follow the 4 steps outline below to write a good summary.
+
+</br>
 
 ## Demo
 
@@ -100,6 +104,8 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 </br>
 
+</br>
+
 ## Features
 
 - 💻 The following Technologies are used
@@ -114,10 +120,12 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 - 📊 For charts and equations I used
   - [Chart.js](https://www.chartjs.org/)
   - [Katex](https://github.com/KaTeX/KaTeX)
-- 🎨 Styled with `Ui-Kit`
+</br>- 🎨 Styled with `Ui-Kit`
   - [Documentation](https://getuikit.com/)
   - [Github repository](https://github.com/uikit/uikit)
   
+
+
 ## Quick start
 
 ### 1. Clone repository
@@ -138,7 +146,7 @@ yarn install
 npm i 
 ```
 
-### 3. Start development server
+</br>### 3. Start development server
 
 ```bash
 yarn dev
@@ -150,6 +158,8 @@ npm run dev
 ```
 
 Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it out.
+
+
 
 ## Project code summary
 
@@ -169,7 +179,7 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 | SCSS | 22 | 2,019 | 9 | 107 | 2,135 |
 | TypeScript | 49 | 1,544 | 283 | 217 | 2,044 |
 
-### Directories
+</br>### Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
 | . | 204 | 21,670 | 337 | 970 | 22,977 |
@@ -178,19 +188,25 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 | pages | 39 | 1,891 | 14 | 246 | 2,151 |
 | scss | 22 | 2,019 | 9 | 107 | 2,135 |
 
+
+
 ## Connect with me
 
 - Email: <brlaney@outlook.com>
 - Twitter: [brendan_webdev](https://twitter.com/Brendan_webdev)
 - Instagram: [brlaney94](https://www.instagram.com/brlaney94/)
 
+</br>
+
 ## References and resources
 
 - Great introduction video by [Dr. Structure](https://youtu.be/kFkU1M7xVbg)
-- Wikipedia:
+</br>- Wikipedia:
   - [Direct Stiffness Method](https://en.wikipedia.org/wiki/Direct_stiffness_method)
   - [Finite Element Method](https://en.wikipedia.org/wiki/Finite_element_method)
   - [Structural Analysis](https://en.wikipedia.org/wiki/Structural_analysis)
+
+
 
 ## License
 
@@ -217,6 +233,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Brendan Laney | Copyright (c) 2021
 ```
+
+</br>
 
 ## Contributions and issues
 
