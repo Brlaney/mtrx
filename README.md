@@ -162,16 +162,12 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
   - `970 blanks`
   - *Sum total* `22,977 lines`
 
-</br>
-
 #### Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
 | TypeScript React | 133 | 18,107 | 45 | 646 | 18,798 |
 | SCSS | 22 | 2,019 | 9 | 107 | 2,135 |
 | TypeScript | 49 | 1,544 | 283 | 217 | 2,044 |
-
-</br>
 
 #### Directories
 | path | files | code | comment | blank | total |
@@ -181,8 +177,6 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 | lib | 42 | 1,474 | 274 | 196 | 1,944 |
 | pages | 39 | 1,891 | 14 | 246 | 2,151 |
 | scss | 22 | 2,019 | 9 | 107 | 2,135 |
-
-</br>
 
 ### Connect with me
 
