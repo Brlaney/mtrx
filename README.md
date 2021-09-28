@@ -160,7 +160,7 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
   - `21,670 lines of code`
   - `337 comments` 
   - `970 blanks`
-  - *Sum total* `22,977 lines`
+  - **Sum total** `22,977 lines`
 
 #### Languages
 | language | files | code | comment | blank | total |
