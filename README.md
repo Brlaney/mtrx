@@ -35,7 +35,7 @@
 - [License](#license)
 - [Contributions and issues](#contributions-and-issues)
 
-### Summary
+## Summary
 
 There are many situations in which you might have to summarize an article or other source:
 
@@ -49,7 +49,7 @@ But it’s often appropriate to summarize a whole article or chapter if it is es
 
 In any case, the goal of summarizing is to give your reader a clear understanding of the original source. Follow the 4 steps outline below to write a good summary.
 
-### Demo
+## Demo
 
 </br>
 
@@ -100,7 +100,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 </br>
 
-### Features
+## Features
 
 - 💻 The following Technologies are used
   - [Next.js](https://nextjs.org/)
@@ -118,15 +118,15 @@ In any case, the goal of summarizing is to give your reader a clear understandin
   - [Documentation](https://getuikit.com/)
   - [Github repository](https://github.com/uikit/uikit)
   
-### Quick start
+## Quick start
 
-#### 1. Clone repository
+### 1. Clone repository
 
 ```bash
 git clone https://github.com/Brlaney/mtrx.git
 ```
 
-#### 2. Install dependencies
+### 2. Install dependencies
 
 ```bash
 cd mtrx
@@ -138,7 +138,7 @@ yarn install
 npm i 
 ```
 
-#### 3. Start development server
+### 3. Start development server
 
 ```bash
 yarn dev
@@ -151,7 +151,7 @@ npm run dev
 
 Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it out.
 
-### Project code summary
+## Project code summary
 
 - **Date:** `2021-09-28 12:34:34`
 - **Directory:** `\mtrx\src`
@@ -162,14 +162,14 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
   - `970 blanks`
   - **Sum total** `22,977 lines`
 
-#### Languages
+### Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
 | TypeScript React | 133 | 18,107 | 45 | 646 | 18,798 |
 | SCSS | 22 | 2,019 | 9 | 107 | 2,135 |
 | TypeScript | 49 | 1,544 | 283 | 217 | 2,044 |
 
-#### Directories
+### Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
 | . | 204 | 21,670 | 337 | 970 | 22,977 |
@@ -178,13 +178,13 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 | pages | 39 | 1,891 | 14 | 246 | 2,151 |
 | scss | 22 | 2,019 | 9 | 107 | 2,135 |
 
-### Connect with me
+## Connect with me
 
 - Email: <brlaney@outlook.com>
 - Twitter: [brendan_webdev](https://twitter.com/Brendan_webdev)
 - Instagram: [brlaney94](https://www.instagram.com/brlaney94/)
 
-### References and resources
+## References and resources
 
 - Great introduction video by [Dr. Structure](https://youtu.be/kFkU1M7xVbg)
 - Wikipedia:
@@ -192,7 +192,7 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
   - [Finite Element Method](https://en.wikipedia.org/wiki/Finite_element_method)
   - [Structural Analysis](https://en.wikipedia.org/wiki/Structural_analysis)
 
-### License
+## License
 
 ```text
 MIT License
@@ -218,6 +218,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Brendan Laney | Copyright (c) 2021
 ```
 
-### Contributions and issues
+## Contributions and issues
 
 I would love your feedback on my project - please feel free to make a pull request or submit an issue if you find any. Thanks for checking out my project!
