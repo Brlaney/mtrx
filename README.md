@@ -29,6 +29,7 @@
   - [1. Clone repository](#1-clone-repository)
   - [2. Install dependencies](#2-install-dependencies)
   - [3. Start development server](#3-start-development-server)
+- [Problem solving](#problem-solving)
 - [Project code sumary](#project-code-summary)
 - [Connect with me](#connect-with-me)
 - [References and resources](#references-and-resources)
@@ -157,6 +158,16 @@ npm run dev
 ```
 
 Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it out.
+
+</br>
+
+## Problem solving
+
+In this section I will sumarize my problem solving process for any issues that arose while creating this project. Issues, bugs, errors, etc. yield critical points in any project were you are presented with the opportunity to evolve your web development skills - after all, Engineering at its core *is* **problem solving**.
+
+### Framer-motion button component glitch
+
+Link to a short video I uploaded to youtube showing this issue and how it was debugged: [Framer-motion bug fix](https://youtu.be/uJpbSbn3jOc)
 
 </br>
 
