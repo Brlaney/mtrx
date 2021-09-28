@@ -29,6 +29,7 @@
   - [1. Clone repository](#1-clone-repository)
   - [2. Install dependencies](#2-install-dependencies)
   - [3. Start development server](#3-start-development-server)
+- [Project code sumary](#project-code-summary)
 - [Connect with me](#connect-with-me)
 - [References and resources](#references-and-resources)
 - [License](#license)
@@ -150,7 +151,7 @@ npm run dev
 
 Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it out.
 
-### Project code summary:
+### Project code summary
 
 - **Date:** `2021-09-28 12:34:34`
 - **Directory:** `\mtrx\src`
@@ -163,7 +164,7 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 
 </br>
 
-## Languages
+#### Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
 | TypeScript React | 133 | 18,107 | 45 | 646 | 18,798 |
@@ -172,7 +173,7 @@ Now navigate to [http://localhost:3000/](http://localhost:3000/) and check it ou
 
 </br>
 
-## Directories
+#### Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
 | . | 204 | 21,670 | 337 | 970 | 22,977 |
