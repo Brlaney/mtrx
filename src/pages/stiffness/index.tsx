@@ -8,7 +8,8 @@ import { ITopicS, Isection } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Topics.module.scss';
 
-const Stiffness = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Stiffness = ({ topics }:
+  InferGetStaticPropsType<typeof getStaticProps>) => {
   const [topicsList] = React.useState(topics);
   const endpoint = '/';
 
@@ -21,11 +22,14 @@ const Stiffness = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>) =
     >
       <GoBack link={endpoint} />
       <motion.div className={styles.container} variants={stagger}>
-        <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
+        <div
+          id={styles.space}
+          className='uk-height-small uk-flex uk-flex-center'
+        />
 
         <motion.div className={styles.header} variants={fadeInUp}>
           <h3 className={styles.title}>
-            The <span className={styles.span}>stiffness</span> method 
+            The <span className={styles.span}>stiffness</span> method
           </h3>
         </motion.div>
 
@@ -48,14 +52,20 @@ const Stiffness = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>) =
                           className={styles.contents}
                           variants={fadeInUp}
                           whileHover={{
-                              position: 'relative',
-                              zIndex: 1,
-                              scale: 1.04,
-                              transition: { duration: 0.3 }
-                            }}
-                            whileTap={{ scale: 0.98 }}
+                            position: 'relative',
+                            zIndex: 1,
+                            scale: 1.04,
+                            transition: {
+                              duration: 0.6,
+                              ease: [0.3, -0.01, 0.01, 0.79]
+                            }
+                          }}
+                          whileTap={{ scale: 0.98 }}
                         >
-                          <motion.a id={styles.link} className='uk-link-heading'>
+                          <motion.a
+                            id={styles.link}
+                            className='uk-link-heading'
+                          >
                             {section.name}
                           </motion.a>
                         </motion.div>
