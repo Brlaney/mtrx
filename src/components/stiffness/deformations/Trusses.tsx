@@ -11,7 +11,7 @@ const Trusses = () => {
         data={data}
         options={config}
         width={800}
-        height={350}
+        height={550}
       />
     </>
   )
