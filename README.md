@@ -60,7 +60,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Homepage (desktop) - figure 1.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/134724980-d1f4154d-cebc-46fb-b858-13619afa8518.png" alt="Homepage-desktop"  align="center" width="55%" />
+  <img src="https://user-images.githubusercontent.com/64326462/134724980-d1f4154d-cebc-46fb-b858-13619afa8518.png" alt="Homepage-desktop"  align="center" style="max-width: 480px" />
 </div>
 
 </br>
@@ -68,7 +68,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Truss deformation - figure 2.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/135325159-a1a99e5d-c690-442e-97d7-23252e8c3667.png" alt="truss-deformation"  align="center" width="55%" />
+  <img src="https://user-images.githubusercontent.com/64326462/135328659-637d24cb-0b2f-4a6d-97f3-97a31ee4c9b1.png" alt="truss-deformation"  align="center" style="max-width: 480px" />
 </div>
 
 </br>
@@ -76,7 +76,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Beam deformation - figure 3.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/135325156-c3de1c27-92ed-42ed-be87-9450f94506a2.png" alt="beam-deformation"  align="center" width="55%" />
+  <img src="https://user-images.githubusercontent.com/64326462/135328653-a190919c-c149-4775-8b3b-1c664bb4c018.png" alt="beam-deformation"  align="center" style="max-width: 480px" />
 </div>
 
 </br>
@@ -84,7 +84,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Frame deformation - figure 4.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/135325158-ccc88f04-13cc-40d6-9f80-cab0eca4c802.png" alt="frame-deformation"  align="center" width="55%" />
+  <img src="https://user-images.githubusercontent.com/64326462/135328656-74973971-443a-48a7-ae0f-f3d186174f85.png" alt="frame-deformation"  align="center" style="max-width: 480px" />
 </div>
 
 </br>
