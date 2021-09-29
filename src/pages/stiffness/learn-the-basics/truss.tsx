@@ -17,7 +17,6 @@ import { data } from '@/lib/data/stiffness/learn-the-basics/truss';
 import GoBack from '@/components/global/buttons/GoBack';
 import Back from '@/components/global/buttons/matrix/Back';
 import Forward from '@/components/global/buttons/matrix/Forward';
-import { nextMod, prevMod } from '@/lib/utils/matrix/calculate';
 import styles from '@/styles/pages/Displacements.module.scss';
 
 export default function Truss() {
@@ -25,25 +24,26 @@ export default function Truss() {
   const [graphic, setGraphic] = React.useState(1);
   const endpoint = '/stiffness';
 
-  const handleBack = () => {
-    let newStep = prevMod(graphic, 13);
-    setGraphic(newStep);
-    console.log(graphic);
-    return newStep;
+  let increment = () => {
+    setGraphic(graphic + 1);
   };
 
-  const handleFwd = () => {
-    let newStep = nextMod(graphic, 13);
-    setGraphic(newStep);
-    console.log(graphic);
-    return newStep;
+  let decrement = () => {
+    setGraphic(graphic - 1);
   };
 
   useEffect(() => {
     let k = graphic - 1;
     setDisplay(data[k]);
-    console.log(graphic);
   }, [graphic, display]);
+
+  if(graphic <= 0) {
+    decrement = () => setGraphic(1);
+  }
+
+  if(graphic > 6) {
+    increment = () => setGraphic(6);
+  }
 
   return (
     <motion.div
@@ -144,7 +144,7 @@ export default function Truss() {
           <motion.button
             id={styles.bckBtn}
             className='uk-button'
-            onClick={handleBack}
+            onClick={decrement}
             variants={fadeInUp2}
             whileHover={{
               scale: 1.05,
@@ -159,7 +159,7 @@ export default function Truss() {
           <motion.button
             id={styles.fwdBtn}
             className='uk-button'
-            onClick={handleFwd}
+            onClick={increment}
             variants={fadeInUp2}
             whileHover={{
               scale: 1.05,

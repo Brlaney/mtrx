@@ -98,30 +98,3 @@ export function trussCheck(m, n, r) {
     return 2;
   }
 };
-
-
-/* Function 6.)
-  Input:
-  - x, the current step in the switch
-  - n, the total number of possible states
-  Output: The next step increment state value 
-*/
-export function nextMod(x, n) {
-  let increment = x + 1;
-  let step = increment % n;
-  
-  return step;
-};
-
-/* Function 7.)
-  Input:
-  - x, the current step in the switch
-  - n, the total number of possible states
-  Output: The previous step increment state value 
-*/
-export function prevMod(x, n) {
-  let increment = x - 1;
-  let step = increment % n;
-  
-  return step;
-};

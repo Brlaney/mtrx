@@ -15,9 +15,9 @@ const A = () => {
       exit={{ opacity: 0 }}
     >
       <svg
-        width='314'
-        height='93'
-        viewBox='0 0 314 93'
+        width='443'
+        height='233'
+        viewBox='0 0 443 233'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >

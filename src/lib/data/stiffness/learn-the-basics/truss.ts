@@ -1,5 +1,5 @@
 export const data = [
-  'Our given Truss system that contains 5 bar elements (members) that contain 4 local degrees of freedom. There are 4 nodes in this system, each containing 2 global degrees of freedom. Nodes 1 & 4 are restrained from horizontal and vertical displacements while nodes 2 & 3 are unrestrained against all displacements. The two matrices on the right are the element connection matrix and the node coordinates matrix',
+  'This truss contains five elements each containing four (local) degrees of freedom. There are four nodes in this system, each contain two (global) degrees of freedom. Nodes 1. & 4. are restrained from horizontal and vertical displacements while Node 1. & 3. are unrestrained against horizontal and vertical displacements. The two matrices on the right are the element connection matrix and the node coordinates matrix',
   'Local element 1 stiffness matrix (left). The local stiffness matrix (right)',
   'Local element 2 stiffness matrix (left). The local stiffness matrix (right)',
   'Local element 3 stiffness matrix (left). The local stiffness matrix (right)',
