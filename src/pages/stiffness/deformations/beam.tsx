@@ -19,14 +19,9 @@ export default function Beam() {
           </h1>
         </div>
 
-        {/* Divider */}
-        <div className='uk-heading-divider' />
-
-        {/* This pages main content */}
-        <div className={styles.content}>
-          <div className={styles.chartContainer}>
-            <Beams />
-          </div>
+        {/* Chart container - main content */}
+        <div className={styles.chartContainer}>
+          <Beams />
         </div>
       </div>
     </motion.div>

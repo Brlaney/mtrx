@@ -19,14 +19,9 @@ export default function Truss() {
           </h1>
         </div>
 
-        {/* Divider */}
-        <div className='uk-heading-divider' />
-
-        {/* This pages main content */}
-        <div className={styles.content}>
-          <div className={styles.chartContainer}>
-            <Trusses />
-          </div>
+        {/* Chart container - main content */}
+        <div className={styles.chartContainer}>
+          <Trusses />
         </div>
       </div>
     </motion.div>

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, fadeInUp2, stagger } from '@/lib/config/animations/svgs/learn';
 import Blank from '@/components/stiffness/examples/truss/solutions/Blank';
-import A from '@/components/stiffness/examples/truss/solutions/A';
 import Elem1 from '@/components/stiffness/examples/truss/solutions/Elem1';
 import Elem2 from '@/components/stiffness/examples/truss/solutions/Elem2';
 import Elem3 from '@/components/stiffness/examples/truss/solutions/Elem3';
@@ -67,7 +66,7 @@ export default function Truss() {
               exit={{ opacity: 0 }}
               layout
             >
-              <Blank /><A />
+              <Blank />
             </motion.div>
           )}
           {graphic === 2 && (

@@ -7,8 +7,7 @@ export const data = [
   'The angle of orientation for element 2.',
   'The angle of orientation for element 3.',
   'The angle of orientation for element 4.',
-  'The angle of orientation for element 5.',
-  'Organize everything to easily iterate over the system to solve for member-end forces and all displacements.'
+  'The angle of orientation for element 5.'
 ];
 
 export const buttonTexts = [
@@ -20,6 +19,5 @@ export const buttonTexts = [
   { id: 6, text: 'theta_2' },
   { id: 7, text: 'theta_3' },
   { id: 8, text: 'theta_4' },
-  { id: 9, text: 'theta_5' },
-  { id: 10, text: 'Assembling solution' }
+  { id: 9, text: 'theta_5' }
 ];

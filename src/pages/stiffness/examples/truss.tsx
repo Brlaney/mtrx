@@ -10,7 +10,6 @@ import T2 from '@/components/stiffness/examples/truss/T2';
 import T3 from '@/components/stiffness/examples/truss/T3';
 import T4 from '@/components/stiffness/examples/truss/T4';
 import T5 from '@/components/stiffness/examples/truss/T5';
-import A from '@/components/stiffness/examples/truss/solutions/A';
 import { Button5 } from '@/components/stiffness/examples/truss/buttons/Button5';
 import { Button6 } from '@/components/stiffness/examples/truss/buttons/Button6';
 import { Button7 } from '@/components/stiffness/examples/truss/buttons/Button7';
@@ -50,7 +49,6 @@ export default function Truss() {
           {graphic === 7 && <T3 />}
           {graphic === 8 && <T4 />}
           {graphic === 9 && <T5 />}
-          {graphic === 10 && <A />}
         </motion.div>
 
         {/* Information onClick */}
@@ -64,7 +62,7 @@ export default function Truss() {
         <motion.div className={styles.controls}>
           {buttonTexts.map((buttonText: IDispl) => (
             <motion.button
-              id={buttonText.id < 11 ? styles.gridbtn : styles.fullwidthbtn}
+              id={buttonText.id < 9 ? styles.gridbtn : styles.fullwidthbtn}
               className='uk-button'
               onClick={() => { setGraphic(buttonText.id) }}
               whileHover={{
@@ -84,7 +82,6 @@ export default function Truss() {
               {buttonText.id === 7 && <Button7 />}
               {buttonText.id === 8 && <Button8 />}
               {buttonText.id === 9 && <Button9 />}
-              {buttonText.id === 10 && buttonText.text}
             </motion.button>
           ))}
         </motion.div>
