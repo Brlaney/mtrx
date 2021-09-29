@@ -46,13 +46,13 @@ I am referring to statics and structural analysis within the context of *Civil E
 
 How does this apply to Civil Engineering? Well, when designing and modeling any structure, our end goal is for the structure to be rigid - Civil Engineers call this **static equalibrium**. This is pretty obvious, but this basic concept is the foundation for analysing any structural system.
 
-This project contains three *components* or *page directories* (see src/pages/). 
+This project contains three **components** or **page directories** (see src/pages/). 
 
-**1. Solver** (*./src/pages/solver/*)
-**2. Stiffness** (*./src/pages/stiffness/*)
-**3. Bridge-Design** (*./src/pages/bridge-design/*)
+- **1. Solver** (*./src/pages/solver/*)
+- **2. Stiffness** (*./src/pages/stiffness/*)
+- **3. Bridge-Design** (*./src/pages/bridge-design/*)
 
-The solver (1.) is where users can go through an a multi-part form inputting all of the necessary information about either a Truss, Beam, or Frame system and a detailed solution will be output. The pages within the stiffness (2.) directory contain tutorials, walkthroughs, and examples which allow the user to better understand the matrix displacement method or build a solid foundation of the basics. The bridge-design (3.) directory will eventually contain similar tutorials as the stiffness (2.) directory, but as of `9/29/2021` I have mainly been building the features within solver (1.) and stiffness (2.)
+The solver **(1.)** is where users can go through an a multi-part form inputting all of the necessary information about either a Truss, Beam, or Frame system and a detailed solution will be output. The pages within the stiffness **(2.)** directory contain tutorials, walkthroughs, and examples which allow the user to better understand the matrix displacement method or build a solid foundation of the basics. The bridge-design **(3.)** directory will eventually contain similar tutorials as the stiffness **(2.)** directory, but as of `9/29/2021` I have mainly been building the features within solver **(1.)** and stiffness **(2.)**.
 
 Let me know if you have any questions and feel free to reach out to me through any of the provided contacts at the bottom of this readme. Have fun!
 
