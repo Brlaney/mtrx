@@ -40,17 +40,19 @@
 
 ## Summary
 
-There are many situations in which you might have to summarize an article or other source:
+The main goal of this project is to allow the user to understand the **matrix displacement method** by learning visually and interactively. The **matrix displacement method** or the **stiffness method** usually requires an understanding of statics and structural mechanics (analysis) - my goal is to make content that is approachable from any level of understanding of these topics.
 
-- As a stand-alone assignment to show you’ve understood the material.
-- To keep notes that will help you remember what you’ve read.
-- To give an overview of other researchers’ work in a literature review.
+I am referring to statics and structural analysis within the context of *Civil Engineering*, they are both courses required for [ABET](https://www.abet.org/) accredited Civil Engineering degrees. Regardless if you are a Civil Engineer (or studying to become one), they are interesting and intuitive subjects that are a direct implication of [Newtonian Mechanics](https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion). Newton's first law states that `an object at rest will stay at rest` implying that the sum of all forces on that object equal zero.
 
-When you’re writing an academic text like an essay, research paper, or dissertation, you’ll engage with other researchers’ work in a variety of ways. Sometimes you might use a brief quote to support your point; sometimes you might paraphrase a few sentences or paragraphs.
+How does this apply to Civil Engineering? Well, when designing and modeling any structure, our end goal is for the structure to be rigid - Civil Engineers call this **static equalibrium**. This is pretty obvious, but this basic concept is the foundation for analysing any structural system.
 
-But it’s often appropriate to summarize a whole article or chapter if it is especially relevant to your own research, or to provide an overview of a source before you analyze or critique it.
+This project contains three *components* or *page directories* (see src/pages/). The solver (1.) is where users can go through an a multi-part form inputting all of the necessary information about either a Truss, Beam, or Frame system and a detailed solution will be output. The pages within the stiffness (2.) directory contain tutorials, walkthroughs, and examples which allow the user to better understand the matrix displacement method or build a solid foundation of the basics. The bridge-design (3.) directory will eventually contain similar tutorials as the stiffness (2.) directory, but as of `9/29/2021` I have mainly been building the features within solver (1.) and stiffness (2.)
 
-In any case, the goal of summarizing is to give your reader a clear understanding of the original source. Follow the 4 steps outline below to write a good summary.
+1. Solver (./src/pages/solver/)
+2. Stiffness (./src/pages/stiffness/)
+3. Bridge-Design (./src/pages/bridge-design/)
+
+Let me know if you have any questions and feel free to reach out to me through any of the provided contacts at the bottom of this readme. Have fun!
 
 </br>
 
