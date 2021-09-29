@@ -217,7 +217,9 @@ Link to a short video I uploaded to youtube showing this issue and how it was de
 - Wikipedia:
   - [Direct Stiffness Method](https://en.wikipedia.org/wiki/Direct_stiffness_method)
   - [Finite Element Method](https://en.wikipedia.org/wiki/Finite_element_method)
+  - [Newtonian Mechanics](https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion)
   - [Structural Analysis](https://en.wikipedia.org/wiki/Structural_analysis)
+- [ABET](https://www.abet.org/)
 
 </br>
 
