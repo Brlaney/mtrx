@@ -60,7 +60,7 @@ In any case, the goal of summarizing is to give your reader a clear understandin
 
 <div align="center">
   <h4><b>Homepage (desktop) - figure 1.</b></h4>
-  <img src="https://user-images.githubusercontent.com/64326462/134724980-d1f4154d-cebc-46fb-b858-13619afa8518.png" alt="Homepage-desktop"  align="center" />
+  <img src="https://user-images.githubusercontent.com/64326462/135329043-33ea31dd-f4df-4155-8106-c120634e2424.png" alt="Homepage-desktop"  align="center" />
 </div>
 
 </br>
