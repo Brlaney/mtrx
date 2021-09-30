@@ -1,8 +1,7 @@
-export const data = {
+export const coordinates = {
   labels: ['0', '5 ft', '10 ft', '20 ft', '30 ft'],
   datasets: [
     {
-      type: 'line',
       label: 'Continuous beam',
       data: [
         { x: 0, y: 0, },
@@ -47,8 +46,8 @@ export const data = {
 };
 
 export const config = {
-  type: 'line',
-  data: data,
+  // type: 'line',
+  // data: data,
   options: {
     responsive: true,
     stacked: false,
@@ -63,30 +62,30 @@ export const config = {
     }
   },
   scales: {
-    x: {
+    xAxes: {
       type: 'linear',
       display: true,
       max: 40,
       min: -10,
-      ticks: {
-        stepSize: 5,
-        callback: function (value) {
-          return value + ' ft';
-        }
-      },
+      // ticks: {
+      //   stepSize: 5,
+      //   callback: function (value) {
+      //     return value + ' ft';
+      //   }
+      // },
     },
-    y: {
+    yAxes: {
       type: 'linear',
       display: true,
-      position: 'left',
+      position: 'right',
       max: 15,
       min: -5,
-      ticks: {
-        stepSize: 1,
-        callback: function (value) {
-          return value + ' in';
-        }
-      },
+      // ticks: {
+      //   stepSize: 1,
+      //   callback: function (value) {
+      //     return value + ' in';
+      //   }
+      // },
     },
   },
 };
