@@ -2,8 +2,8 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/tests/svgs';
 import GoBack from '@/components/global/buttons/GoBack';
-import { elementLengths, localK } from '@/lib/utils/matrix/truss';
 import styles from '@/styles/pages/Tests.module.scss';
+import { elementLengths, localK } from '@/lib/utils/matrix/truss';
 
 const Tests = () => {
   const endpoint = '/';
@@ -15,8 +15,8 @@ const Tests = () => {
 
   const testOutput = elementLengths(test, elemConn);
 
-  console.log('Each elements length in ft.:')
-  console.log(testOutput[0]);
+  console.log('Each elements length in ft.: ' + testOutput[0]);
+  // console.log(testOutput[0]);
 
   console.log('Each elements orientation in radians:')
   console.log(testOutput[1]);
@@ -34,6 +34,7 @@ const Tests = () => {
   console.log('These arrays contain a 4 x 4 local stiffness matrix ([k]) for each element in the system.');
   console.log(k);
 
+
   return (
     <motion.div
       className={styles.container}
@@ -48,10 +49,13 @@ const Tests = () => {
       <motion.div className={styles.parent} variants={stagger}>
 
         {/* Header */}
-        <motion.h2 variants={fadeInUp}>
+        <motion.h2 className={styles.header} variants={fadeInUp}>
           Welcome, to the test page
         </motion.h2>
 
+        <motion.div className={styles.box} variants={fadeInUp}>
+          Box
+        </motion.div>
 
       </motion.div>
     </motion.div>
