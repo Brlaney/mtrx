@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import StepOne from '@/components/solver/forms/truss/StepOne';
 import StepTwo from '@/components/solver/forms/truss/StepTwo';
@@ -9,8 +9,8 @@ import styles from '@/styles/pages/Form.module.scss';
 
 const Truss: React.FC<{ props }> = () => {
   const endpoint = '/solver';
-  const [currentStep, setCurrentStep] = React.useState(0);
-  const [data, setData] = React.useState({
+  const [currentStep, setCurrentStep] = useState(0);
+  const [data, setData] = useState({
     nodes: '', // Number of nodes in system
     members: '', // Number of members/elements in system
     reactions: '', // Number of support reactions in system

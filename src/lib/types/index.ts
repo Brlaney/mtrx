@@ -54,3 +54,28 @@ export interface ISteps {
   id: number;
   title: string;
 };
+
+export interface IPhase {
+  id: number; 
+  state: string;
+  txt: string;
+  n1?: number;
+  n2?: number;
+  theta?: number;
+};
+
+export interface INode {
+  index: number;
+  id: string;
+  cx: string;
+  cy: string;
+  r: string;
+  activeAt: number[];
+};
+
+export interface IElement {
+  index: number;
+  id: string;
+  d: string;
+  activeAt: number[];
+};
