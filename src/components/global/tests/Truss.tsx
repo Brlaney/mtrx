@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import * as React from 'react';
 import { motion } from 'framer-motion'
 import { shapeVariations } from '@/lib/config/animations/svgs/svgs';
 import { INode, IElement } from '@/lib/types';
-import { phases, nodes, elements } from '@/lib/data/tests';
+import { nodes, elements } from '@/lib/data/tests';
 
 const strokeColors = [
   'rgba(37, 35, 35, 0.3)',
-  '#252323'
+  '#414141'
 ];
 
 const fillColors = [
@@ -20,11 +20,6 @@ const textColors = [
 ];
 
 const Truss = ({ status }) => {
-  const [phase, setPhase] = useState(phases[status]);
-
-  useEffect(() => {
-    setPhase(phases[status]);
-  }, [status]);
 
   return (
     <motion.div
@@ -32,6 +27,7 @@ const Truss = ({ status }) => {
       initial='initial'
       animate='animate'
       exit={{ opacity: 0 }}
+      layout
     >
       <svg
         width='443'
@@ -52,6 +48,7 @@ const Truss = ({ status }) => {
               {...shapeVariations}
               animate='visible'
               initial='hidden'
+              layout
             />
           ))}
 
@@ -72,6 +69,7 @@ const Truss = ({ status }) => {
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }
               }}
               initial={{ y: 60, opacity: 0, }}
+              layout
             />
           ))}
         </g>

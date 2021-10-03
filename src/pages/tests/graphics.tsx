@@ -36,17 +36,19 @@ const Graphics = () => {
         {phases.map((phase: IPhase) => (
           <motion.button
             key={phase.id}
-            id={styles.phasebutton}
+            id={phase.id == phaseNum ? styles.activebtn : styles.inactivebtn}
             className='uk-button text-lead'
             variants={fadeInUp}
-            onClick={() => {setPhaseNum(phase.id)}}
+            onClick={() => { setPhaseNum(phase.id) }}
             whileHover={{
+              zIndex: 1,
               scale: 1.05,
               transition: {
-                duration: .25
+                duration: .33
               }
             }}
             whileTap={{ scale: 0.95 }}
+            layout
           >
             {phase.txt}
           </motion.button>
