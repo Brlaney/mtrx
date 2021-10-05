@@ -59,6 +59,7 @@ export interface IPhase {
   id: number; 
   state: string;
   txt: string;
+  tip: string;
   n1?: number;
   n2?: number;
   theta?: number;

@@ -1,11 +1,11 @@
 export const phases = [
-  { id: 1, state: 'none', txt: 'x' },
-  { id: 2, state: 'el1', txt: '1.', n1: 1, n2: 2, theta: 0.79 },
-  { id: 3, state: 'el2', txt: '2.', n1: 2, n2: 3, theta: 0.00 },
-  { id: 4, state: 'el3', txt: '3.', n1: 3, n2: 4, theta: 5.50 },
-  { id: 5, state: 'el4', txt: '4.', n1: 1, n2: 3, theta: 0.47 },
-  { id: 6, state: 'el5', txt: '5.', n1: 4, n2: 2, theta: 2.67 },
-  { id: 7, state: 'all', txt: '6.' }
+  { id: 1, state: 'none', txt: 'x', tip: 'Cleared diagram' },
+  { id: 2, state: 'el1', txt: '1.', tip: 'Element 1 local stiffness', n1: 1, n2: 2, theta: 0.79 },
+  { id: 3, state: 'el2', txt: '2.', tip: 'Element 2 local stiffness', n1: 2, n2: 3, theta: 0.00 },
+  { id: 4, state: 'el3', txt: '3.', tip: 'Element 3 local stiffness', n1: 3, n2: 4, theta: 5.50 },
+  { id: 5, state: 'el4', txt: '4.', tip: 'Element 4 local stiffness', n1: 1, n2: 3, theta: 0.47 },
+  { id: 6, state: 'el5', txt: '5.', tip: 'Element 5 local stiffness', n1: 4, n2: 2, theta: 2.67 },
+  { id: 7, state: 'all', txt: '6.', tip: 'All members highlighted' }
 ];
 
 export const nodes = [
