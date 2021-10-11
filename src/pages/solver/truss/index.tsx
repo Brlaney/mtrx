@@ -16,11 +16,6 @@ const Truss: React.FC<{ props }> = () => {
     reactions: '', // Number of support reactions in system
     units: 1, // 1 => imperial system & 0 => metric system
     uniformCheck: 1, // Are material props uniform or unique for each element?
-    coordinates: [], // Input a m x 2 array of (x, y) coordinates for each element
-    dof: [], // For each global dof have user define restrained (0) or unrestrained (1) 
-    f: [], // For each global dof have user input the externally appl. load
-    A: [], // If not uniform props, then prompt user for each element to input props
-    E: [], // Same as above -- if they both are uniform, then auto fill with the input value
   });
 
   const makeRequest = (formData) => {
