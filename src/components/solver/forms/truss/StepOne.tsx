@@ -12,7 +12,7 @@ import Forward from '@/components/global/buttons/matrix/Forward';
 import styles from '@/styles/components/Steps.module.scss';
 
 const StepOne = (props) => {
-  const [radioState, setRadioState] = React.useState(1);
+  // const [radioState, setRadioState] = React.useState(1);
   const handleSubmit = (values) => {
     props.next(values);
   };
@@ -22,6 +22,7 @@ const StepOne = (props) => {
     members: yup.number().defined().min(1).max(50),
     reactions: yup.number().defined().min(0).max(20),
     units: yup.number().default(1).min(1).max(2),
+    uniformCheck: yup.number().default(1).min(1).max(2),
   });
 
   useEffect(() => {
@@ -134,6 +135,42 @@ const StepOne = (props) => {
               </div>
             </div>
 
+            {/* Row 3 | Uniform check radio dials */}
+            <div className={styles.row}>
+              <div id={styles.radio} className='uk-width-1-2'>
+                <div className={styles.col}>
+                  <h6 className={styles.field}>
+                    Are material properties uniform
+                  </h6>
+                </div>
+              </div>
+              <div id={styles.radio} className='uk-width-1-2'>
+                <div className={styles.row}>
+                  <label className={styles.radiolabel}>
+                    <input
+                      id={styles.imperial}
+                      className='uk-radio'
+                      name='uniformCheck'
+                      type='radio'
+                      value='1'
+                      aria-label='Material properties are uniform'
+                      checked
+                    /> Uniform
+                  </label>
+                  <label className={styles.radiolabel}>
+                    <input
+                      id={styles.metric}
+                      className='uk-radio'
+                      name='uniformCheck'
+                      type='radio'
+                      value='2'
+                      aria-label='Material properties are not uniform'
+                    />  Not uniform
+                  </label>
+                </div>
+              </div>
+            </div>
+
             {/* Fordward button if valid inputs */}
             <div id={styles.btnrow} className={styles.row}>
               <div className={styles.buttonRight}>
@@ -156,7 +193,7 @@ const StepOne = (props) => {
             </div>
           </Form>
         )}
-    </Formik>
+      </Formik>
     </>
   )
 };
