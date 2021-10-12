@@ -8,7 +8,8 @@ import { ITopicB, Isection } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Topics.module.scss';
 
-const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const BridgeDesign = ({ topics }:
+  InferGetStaticPropsType<typeof getStaticProps>) => {
   const [topicsList] = React.useState(topics);
   const endpoint = '/';
 
@@ -20,8 +21,10 @@ const BridgeDesign = ({ topics }: InferGetStaticPropsType<typeof getStaticProps>
     >
       <GoBack link={endpoint} />
       <motion.div className={styles.container} variants={stagger}>
-        <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
-
+        <div
+          id={styles.space}
+          className='uk-height-small uk-flex uk-flex-center'
+        />
         <motion.div className={styles.header} variants={fadeInUp}>
           <h3 className={styles.title}>
             Bridge Design <span className={styles.span}> topics</span>
