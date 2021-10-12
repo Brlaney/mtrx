@@ -62,6 +62,7 @@ export default function Truss() {
         <motion.div className={styles.controls}>
           {buttonTexts.map((buttonText: IDispl) => (
             <motion.button
+              key={buttonText.id}
               id={buttonText.id < 9 ? styles.gridbtn : styles.fullwidthbtn}
               className='uk-button'
               onClick={() => { setGraphic(buttonText.id) }}

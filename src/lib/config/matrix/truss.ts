@@ -1,4 +1,4 @@
-export const coordinates = {
+export const data = {
   labels: ['0', '5 ft', '10 ft', '20 ft', '30 ft'],
   datasets: [
     {
@@ -19,7 +19,6 @@ export const coordinates = {
       borderWidth: 1,
       pointRadius: 4,
       pointHoverRadius: 7,
-      yAxisID: 'y'
     },
     {
       type: 'line',
@@ -39,15 +38,13 @@ export const coordinates = {
       borderWidth: 1,
       pointRadius: 4,
       pointHoverRadius: 7,
-      // lineTension: -0.05,
-      yAxisID: 'y'
     },
   ]
 };
 
 export const config = {
-  // type: 'line',
-  // data: data,
+  type: 'line',
+  data: data,
   options: {
     responsive: true,
     stacked: false,
@@ -67,12 +64,12 @@ export const config = {
       display: true,
       max: 40,
       min: -10,
-      // ticks: {
-      //   stepSize: 5,
-      //   callback: function (value) {
-      //     return value + ' ft';
-      //   }
-      // },
+      ticks: {
+        stepSize: 5,
+        callback: function (value) {
+          return value + ' ft';
+        }
+      },
     },
     yAxes: {
       type: 'linear',
@@ -80,12 +77,12 @@ export const config = {
       position: 'right',
       max: 15,
       min: -5,
-      // ticks: {
-      //   stepSize: 1,
-      //   callback: function (value) {
-      //     return value + ' in';
-      //   }
-      // },
+      ticks: {
+        stepSize: 1,
+        callback: function (value) {
+          return value + ' in';
+        }
+      },
     },
   },
 };
