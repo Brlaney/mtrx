@@ -21,7 +21,8 @@ const Solver = () => {
         {name && (
           <>
             <h2 className={styles.pageTitle}>
-              Select a system to solve <span className={styles.conditional}> {name}</span>
+              Select a system to solve
+              <span className={styles.conditional}>{name}</span>
             </h2>
           </>
         )}
@@ -43,7 +44,7 @@ const Solver = () => {
               whileHover={{
                 zIndex: 1,
                 scale: 1.03,
-                transition: { duration: 0.2 }
+                transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.97 }}
             >
@@ -73,7 +74,7 @@ const Solver = () => {
               whileHover={{
                 zIndex: 1,
                 scale: 1.03,
-                transition: { duration: 0.2 }
+                transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.97 }}
             >

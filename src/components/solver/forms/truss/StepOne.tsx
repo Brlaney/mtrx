@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import * as yup from 'yup';
 import {
   Formik,
@@ -12,7 +11,8 @@ import Forward from '@/components/global/buttons/matrix/Forward';
 import styles from '@/styles/components/Steps.module.scss';
 
 const StepOne = (props) => {
-  // const [radioState, setRadioState] = React.useState(1);
+  const [isUSSelected, setIsUSSelected] = React.useState(1);
+  const [isUnifSelected, setIsUnifSelected] = React.useState(1);
   const handleSubmit = (values) => {
     props.next(values);
   };
@@ -21,14 +21,21 @@ const StepOne = (props) => {
     nodes: yup.number().defined().min(1).max(50),
     members: yup.number().defined().min(1).max(50),
     reactions: yup.number().defined().min(0).max(20),
-    units: yup.number().default(1).min(1).max(2),
-    uniformCheck: yup.number().default(1).min(1).max(2),
+    units: yup.number().default(1).min(0).max(1),
+    uniformCheck: yup.number().default(1).min(0).max(1),
   });
 
   useEffect(() => {
-    console.log('UseEffect will run if values change');
+    console.log(props.units);
+    console.log(props.uniformCheck);
 
-  }, [props.members, props.nodes, props.reactions, props.units]);
+  }, [
+    props.members,
+    props.nodes,
+    props.reactions,
+    props.units,
+    props.uniformCheck
+  ]);
 
   return (
     <>
@@ -118,7 +125,9 @@ const StepOne = (props) => {
                       type='radio'
                       value='1'
                       aria-label='Imperial (US)'
-                      checked
+                      checked={isUSSelected > 0}
+                      onClick={() => setIsUSSelected(1)}
+                      onChange={e => {}}
                     /> Imperial
                   </label>
                   <label className={styles.radiolabel}>
@@ -127,8 +136,11 @@ const StepOne = (props) => {
                       className='uk-radio'
                       name='units'
                       type='radio'
-                      value='2'
+                      value='0'
                       aria-label='Metric (SI)'
+                      checked={isUSSelected == 0}
+                      onClick={() => setIsUSSelected(0)}
+                      onChange={e => {}}
                     />  Metric
                   </label>
                 </div>
@@ -154,7 +166,9 @@ const StepOne = (props) => {
                       type='radio'
                       value='1'
                       aria-label='Material properties are uniform'
-                      checked
+                      checked={isUnifSelected > 0}
+                      onClick={() => setIsUnifSelected(1)}
+                      onChange={e => {}}
                     /> Uniform
                   </label>
                   <label className={styles.radiolabel}>
@@ -163,8 +177,11 @@ const StepOne = (props) => {
                       className='uk-radio'
                       name='uniformCheck'
                       type='radio'
-                      value='2'
+                      value='0'
                       aria-label='Material properties are not uniform'
+                      checked={isUnifSelected == 0}
+                      onClick={() => setIsUnifSelected(0)}
+                      onChange={e => {}}
                     />  Not uniform
                   </label>
                 </div>

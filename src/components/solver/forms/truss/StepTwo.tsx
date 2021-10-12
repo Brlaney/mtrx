@@ -65,8 +65,7 @@ const StepTwo = (props) => {
     x1: yup.number().defined(),
     y1: yup.number().defined(),
     x2: yup.number().defined(),
-    y2: yup.number().defined(),
-    uniformCheck: yup.number().defined(),
+    y2: yup.number().defined()
   });
 
   return (
@@ -127,38 +126,6 @@ const StepTwo = (props) => {
               )
             }
             )}
-
-            {/* Uniform check input */}
-            <div className={styles.row}>
-              <div id={styles.uniform1} className='uk-width-2-3'>
-                <h6 className={styles.labelInner}>
-                  Material properties are:
-                </h6>
-              </div>
-              <div id={styles.uniform2} className='uk-width-1-3'>
-                <label className={styles.radiolabel}>
-                  <input
-                    id={styles.input1}
-                    className='uk-radio'
-                    name='uniformCheck'
-                    type='radio'
-                    value={1}
-                    aria-label='Is-uniform'
-                    checked
-                  /> Uniform
-                </label>
-                <label className={styles.radiolabel}>
-                  <input
-                    id={styles.input2}
-                    className='uk-radio'
-                    name='uniformCheck'
-                    type='radio'
-                    value={0}
-                    aria-label='Not-uniform'
-                  />  Unique
-                </label>
-              </div>
-            </div>
 
             {/* Navigation buttons - back & forward */}
             <div className='uk-width-1-1'>
