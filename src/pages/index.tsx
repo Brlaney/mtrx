@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/staggered';
 import Col1 from '@/components/homepage/Col1';
 import Col2 from '@/components/homepage/Col2';
-import Col3 from '@/components/homepage/Col3';
 import Footer from '@/components/global/Footer';
 import styles from '@/styles/pages/Home.module.scss';
 
@@ -67,27 +66,6 @@ export default function Home() {
               <Col2 />
               <p className={styles.cta}>
                 Stiffness Theory
-              </p>
-            </motion.div>
-          </Link>
-
-          {/* Link 3 - Bridge Design theory/tutorials */}
-          <Link href='/bridge-design'>
-            <motion.div
-              id={styles.col3}
-              variants={fadeInUp}
-              className='uk-width-1-3'
-              whileHover={{
-                position: 'relative',
-                zIndex: 1,
-                scale: 1.06,
-                transition: { duration: 0.2 }
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Col3 />
-              <p className={styles.cta}>
-                Bridge Design
               </p>
             </motion.div>
           </Link>

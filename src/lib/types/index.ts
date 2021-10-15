@@ -7,20 +7,6 @@ export interface Choice1 {
   height: number;
 };
 
-export interface IBridgeComponents {
-  id: number;
-  component: string;
-  path: string;
-  source: string;
-  name: string;
-};
-
-export interface ITopicB {
-  id: number;
-  title: string;
-  sections?: any | null | undefined;
-};
-
 export interface ITopicS {
   id: number;
   title: string;

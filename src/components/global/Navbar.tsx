@@ -5,8 +5,7 @@ import styles from '@/styles/components/Navbar.module.scss';
 
 const navLinks = [
   { id: 1, name: 'Solver', link: '/solver', active: 0 },
-  { id: 2, name: 'Stiffness', link: '/stiffness', active: 0 },
-  { id: 3, name: 'Bridge', link: '/bridge-design', active: 0 },
+  { id: 2, name: 'Stiffness theory', link: '/stiffness', active: 0 },
 ];
 
 export default function Navbar() {
