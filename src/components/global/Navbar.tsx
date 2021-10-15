@@ -36,7 +36,10 @@ export default function Navbar() {
         </div>
 
         {/* Navbar links - right-end of navbar */}
-        <div id={styles.rightside} className='uk-navbar-right uk-margin-right'>
+        <div
+          id={styles.rightside}
+          className='uk-navbar-right uk-margin-right'
+        >
           <ul id={styles.list} className='uk-navbar-nav'>
             {navLinks.map((navlink: INav) => (
               <li
