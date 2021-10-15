@@ -4,13 +4,8 @@ import {
   shapeVariations,
 } from '@/lib/config/animations/svgs/svgs';
 
-const color1 = '#252323';
-const color2 = '#2F2F2F';
-const color3 = '#4E4E4E';
-const color4 = '#242121';
-const color5 = '#CADEFC';
-const color6 = 'rgba(37, 35, 35, 0.3)';
-const color7 = 'rgba(202, 222, 252, 0.7)';
+const color1 = 'rgba(37, 35, 35, 0.3)';
+const color2 = 'rgba(202, 222, 252, 0.7)';
 
 const Un = () => {
   return (
@@ -34,7 +29,7 @@ const Un = () => {
           <motion.path
             {...mainPathVariant}
             d='M273 64L370 170'
-            stroke={color6}
+            stroke={color1}
             stroke-linecap='round'
             {...shapeVariations}
             animate='visible'
@@ -42,7 +37,7 @@ const Un = () => {
           />
           <motion.path
             d='M174 62L268.5 62'
-            stroke={color6}
+            stroke={color1}
             stroke-linecap='round'
             {...shapeVariations}
             animate='visible'
@@ -50,7 +45,7 @@ const Un = () => {
           />
           <motion.path
             d='M173.5 63.5L369 170'
-            stroke={color6}
+            stroke={color1}
             stroke-linecap='round'
             {...shapeVariations}
             animate='visible'
@@ -58,7 +53,7 @@ const Un = () => {
           />
           <motion.path
             d='M74 170L269.5 63.5'
-            stroke={color6}
+            stroke={color1}
             stroke-linecap='round'
             {...shapeVariations}
             animate='visible'
@@ -66,7 +61,7 @@ const Un = () => {
           />
           <motion.path
             d='M73.5 169.5L170 64'
-            stroke={color6}
+            stroke={color1}
             stroke-linecap='round'
             {...shapeVariations}
             animate='visible'
@@ -91,8 +86,8 @@ const Un = () => {
             cx='271.5'
             cy='61.5'
             r='2.5'
-            fill={color7}
-            stroke={color6}
+            fill={color2}
+            stroke={color1}
             {...shapeVariations}
             animate={{
               y: 0,
@@ -105,8 +100,8 @@ const Un = () => {
             cx='271.5'
             cy='61.5'
             r='2.75'
-            fill={color7}
-            stroke={color6}
+            fill={color2}
+            stroke={color1}
             stroke-width='0.5'
             {...shapeVariations}
             animate={{
@@ -120,8 +115,8 @@ const Un = () => {
             cx='171.5'
             cy='61.5'
             r='2.5'
-            fill={color7}
-            stroke={color6}
+            fill={color2}
+            stroke={color1}
             {...shapeVariations}
             animate={{
               y: 0,
@@ -134,8 +129,8 @@ const Un = () => {
             cx='171.5'
             cy='61.5'
             r='2.75'
-            fill={color7}
-            stroke={color6}
+            fill={color2}
+            stroke={color1}
             stroke-width='0.5'
             {...shapeVariations}
             animate={{

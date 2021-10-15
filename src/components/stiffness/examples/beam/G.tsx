@@ -4,8 +4,6 @@ import {
   shapeVariations,
 } from '@/lib/config/animations/svgs/svgs';
 
-// const color1 = '#CADEFC'
-// const color2 = '#4E4E4E'
 const color3 = 'rgba(37, 35, 35, 0.3)';
 const color4 = 'rgba(202, 222, 252, 0.7)';
 

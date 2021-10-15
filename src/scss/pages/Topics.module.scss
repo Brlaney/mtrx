@@ -2,7 +2,7 @@
 @import '../mixins/width.scss';
 
 .container {
-  width: 90vw;
+  width: 85vw;
   max-width: 900px;
   margin: 0.5rem 0 1.5rem 0;
   padding: 0 0 0.75rem 0;
@@ -14,8 +14,8 @@
     height: 40px;
   }
   .header {
-    width: 100%;
-    margin: 1rem 0 0.22rem 0;
+    width: 98%;
+    margin: 1.5rem 0 0.22rem 0;
     .title {
       font-family: $primary-font;
       font-size: 2rem;

@@ -8,8 +8,6 @@ const color1 = '#4E4E4E';
 const color2 = '#CADEFC';
 const color3 = 'rgba(37, 35, 35, 0.3)';
 const color4 = 'rgba(202, 222, 252, 0.7)';
-const color5 = '#9d9898';
-const color6 = '#252323';
 
 const F22 = () => {
   return (
