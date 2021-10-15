@@ -18,10 +18,14 @@ export default function Navbar() {
       uk-sticky='sel-target: .uk-navbar-container;
        cls-active: uk-navbar-sticky;'
     >
-      <nav id={styles.navcontainer} className='uk-navbar-container'>
-
-        {/* Navbar title/brand - left-end of navbar */}
-        <div id={styles.parent} className='uk-navbar-left uk-margin-left'>
+      <nav
+        id={styles.navcontainer}
+        className='uk-navbar-container'
+      >
+        <div
+          id={styles.parent}
+          className='uk-navbar-left uk-margin-left'
+        >
           <a
             id={styles.brand}
             href='/'
@@ -31,16 +35,14 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* ATTENTION!!! NEED TO ADD ONCLICK EVENT HANDLER BELOW! */}
-
         {/* Navbar links - right-end of navbar */}
         <div id={styles.rightside} className='uk-navbar-right uk-margin-right'>
           <ul id={styles.list} className='uk-navbar-nav'>
             {navLinks.map((navlink: INav) => (
               <li
                 key={navlink.id}
-                // id='styles.${navlink.id}'
-                className={navlink.name === active ? styles.active : styles.notactive}
+                className={navlink.name ===
+                  active ? styles.active : styles.notactive}
               >
                 <Link href={navlink.link}>
                   <a
