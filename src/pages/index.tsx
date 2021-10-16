@@ -33,7 +33,7 @@ export default function Home() {
             <motion.div
               id={styles.col1}
               variants={fadeInUp}
-              className='uk-width-1-3'
+              className='uk-width-1-2'
               whileHover={{
                 position: 'relative',
                 zIndex: 1,
@@ -54,7 +54,7 @@ export default function Home() {
             <motion.div
               id={styles.col2}
               variants={fadeInUp}
-              className='uk-width-1-3'
+              className='uk-width-1-2'
               whileHover={{
                 position: 'relative',
                 zIndex: 1,

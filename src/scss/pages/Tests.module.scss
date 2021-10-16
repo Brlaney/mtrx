@@ -56,9 +56,11 @@
           font-size: 1.06rem;
         }
         #inactivebtn:hover {
-          border: 2px solid $primary;
+          border: 2px solid $secondary;
         }
         #activebtn {
+          background-color: $secondary;
+          color: $white;
           border-radius: 3px;
           height: 42px;
           width: 90%;
