@@ -36,11 +36,11 @@ export default function Truss() {
     setDisplay(data[k]);
   }, [graphic, display]);
 
-  if(graphic <= 0) {
+  if (graphic <= 0) {
     decrement = () => setGraphic(1);
   }
 
-  if(graphic > 6) {
+  if (graphic > 6) {
     increment = () => setGraphic(6);
   }
 
@@ -78,7 +78,8 @@ export default function Truss() {
               exit={{ opacity: 0 }}
               layout
             >
-              <State1 /><Elem1 />
+              <State1 />
+              <Elem1 />
             </motion.div>
           )}
           {graphic === 3 && (
@@ -90,7 +91,8 @@ export default function Truss() {
               exit={{ opacity: 0 }}
               layout
             >
-              <State2 /><Elem2 />
+              <State2 />
+              <Elem2 />
             </motion.div>
           )}
           {graphic === 4 && (
@@ -102,7 +104,8 @@ export default function Truss() {
               exit={{ opacity: 0 }}
               layout
             >
-              <State3 /><Elem3 />
+              <State3 />
+              <Elem3 />
             </motion.div>
           )}
           {graphic === 5 && (
@@ -114,7 +117,8 @@ export default function Truss() {
               exit={{ opacity: 0 }}
               layout
             >
-              <State4 /><Elem4 />
+              <State4 />
+              <Elem4 />
             </motion.div>
           )}
           {graphic === 6 && (
@@ -126,7 +130,8 @@ export default function Truss() {
               exit={{ opacity: 0 }}
               layout
             >
-              <State5 /><Elem5 />
+              <State5 />
+              <Elem5 />
             </motion.div>
           )}
         </motion.div>
