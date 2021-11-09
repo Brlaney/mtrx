@@ -152,7 +152,7 @@ const StepOne = (props) => {
               <div id={styles.radio} className='uk-width-1-2'>
                 <div className={styles.col}>
                   <h6 className={styles.field}>
-                    Are material properties uniform
+                    Uniform material properties
                   </h6>
                 </div>
               </div>

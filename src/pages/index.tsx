@@ -26,7 +26,7 @@ export default function Home() {
         </motion.div>
 
         {/* Grid row I - children = columns/cards */}
-        <motion.div className={styles.grid} variants={fadeInUp}>
+        <motion.div className={styles.grid}>
 
           {/* Link 1 - Matrix displacement solver */}
           <Link href='/solver'>
