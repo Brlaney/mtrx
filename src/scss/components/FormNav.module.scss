@@ -1,0 +1,39 @@
+@import '../theme/theme';
+@import '../mixins/width.scss';
+
+.subnav {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  .outerbox {
+    height: 100%;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+  }
+  .stepbox1, .stepbox2, .stepbox3 {
+    height: 100%;
+    width: 143px;
+    justify-content: center;
+    align-items: center;
+    margin: 7px 0 7px 0;
+  }
+  .rodbox1, .rodbox2 {
+    height: 100%;
+    width: 424px;
+  }
+  .rodbox3 {
+    height: 100%;
+    width: 160px;
+  }
+  .modelbox {
+    height: 100%;
+    width: 198px;
+  }
+}

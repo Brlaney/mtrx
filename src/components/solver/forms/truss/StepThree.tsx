@@ -24,17 +24,6 @@ const StepThree = (props) => {
 
   return (
     <>
-      {/* Header */}
-      <h2 className={styles.label}>
-        Step 3. <span className={styles.span}>
-          Unrestrained &amp; restrained degrees of freedom
-        </span>
-      </h2>
-
-      {/* Dotnav container for component render */}
-      {/* <div className={styles.dotnavContainer}>
-        <Dotnav props={props.step} />
-      </div> */}
 
       {/* Form | Step 3 */}
       <Formik

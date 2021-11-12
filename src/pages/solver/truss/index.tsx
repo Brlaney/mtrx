@@ -7,6 +7,8 @@ import Results from '@/components/solver/forms/truss/Results';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Form.module.scss';
 
+import FormNav from '@/components/FormNav';
+
 const Truss: React.FC<{ props }> = () => {
   const endpoint = '/solver';
   const [currentStep, setCurrentStep] = useState(0);
@@ -44,7 +46,7 @@ const Truss: React.FC<{ props }> = () => {
   return (
     <div className={styles.container}>
       <GoBack link={endpoint} />
-      <div id={styles.space} className='uk-height-small uk-flex uk-flex-center' />
+      <FormNav />
 
       {/* Page parent container and header */}
       <div className={styles.parent}>

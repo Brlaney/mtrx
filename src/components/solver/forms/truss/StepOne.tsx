@@ -7,7 +7,6 @@ import {
 } from 'formik';
 import { motion } from 'framer-motion';
 import Forward from '@/components/global/buttons/matrix/Forward';
-// import Dotnav from '@/components/global/buttons/matrix/Dotnav';
 import styles from '@/styles/components/Steps.module.scss';
 
 const StepOne = (props) => {
@@ -39,18 +38,6 @@ const StepOne = (props) => {
 
   return (
     <>
-
-      {/* Header */}
-      <h2 className={styles.label}>
-        Step 1. <span className={styles.span}>
-          Describe your truss
-        </span>
-      </h2>
-
-      {/* Dotnav container for component render */}
-      {/* <div className={styles.dotnavContainer}>
-        <Dotnav props={props} />
-      </div> */}
 
       {/* Form | Step 1 */}
       <Formik

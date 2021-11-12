@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import * as yup from 'yup';
 import { motion } from 'framer-motion';
-// import Dotnav from '@/components/global/buttons/matrix/Dotnav';
 import { Formik, Form, Field } from 'formik';
 import { forces, lengths } from '@/lib/config/forms/truss';
 import { trussCheck } from '@/lib/utils/matrix/calculate';
@@ -70,18 +69,6 @@ const StepTwo = (props) => {
 
   return (
     <>
-
-      {/* Header */}
-      <h2 className={styles.label}>
-        Step 2. <span className={styles.span}>
-          Node coordinates
-        </span>
-      </h2>
-
-      {/* Dotnav container for component render */}
-      {/* <div className={styles.dotnavContainer}>
-        <Dotnav props={props.step} />
-      </div> */}
 
       {/* Form | Step 2 */}
       <Formik
