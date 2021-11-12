@@ -66,3 +66,17 @@ export interface IElement {
   d: string;
   activeAt: number[];
 };
+
+export interface IRod {
+  id: number;
+  name: string;
+  d: string;
+  index: number;
+};
+
+export interface IRodLine {
+  id: number;
+  name: string;
+  d: string;
+  color: string;
+};
