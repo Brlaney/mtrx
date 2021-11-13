@@ -32,10 +32,7 @@ const rightColors = [
     3 => lhs & rhs complete
 */
 
-const Rod = ({ lhs, rhs, stage }) => {
-  
-
-
+const Full = ({ lhs, rhs, stage }) => {
   return (
     <motion.div
       {...mainPathVariant}
@@ -45,9 +42,9 @@ const Rod = ({ lhs, rhs, stage }) => {
       exit={{ opacity: 0 }}
     >
       <svg
-        width='424'
+        width='400'
         height='90'
-        viewBox='0 0 424 90'
+        viewBox='0 0 400 90'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
@@ -56,7 +53,7 @@ const Rod = ({ lhs, rhs, stage }) => {
           {/* Left end */}
           <motion.path
             id='left-end'
-            d='M12 36.5L20.5 45L12 53.5L3.5 45L12 36.5Z'
+            d='M14.5 36.5L23 45L14.5 53.5L6 45L14.5 36.5Z'
             fill='#2F2F2F'
             {...shapeVariations}
             animate='visible'
@@ -66,7 +63,7 @@ const Rod = ({ lhs, rhs, stage }) => {
           {/* Right end */}
           <motion.path
             id='right-end'
-            d='M412 36.5L420.5 45L412 53.5L403.5 45L412 36.5Z'
+            d='M385 36.5L393.5 45L385 53.5L376.5 45L385 36.5Z'
             fill='#2F2F2F'
             {...shapeVariations}
             animate='visible'
@@ -76,7 +73,7 @@ const Rod = ({ lhs, rhs, stage }) => {
           {/* Line */}
           <motion.path
             id='line'
-            d='M18.5 45C275.388 45 379.703 45 406 45'
+            d='M20.5 45C257.831 45 354.205 45 378.5 45'
             stroke='#2F2F2F'
             strokeWidth='3'
             strokeLinecap='round'
@@ -90,7 +87,7 @@ const Rod = ({ lhs, rhs, stage }) => {
           {lhs === 1 && (
             <motion.path
               id='left-end-active'
-              d='M12 36L3 45L12 54L21 45L12 36Z'
+              d='M14.5 37L6.5 45L14.5 53L22.5 45L14.5 37Z'
               stroke='#55BF81'
               strokeWidth='2'
               strokeLinecap='round'
@@ -105,7 +102,7 @@ const Rod = ({ lhs, rhs, stage }) => {
           {rhs === 1 && (
             <motion.path
               id='right-end-active'
-              d='M412 36L403 45L412 54L421 45L412 36Z'
+              d='M385 37L377 45L385 53L393 45L385 37Z'
               stroke='#55BF81'
               strokeWidth='2'
               strokeLinecap='round'
@@ -121,7 +118,7 @@ const Rod = ({ lhs, rhs, stage }) => {
             <>
               <motion.path
                 id='left-end'
-                d='M7 45L12 40L17 45L12 50L7 45Z'
+                d='M9.5 45L14.5 40L19.5 45L14.5 50L9.5 45Z'
                 fill={leftColors[stage]}
                 {...shapeVariations}
                 animate='visible'
@@ -129,7 +126,7 @@ const Rod = ({ lhs, rhs, stage }) => {
               />
               <motion.path
                 id='right-end'
-                d='M407 45L412 40L417 45L412 50L407 45Z'
+                d='M380 45L385 40L390 45L385 50L380 45Z'
                 fill={rightColors[stage]}
                 {...shapeVariations}
                 animate='visible'
@@ -143,4 +140,4 @@ const Rod = ({ lhs, rhs, stage }) => {
   );
 };
 
-export default Rod;
+export default Full;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/tests/svgs';
 import GoBack from '@/components/global/buttons/GoBack';
-import Truss from '@/components/global/form-nav/Truss';
+import Truss from '@/components/global/tests/Truss';
 import { IPhase } from '@/lib/types';
 import { phases } from '@/lib/data/tests'
 import styles from '@/styles/pages/Tests.module.scss';

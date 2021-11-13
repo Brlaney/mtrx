@@ -1,6 +1,9 @@
 // import React, { useState, useEffect } from 'react';
 import * as React from 'react';
-import Rod from '@/components/global/form-nav/Rod';
+import Full from '@/components/global/form-nav/Full';
+import H from '@/components/global/form-nav/H';
+import ModelIcon from '@/components/global/form-nav/ModelIcon';
+
 import styles from '@/styles/components/FormNav.module.scss';
 
 export default function FormNav() {
@@ -18,11 +21,7 @@ export default function FormNav() {
       </div>
 
       <div className={styles.rodbox1}>
-        <Rod
-          lhs={1}
-          rhs={0}
-          stage={1}
-        />
+        <Full lhs={1} rhs={0} stage={1} />
       </div>
 
       <div className={styles.stepbox2}>
@@ -30,11 +29,7 @@ export default function FormNav() {
       </div>
 
       <div className={styles.rodbox2}>
-        <Rod
-          lhs={0}
-          rhs={0}
-          stage={0}
-        />
+        <Full lhs={0} rhs={0} stage={0} />
       </div>
 
       <div className={styles.stepbox3}>
@@ -42,11 +37,15 @@ export default function FormNav() {
       </div>
 
       <div className={styles.rodbox3}>
-        Rod 3
+        <H lhs={0} rhs={0} stage={0} />
+      </div>
+
+      <div className={styles.modelsvg}>
+        <ModelIcon ready={0} />
       </div>
 
       <div className={styles.modelbox}>
-        Modelbox
+        Analyze your model
       </div>
 
       <div className={styles.outerbox}>

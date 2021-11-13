@@ -14,30 +14,49 @@
   .outerbox {
     color: white;
     height: 100%;
-    width: 120px;
+    width: 2.3%;
     justify-content: center;
     align-items: center;
-  }
-  .outerbox:onhover {
-    cursor: none;
+    @include respond-above-width(md) {
+      width: 6.7%;  
+    }
   }
   .stepbox1, .stepbox2, .stepbox3 {
     height: 100%;
-    width: 143px;
+    width: 14%;
     justify-content: center;
     align-items: center;
     margin: 7px 0 7px 0;
+    @include respond-above-width(md) {
+      width: 7.5%;  
+    }
   }
   .rodbox1, .rodbox2 {
     height: 100%;
-    width: 424px;
+    width: 14%;
+    @include respond-above-width(md) {
+      width: 21.4%;  
+    }
   }
   .rodbox3 {
     height: 100%;
-    width: 160px;
+    width: 6.6%;
+    @include respond-above-width(md) {
+      width: 10.7%;  
+    }
+  }
+  .modelsvg {
+    height: 100%;
+    width: 4.8%;
+    @include respond-above-width(md) {
+      width: 2.9%;
+    }
   }
   .modelbox {
     height: 100%;
-    width: 198px;
+    width: 14%;
+    @include respond-above-width(md) {
+      width: 7.65%;  
+    }
   }
 }

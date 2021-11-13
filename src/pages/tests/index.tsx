@@ -5,7 +5,9 @@ import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Tests.module.scss';
 // import { elementLengths, localK } from '@/lib/utils/matrix/truss';
 
-import Rod from '@/components/global/form-nav/Rod';
+import Full from '@/components/global/form-nav/Full';
+import XL from '@/components/global/form-nav/XL';
+import L from '@/components/global/form-nav/L';
 
 const Tests = () => {
   // const [rodState, setRodState] = useState(0);
@@ -59,13 +61,10 @@ const Tests = () => {
         </motion.h2>
 
         <motion.div className={styles.box} variants={fadeInUp}>
-          <Rod
-            lhs={0}
-            rhs={0}
-            stage={3}
-          />
+          <Full lhs={0} rhs={1} stage={2} />
+          <XL lhs={0} rhs={1} stage={2} />
+          <L lhs={0} rhs={1} stage={2} />
         </motion.div>
-
       </motion.div>
     </motion.div>
   )
