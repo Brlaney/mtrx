@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   mainPathVariant,
@@ -6,7 +7,7 @@ import {
 
 const leftColors = [
   '#FFFFFF',
-  '#3D69C2',
+  '#55BF81',
   '#3D69C2',
   '#3D69C2'
 ];
@@ -14,7 +15,7 @@ const leftColors = [
 const rightColors = [
   '#FFFFFF',
   '#FFFFFF',
-  '#3D69C2',
+  '#55BF81',
   '#3D69C2'
 ];
 
@@ -32,6 +33,9 @@ const rightColors = [
 */
 
 const Rod = ({ lhs, rhs, stage }) => {
+  
+
+
   return (
     <motion.div
       {...mainPathVariant}

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import {  AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
