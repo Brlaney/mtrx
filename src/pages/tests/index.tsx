@@ -5,12 +5,13 @@ import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Tests.module.scss';
 // import { elementLengths, localK } from '@/lib/utils/matrix/truss';
 
-import Rod from '@/components/global/tests/Rod';
+import Rod from '@/components/global/form-nav/Rod';
 
 const Tests = () => {
   // const [rodState, setRodState] = useState(0);
   const endpoint = '/';
 
+  // The following tests the stiffness functions
   /*
   const test = [0, 0, 10, 10, 20, 10, 30, 0];
   const elemConn = [1, 2, 2, 3, 3, 4, 1, 3, 4, 2];
@@ -58,7 +59,11 @@ const Tests = () => {
         </motion.h2>
 
         <motion.div className={styles.box} variants={fadeInUp}>
-          <Rod phase={2} />
+          <Rod
+            lhs={0}
+            rhs={0}
+            stage={3}
+          />
         </motion.div>
 
       </motion.div>

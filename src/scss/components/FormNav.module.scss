@@ -12,10 +12,14 @@
   align-items: center;
   flex: 1;
   .outerbox {
+    color: white;
     height: 100%;
     width: 120px;
     justify-content: center;
     align-items: center;
+  }
+  .outerbox:onhover {
+    cursor: none;
   }
   .stepbox1, .stepbox2, .stepbox3 {
     height: 100%;
