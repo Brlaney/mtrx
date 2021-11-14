@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
     @include respond-above-width(md) {
+      height: 90px;
       width: 6.7%;  
     }
   }
@@ -30,6 +31,7 @@
     margin: 7px 0 7px 0;
     text-align: center;
     @include respond-above-width(md) {
+      height: 90px;
       width: 7.5%;  
     }
   }
@@ -37,25 +39,23 @@
     height: 90px;
     width: 14%;
     @include respond-above-width(md) {
+      height: 90px;
       width: 21.4%;  
     }
   }
   .rodbox3 {
-    height: 90px;
     width: 6.6%;
     @include respond-above-width(md) {
       width: 10.7%;  
     }
   }
   .modelsvg {
-    height: 90px;
     width: 4.8%;
     @include respond-above-width(md) {
       width: 2.9%;
     }
   }
   .modelbox {
-    height: 90px;
     width: 14%;
     @include respond-above-width(md) {
       width: 7.65%;  
