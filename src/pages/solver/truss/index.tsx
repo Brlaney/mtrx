@@ -45,7 +45,16 @@ const Truss: React.FC<{ props }> = () => {
 
   return (
     <div className={styles.container}>
+
+      {/* GoBack button */}
       <GoBack link={endpoint} />
+
+      <div
+        id={styles.space}
+        className='uk-height-small uk-flex uk-flex-center'
+      />
+
+      {/* FormNav component */}
       <FormNav />
 
       {/* Page parent container and header */}

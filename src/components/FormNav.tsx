@@ -12,9 +12,7 @@ export default function FormNav() {
   return (
     <div className={styles.subnav}>
 
-      <div className={styles.outerbox}>
-        go back button
-      </div>
+      <div className={styles.outerbox} />
 
       <div className={styles.stepbox1}>
         Step 1
