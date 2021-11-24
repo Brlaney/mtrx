@@ -1,4 +1,8 @@
-export const data = {
+import * as React from 'react';
+import { Line } from 'react-chartjs-2';
+
+/*
+const data = {
   labels: ['0', '5 ft', '10 ft', '20 ft', '30 ft'],
   datasets: [
     {
@@ -42,22 +46,7 @@ export const data = {
   ]
 };
 
-export const config = {
-  type: 'line',
-  data: data,
-  options: {
-    responsive: true,
-    stacked: false,
-    layout: {
-      padding: '10px',
-    },
-    plugins: {
-      legend: {
-        display: true,
-        position: 'top',
-      },
-    }
-  },
+const options = {
   scales: {
     xAxes: {
       display: true,
@@ -84,3 +73,64 @@ export const config = {
     },
   },
 };
+*/
+
+const legend = {
+  display: true,
+  position: "bottom",
+  labels: {
+    fontColor: "#323130",
+    fontSize: 14
+  }
+};
+
+
+const data = {
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+  datasets: [
+    {
+      label: "First dataset",
+      data: [33, 53, 85, 41, 44, 65],
+      fill: true,
+      backgroundColor: "rgba(75,192,192,0.2)",
+      borderColor: "rgba(75,192,192,1)"
+    },
+    {
+      label: "Second dataset",
+      data: [33, 25, 35, 51, 54, 76],
+      fill: false,
+      borderColor: "#742774"
+    }
+  ]
+};
+
+const options = {
+  title: {
+    display: true,
+    text: "Chart Title"
+  },
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          suggestedMin: 0,
+          suggestedMax: 100
+        }
+      }
+    ]
+  }
+};
+
+export default function Trusses() {
+  return (
+    <>
+      <Line
+        data={data}
+        legend={legend}
+        options={options}
+        width={800}
+        height={550}
+      />
+    </>
+  );
+}

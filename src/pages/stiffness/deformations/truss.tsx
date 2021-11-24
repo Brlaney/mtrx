@@ -1,10 +1,8 @@
-import TrussDeformation from '@/components/stiffness/deformations/TrussDeformation';
+import Trusses from '@/components/stiffness/deformations/Trusses';
 import GoBack from '@/components/global/buttons/GoBack';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
 import styles from '@/styles/pages/Charts.module.scss';
-
-// import { data, options } from '@/lib/config/matrix/truss';
 
 export default function Truss() {
   const endpoint = '/stiffness';
@@ -30,7 +28,7 @@ export default function Truss() {
 
         {/* Chart container - main content */}
         <motion.div className={styles.chartContainer} variants={fadeInUp}>
-          <TrussDeformation />
+          <Trusses />
         </motion.div>
       </motion.div>
     </motion.div>
