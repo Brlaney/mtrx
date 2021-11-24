@@ -68,7 +68,7 @@ const Truss: React.FC<{ props }> = () => {
                 initial={{ x: 300, y: 0, opacity: 1 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
                 transition={{
-                  delay: 3,
+                  delay: 0.3,
                   x: { type: 'spring', stiffness: 60, velocity: 0.1 },
                   default: { duration: 1 },
                 }}
@@ -89,7 +89,7 @@ const Truss: React.FC<{ props }> = () => {
                 initial={{ x: 300, y: 0, opacity: 1 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
                 transition={{
-                  delay: 3,
+                  delay: 0.3,
                   x: { type: 'spring', stiffness: 80, velocity: 1 },
                   default: { duration: 1 },
                 }}
