@@ -60,7 +60,6 @@ export const config = {
   },
   scales: {
     xAxes: {
-      type: 'linear',
       display: true,
       max: 40,
       min: -10,
@@ -72,7 +71,6 @@ export const config = {
       },
     },
     yAxes: {
-      type: 'linear',
       display: true,
       position: 'right',
       max: 15,
