@@ -30,6 +30,7 @@ export default function Truss() {
         <motion.div className={styles.chartContainer} variants={fadeInUp}>
           <Trusses />
         </motion.div>
+
       </motion.div>
     </motion.div>
   )
