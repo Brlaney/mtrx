@@ -15,11 +15,11 @@ const Graphics = () => {
 
   useEffect(() => {
     if (isShown == 1) {
-      UIkit.tooltip(`#tooltip`).show();
+      UIkit.tooltip(`.uk-button > text-lead`).show();
     }
-    if (isShown == 0) {
-      UIkit.tooltip(`#tooltip`).hide();
-    }
+    // if (isShown == 0) {
+    //   UIkit.tooltip(`.uk-button text-lead`).hide();
+    // }
   }, [isShown]);
 
   return (
