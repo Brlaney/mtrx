@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {  AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
@@ -13,7 +13,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
       <AnimatePresence>
         <Layout>
-          <Component {...pageProps} key={router.route} />
+        <Component
+          {...pageProps}
+          key={router.route}
+        />
         </Layout>
       </AnimatePresence>
   )
