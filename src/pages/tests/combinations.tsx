@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/tests/svgs';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Tests.module.scss';
-// import { elementLengths, localK } from '@/lib/utils/matrix/truss';
-import combos from '@/lib/utils/matrix/combos';
+import combos from '@/lib/utils/math/combos';
 
 import Full from '@/components/global/form-nav/Full';
 import XL from '@/components/global/form-nav/XL';
 import L from '@/components/global/form-nav/L';
 
 const Combinations = () => {
-  // const [rodState, setRodState] = useState(0);
   const endpoint = '/';
 
   const v = combos(['a', 'b']);
-  console.log(v)
+  console.log(v);
 
   return (
     <motion.div
@@ -30,7 +28,7 @@ const Combinations = () => {
       {/* Page parent container */}
       <motion.div className={styles.parent} variants={stagger}>
 
-          <motion.h2 className={styles.header} variants={fadeInUp}>
+        <motion.h2 className={styles.header} variants={fadeInUp}>
           Welcome, to the test page
         </motion.h2>
 

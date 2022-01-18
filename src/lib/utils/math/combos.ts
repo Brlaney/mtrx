@@ -3,10 +3,10 @@ Calculates area given a radius ~
   Input: cross-sectional radius
   Output: cross-sectional area in US units 
 */
-const combos = (containers) => {
-  if (containers.length === 0) return [[]];
-  const firstEl = containers[0];
-  const rest = containers.slice(1);
+const combos = (objects) => {
+  if (objects.length === 0) return [[]];
+  const firstEl = objects[0];
+  const rest = objects.slice(1);
   const combosWithoutFirst = combos(rest);
   const combosWithFirst = [];
 
@@ -14,9 +14,6 @@ const combos = (containers) => {
     const comboWithFirst = [...combo, firstEl];
     combosWithFirst.push(comboWithFirst);
   });
-
-  console.log(combosWithoutFirst);
-  console.log(combosWithFirst);
 
   return [...combosWithoutFirst, ...combosWithFirst];
 }
