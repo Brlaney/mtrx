@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/tests/svgs';
 import GoBack from '@/components/global/buttons/GoBack';
@@ -9,11 +9,9 @@ import XL from '@/components/global/form-nav/XL';
 import L from '@/components/global/form-nav/L';
 
 const Tests = () => {
-  // const [rodState, setRodState] = useState(0);
   const endpoint = '/';
 
   // console.log('The empty state: ', state1)
-
 
   // The following tests the stiffness functions
   /*

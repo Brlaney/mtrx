@@ -1,8 +1,4 @@
-/* Function 1.)
-Calculates area given a radius ~
-  Input: cross-sectional radius
-  Output: cross-sectional area in US units 
-*/
+// A combination utility function
 const combos = (objects) => {
   if (objects.length === 0) return [[]];
   const firstEl = objects[0];
@@ -19,6 +15,3 @@ const combos = (objects) => {
 }
 
 export default combos;
-
-// combos([])
-// combos(['a', 'b', 'c', 'd', 'e', 'f'])
