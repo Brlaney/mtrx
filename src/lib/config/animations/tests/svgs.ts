@@ -17,13 +17,13 @@ export const shapeVariations: AnimationProps = {
   },
 };
 
-const easing = [0.2, 0.4, -0.3, 0.95];
+const easing = [0.1, 0.4, -0.1, 0.88];
 
 export const fadeInUp = {
   initial: {
-    y: +300,
+    y: 300,
     opacity: 0,
-    transition: { duration: 0.6, ease: easing }
+    transition: { duration: 0.2, ease: easing }
   },
   animate: {
     y: 0,
@@ -38,7 +38,7 @@ export const fadeInUp = {
 export const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.45
+      staggerChildren: 0.5
     }
   }
 };
