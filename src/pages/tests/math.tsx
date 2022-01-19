@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import styles from '@/styles/pages/Math.module.scss';
+import { motion } from 'framer-motion';
 import { IVials } from '@/lib/types';
 import { vials } from '@/lib/data/game';
+import styles from '@/styles/pages/Math.module.scss';
 
-import combos from '@/lib/utils/math/combos';
-import permute from '@/lib/utils/math/permute';
+// import combos from '@/lib/utils/math/combos';
+// import permute from '@/lib/utils/math/permute';
 
 const colors = ['#FFFFFF', '#00568D', '#51BA5D'];
 
 const Math = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(0);
+
+  const vialVariants = {
+    opened: { translateY: 40, scale: 1.1 },
+    closed: { translateY: 120, scale: 0.9 }
+  };
 
   /*
   const input1 = ['a', 'b', 'c'];
@@ -26,22 +33,35 @@ const Math = () => {
   console.log("\n", "Output: ", output2);
   */
 
+  const updateState = (prev, vial) => {
+    if (prev != 0) {
+      setSelected(0);
+      setIsOpen(false);
+    } else {
+      setSelected(vial);
+      setIsOpen(true)
+    }
+  }
+
   useEffect(() => {
     console.log('Currently selected: ', selected)
   }, [selected]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.grid}>
+    <motion.div className={styles.container}>
+      <motion.div className={styles.grid}>
 
         {vials.map((vial: IVials) => (
-          <div
+          <motion.div
             key={vial.id}
             className={styles.vial}
-            onClick={() => { setSelected(vial.id) }}
+            initial={false}
+            animate={vial.id == selected  ? 'opened' : 'closed'}
+            variants={vialVariants}
+            onClick={() => { updateState(selected, vial.id) }}
           >
             {vial.slots.map((slot, i) => (
-              <div
+              <motion.div
                 key={i}
                 className={styles.box}
                 style={{
@@ -49,10 +69,10 @@ const Math = () => {
                 }}
               />
             ))}
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 };
 
