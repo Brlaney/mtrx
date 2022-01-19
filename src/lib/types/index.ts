@@ -70,5 +70,5 @@ export interface IElement {
 export interface IVials {
   id: number;
   slots: number[];
-  selected: number;
+  status: number[];
 };

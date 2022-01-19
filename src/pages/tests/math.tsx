@@ -10,12 +10,11 @@ import styles from '@/styles/pages/Math.module.scss';
 const colors = ['#FFFFFF', '#00568D', '#51BA5D'];
 
 const Math = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(0);
 
   const vialVariants = {
-    opened: { translateY: 40, scale: 1.1 },
-    closed: { translateY: 120, scale: 0.9 }
+    opened: { translateY: -10, scale: 1.15 },
+    closed: { translateY: 50, scale: 1.0 }
   };
 
   /*
@@ -36,10 +35,8 @@ const Math = () => {
   const updateState = (prev, vial) => {
     if (prev != 0) {
       setSelected(0);
-      setIsOpen(false);
     } else {
       setSelected(vial);
-      setIsOpen(true)
     }
   }
 
@@ -56,8 +53,8 @@ const Math = () => {
             key={vial.id}
             className={styles.vial}
             initial={false}
-            animate={vial.id == selected  ? 'opened' : 'closed'}
             variants={vialVariants}
+            animate={vial.id == selected  ? 'opened' : 'closed'}
             onClick={() => { updateState(selected, vial.id) }}
           >
             {vial.slots.map((slot, i) => (
