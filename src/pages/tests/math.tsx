@@ -32,17 +32,45 @@ const Math = () => {
   console.log("\n", "Output: ", output2);
   */
 
+  function Rearrange(vial) {
+    var currentVial = vials[vial.id - 1];
+    var fullSlots = currentVial.status[0];
+    var emptySlots = currentVial.status[1];
+
+
+  }
+
   const updateState = (prev, vial) => {
-    if (prev != 0) {
+    if (prev != 0 && vials[vial - 1].status[0] == 0) {
+
+      // These are used to match the desired array entrys
+      var firstVial = vials[prev - 1];
+      var secondVial = vials[vial - 1];
+
+      // The entry slot that will be updated
+      var entry = secondVial.status[1] - 1;
+
+      // The entry slot containing the new value
+      var newEntry = firstVial.status[1];
+
+      // Update the second clicked vials entry
+      vials[vial - 1].slots[entry] == vials[prev - 1].slots[newEntry];
+      
+      // Update the first clicked vials entry with a blank block
+      vials[prev - 1].slots[newEntry] == newEntry;
+
       setSelected(0);
     } else {
       setSelected(vial);
     }
+    return vials;
   }
 
   useEffect(() => {
-    console.log('Currently selected: ', selected)
-  }, [selected]);
+    console.log('Currently selected: ', selected);
+    console.log('\n');
+    console.log('Current vial values: ', vials);
+  }, [selected, vials]);
 
   return (
     <motion.div className={styles.container}>
