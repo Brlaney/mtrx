@@ -66,9 +66,3 @@ export interface IElement {
   d: string;
   activeAt: number[];
 };
-
-export interface IVials {
-  id: number;
-  slots: number[];
-  status: number[];
-};
