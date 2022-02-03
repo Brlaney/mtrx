@@ -123,7 +123,7 @@ export function elementLengths(coordinates, connects) {
   for (let i = 0; i < m; i++) {
     let end1 = connects[i * 2];
     let end2 = connects[i * 2 + 1];
-    
+
     lDof.push(2 * end1 - 1);
     lDof.push(2 * end1);
     lDof.push(2 * end2 - 1);
@@ -136,16 +136,16 @@ export function elementLengths(coordinates, connects) {
 
     let length = Math.sqrt(dx * dx + dy * dy);
     let theta = orientation(dx, dy);
-    
+
     // Theta vector (elements angles) in radians
     thetaD.push(theta); // Output in degrees
-    
+
     let rad = degToRad(theta);
     thetaR.push(rad); // Output in radians
 
     elemL.push(length.toFixed(2));
   };
- return [elemL, thetaR, thetaD, lDof, gDof];
+  return [elemL, thetaR, thetaD, lDof, gDof];
 };
 
 
@@ -167,41 +167,41 @@ export function localK(m, radians, lengths, elasticity, area) {
     let L = lengths[i] * 12;
     let A = area[i];
     let E = elasticity[i];
-    
+
     let s = Math.sin(theta);
     let c = Math.cos(theta);
     let coeff = A * E / L;
-    
+
     // Row 1
     let k11 = coeff * c * c;
     let k12 = coeff * c * s;
     let k13 = coeff * - c * c;
     let k14 = coeff * - c * s;
-    
+
     // Row 2
     let k21 = coeff * c * s;
     let k22 = coeff * s * s;
     let k23 = coeff * - c * s;
     let k24 = coeff * - s * s;
-    
+
     // Row 3
     let k31 = coeff * - c * c;
     let k32 = coeff * -c * s;
     let k33 = coeff * c * c;
     let k34 = coeff * c * s;
-    
+
     // Row 4
     let k41 = coeff * - c * s;
     let k42 = coeff * - s * s;
     let k43 = coeff * c * s;
     let k44 = coeff * s * s;
-    
+
     T.push([
       k11.toFixed(2), k12.toFixed(2), k13.toFixed(2), k14.toFixed(2),
       k21.toFixed(2), k22.toFixed(2), k23.toFixed(2), k24.toFixed(2),
       k31.toFixed(2), k32.toFixed(2), k33.toFixed(2), k34.toFixed(2),
       k41.toFixed(2), k42.toFixed(2), k43.toFixed(2), k44.toFixed(2)
-    ]);   
+    ]);
   };
   return T;
 };
