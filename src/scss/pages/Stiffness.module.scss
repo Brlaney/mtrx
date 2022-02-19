@@ -97,23 +97,20 @@
     }
     .card {
       width: 45%;
-      min-width: 350px;
+      // min-width: 350px;
       justify-content: center;
       align-items: center;
       border-radius: 10px;
       border: 1px solid $border-color;
       margin: 1rem 0.2rem 0 0.2rem;
-      padding: 0 1.77rem 0 1.77rem;
+      padding: 0 1.77rem ;
       box-shadow: rgba(50, 50, 93, 0.25) 4px 6px 5px -5px,
       rgba(0, 0, 0, 0.3) 0px 6px 7px -8px;
-      @include respond-below-width(sm) {
+      @include respond-below-width(md) {
         width: 100%; 
       }
       @include respond-above-width(md) {
         width: 440px;
-      }
-      @include  respond-between-width(sm, md) {
-        width: 49%;
       }
       .cardbody {
         display: flex;

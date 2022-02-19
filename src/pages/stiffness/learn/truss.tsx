@@ -12,7 +12,7 @@ import State2 from '@/components/stiffness/examples/truss/solutions/State2';
 import State3 from '@/components/stiffness/examples/truss/solutions/State3';
 import State4 from '@/components/stiffness/examples/truss/solutions/State4';
 import State5 from '@/components/stiffness/examples/truss/solutions/State5';
-import { data } from '@/lib/data/stiffness/learn-the-basics/truss';
+import { data } from '@/lib/data/stiffness/learn/truss';
 import GoBack from '@/components/global/buttons/GoBack';
 import Back from '@/components/global/buttons/matrix/Back';
 import Forward from '@/components/global/buttons/matrix/Forward';

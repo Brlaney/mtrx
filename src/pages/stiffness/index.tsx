@@ -6,7 +6,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/server';
 import { ITopicS, Isection } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
-import styles from '@/styles/pages/Topics.module.scss';
+import styles from '@/styles/pages/Stiffness.module.scss';
 
 const Stiffness = ({ topics }:
   InferGetStaticPropsType<typeof getStaticProps>) => {

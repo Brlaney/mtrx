@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import Distributed from '@/components/stiffness/learn-the-basics/fem/Distributed';
-import Eqn1 from '@/components/stiffness/learn-the-basics/fem/Eqn1';
-import Point from '@/components/stiffness/learn-the-basics/fem/Point';
-import Eqn2 from '@/components/stiffness/learn-the-basics/fem/Eqn2';
-import { data, buttonTexts } from '@/lib/data/stiffness/learn-the-basics/fixed-end-moments';
+import Distributed from '@/components/stiffness/learn/fem/Distributed';
+import Eqn1 from '@/components/stiffness/learn/fem/Eqn1';
+import Point from '@/components/stiffness/learn/fem/Point';
+import Eqn2 from '@/components/stiffness/learn/fem/Eqn2';
+import { data, buttonTexts } from '@/lib/data/stiffness/learn/fixed-end-moments';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';

@@ -1,19 +1,20 @@
-import React, { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
-import F11 from '@/components/stiffness/learn-the-basics/truss/F11';
-import F12 from '@/components/stiffness/learn-the-basics/truss/F12';
-import F21 from '@/components/stiffness/learn-the-basics/truss/F21';
-import F22 from '@/components/stiffness/learn-the-basics/truss/F22';
-import Forces from '@/components/stiffness/learn-the-basics/truss/Forces';
+import F11 from '@/components/stiffness/learn/truss/F11';
+import F12 from '@/components/stiffness/learn/truss/F12';
+import F21 from '@/components/stiffness/learn/truss/F21';
+import F22 from '@/components/stiffness/learn/truss/F22';
+import Forces from '@/components/stiffness/learn/truss/Forces';
 import { data, buttonTexts } from '@/lib/data/stiffness/displacements/truss';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
+
 export default function Truss() {
-  const [display, setDisplay] = React.useState('');
-  const [graphic, setGraphic] = React.useState(1);
+  const [display, setDisplay] = useState('');
+  const [graphic, setGraphic] = useState(1);
   const endpoint = '/stiffness';
 
   useEffect(() => {

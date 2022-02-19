@@ -10,9 +10,9 @@ export const topics: ITopicS[] = [
   },
   {
     id: 2, title: 'Learn the basics', sections: [
-      { key: 4, name: 'Truss', link: '/stiffness/learn-the-basics/truss' },
-      { key: 5, name: 'Beam', link: '/stiffness/learn-the-basics/beam' },
-      { key: 6, name: 'Frame', link: '/stiffness/learn-the-basics/frame' }
+      { key: 4, name: 'Truss', link: '/stiffness/learn/truss' },
+      { key: 5, name: 'Beam', link: '/stiffness/learn/beam' },
+      { key: 6, name: 'Frame', link: '/stiffness/learn/frame' }
     ]
   },
   {
@@ -32,7 +32,7 @@ export const topics: ITopicS[] = [
   {
     id: 5, title: 'Other topics', sections: [
       { key: 13, name: 'Discretization', link: '#' },
-      { key: 14, name: 'Fixed-end-moments', link: '/stiffness/learn-the-basics/fixed-end-moments' },
+      { key: 14, name: 'Fixed-end-moments', link: '/stiffness/learn/fixed-end-moments' },
       { key: 15, name: 'Restrained & unrestrained nodes', link: '#' }
     ]
   }
