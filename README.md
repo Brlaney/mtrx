@@ -30,7 +30,6 @@
   - [2. Install dependencies](#2-install-dependencies)
   - [3. Start development server](#3-start-development-server)
 - [Problem solving](#problem-solving)
-- [Project code sumary](#project-code-summary)
 - [Connect with me](#connect-with-me)
 - [References and resources](#references-and-resources)
 - [License](#license)
@@ -173,35 +172,6 @@ In this section I will sumarize my problem solving process for any issues that a
 
 Link to a short video I uploaded to youtube showing this issue and how it was debugged: [Framer-motion bug fix](https://youtu.be/uJpbSbn3jOc)
 
-## Project code summary
-
-- **Date updated:** `09-29-2021`
-- **First commit:** `08-20-2021`
-- **Directory:** `\mtrx\src`
-- **Totals:** 
-  - `203 files`
-  - `21,747 lines of code`
-  - `320 comments` 
-  - `962 blanks`
-  - **Sum total** `23,029 lines`
-
-### Languages
-| language | files | code | comment | blank | total |
-| :--- | ---: | ---: | ---: | ---: | ---: |
-| TypeScript React | 132 | 18,211 | 40 | 643 | 18,894 |
-| SCSS | 22 | 2,004 | 9 | 106 | 2,119 |
-| TypeScript | 49 | 1,532 | 271 | 213 | 2,016 |
-
-### Directories
-| path | files | code | comment | blank | total |
-| :--- | ---: | ---: | ---: | ---: | ---: |
-| src/ | 204 | 21,670 | 337 | 970 | 22,977 |
-| src/components | 101 | 16,286 | 40 | 421 | 16,747 |
-| src/lib | 42 | 1,474 | 274 | 196 | 1,944 |
-| src/pages | 39 | 1,891 | 14 | 246 | 2,151 |
-| src/scss | 22 | 2,019 | 9 | 107 | 2,135 |
-
-</br>
 
 ## Connect with me
 

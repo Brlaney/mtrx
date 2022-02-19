@@ -7,6 +7,7 @@ import {
 const color1 = '#CADEFC';
 const color2 = '#4E4E4E';
 
+
 const Distributed = () => {
   return (
     <motion.div

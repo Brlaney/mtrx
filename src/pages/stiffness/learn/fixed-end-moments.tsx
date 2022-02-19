@@ -1,18 +1,23 @@
-import React, { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
 import Distributed from '@/components/stiffness/learn/fem/Distributed';
-import Eqn1 from '@/components/stiffness/learn/fem/Eqn1';
 import Point from '@/components/stiffness/learn/fem/Point';
+import Increasing from '@/components/stiffness/learn/fem/Increasing';
+import Decreasing from '@/components/stiffness/learn/fem/Decreasing';
+import Eqn1 from '@/components/stiffness/learn/fem/Eqn1';
 import Eqn2 from '@/components/stiffness/learn/fem/Eqn2';
+import Eqn3 from '@/components/stiffness/learn/fem/Eqn3';
+import Eqn4 from '@/components/stiffness/learn/fem/Eqn4';
 import { data, buttonTexts } from '@/lib/data/stiffness/learn/fixed-end-moments';
 import { IDispl } from '@/lib/types';
 import GoBack from '@/components/global/buttons/GoBack';
 import styles from '@/styles/pages/Displacements.module.scss';
 
+
 export default function FixedEndMoments() {
-  const [display, setDisplay] = React.useState('');
-  const [graphic, setGraphic] = React.useState(1);
+  const [display, setDisplay] = useState('');
+  const [graphic, setGraphic] = useState(1);
   const endpoint = '/stiffness';
 
   useEffect(() => {
@@ -34,6 +39,10 @@ export default function FixedEndMoments() {
           {graphic === 2 && (<><Distributed /><Eqn1 /></>)}
           {graphic === 3 && <Point />}
           {graphic === 4 && (<> <Point /> <Eqn2 /></>)}
+          {graphic === 5 && <Increasing />}
+          {graphic === 6 && (<> <Increasing /> <Eqn3 /></>)}
+          {graphic === 7 && <Decreasing />}
+          {graphic === 8 && (<> <Decreasing /> <Eqn4 /></>)}
         </motion.div>
 
         {/* Information onClick */}
