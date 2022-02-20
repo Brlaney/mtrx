@@ -1,11 +1,11 @@
-import * as React from 'react';
+import { useRef } from 'react';
 // import { Line } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
 
 Chart.register(...registerables);
 
 export default function Trusses() {
-  const ctx = document.getElementById('#trussChart');
+  const ctx = useRef();
 
   const myChart = new Chart(ctx, {
     type: 'bar',
@@ -44,7 +44,7 @@ export default function Trusses() {
 
   return (
     <>
-      <canvas id='trussChart' width={600} height={800} />;
+      <canvas ref={ctx} width={600} height={800} />;
       {myChart}
     </>
   );

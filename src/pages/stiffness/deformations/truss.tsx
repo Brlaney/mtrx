@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { fadeInUp, stagger } from '@/lib/config/animations/svgs/displacements';
 import styles from '@/styles/pages/Charts.module.scss';
 
+
 export default function Truss() {
   const endpoint = '/stiffness';
 
