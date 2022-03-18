@@ -10,7 +10,7 @@ const color3 = '#C4C4C4';
 const color4 = '#CADEFC';
 const color5 = '#000000';
 
-const Beam = () => {
+const Beam = ({props, shapeVariations, mainPathVariant}) => {
   return (
     <motion.div
       className='animationParent'
